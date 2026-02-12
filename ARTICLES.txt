@@ -1,0 +1,45 @@
+ATTACHMENT TO ARTICLES OF INCORPORATION OF SOL PBC
+ARTICLE 8: GOVERNANCE RESTRICTIONS AND COVENANTS
+
+Section 8.1. Definitions.
+(a) “Founder” means Jeremie Miller.
+(b) “Colorado Privacy Act” or “CPA” means the Colorado Privacy Act, C.R.S. § 6-1-1301 et seq.
+(c) “Personal Representative” means the personal representative, executor, administrator, conservator, guardian, or other fiduciary authorized under applicable law to act for the Founder or the Founder’s estate.
+(d) “Incapacity” means the Founder’s inability to perform the essential functions of sole director and sole officer, as determined by (i) a court of competent jurisdiction, or (ii) a written certification by two licensed physicians (or a licensed physician and a licensed psychologist) stating that the Founder is unable to manage the Founder’s affairs.
+(e) “Liquidating Director” means the single director appointed pursuant to Section 8.3 solely to wind up and dissolve the Corporation.
+(f) Capitalized terms used in this Article 8 but not otherwise defined herein shall have the meanings set forth in the CPA (including, without limitation, “Personal Data,” “De-identified Data,” “Publicly Available Information,” “Processor,” “Sale,” and any successor defined terms), as in effect on the date the relevant interpretation is made.
+
+Section 8.2. Solo Stewardship.
+(a) Single Director; Founder-Only Service During Lifetime. The Corporation shall at all times have exactly one (1) director. During the Founder’s lifetime, only the Founder may serve as director.
+(b) Sole Officer. During the Founder’s lifetime, the Founder shall be the sole officer of the Corporation and shall hold all offices required by law or, if no specific offices are required, shall serve as President and Secretary (or their functional equivalent).
+(c) No Employees Other Than Founder. The Corporation shall have no employees other than the Founder. Operations requiring additional labor shall be conducted via independent contractors or service providers, subject to the Data Non-Sale Covenant in Section 8.5.
+
+Section 8.3. Mandatory Winding Up and Dissolution; Liquidating Director.
+(a) Dissolution Trigger. If the Founder ceases to serve as the sole director and sole officer for any reason, including death, Incapacity, or resignation, the Corporation shall promptly commence dissolution and winding up.
+(b) Appointment Upon Death or Incapacity. During the Founder’s lifetime, only the Founder may serve as director. Upon the Founder’s death or Incapacity, the Personal Representative may appoint a Liquidating Director solely to wind up and dissolve the Corporation.
+(c) Resignation. If the Founder resigns as director and/or officer, the Founder shall promptly cause the Corporation to commence dissolution and winding up and may, in the written instrument of resignation, appoint a Liquidating Director effective upon such resignation solely to wind up and dissolve the Corporation.
+(d) Limited Authority of Liquidating Director. The Liquidating Director shall have no authority except to take actions reasonably necessary or appropriate to (i) wind up the Corporation, (ii) terminate products and services, (iii) preserve and protect corporate assets pending lawful disposition, (iv) facilitate export of stored user data to each individual user at the user’s direction (to the extent such export is feasible and lawful), and (v) prepare and file the necessary Articles of Dissolution and any other filings strictly required to complete winding up and dissolution.
+(e) Data Export and Service Termination. In carrying out the winding up, the Corporation shall, as reasonably practicable and consistent with law and security obligations, provide users a reasonable opportunity to export their stored Personal Data (excluding De-identified Data) that is maintained by the Corporation for the user’s use, after which the Corporation shall terminate services and complete dissolution.
+
+Section 8.4. No Change of Control.
+Except in connection with the mandatory dissolution and winding up described in Section 8.3, the Corporation shall not:
+(a) Merge, convert, or domesticate;
+(b) Enter into a share exchange or similar reorganization transaction; or
+(c) Sell, lease, exchange, or otherwise dispose of all or substantially all of its property, whether in one transaction or a series of related transactions.
+
+Section 8.5. Data Non-Sale Covenant (Comprehensive).
+(a) Covenant. The Corporation shall not Sell, license, lease, transfer, or otherwise make available for monetary or other valuable consideration (as “Sale” is defined in the CPA) any User Personal Data or access to User Personal Data.
+(b) “User Personal Data” means Personal Data (as defined in the CPA) that is linked or reasonably linkable to an identified or identifiable individual user, but expressly excludes De-identified Data and Publicly Available Information (each as defined in the CPA).
+(c) CPA-Based Interpretation; Exclusions. This covenant shall be interpreted consistently with the CPA’s definitions, exclusions, and permitted disclosures regarding “Sale,” including, without limitation, disclosures to a Processor acting on the Corporation’s behalf and disclosures necessary to provide a product or service requested by the user. Nothing herein prohibits disclosures required by law or made at the user’s specific direction.
+
+Section 8.6. Exclusive Forum for Internal Corporate Claims.
+Unless the Corporation consents in writing to the selection of an alternative forum, the state courts of Colorado shall be the exclusive forum for any internal corporate claim, as defined in C.R.S. § 7-102-108. If and only if the state courts of Colorado lack subject-matter jurisdiction over a claim, the U.S. District Court for the District of Colorado shall be the exclusive forum for such claim. If neither such court has subject-matter jurisdiction, the claim shall be brought in another court located in Colorado with subject-matter jurisdiction.
+
+Section 8.7. Founder Consent Required for Changes to Article 8.
+(a) Additional Required Approval. To the fullest extent permitted by the Colorado Business Corporation Act, any amendment, repeal, adoption of any inconsistent provision, or waiver (whether by the Corporation, the board, or the shareholders) of any provision of this Article 8 shall require, in addition to any approvals otherwise required by law, the Founder’s prior Written Consent (as defined below).
+(b) Founder Written Consent. “Written Consent” means a written instrument dated and signed by the Founder that (i) specifically references this Section 8.7, and (ii) expressly approves the particular amendment, repeal, waiver, or inconsistent provision. No implied consent, acquiescence, course of dealing, or failure to object shall constitute Written Consent.
+(c) No Delegation. The Founder’s Written Consent may not be granted by any agent, attorney-in-fact, Personal Representative, or other person, and shall be personal to the Founder. Upon the Founder’s death or Incapacity, the Corporation’s sole permitted course is winding up and dissolution pursuant to Section 8.3, and no amendment, repeal, or waiver of this Article 8 shall be permitted except as may be strictly necessary to effectuate dissolution in compliance with mandatory law.
+
+Section 8.8. Severability.
+If any provision of this Article 8, or the application thereof to any person or circumstance, is held invalid or unenforceable to any extent, the remainder of this Article 8 and the application of such provision to other persons or circumstances shall not be affected and shall be enforced to the fullest extent permitted by law.
+
