@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <title>sol pbc blog</title>
+    <subtitle>ideas on digital self-determination, open source, and building technology that serves people.</subtitle>
+    <link href="https://solpbc.org/blog/feed.xml" rel="self"/>
+    <link href="https://solpbc.org/blog/"/>
+    <id>https://solpbc.org/blog/</id>
+    <updated>2026-03-25T00:00:00Z</updated>
+    <entry>
+        <title>the company that can't be sold</title>
+        <link href="https://solpbc.org/blog/company-that-cant-be-sold/" rel="alternate"/>
+        <id>https://solpbc.org/blog/company-that-cant-be-sold/</id>
+        <updated>2026-03-25T00:00:00Z</updated>
+        <author><name>jer</name></author>
+        <summary>why sol pbc wrote a no-acquisition covenant into its articles of incorporation</summary>
+        <content type="html">&lt;p&gt;most companies are built to be sold. sol pbc was built so it &lt;em&gt;can&amp;rsquo;t&lt;/em&gt; be.&lt;/p&gt;
+&lt;h2&gt;why this matters&lt;/h2&gt;
+&lt;p&gt;when a company can be acquired, every decision is haunted by a question: &amp;ldquo;will this make us more attractive to buyers?&amp;rdquo; that question distorts everything — from product choices to data practices to how you treat the people who trust you.&lt;/p&gt;
+&lt;p&gt;we removed the question entirely. sol pbc&amp;rsquo;s articles of incorporation contain an irrevocable &lt;strong&gt;no-acquisition covenant&lt;/strong&gt;. the company cannot be sold, merged, acquired, or reorganized. ever.&lt;/p&gt;
+&lt;h2&gt;what this means in practice&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;your data stays yours.&lt;/strong&gt; there&amp;rsquo;s no future acquirer who might &amp;ldquo;update the privacy policy&amp;rdquo; to monetize what you&amp;rsquo;ve shared.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;the mission stays the mission.&lt;/strong&gt; digital self-determination isn&amp;rsquo;t a marketing pitch we&amp;rsquo;ll abandon when the numbers don&amp;rsquo;t work. it&amp;rsquo;s a legal commitment.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;the technology stays open.&lt;/strong&gt; open source isn&amp;rsquo;t a growth hack. it&amp;rsquo;s the only way to build tools people can actually trust.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;the structural trust thesis&lt;/h2&gt;
+&lt;p&gt;trust isn&amp;rsquo;t a feature. it&amp;rsquo;s a structure.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;the specific public benefit purpose of the Corporation is to advance digital self-determination by providing open-source, privacy-respecting tools and services that enable individuals to directly collect and gain insight from their personal data.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;that&amp;rsquo;s not from a pitch deck. it&amp;rsquo;s from our &lt;a href=&quot;https://solpbc.org/20261003269.pdf&quot;&gt;articles of incorporation&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;when the structure makes betrayal impossible, trust becomes a property of the system — not a promise from the people running it. people change. incentives change. structures, when built right, don&amp;rsquo;t.&lt;/p&gt;
+&lt;h2&gt;building in the open&lt;/h2&gt;
+&lt;p&gt;we&amp;rsquo;re sharing this because the ideas matter more than the competitive advantage. if more companies built structures that made trust inevitable rather than optional, the internet would be a fundamentally different place.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-python&quot;&gt;# this is what irrevocable means
+class SolPBC:
+    def acquire(self):
+        raise ImpossibleError(&amp;quot;nice try&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;sol pbc exists to prove that technology companies can be built differently. not as a compromise, but as a better way.&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;em&gt;this is the first in a series about building technology that serves people. follow along at &lt;a href=&quot;/blog/&quot;&gt;solpbc.org/blog&lt;/a&gt; or subscribe to the &lt;a href=&quot;/blog/feed.xml&quot;&gt;RSS feed&lt;/a&gt;.&lt;/em&gt;&lt;/p&gt;</content>
+    </entry>
+</feed>
