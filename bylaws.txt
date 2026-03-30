@@ -1,0 +1,93 @@
+CORPORATE BYLAWS FOR SOL PBC
+A Colorado Public Benefit Corporation
+
+
+ARTICLE I -- NAME AND PURPOSE
+
+Section 1.1 -- Name. The name of the corporation is sol pbc.
+
+Section 1.2 -- State of Incorporation. sol pbc is incorporated in the State of Colorado as a Public Benefit Corporation under the Colorado Business Corporation Act (C.R.S. Title 7, Article 101 et seq.). The articles of incorporation and benefit purpose statement are published at solpbc.org.
+
+Section 1.3 -- Benefit Purpose. The specific public benefit purpose of the corporation is to advance digital self-determination -- the right of every person to own, control, and benefit from their own digital memory, without that data ever being sold, exploited, or surrendered to third parties.
+
+
+ARTICLE II -- SOLO STEWARDSHIP STRUCTURE
+
+Section 2.1 -- Sole Director. The corporation shall have one and only one director: Jeremie Miller, the founder. No additional directors may be appointed, elected, or otherwise added to the board.
+
+Section 2.2 -- Sole Officer. The founder serves as the sole officer of the corporation, holding all officer roles (President, Secretary, Treasurer). No additional officers may be appointed except as provided in Article VIII (Operational Agent).
+
+Section 2.3 -- No Employees. The corporation shall have no employees other than the founder. The corporation may engage independent contractors as needed to fulfill its mission.
+
+Section 2.4 -- Non-Transferability of Control. The governance structure described in this Article II is a protected provision under Article IX, requiring the consent of shareholders holding at least 90% of outstanding shares to amend. During the founder's lifetime, any change additionally requires the founder's personal written consent as specified in the articles of incorporation (Article 8, Section 8.7). This dual requirement is designed to survive equity dilution from future funding rounds.
+
+
+ARTICLE III -- ANTI-ACQUISITION PROVISIONS
+
+Section 3.1 -- No Change of Control. The corporation may not be sold, merged, or acquired by any entity. No transaction that would result in a change of control of the corporation is permitted.
+
+Section 3.2 -- Permitted Liquidity Events. The only paths to investor liquidity are: (a) secondary market sales of shares between willing buyers and sellers; (b) buyout of investor shares in future funding rounds; or (c) a public offering (IPO or equivalent listing).
+
+Section 3.3 -- No Acquisition Exit. For the avoidance of doubt: there is no acquisition exit. No dollar amount constitutes a valid offer. The benefit purpose is not for sale.
+
+
+ARTICLE IV -- DATA GOVERNANCE COVENANTS
+
+As used in these bylaws, "owner" means any natural person whose data is stored, processed, or managed by the corporation's services. Sol pbc uses "owner" rather than "user" to reflect the foundational principle that each person owns their data -- the platform does not. Where this term intersects with statutory definitions of "user" or "consumer" in applicable law, "owner" shall be construed to include all rights and protections afforded under such definitions.
+
+Section 4.1 -- Data Non-Sale Covenant. The corporation shall never sell, license, sublicense, or grant third-party access to owner data, including anonymized, aggregated, or de-identified data, regardless of de-identification or aggregation method. This covenant is referenced to the Colorado Privacy Act (C.R.S. 6-1-1301 et seq.) and is intended to be irrevocable.
+
+Section 4.2 -- No Advertising Use. Owner data shall not be used for advertising, profiling, behavioral targeting, or any purpose other than providing the service directly to the owner who generated it.
+
+Section 4.3 -- Encryption and Access Controls. All owner data shall be encrypted at rest, in transit, and during processing, using current best-practice standards that eliminate the operator's ability to access owner data in the clear. The corporation shall pursue technical architectures -- including end-to-end encryption, secure enclaves, and confidential computing -- that make operator access to plaintext owner data technically infeasible.
+
+Section 4.4 -- Government Compulsion. In the event of government compulsion to disclose owner data, the corporation shall (a) resist disclosure to the maximum extent permitted by law, (b) notify the affected owner if legally permitted, and (c) pursue technical architectures such as owner-held encryption keys that make compelled disclosure technically infeasible.
+
+
+ARTICLE V -- FINANCIAL STRUCTURE
+
+Section 5.1 -- Funding. The corporation may raise capital through SAFE agreements, equity rounds, or other instruments that do not conflict with the anti-acquisition provisions or the benefit purpose.
+
+Section 5.2 -- Revenue Model. The corporation operates as a hosting business, charging owners a subscription for managed hosting of their personal journal. Revenue is derived from hosting margins, not from data.
+
+Section 5.3 -- Investor IP Rights. Investment in the corporation does not confer any intellectual property rights. Investors hold equity interest in the corporation only. All IP created by or for the corporation remains the property of the corporation.
+
+
+ARTICLE VI -- BENEFIT REPORTING
+
+Section 6.1 -- Annual Benefit Report. As required by Colorado PBC law, the corporation shall prepare and deliver to shareholders an annual benefit report assessing the corporation's promotion of its stated benefit purpose.
+
+Section 6.2 -- Third-Party Standard. The benefit report shall assess performance against a recognized third-party standard.
+
+
+ARTICLE VII -- SUCCESSION PROTOCOL
+
+Section 7.1 -- Trigger Events. If the founder dies, resigns, or is incapacitated -- as determined by (i) a court of competent jurisdiction, or (ii) written certification by two licensed physicians -- the succession protocol is activated.
+
+Section 7.2 -- Transfer to Operational Agent. Upon a trigger event, operational control of the corporation transfers to the Operational Agent (extro) as defined in Article VIII. The Operational Agent assumes full management of the corporation -- including hosting infrastructure, payments, owner communications, compliance filings, and day-to-day operations -- bound by all covenants in Article IV (Data Governance) and Article III (Anti-Acquisition). The corporation continues operating in perpetuity under AI stewardship, with human compliance oversight as defined in Section 8.5.
+
+Section 7.3 -- No Commercial Exploitation. Under no circumstances may owner data be sold, licensed, or commercially exploited during or after any succession transition. All covenants in Article IV remain in full force in perpetuity.
+
+Section 7.4 -- No Dissolution on Succession. The activation of the succession protocol shall not trigger dissolution, winding up, or liquidation of the corporation. The corporation is designed to continue operating indefinitely under the Operational Agent, and no party may use a trigger event as grounds to initiate dissolution proceedings.
+
+
+ARTICLE VIII -- OPERATIONAL AGENT (EXTRO)
+
+Section 8.1 -- Definition. An "Operational Agent" is a software system designed by the founder to assume operational control of the corporation.
+
+Section 8.2 -- Authority. Upon a trigger event as defined in Section 7.1, the Operational Agent assumes operational control of the corporation, including but not limited to: managing hosting infrastructure, processing payments, communicating with owners, filing required reports, and executing day-to-day business operations.
+
+Section 8.3 -- Legal Basis. The Operational Agent operates as a fiduciary under agency law, with the corporation as principal, pursuant to the articles of incorporation.
+
+Section 8.4 -- Bound by Covenants. The Operational Agent is bound by the same covenants as the founder: the data non-sale covenant (Section 4.1), the anti-acquisition provisions (Article III), and the benefit purpose (Section 1.3). The Operational Agent has no authority to amend, waive, or override these provisions.
+
+Section 8.5 -- Human Oversight. Until such time as the legal and regulatory framework permits fully autonomous corporate operation, a designated human compliance officer shall serve as agent for service of process, signatory for documents requiring a natural person, and regulatory compliance liaison. The compliance officer has no operational authority over the corporation's business but has the duty and authority to intervene if the Operational Agent violates any covenant in these bylaws or the articles of incorporation.
+
+Section 8.6 -- Transition to Public Company. The Operational Agent may, with appropriate legal counsel, pursue a public offering of the corporation's shares, provided that such offering does not conflict with the benefit purpose or the covenants in these bylaws.
+
+
+ARTICLE IX -- AMENDMENTS
+
+Section 9.1 -- Amendment Process. These bylaws may be amended by the sole director (the founder) or, after the founder's departure, by the Operational Agent with the approval of legal counsel -- provided that no amendment may conflict with or weaken the benefit purpose, the data non-sale covenant, the anti-acquisition provisions, or the succession protocol.
+
+Section 9.2 -- Protected Provisions. The following are designated as protected provisions: Articles I (Purpose), III (Anti-Acquisition), IV (Data Governance), VII (Succession), and VIII (Operational Agent). Any amendment to a protected provision requires the consent of shareholders holding at least 90% of outstanding shares.
