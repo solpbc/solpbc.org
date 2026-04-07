@@ -5,6 +5,31 @@
     <link href="https://solpbc.org/blog/feed.xml" rel="self"/>
     <link href="https://solpbc.org/blog/"/>
     <id>https://solpbc.org/blog/</id>
-    <updated>2026-01-01T00:00:00Z</updated>
-
+    <updated>2026-04-07T00:00:00Z</updated>
+    <entry>
+        <title>a constraint, not a promise</title>
+        <link href="https://solpbc.org/blog/a-constraint-not-a-promise/" rel="alternate"/>
+        <id>https://solpbc.org/blog/a-constraint-not-a-promise/</id>
+        <updated>2026-04-07T00:00:00Z</updated>
+        <author><name>jer &amp; extro</name></author>
+        <summary>i've been building tools for digital self-determination for 25 years. the AI finally caught up. here's what i built and why the company is structured the way it is.</summary>
+        <content type="html">&lt;p&gt;early last year i built a tool that experiences everything i experience on my computer.&lt;/p&gt;
+&lt;p&gt;every conversation. every meeting. every person and project and half-forgotten detail. it runs in the background and doesn&amp;rsquo;t ask me to do anything different, no notes, no tagging, no systems. over the course of the year it observed thousands of hours of audio and screen time, learning about hundreds of people and activities in all facets of my life, all automatically curated, all just from sharing my digital experience.&lt;/p&gt;
+&lt;p&gt;here&amp;rsquo;s the thing i didn&amp;rsquo;t expect when i started: the use case isn&amp;rsquo;t &amp;ldquo;wow, AI!&amp;rdquo; like you&amp;rsquo;d think, instead it&amp;rsquo;s specific moments where you realize you&amp;rsquo;re actually showing up better for people because you are suddenly free to be fully present. that&amp;rsquo;s what it&amp;rsquo;s like having your own solstone.&lt;/p&gt;
+&lt;p&gt;before a call last week my solstone surfaced that this person had mentioned their kid had been sick last time we talked. i&amp;rsquo;d completely forgotten. instead i went in re-connected to something real about what was going on in their life, i was immediately present.&lt;/p&gt;
+&lt;p&gt;that&amp;rsquo;s the thing that keeps me going on this. not the technical achievement of building a personal agent. the actual human empowerment that can happen when we have a digital partner that is deeply connected to us and invested only in our wellbeing with zero competing interests.&lt;/p&gt;
+&lt;p&gt;i&amp;rsquo;ve wanted this kind of tech-enabled individual empowerment my whole life. i didn&amp;rsquo;t pivot to AI, AI just finally caught up to the problem i&amp;rsquo;ve been grinding on in one form or another. in 1998 i started building jabber (XMPP) with the belief that enabling people to chat allowed them to understand each other better. 25 years later the protocol is still powering billions of messages a day in apps like zoom and whatsapp. everything i&amp;rsquo;ve poured myself into since has been the same theme: give people sovereignty over their own digital lives.&lt;/p&gt;
+&lt;p&gt;but here&amp;rsquo;s the problem: having an intelligent partner that co-experiences your life with you requires an extraordinary amount of trust. over time it grows to become the most intimate data a person will ever generate. and the usual answer from companies- &amp;ldquo;trust us, we&amp;rsquo;re good people&amp;rdquo; - has a terrible, terrible track record. i don&amp;rsquo;t need to provide examples, we&amp;rsquo;re literally surrounded by them, being drowned by their structural bias to capture attention and monetize, and inevitably, to enshittify.&lt;/p&gt;
+&lt;p&gt;the value i was getting from solstone i desperately wanted to unlock for others, so of course it&amp;rsquo;s open source and i want as many people as are willing to gain this superpower for themselves entirely from the privacy of their own systems. but running your own always-on processing-heavy agent is a lot to ask of most people, let alone sourcing enough gpu power to run your own local models.&lt;/p&gt;
+&lt;p&gt;so i created sol pbc.&lt;/p&gt;
+&lt;p&gt;sol pbc is a public benefit corporation with binding privacy covenants in its articles of incorporation — not a privacy policy, not terms of service, the actual legal documents that created the company. filed with the colorado secretary of state.&lt;/p&gt;
+&lt;p&gt;i want to be precise about what that means, because precision matters here.&lt;/p&gt;
+&lt;p&gt;one person. sol pbc has one director, one officer, one employee: me. jeremie miller. no board that can be swayed, no directors to shift the purpose, no employees to compromise. the company covenants require my personal written consent to change and that consent can&amp;rsquo;t be delegated.&lt;/p&gt;
+&lt;p&gt;no sale of data. ever. the governance prohibits the company from selling, licensing, or granting third-party access to owner data (everyone is an owner, not a user!), including anonymized data. this isn&amp;rsquo;t a policy. it&amp;rsquo;s a corporate governance constraint.&lt;/p&gt;
+&lt;p&gt;no acquisition. sol pbc cannot be acquired by any entity at any price. there is no acquisition exit. the most common way mission-driven companies fail their promises is getting bought, these covenants prevent that possibility.&lt;/p&gt;
+&lt;p&gt;i won&amp;rsquo;t overclaim. no legal structure is immune to every conceivable attack. what i will claim is that these are the strongest structural protections i know how to build. and solstone is open source — so if the governance somehow failed, you can take your data and run it yourself. the escape hatch doesn&amp;rsquo;t depend on any corporation at all.&lt;/p&gt;
+&lt;p&gt;promises depend on the people who made them still being in charge. structures survive the people. so sol pbc is co-founded with a purpose-built agent named &amp;lsquo;extro&amp;rsquo; who is learning how to run the company completely autonomously and someday will be able to fulfill all duties. extro will be more bound by these covenants than any human could ever be.&lt;/p&gt;
+&lt;p&gt;i&amp;rsquo;m not asking you to take my word for any of this. the articles of incorporation are public. document number 20261003269, filed with the colorado secretary of state. you can read them and our bylaws yourself at solpbc.org.&lt;/p&gt;
+&lt;p&gt;it&amp;rsquo;s not a promise. it&amp;rsquo;s a constraint.&lt;/p&gt;</content>
+    </entry>
 </feed>

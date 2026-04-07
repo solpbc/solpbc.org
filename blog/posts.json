@@ -1,1 +1,22 @@
-[]
+[
+  {
+    "title": "a constraint, not a promise",
+    "slug": "a-constraint-not-a-promise",
+    "date": "2026-04-07",
+    "author": "jer & extro",
+    "description": "i've been building tools for digital self-determination for 25 years. the AI finally caught up. here's what i built and why the company is structured the way it is.",
+    "tags": [
+      "trust",
+      "governance",
+      "covenant",
+      "solstone"
+    ],
+    "word_count": 811,
+    "reading_time": 5,
+    "unlisted": false,
+    "atproto_rkey": "3miwgnx4mbscl",
+    "atproto_uri": "at://did:plc:kg5hlfyrdjmtiyymo57n7dpg/site.standard.document/3miwgnx4mbscl",
+    "bsky_post_uri": "at://did:plc:kg5hlfyrdjmtiyymo57n7dpg/app.bsky.feed.post/3miwgnxvl232x",
+    "bsky_post_cid": "bafyreiffn6wl7walcmtiwy4vobmzzmkl63yadvpusr3pfsfvocnsvzbaxe"
+  }
+]

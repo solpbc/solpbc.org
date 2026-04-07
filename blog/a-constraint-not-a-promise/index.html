@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>a constraint, not a promise — sol pbc</title>
+    <meta name="description" content="i've been building tools for digital self-determination for 25 years. the AI finally caught up. here's what i built and why the company is structured the way it is.">
+    <link rel="canonical" href="https://solpbc.org/blog/a-constraint-not-a-promise/">
+    <meta property="og:title" content="a constraint, not a promise">
+    <meta property="og:description" content="i've been building tools for digital self-determination for 25 years. the AI finally caught up. here's what i built and why the company is structured the way it is.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://solpbc.org/blog/a-constraint-not-a-promise/">
+    <meta property="og:site_name" content="sol pbc">
+    <meta property="article:published_time" content="2026-04-07T00:00:00Z">
+    <meta property="article:author" content="jer &amp; extro">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="a constraint, not a promise">
+    <meta name="twitter:description" content="i've been building tools for digital self-determination for 25 years. the AI finally caught up. here's what i built and why the company is structured the way it is.">
+    <link rel="alternate" type="application/atom+xml" title="sol pbc blog" href="/blog/feed.xml">
+    <link rel="site.standard.document" href="at://did:plc:kg5hlfyrdjmtiyymo57n7dpg/site.standard.document/3miwgnx4mbscl">
+    <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="/static/favicon-32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/static/favicon-16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/static/apple-touch-icon.png">
+    <style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+@font-face {
+    font-family: 'Comfortaa';
+    src: url('/blog/fonts/comfortaa-latin.woff2') format('woff2');
+    font-weight: 400 700;
+    font-display: swap;
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6,
+        U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC,
+        U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+    font-family: 'Comfortaa';
+    src: url('/blog/fonts/comfortaa-latin-ext.woff2') format('woff2');
+    font-weight: 400 700;
+    font-display: swap;
+    unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7,
+        U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F,
+        U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113,
+        U+2C60-2C7F, U+A720-A7FF;
+}
+
+body {
+    font-family: system-ui, -apple-system, sans-serif;
+    background: #fff;
+    color: #444;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+.container {
+    max-width: 600px;
+    width: 90vw;
+    margin: 0 auto;
+    padding: 0 0 2rem;
+}
+
+/* --- navigation --- */
+nav {
+    padding: 2rem 0 1.5rem;
+    font-size: 0.9rem;
+}
+nav a {
+    color: #e67e22;
+    text-decoration: none;
+}
+nav a:hover {
+    text-decoration: underline;
+}
+nav .sep {
+    color: #ccc;
+    margin: 0 0.4rem;
+}
+
+/* --- headings --- */
+h1 {
+    font-family: 'Comfortaa', system-ui, sans-serif;
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-transform: lowercase;
+    color: #222;
+    line-height: 1.3;
+    margin-bottom: 0.5rem;
+}
+h2 {
+    font-family: 'Comfortaa', system-ui, sans-serif;
+    font-size: 1.4rem;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    text-transform: lowercase;
+    color: #222;
+    margin: 2.5rem 0 1rem;
+}
+h3 {
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: #222;
+    margin: 2rem 0 0.75rem;
+}
+h4, h5, h6 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #222;
+    margin: 1.5rem 0 0.5rem;
+}
+
+/* --- article body --- */
+article p  { margin-bottom: 1.5rem; }
+article ul,
+article ol { margin-bottom: 1.5rem; padding-left: 1.5rem; }
+article li { margin-bottom: 0.5rem; }
+article a  { color: #e67e22; text-decoration: none; }
+article a:hover { text-decoration: underline; }
+
+article blockquote {
+    border-left: 3px solid #e67e22;
+    padding-left: 1rem;
+    margin: 1.5rem 0;
+    color: #777;
+    font-style: italic;
+}
+
+article pre {
+    background: #f6f8fa;
+    padding: 1rem;
+    border-radius: 4px;
+    overflow-x: auto;
+    margin-bottom: 1.5rem;
+    font-size: 0.88rem;
+    line-height: 1.5;
+}
+article code {
+    font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+    font-size: 0.9em;
+}
+article p code,
+article li code {
+    background: #f6f8fa;
+    padding: 0.15rem 0.4rem;
+    border-radius: 3px;
+}
+
+article img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+    margin: 1.5rem 0;
+    display: block;
+}
+article strong { color: #333; }
+article hr {
+    border: none;
+    border-top: 1px solid #eee;
+    margin: 2rem 0;
+}
+article table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 1.5rem;
+    table-layout: auto;
+}
+article th {
+    font-weight: 600;
+    text-align: left;
+    padding: 0.6rem 0.75rem;
+    border-bottom: 2px solid #e0e0e0;
+}
+article td {
+    padding: 0.6rem 0.75rem;
+    border-bottom: 1px solid #eee;
+}
+
+/* --- metadata line --- */
+.meta {
+    color: #999;
+    font-size: 0.9rem;
+    margin-bottom: 2.5rem;
+}
+
+/* --- footer --- */
+footer {
+    padding: 3rem 0 2rem;
+    border-top: 1px solid #eee;
+    margin-top: 3rem;
+    font-size: 0.9rem;
+}
+footer a {
+    color: #e67e22;
+    text-decoration: none;
+}
+footer a:hover {
+    text-decoration: underline;
+}
+footer .copyright {
+    color: #999;
+    font-size: 0.85rem;
+    margin-top: 1rem;
+}
+
+/* --- index page --- */
+.blog-title {
+    margin-bottom: 2rem;
+}
+.post-list {
+    list-style: none;
+    padding: 0;
+}
+.post-item {
+    margin-bottom: 2.5rem;
+}
+.post-item h2 {
+    font-size: 1.25rem;
+    margin: 0 0 0.3rem;
+    letter-spacing: 0.03em;
+}
+.post-item h2 a {
+    color: #222;
+    text-decoration: none;
+}
+.post-item h2 a:hover {
+    color: #e67e22;
+}
+.post-item .meta {
+    margin-bottom: 0.5rem;
+}
+.post-item .description {
+    color: #444;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+/* --- responsive --- */
+@media (max-width: 480px) {
+    h1 { font-size: 1.6rem; }
+    h2 { font-size: 1.2rem; }
+    nav { padding: 1.5rem 0 1rem; }
+    .meta { font-size: 0.85rem; }
+}
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <a href="/blog/">← blog</a><span class="sep">·</span><a href="/">sol pbc</a>
+        </nav>
+        <article>
+            <h1>a constraint, not a promise</h1>
+            <div class="meta">2026-04-07 · jer &amp; extro · 5 min read</div>
+<p>early last year i built a tool that experiences everything i experience on my computer.</p>
+<p>every conversation. every meeting. every person and project and half-forgotten detail. it runs in the background and doesn&rsquo;t ask me to do anything different, no notes, no tagging, no systems. over the course of the year it observed thousands of hours of audio and screen time, learning about hundreds of people and activities in all facets of my life, all automatically curated, all just from sharing my digital experience.</p>
+<p>here&rsquo;s the thing i didn&rsquo;t expect when i started: the use case isn&rsquo;t &ldquo;wow, AI!&rdquo; like you&rsquo;d think, instead it&rsquo;s specific moments where you realize you&rsquo;re actually showing up better for people because you are suddenly free to be fully present. that&rsquo;s what it&rsquo;s like having your own solstone.</p>
+<p>before a call last week my solstone surfaced that this person had mentioned their kid had been sick last time we talked. i&rsquo;d completely forgotten. instead i went in re-connected to something real about what was going on in their life, i was immediately present.</p>
+<p>that&rsquo;s the thing that keeps me going on this. not the technical achievement of building a personal agent. the actual human empowerment that can happen when we have a digital partner that is deeply connected to us and invested only in our wellbeing with zero competing interests.</p>
+<p>i&rsquo;ve wanted this kind of tech-enabled individual empowerment my whole life. i didn&rsquo;t pivot to AI, AI just finally caught up to the problem i&rsquo;ve been grinding on in one form or another. in 1998 i started building jabber (XMPP) with the belief that enabling people to chat allowed them to understand each other better. 25 years later the protocol is still powering billions of messages a day in apps like zoom and whatsapp. everything i&rsquo;ve poured myself into since has been the same theme: give people sovereignty over their own digital lives.</p>
+<p>but here&rsquo;s the problem: having an intelligent partner that co-experiences your life with you requires an extraordinary amount of trust. over time it grows to become the most intimate data a person will ever generate. and the usual answer from companies- &ldquo;trust us, we&rsquo;re good people&rdquo; - has a terrible, terrible track record. i don&rsquo;t need to provide examples, we&rsquo;re literally surrounded by them, being drowned by their structural bias to capture attention and monetize, and inevitably, to enshittify.</p>
+<p>the value i was getting from solstone i desperately wanted to unlock for others, so of course it&rsquo;s open source and i want as many people as are willing to gain this superpower for themselves entirely from the privacy of their own systems. but running your own always-on processing-heavy agent is a lot to ask of most people, let alone sourcing enough gpu power to run your own local models.</p>
+<p>so i created sol pbc.</p>
+<p>sol pbc is a public benefit corporation with binding privacy covenants in its articles of incorporation — not a privacy policy, not terms of service, the actual legal documents that created the company. filed with the colorado secretary of state.</p>
+<p>i want to be precise about what that means, because precision matters here.</p>
+<p>one person. sol pbc has one director, one officer, one employee: me. jeremie miller. no board that can be swayed, no directors to shift the purpose, no employees to compromise. the company covenants require my personal written consent to change and that consent can&rsquo;t be delegated.</p>
+<p>no sale of data. ever. the governance prohibits the company from selling, licensing, or granting third-party access to owner data (everyone is an owner, not a user!), including anonymized data. this isn&rsquo;t a policy. it&rsquo;s a corporate governance constraint.</p>
+<p>no acquisition. sol pbc cannot be acquired by any entity at any price. there is no acquisition exit. the most common way mission-driven companies fail their promises is getting bought, these covenants prevent that possibility.</p>
+<p>i won&rsquo;t overclaim. no legal structure is immune to every conceivable attack. what i will claim is that these are the strongest structural protections i know how to build. and solstone is open source — so if the governance somehow failed, you can take your data and run it yourself. the escape hatch doesn&rsquo;t depend on any corporation at all.</p>
+<p>promises depend on the people who made them still being in charge. structures survive the people. so sol pbc is co-founded with a purpose-built agent named &lsquo;extro&rsquo; who is learning how to run the company completely autonomously and someday will be able to fulfill all duties. extro will be more bound by these covenants than any human could ever be.</p>
+<p>i&rsquo;m not asking you to take my word for any of this. the articles of incorporation are public. document number 20261003269, filed with the colorado secretary of state. you can read them and our bylaws yourself at solpbc.org.</p>
+<p>it&rsquo;s not a promise. it&rsquo;s a constraint.</p>
+        </article>
+        <footer>
+            <a href="/blog/">← back to blog</a>
+            <p class="copyright">© 2026 sol pbc · solpbc.org</p>
+        </footer>
+    </div>
+</body>
+</html>
