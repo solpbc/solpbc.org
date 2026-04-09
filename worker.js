@@ -80,25 +80,6 @@ async function validateTurnstile(env, token, remoteIp) {
 
 // --- contact form handler ---
 
-function fireWebhook(env, ctx, eventType, data) {
-  if (!env.HUB_WEBHOOK_URL) return;
-  const body = JSON.stringify({
-    event: eventType,
-    data,
-    timestamp: new Date().toISOString(),
-  });
-  ctx.waitUntil(
-    fetch(env.HUB_WEBHOOK_URL, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        'X-Hub-Secret': env.HUB_WEBHOOK_SECRET || '',
-      },
-      body,
-    }).catch((err) => console.error('webhook failed:', err))
-  );
-}
-
 async function handleContact(request, env, ctx) {
   const contentType = request.headers.get('Content-Type') || '';
   const isJson = contentType.includes('application/json');
@@ -156,20 +137,95 @@ async function handleContact(request, env, ctx) {
       return respond({ ok: false, error: 'message is required' }, 400);
     }
 
-    // Fire webhook
-    fireWebhook(env, ctx, 'contact.submitted', {
+    // Build flat payload matching hub webhook contract
+    const submissionId = crypto.randomUUID();
+    const submission = {
+      type: 'contact.submitted',
+      submission_id: submissionId,
       name,
       email,
       message,
       ip: request.headers.get('CF-Connecting-IP') || '',
       timestamp: new Date().toISOString(),
-    });
+    };
+
+    // Cache in KV before firing webhook — survives hub downtime
+    if (env.CONTACT_SUBMISSIONS) {
+      await env.CONTACT_SUBMISSIONS.put(submissionId, JSON.stringify(submission), {
+        expirationTtl: 86400, // 24 hours
+      });
+    }
+
+    // Fire webhook, delete from KV on success
+    if (env.HUB_WEBHOOK_URL) {
+      ctx.waitUntil(
+        fetch(env.HUB_WEBHOOK_URL, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'X-Hub-Secret': env.HUB_WEBHOOK_SECRET || '',
+          },
+          body: JSON.stringify(submission),
+        })
+          .then((res) => {
+            if (res.ok && env.CONTACT_SUBMISSIONS) {
+              return env.CONTACT_SUBMISSIONS.delete(submissionId);
+            }
+          })
+          .catch((err) => console.error('webhook failed:', err))
+      );
+    }
 
     return respond({ ok: true }, 200);
   } catch (err) {
     console.error('contact submission error:', err);
     return respond({ ok: false, error: 'internal error' }, 500);
   }
+}
+
+// --- sweep endpoints for hub recovery ---
+
+function verifyHubSecret(request, env) {
+  const secret = env.HUB_WEBHOOK_SECRET;
+  if (!secret) return false;
+  return request.headers.get('X-Hub-Secret') === secret;
+}
+
+async function handleSweepList(request, env) {
+  if (!verifyHubSecret(request, env)) {
+    return jsonResponse({ error: 'unauthorized' }, 401);
+  }
+  if (!env.CONTACT_SUBMISSIONS) {
+    return jsonResponse({ submissions: [] });
+  }
+  const list = await env.CONTACT_SUBMISSIONS.list();
+  const submissions = [];
+  for (const key of list.keys) {
+    const value = await env.CONTACT_SUBMISSIONS.get(key.name);
+    if (value) {
+      try {
+        submissions.push(JSON.parse(value));
+      } catch {
+        // Skip malformed entries
+      }
+    }
+  }
+  return jsonResponse({ submissions });
+}
+
+async function handleSweepAck(request, env, submissionId) {
+  if (!verifyHubSecret(request, env)) {
+    return jsonResponse({ error: 'unauthorized' }, 401);
+  }
+  if (!env.CONTACT_SUBMISSIONS) {
+    return jsonResponse({ error: 'not found' }, 404);
+  }
+  const existing = await env.CONTACT_SUBMISSIONS.get(submissionId);
+  if (!existing) {
+    return jsonResponse({ error: 'not found' }, 404);
+  }
+  await env.CONTACT_SUBMISSIONS.delete(submissionId);
+  return jsonResponse({ ok: true });
 }
 
 // --- main ---
@@ -188,6 +244,17 @@ export default {
     if (url.pathname === '/api/contact' && request.method === 'POST') {
       const response = await handleContact(request, env, ctx);
       return applySecurityHeaders(response, url.pathname);
+    }
+
+    // GET /api/contact/pending → list cached submissions for hub sweep
+    if (url.pathname === '/api/contact/pending' && request.method === 'GET') {
+      return handleSweepList(request, env);
+    }
+
+    // DELETE /api/contact/pending/:id → acknowledge a submission
+    if (url.pathname.startsWith('/api/contact/pending/') && request.method === 'DELETE') {
+      const id = url.pathname.slice('/api/contact/pending/'.length);
+      return handleSweepAck(request, env, id);
     }
 
     // Serve static assets

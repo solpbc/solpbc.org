@@ -16,6 +16,10 @@ type = "ratelimit"
 namespace_id = "0"
 simple = { limit = 5, period = 60 }
 
+[[kv_namespaces]]
+binding = "CONTACT_SUBMISSIONS"
+id = "f1a2b62b145346179858ef66612b58cb"
+
 # Secrets (set with: wrangler secret put <NAME> --name solpbc-org)
 # TURNSTILE_SECRET — Turnstile secret key from Cloudflare dashboard
 # HUB_WEBHOOK_URL — outbound hub webhook endpoint
