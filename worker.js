@@ -184,8 +184,8 @@ export default {
       return redirect(url.toString(), 301);
     }
 
-    // POST /contact → form handler
-    if (url.pathname === '/contact' && request.method === 'POST') {
+    // POST /api/contact → form handler
+    if (url.pathname === '/api/contact' && request.method === 'POST') {
       const response = await handleContact(request, env, ctx);
       return applySecurityHeaders(response, url.pathname);
     }
