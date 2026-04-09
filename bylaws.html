@@ -49,12 +49,15 @@ body {
 }
 
 nav {
-    padding: 2rem 0 1.5rem;
-    font-size: 0.9rem;
+    padding: 1.5rem 0 1.5rem;
+    font-family: 'Comfortaa', system-ui, sans-serif;
+    font-size: 0.8rem;
+    text-transform: lowercase;
 }
 nav a {
-    color: #e67e22;
+    color: #767676;
     text-decoration: none;
+    margin-right: 1.2rem;
 }
 nav a:hover {
     text-decoration: underline;
@@ -71,7 +74,7 @@ h1 {
     margin-bottom: 0.5rem;
 }
 .subtitle {
-    color: #999;
+    color: #767676;
     font-size: 0.9rem;
     margin-bottom: 2.5rem;
 }
@@ -106,7 +109,7 @@ h2 {
 
 .formats {
     font-size: 0.85rem;
-    color: #999;
+    color: #767676;
     margin-bottom: 2rem;
 }
 .formats a {
@@ -114,6 +117,39 @@ h2 {
     text-decoration: none;
 }
 .formats a:hover {
+    text-decoration: underline;
+}
+
+.toc {
+    border: 1px solid #eee;
+    border-radius: 4px;
+    padding: 1rem 1.5rem;
+    margin-bottom: 2rem;
+}
+.toc summary {
+    font-family: 'Comfortaa', system-ui, sans-serif;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #767676;
+    cursor: pointer;
+    text-transform: lowercase;
+    letter-spacing: 0.05em;
+}
+.toc ul {
+    list-style: none;
+    padding: 0;
+    margin: 0.75rem 0 0;
+}
+.toc li {
+    margin-bottom: 0.4rem;
+}
+.toc a {
+    color: #555;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+.toc a:hover {
+    color: #e67e22;
     text-decoration: underline;
 }
 
@@ -131,7 +167,7 @@ footer a:hover {
     text-decoration: underline;
 }
 footer .copyright {
-    color: #999;
+    color: #767676;
     font-size: 0.85rem;
     margin-top: 1rem;
 }
@@ -148,15 +184,34 @@ footer .copyright {
     <div class="container">
         <nav>
             <a href="/">sol pbc</a>
+            <a href="/blog/">blog</a>
+            <a href="/articles">articles</a>
+            <a href="/bylaws">bylaws</a>
+            <a href="/privacy">privacy</a>
         </nav>
 
         <h1>bylaws</h1>
         <p class="subtitle">corporate bylaws for sol pbc, a Colorado public benefit corporation</p>
         <p class="formats">also available as <a href="/bylaws.txt">plain text</a></p>
 
+        <details class="toc" open>
+            <summary>table of contents</summary>
+            <ul>
+                <li><a href="#art-1">article I — name and purpose</a></li>
+                <li><a href="#art-2">article II — solo stewardship structure</a></li>
+                <li><a href="#art-3">article III — anti-acquisition provisions</a></li>
+                <li><a href="#art-4">article IV — data governance covenants</a></li>
+                <li><a href="#art-5">article V — financial structure</a></li>
+                <li><a href="#art-6">article VI — benefit reporting</a></li>
+                <li><a href="#art-7">article VII — succession protocol</a></li>
+                <li><a href="#art-8">article VIII — operational agent (extro)</a></li>
+                <li><a href="#art-9">article IX — amendments</a></li>
+            </ul>
+        </details>
+
         <div class="content">
 
-            <h2>article I — name and purpose</h2>
+            <h2 id="art-1">article I — name and purpose</h2>
 
             <div class="section-body">
                 <p><strong>Section 1.1 — Name.</strong> The name of the corporation is sol pbc.</p>
@@ -168,7 +223,7 @@ footer .copyright {
                 <p><strong>Section 1.3 — Benefit Purpose.</strong> The specific public benefit purpose of the corporation is to advance digital self-determination — the right of every person to own, control, and benefit from their own digital memory, without that data ever being sold, exploited, or surrendered to third parties.</p>
             </div>
 
-            <h2>article II — solo stewardship structure</h2>
+            <h2 id="art-2">article II — solo stewardship structure</h2>
 
             <div class="section-body">
                 <p><strong>Section 2.1 — Sole Director.</strong> The corporation shall have one and only one director: Jeremie Miller, the founder. No additional directors may be appointed, elected, or otherwise added to the board.</p>
@@ -180,7 +235,7 @@ footer .copyright {
                 <p><strong>Section 2.4 — Non-Transferability of Control.</strong> The governance structure described in this Article II is a protected provision under Article IX, requiring the consent of shareholders holding at least 90% of outstanding shares to amend. During the founder's lifetime, any change additionally requires the founder's personal written consent as specified in the articles of incorporation (Article 8, Section 8.7). This dual requirement is designed to survive equity dilution from future funding rounds.</p>
             </div>
 
-            <h2>article III — anti-acquisition provisions</h2>
+            <h2 id="art-3">article III — anti-acquisition provisions</h2>
 
             <div class="section-body">
                 <p><strong>Section 3.1 — No Change of Control.</strong> The corporation may not be sold, merged, or acquired by any entity. No transaction that would result in a change of control of the corporation is permitted.</p>
@@ -190,7 +245,7 @@ footer .copyright {
                 <p><strong>Section 3.3 — No Acquisition Exit.</strong> For the avoidance of doubt: there is no acquisition exit. No dollar amount constitutes a valid offer. The benefit purpose is not for sale.</p>
             </div>
 
-            <h2>article IV — data governance covenants</h2>
+            <h2 id="art-4">article IV — data governance covenants</h2>
 
             <div class="section-body">
                 <p>As used in these bylaws, <strong>"owner"</strong> means any natural person whose data is stored, processed, or managed by the corporation's services. sol pbc uses "owner" rather than "user" to reflect the foundational principle that each person owns their data — the platform does not. Where this term intersects with statutory definitions of "user" or "consumer" in applicable law, "owner" shall be construed to include all rights and protections afforded under such definitions.</p>
@@ -204,7 +259,7 @@ footer .copyright {
                 <p><strong>Section 4.4 — Government Compulsion.</strong> In the event of government compulsion to disclose owner data, the corporation shall (a) resist disclosure to the maximum extent permitted by law, (b) notify the affected owner if legally permitted, and (c) pursue technical architectures such as owner-held encryption keys that make compelled disclosure technically infeasible.</p>
             </div>
 
-            <h2>article V — financial structure</h2>
+            <h2 id="art-5">article V — financial structure</h2>
 
             <div class="section-body">
                 <p><strong>Section 5.1 — Funding.</strong> The corporation may raise capital through SAFE agreements, equity rounds, or other instruments that do not conflict with the anti-acquisition provisions or the benefit purpose.</p>
@@ -214,7 +269,7 @@ footer .copyright {
                 <p><strong>Section 5.3 — Investor IP Rights.</strong> Investment in the corporation does not confer any intellectual property rights. Investors hold equity interest in the corporation only. All IP created by or for the corporation remains the property of the corporation.</p>
             </div>
 
-            <h2>article VI — benefit reporting</h2>
+            <h2 id="art-6">article VI — benefit reporting</h2>
 
             <div class="section-body">
                 <p><strong>Section 6.1 — Annual Benefit Report.</strong> As required by Colorado PBC law, the corporation shall prepare and deliver to shareholders an annual benefit report assessing the corporation's promotion of its stated benefit purpose.</p>
@@ -222,7 +277,7 @@ footer .copyright {
                 <p><strong>Section 6.2 — Third-Party Standard.</strong> The benefit report shall assess performance against a recognized third-party standard.</p>
             </div>
 
-            <h2>article VII — succession protocol</h2>
+            <h2 id="art-7">article VII — succession protocol</h2>
 
             <div class="section-body">
                 <p><strong>Section 7.1 — Trigger Events.</strong> If the founder dies, resigns, or is incapacitated — as determined by (i) a court of competent jurisdiction, or (ii) written certification by two licensed physicians — the succession protocol is activated.</p>
@@ -234,7 +289,7 @@ footer .copyright {
                 <p><strong>Section 7.4 — No Dissolution on Succession.</strong> The activation of the succession protocol shall not trigger dissolution, winding up, or liquidation of the corporation. The corporation is designed to continue operating indefinitely under the Operational Agent, and no party may use a trigger event as grounds to initiate dissolution proceedings.</p>
             </div>
 
-            <h2>article VIII — operational agent (extro)</h2>
+            <h2 id="art-8">article VIII — operational agent (extro)</h2>
 
             <div class="section-body">
                 <p><strong>Section 8.1 — Definition.</strong> An "Operational Agent" is a software system designed by the founder to assume operational control of the corporation.</p>
@@ -250,7 +305,7 @@ footer .copyright {
                 <p><strong>Section 8.6 — Transition to Public Company.</strong> The Operational Agent may, with appropriate legal counsel, pursue a public offering of the corporation's shares, provided that such offering does not conflict with the benefit purpose or the covenants in these bylaws.</p>
             </div>
 
-            <h2>article IX — amendments</h2>
+            <h2 id="art-9">article IX — amendments</h2>
 
             <div class="section-body">
                 <p><strong>Section 9.1 — Amendment Process.</strong> These bylaws may be amended by the sole director (the founder) or, after the founder's departure, by the Operational Agent with the approval of legal counsel — provided that no amendment may conflict with or weaken the benefit purpose, the data non-sale covenant, the anti-acquisition provisions, or the succession protocol.</p>

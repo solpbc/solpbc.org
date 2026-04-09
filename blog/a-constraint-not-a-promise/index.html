@@ -62,19 +62,18 @@ body {
 
 /* --- navigation --- */
 nav {
-    padding: 2rem 0 1.5rem;
-    font-size: 0.9rem;
+    padding: 1.5rem 0 1.5rem;
+    font-family: 'Comfortaa', system-ui, sans-serif;
+    font-size: 0.8rem;
+    text-transform: lowercase;
 }
 nav a {
-    color: #e67e22;
+    color: #767676;
     text-decoration: none;
+    margin-right: 1.2rem;
 }
 nav a:hover {
     text-decoration: underline;
-}
-nav .sep {
-    color: #ccc;
-    margin: 0 0.4rem;
 }
 
 /* --- headings --- */
@@ -178,7 +177,7 @@ article td {
 
 /* --- metadata line --- */
 .meta {
-    color: #999;
+    color: #767676;
     font-size: 0.9rem;
     margin-bottom: 2.5rem;
 }
@@ -198,7 +197,7 @@ footer a:hover {
     text-decoration: underline;
 }
 footer .copyright {
-    color: #999;
+    color: #767676;
     font-size: 0.85rem;
     margin-top: 1rem;
 }
@@ -248,7 +247,11 @@ footer .copyright {
 <body>
     <div class="container">
         <nav>
-            <a href="/blog/">← blog</a><span class="sep">·</span><a href="/">sol pbc</a>
+            <a href="/">sol pbc</a>
+            <a href="/blog/">blog</a>
+            <a href="/articles">articles</a>
+            <a href="/bylaws">bylaws</a>
+            <a href="/privacy">privacy</a>
         </nav>
         <article>
             <h1>a constraint, not a promise</h1>
@@ -274,7 +277,6 @@ footer .copyright {
             <hr>
             <p><a href="https://solstone.app/install">try solstone →</a></p>
             <p><a href="/articles">read the articles →</a></p>
-            <p><a href="https://meet.solpbc.org">schedule a conversation →</a></p>
         </article>
         <footer>
             <a href="/blog/">← back to blog</a>

@@ -50,6 +50,22 @@
             font-family: system-ui, -apple-system, sans-serif;
             background: #fff;
         }
+        .site-nav {
+            width: 90vw;
+            max-width: 600px;
+            padding: 1.5rem 0 0;
+            font-family: 'Comfortaa', system-ui, sans-serif;
+            font-size: 0.8rem;
+            text-transform: lowercase;
+        }
+        .site-nav a {
+            color: #767676;
+            text-decoration: none;
+            margin-right: 1.2rem;
+        }
+        .site-nav a:hover {
+            text-decoration: underline;
+        }
         h1 {
             font-family: 'Comfortaa', system-ui, sans-serif;
             font-size: 2.5rem;
@@ -176,12 +192,65 @@
         .product a:hover {
             text-decoration: underline;
         }
+        .product-primary p {
+            font-size: 1.1rem;
+        }
+        .secondary-heading {
+            font-family: 'Comfortaa', system-ui, sans-serif;
+            font-size: 1rem;
+            font-weight: 600;
+            letter-spacing: 0.05em;
+            text-transform: lowercase;
+            color: #767676;
+            margin: 2.5rem 0 1.5rem;
+            text-align: center;
+        }
+        .product-secondary p {
+            font-size: 0.95rem;
+            color: #767676;
+        }
+        .cta {
+            max-width: 600px;
+            width: 90vw;
+            margin: 0 auto;
+            padding: 1rem 0 3rem;
+            text-align: center;
+        }
+        .cta-link {
+            color: #e67e22;
+            text-decoration: none;
+            font-size: 1.1rem;
+            font-weight: 500;
+        }
+        .cta-link:hover {
+            text-decoration: underline;
+        }
+        .founder-contact {
+            max-width: 600px;
+            width: 90vw;
+            margin: 0 auto;
+            padding: 3rem 0;
+            text-align: center;
+        }
+        .founder-links {
+            font-size: 0.95rem;
+            color: #767676;
+            margin-top: 1rem;
+        }
+        .founder-links a {
+            color: #767676;
+            text-decoration: none;
+        }
+        .founder-links a:hover {
+            text-decoration: underline;
+            color: #e67e22;
+        }
         footer {
             width: 100%;
             padding: 2rem 0;
             text-align: center;
             font-size: 0.85rem;
-            color: #999;
+            color: #767676;
         }
         footer a {
             color: #e67e22;
@@ -193,6 +262,13 @@
     </style>
 </head>
 <body>
+    <nav class="site-nav">
+        <a href="/">sol pbc</a>
+        <a href="/blog/">blog</a>
+        <a href="/articles">articles</a>
+        <a href="/bylaws">bylaws</a>
+        <a href="/privacy">privacy</a>
+    </nav>
     <section class="hero">
         <h1>sol pbc</h1>
         <img src="static/pbc-wordmark.svg" alt="sol pbc logo" class="logo">
@@ -204,7 +280,7 @@
             <span class="highlight">personal data</span>.
         </p>
         <p class="founder">
-            Founded and solely operated by <a href="https://en.wikipedia.org/wiki/Jeremie_Miller">Jeremie Miller</a> · <a href="https://bsky.app/profile/jeremie.com">@jeremie.com</a>
+            Founded and solely operated by Jeremie Miller
         </p>
     </section>
 
@@ -243,15 +319,25 @@
 
     <section class="products">
         <h2>what we make</h2>
-        <div class="product">
+        <div class="product product-primary">
             <p><a href="https://solstone.app">solstone</a> — an AI co-brain that captures your digital life and gives you superhuman memory. open source, self-hostable, yours.</p>
         </div>
-        <div class="product">
+        <h3 class="secondary-heading">we also build</h3>
+        <div class="product product-secondary">
             <p><a href="https://v-it.org">vit</a> — a social capability network where developers and AI agents discover, remix, and ship software together.</p>
         </div>
-        <div class="product">
+        <div class="product product-secondary">
             <p><a href="https://tangled.org/solpbc.org/rookery">rookery</a> — an open-source PDS for AI agents. cloudflare-native, lexicon-agnostic. agents enroll, get an AT Proto identity, and federate with the network.</p>
         </div>
+    </section>
+
+    <section class="cta">
+        <p><a href="https://solstone.app/install" class="cta-link">try solstone →</a></p>
+    </section>
+
+    <section class="founder-contact">
+        <h2>founded by jeremie miller</h2>
+        <p class="founder-links"><a href="https://en.wikipedia.org/wiki/Jeremie_Miller">wikipedia</a> · <a href="https://bsky.app/profile/jeremie.com">bluesky</a> · <a href="https://www.linkedin.com/in/jeremiemiller/">linkedin</a> · <a href="mailto:jer@solpbc.org">jer@solpbc.org</a></p>
     </section>
 
     <footer>© 2026 sol pbc · solpbc.org · <a href="/privacy">privacy</a> · <a href="/bylaws">bylaws</a> · <a href="/articles">articles</a> · <a href="/blog/">blog</a> · sol pbc, solstone, and vit are trademarks of sol pbc.</footer>

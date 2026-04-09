@@ -49,12 +49,15 @@ body {
 }
 
 nav {
-    padding: 2rem 0 1.5rem;
-    font-size: 0.9rem;
+    padding: 1.5rem 0 1.5rem;
+    font-family: 'Comfortaa', system-ui, sans-serif;
+    font-size: 0.8rem;
+    text-transform: lowercase;
 }
 nav a {
-    color: #e67e22;
+    color: #767676;
     text-decoration: none;
+    margin-right: 1.2rem;
 }
 nav a:hover {
     text-decoration: underline;
@@ -71,7 +74,7 @@ h1 {
     margin-bottom: 0.5rem;
 }
 .subtitle {
-    color: #999;
+    color: #767676;
     font-size: 0.9rem;
     margin-bottom: 2.5rem;
 }
@@ -106,7 +109,7 @@ h2 {
 
 .formats {
     font-size: 0.85rem;
-    color: #999;
+    color: #767676;
     margin-bottom: 2rem;
 }
 .formats a {
@@ -114,6 +117,39 @@ h2 {
     text-decoration: none;
 }
 .formats a:hover {
+    text-decoration: underline;
+}
+
+.toc {
+    border: 1px solid #eee;
+    border-radius: 4px;
+    padding: 1rem 1.5rem;
+    margin-bottom: 2rem;
+}
+.toc summary {
+    font-family: 'Comfortaa', system-ui, sans-serif;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #767676;
+    cursor: pointer;
+    text-transform: lowercase;
+    letter-spacing: 0.05em;
+}
+.toc ul {
+    list-style: none;
+    padding: 0;
+    margin: 0.75rem 0 0;
+}
+.toc li {
+    margin-bottom: 0.4rem;
+}
+.toc a {
+    color: #555;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+.toc a:hover {
+    color: #e67e22;
     text-decoration: underline;
 }
 
@@ -131,7 +167,7 @@ footer a:hover {
     text-decoration: underline;
 }
 footer .copyright {
-    color: #999;
+    color: #767676;
     font-size: 0.85rem;
     margin-top: 1rem;
 }
@@ -148,15 +184,33 @@ footer .copyright {
     <div class="container">
         <nav>
             <a href="/">sol pbc</a>
+            <a href="/blog/">blog</a>
+            <a href="/articles">articles</a>
+            <a href="/bylaws">bylaws</a>
+            <a href="/privacy">privacy</a>
         </nav>
 
         <h1>articles of incorporation</h1>
         <p class="subtitle">article 8: governance restrictions and covenants</p>
         <p class="formats">also available as <a href="/ARTICLES.txt">plain text</a> · <a href="/20261003269.pdf">official filing (PDF)</a></p>
 
+        <details class="toc" open>
+            <summary>table of contents</summary>
+            <ul>
+                <li><a href="#s8-1">section 8.1 — definitions</a></li>
+                <li><a href="#s8-2">section 8.2 — solo stewardship</a></li>
+                <li><a href="#s8-3">section 8.3 — mandatory winding up and dissolution</a></li>
+                <li><a href="#s8-4">section 8.4 — no change of control</a></li>
+                <li><a href="#s8-5">section 8.5 — data non-sale covenant</a></li>
+                <li><a href="#s8-6">section 8.6 — exclusive forum</a></li>
+                <li><a href="#s8-7">section 8.7 — founder consent required for changes</a></li>
+                <li><a href="#s8-8">section 8.8 — severability</a></li>
+            </ul>
+        </details>
+
         <div class="content">
 
-            <h2>section 8.1 — definitions</h2>
+            <h2 id="s8-1">section 8.1 — definitions</h2>
 
             <div class="section-body">
                 <p>(a) <strong>"Founder"</strong> means Jeremie Miller.</p>
@@ -172,7 +226,7 @@ footer .copyright {
                 <p>(f) Capitalized terms used in this Article 8 but not otherwise defined herein shall have the meanings set forth in the CPA (including, without limitation, "Personal Data," "De-identified Data," "Publicly Available Information," "Processor," "Sale," and any successor defined terms), as in effect on the date the relevant interpretation is made.</p>
             </div>
 
-            <h2>section 8.2 — solo stewardship</h2>
+            <h2 id="s8-2">section 8.2 — solo stewardship</h2>
 
             <div class="section-body">
                 <p>(a) <strong>Single Director; Founder-Only Service During Lifetime.</strong> The Corporation shall at all times have exactly one (1) director. During the Founder's lifetime, only the Founder may serve as director.</p>
@@ -182,7 +236,7 @@ footer .copyright {
                 <p>(c) <strong>No Employees Other Than Founder.</strong> The Corporation shall have no employees other than the Founder. Operations requiring additional labor shall be conducted via independent contractors or service providers, subject to the Data Non-Sale Covenant in Section 8.5.</p>
             </div>
 
-            <h2>section 8.3 — mandatory winding up and dissolution</h2>
+            <h2 id="s8-3">section 8.3 — mandatory winding up and dissolution</h2>
 
             <div class="section-body">
                 <p>(a) <strong>Dissolution Trigger.</strong> If the Founder ceases to serve as the sole director and sole officer for any reason, including death, Incapacity, or resignation, the Corporation shall promptly commence dissolution and winding up.</p>
@@ -196,7 +250,7 @@ footer .copyright {
                 <p>(e) <strong>Data Export and Service Termination.</strong> In carrying out the winding up, the Corporation shall, as reasonably practicable and consistent with law and security obligations, provide users a reasonable opportunity to export their stored Personal Data (excluding De-identified Data) that is maintained by the Corporation for the user's use, after which the Corporation shall terminate services and complete dissolution.</p>
             </div>
 
-            <h2>section 8.4 — no change of control</h2>
+            <h2 id="s8-4">section 8.4 — no change of control</h2>
 
             <div class="section-body">
                 <p>Except in connection with the mandatory dissolution and winding up described in Section 8.3, the Corporation shall not:</p>
@@ -208,7 +262,7 @@ footer .copyright {
                 <p>(c) Sell, lease, exchange, or otherwise dispose of all or substantially all of its property, whether in one transaction or a series of related transactions.</p>
             </div>
 
-            <h2>section 8.5 — data non-sale covenant</h2>
+            <h2 id="s8-5">section 8.5 — data non-sale covenant</h2>
 
             <div class="section-body">
                 <p>(a) <strong>Covenant.</strong> The Corporation shall not Sell, license, lease, transfer, or otherwise make available for monetary or other valuable consideration (as "Sale" is defined in the CPA) any User Personal Data or access to User Personal Data.</p>
@@ -218,13 +272,13 @@ footer .copyright {
                 <p>(c) <strong>CPA-Based Interpretation; Exclusions.</strong> This covenant shall be interpreted consistently with the CPA's definitions, exclusions, and permitted disclosures regarding "Sale," including, without limitation, disclosures to a Processor acting on the Corporation's behalf and disclosures necessary to provide a product or service requested by the user. Nothing herein prohibits disclosures required by law or made at the user's specific direction.</p>
             </div>
 
-            <h2>section 8.6 — exclusive forum</h2>
+            <h2 id="s8-6">section 8.6 — exclusive forum</h2>
 
             <div class="section-body">
                 <p>Unless the Corporation consents in writing to the selection of an alternative forum, the state courts of Colorado shall be the exclusive forum for any internal corporate claim, as defined in C.R.S. &sect; 7-102-108. If and only if the state courts of Colorado lack subject-matter jurisdiction over a claim, the U.S. District Court for the District of Colorado shall be the exclusive forum for such claim. If neither such court has subject-matter jurisdiction, the claim shall be brought in another court located in Colorado with subject-matter jurisdiction.</p>
             </div>
 
-            <h2>section 8.7 — founder consent required for changes</h2>
+            <h2 id="s8-7">section 8.7 — founder consent required for changes</h2>
 
             <div class="section-body">
                 <p>(a) <strong>Additional Required Approval.</strong> To the fullest extent permitted by the Colorado Business Corporation Act, any amendment, repeal, adoption of any inconsistent provision, or waiver (whether by the Corporation, the board, or the shareholders) of any provision of this Article 8 shall require, in addition to any approvals otherwise required by law, the Founder's prior Written Consent (as defined below).</p>
@@ -234,7 +288,7 @@ footer .copyright {
                 <p>(c) <strong>No Delegation.</strong> The Founder's Written Consent may not be granted by any agent, attorney-in-fact, Personal Representative, or other person, and shall be personal to the Founder. Upon the Founder's death or Incapacity, the Corporation's sole permitted course is winding up and dissolution pursuant to Section 8.3, and no amendment, repeal, or waiver of this Article 8 shall be permitted except as may be strictly necessary to effectuate dissolution in compliance with mandatory law.</p>
             </div>
 
-            <h2>section 8.8 — severability</h2>
+            <h2 id="s8-8">section 8.8 — severability</h2>
 
             <div class="section-body">
                 <p>If any provision of this Article 8, or the application thereof to any person or circumstance, is held invalid or unenforceable to any extent, the remainder of this Article 8 and the application of such provision to other persons or circumstances shall not be affected and shall be enforced to the fullest extent permitted by law.</p>
