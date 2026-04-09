@@ -287,10 +287,10 @@ footer .copyright {
 
             var turnstileInput = form.querySelector('[name="cf-turnstile-response"]');
             var data = {
-                name: form.name.value,
-                email: form.email.value,
-                message: form.message.value,
-                company: form.company.value,
+                name: document.getElementById('name').value,
+                email: document.getElementById('email').value,
+                message: document.getElementById('message').value,
+                company: document.getElementById('company').value,
                 'cf-turnstile-response': turnstileInput ? turnstileInput.value : ''
             };
 
