@@ -1,0 +1,25 @@
+name = "solpbc-org"
+account_id = "3f2c1528c7d4d9685819ea9e9e307c92"
+compatibility_date = "2025-04-01"
+main = "worker.js"
+
+routes = [
+  { pattern = "solpbc.org", custom_domain = true },
+  { pattern = "www.solpbc.org", custom_domain = true }
+]
+
+[assets]
+directory = "./public"
+binding = "ASSETS"
+serve_directly = false
+
+[[unsafe.bindings]]
+name = "CONTACT_LIMITER"
+type = "ratelimit"
+namespace_id = "0"
+simple = { limit = 5, period = 60 }
+
+# Secrets (set with: wrangler secret put <NAME> --name solpbc-org)
+# TURNSTILE_SECRET — Turnstile secret key from Cloudflare dashboard
+# HUB_WEBHOOK_URL — outbound hub webhook endpoint
+# HUB_WEBHOOK_SECRET — shared secret for outbound hub webhook delivery
