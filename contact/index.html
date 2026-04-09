@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>contact — sol pbc</title>
+    <meta name="description" content="get in touch with sol pbc. your message goes directly to jer.">
+    <link rel="canonical" href="https://solpbc.org/contact">
+    <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="/static/favicon-32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/static/favicon-16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/static/apple-touch-icon.png">
+    <style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+@font-face {
+    font-family: 'Comfortaa';
+    src: url('/blog/fonts/comfortaa-latin.woff2') format('woff2');
+    font-weight: 400 700;
+    font-display: swap;
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6,
+        U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC,
+        U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+    font-family: 'Comfortaa';
+    src: url('/blog/fonts/comfortaa-latin-ext.woff2') format('woff2');
+    font-weight: 400 700;
+    font-display: swap;
+    unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7,
+        U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F,
+        U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113,
+        U+2C60-2C7F, U+A720-A7FF;
+}
+
+body {
+    font-family: system-ui, -apple-system, sans-serif;
+    background: #fff;
+    color: #555;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+.container {
+    max-width: 600px;
+    width: 90vw;
+    margin: 0 auto;
+    padding: 0 0 2rem;
+}
+
+nav {
+    padding: 1.5rem 0 1.5rem;
+    font-family: 'Comfortaa', system-ui, sans-serif;
+    font-size: 0.8rem;
+    text-transform: lowercase;
+}
+nav a {
+    color: #767676;
+    text-decoration: none;
+    margin-right: 1.2rem;
+}
+nav a:hover {
+    text-decoration: underline;
+}
+
+h1 {
+    font-family: 'Comfortaa', system-ui, sans-serif;
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-transform: lowercase;
+    color: #222;
+    line-height: 1.3;
+    margin-bottom: 0.5rem;
+}
+
+.intro {
+    color: #555;
+    margin-bottom: 2rem;
+    line-height: 1.6;
+}
+
+.form-group {
+    margin-bottom: 16px;
+}
+.form-group label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 600;
+    color: #222;
+    font-size: 0.95rem;
+}
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 11px 12px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    font: inherit;
+    color: #333;
+    background: #fff;
+}
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #e67e22;
+    box-shadow: 0 0 0 3px rgba(230, 126, 34, 0.2);
+    outline: none;
+}
+.form-group textarea {
+    min-height: 130px;
+    resize: vertical;
+}
+
+.honeypot {
+    position: absolute;
+    left: -9999px;
+    opacity: 0;
+}
+
+.submit-btn {
+    background: #e67e22;
+    color: #fff;
+    border: 0;
+    border-radius: 999px;
+    padding: 12px 24px;
+    font-weight: 600;
+    font-size: 1rem;
+    min-height: 44px;
+    cursor: pointer;
+    font-family: inherit;
+}
+.submit-btn:hover {
+    background: #cf6d1a;
+}
+.submit-btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.trust-strip {
+    font-size: 0.8125rem;
+    color: #666;
+    text-align: center;
+    margin-top: 1rem;
+    line-height: 1.5;
+}
+.trust-strip a {
+    color: #e67e22;
+    text-decoration: none;
+}
+.trust-strip a:hover {
+    text-decoration: underline;
+}
+
+.error-message {
+    color: #c0392b;
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+}
+
+.success {
+    text-align: center;
+    padding: 2rem 0;
+}
+.success h2 {
+    font-family: 'Comfortaa', system-ui, sans-serif;
+    font-size: 1.4rem;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    text-transform: lowercase;
+    color: #222;
+    margin-bottom: 1rem;
+}
+.success p {
+    margin-bottom: 1.5rem;
+}
+.success a {
+    color: #e67e22;
+    text-decoration: none;
+}
+.success a:hover {
+    text-decoration: underline;
+}
+
+footer {
+    padding: 3rem 0 2rem;
+    border-top: 1px solid #eee;
+    margin-top: 3rem;
+    font-size: 0.9rem;
+}
+footer a {
+    color: #e67e22;
+    text-decoration: none;
+}
+footer a:hover {
+    text-decoration: underline;
+}
+footer .copyright {
+    color: #767676;
+    font-size: 0.85rem;
+    margin-top: 1rem;
+}
+
+@media (max-width: 480px) {
+    h1 { font-size: 1.6rem; }
+    nav { padding: 1.5rem 0 1rem; }
+    .submit-btn { width: 100%; }
+}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <a href="/">sol pbc</a>
+            <a href="/blog/">blog</a>
+            <a href="/articles">articles</a>
+            <a href="/bylaws">bylaws</a>
+            <a href="/privacy">privacy</a>
+            <a href="/contact">contact</a>
+        </nav>
+
+        <h1>get in touch</h1>
+        <p class="intro">your message goes directly to jer. no ticketing system, no auto-replies, no third parties.<br>we read everything.</p>
+
+        <form id="contact-form" action="https://contact.solpbc.org" method="POST">
+            <div class="form-group">
+                <label for="name">your name</label>
+                <input type="text" id="name" name="name" maxlength="200" autocomplete="name">
+            </div>
+            <div class="form-group">
+                <label for="email">your email <span style="color: #c0392b;">*</span></label>
+                <input type="email" id="email" name="email" required maxlength="200" autocomplete="email">
+            </div>
+            <div class="form-group">
+                <label for="message">what's on your mind? <span style="color: #c0392b;">*</span></label>
+                <textarea id="message" name="message" required maxlength="5000"></textarea>
+            </div>
+
+            <div class="honeypot">
+                <label for="company">company</label>
+                <input type="text" id="company" name="company" tabindex="-1" aria-hidden="true" autocomplete="off">
+            </div>
+
+            <div class="cf-turnstile" data-sitekey="0x4AAAAAAC2zlC_SPxsY7aVU"></div>
+
+            <div style="margin-top: 1rem;">
+                <button type="submit" class="submit-btn">send message</button>
+            </div>
+
+            <div class="error-message" id="error-message" role="alert" hidden></div>
+
+            <p class="trust-strip">sol pbc doesn't track you, doesn't use analytics, and files its privacy covenants with the state. your email is used only to reply to you — nothing else. <a href="/privacy">read our privacy policy</a>.</p>
+        </form>
+
+        <div id="success-state" class="success" hidden>
+            <h2>message sent</h2>
+            <p>thanks for reaching out. jer will get back to you personally.</p>
+            <a href="/">← back to solpbc.org</a>
+        </div>
+
+        <footer>
+            <a href="/">← solpbc.org</a>
+            <p class="copyright">© 2026 sol pbc · <a href="/">solpbc.org</a> · <a href="/privacy">privacy</a> · <a href="/bylaws">bylaws</a> · <a href="/articles">articles</a> · <a href="/blog/">blog</a> · <a href="/contact">contact</a></p>
+        </footer>
+    </div>
+
+    <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+    <script>
+    (function() {
+        var form = document.getElementById('contact-form');
+        var errorEl = document.getElementById('error-message');
+        var successEl = document.getElementById('success-state');
+
+        // Show error from URL param (non-JS fallback redirect)
+        if (window.location.search.indexOf('error=1') !== -1) {
+            errorEl.textContent = 'something went wrong — please try again, or email jer at solpbc dot org directly.';
+            errorEl.hidden = false;
+        }
+
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+            errorEl.hidden = true;
+
+            var btn = form.querySelector('.submit-btn');
+            btn.disabled = true;
+            btn.textContent = 'sending...';
+
+            var turnstileInput = form.querySelector('[name="cf-turnstile-response"]');
+            var data = {
+                name: form.name.value,
+                email: form.email.value,
+                message: form.message.value,
+                company: form.company.value,
+                'cf-turnstile-response': turnstileInput ? turnstileInput.value : ''
+            };
+
+            fetch('https://contact.solpbc.org', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(data)
+            })
+            .then(function(res) { return res.json(); })
+            .then(function(result) {
+                if (result.ok) {
+                    form.hidden = true;
+                    successEl.hidden = false;
+                } else {
+                    errorEl.textContent = result.error || 'something went wrong — please try again, or email jer at solpbc dot org directly.';
+                    errorEl.hidden = false;
+                    btn.disabled = false;
+                    btn.textContent = 'send message';
+                    if (window.turnstile) { turnstile.reset(); }
+                }
+            })
+            .catch(function() {
+                errorEl.textContent = 'something went wrong — please try again, or email jer at solpbc dot org directly.';
+                errorEl.hidden = false;
+                btn.disabled = false;
+                btn.textContent = 'send message';
+                if (window.turnstile) { turnstile.reset(); }
+            });
+        });
+    })();
+    </script>
+</body>
+</html>
