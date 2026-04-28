@@ -57,11 +57,12 @@
             font-family: 'Comfortaa', system-ui, sans-serif;
             font-size: 0.8rem;
             text-transform: lowercase;
+            text-align: center;
         }
         .site-nav a {
             color: #767676;
             text-decoration: none;
-            margin-right: 1.2rem;
+            margin: 0 0.6rem;
         }
         .site-nav a:hover {
             text-decoration: underline;
@@ -270,7 +271,7 @@
         <a href="/privacy">privacy</a>
         <a href="/contact">contact</a>
     </nav>
-    <section class="hero">
+    <section class="hero" id="top">
         <h1>sol pbc</h1>
         <img src="static/pbc-wordmark.svg" alt="sol pbc logo" class="logo">
         <p class="purpose">
@@ -281,11 +282,11 @@
             <span class="highlight">personal data</span>.
         </p>
         <p class="founder">
-            founded and solely operated by jeremie miller
+            founded and solely operated by <a href="#founder">jeremie miller</a>
         </p>
     </section>
 
-    <section class="commitments">
+    <section class="commitments" id="governance">
         <h2>governance commitments</h2>
         <div class="commitment">
             <h3>solo stewardship</h3>
@@ -309,7 +310,7 @@
         </div>
     </section>
 
-    <section class="filing">
+    <section class="filing" id="filing">
         <p>these commitments are legally binding, filed with the colorado secretary of state.<br>
         <a href="/articles">read the articles of incorporation</a> · <a href="/bylaws">read the bylaws</a> · <a href="20261003269.pdf">official filing (PDF)</a></p>
     </section>
@@ -318,7 +319,7 @@
         <p><a href="/blog/">read our blog →</a></p>
     </section>
 
-    <section class="products">
+    <section class="products" id="products">
         <h2>what we make</h2>
         <div class="product product-primary">
             <p><a href="https://solstone.app">solstone</a> — an AI co-brain you have. observers experience your day along with you, sol agent curates your memories, your journal holds everything. open source, self-hostable, yours.</p>
@@ -336,7 +337,7 @@
         <p><a href="https://solstone.app/install" class="cta-link">try solstone →</a></p>
     </section>
 
-    <section class="founder-contact">
+    <section class="founder-contact" id="founder">
         <h2>founded by jeremie miller</h2>
         <p class="founder-links"><a href="https://en.wikipedia.org/wiki/Jeremie_Miller">wikipedia</a> · <a href="https://bsky.app/profile/jeremie.com">bluesky</a> · <a href="https://www.linkedin.com/in/jeremie-miller-b4824a3b6/">linkedin</a> · <a href="/contact">contact</a></p>
     </section>
