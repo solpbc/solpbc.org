@@ -1,5 +1,5 @@
 (function() {
-  const TOTAL_SECONDS = 420; // 7:00
+  const TOTAL_SECONDS = 450; // 7:30
   let running = false;
   let lastFrame = null;
   let elapsed = 0;            // seconds of "talk time" consumed
