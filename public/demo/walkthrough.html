@@ -135,7 +135,7 @@
 <div id="progress"></div>
 
 <header class="title">
-  <h1>solstone — demo day · 6:40</h1>
+  <h1>solstone — demo day · v4 · 7:00</h1>
   <p><kbd>space</kbd> start / stop slow scroll &nbsp;·&nbsp; manual scroll continues from new position</p>
   <p class="legend">
     <span style="color:var(--m-peer)">peer</span> ·
@@ -148,199 +148,180 @@
 
 <section class="sec" data-mode="peer">
   <div class="num">§1 · 0:00 · premise</div>
-  <p>Look. Everyone in this room is here because we all believe the same thing: personal agents are inevitable.</p>
+  <p>We're here at an Agent Systems Camp demo day because we all already believe the same thing.</p>
+  <p>Personal agents are inevitable.</p>
   <p>Professional agents are inevitable.</p>
-  <p>An interface that knows you and operates on your behalf — that's coming.</p>
-  <p>We can stop pitching that.</p>
+  <p>Having agents that operate on your behalf — that's happening.</p>
+  <p>So I'm not here to pitch any of that.</p>
+  <p>This is a rough frontier, though. A challenging time to be in the agentic world.</p>
 </section>
 
 <section class="sec" data-mode="peer">
-  <div class="num">§1.5 · 0:25 · the disagreement</div>
-  <p>What we don't agree on yet — and what I want to spend the next six minutes on — is how to build it.</p>
-  <p>If you've spent any time with OpenClaw, with Hermes, with any of the harnesses out there, you already know the gaps.</p>
+  <div class="num">§1.5 · 0:30 · the disagreement</div>
+  <p>If you've spent any time with claude, or setting up Hermes, or building your own with claude code or codex — you know the gaps. You know the frustration.</p>
+  <p>The fast path is fifteen minutes.</p>
+  <p>The real path is a weekend.</p>
 </section>
 
 <section class="sec" data-mode="peer">
-  <div class="num">§2 · 0:45 · the five gaps</div>
-  <p>Five things, specifically.</p>
+  <div class="num">§2 · 1:00 · the five gaps</div>
+  <p>There are five gaps I'm specifically here to address.</p>
   <p class="beat">Safety.</p>
   <p class="beat">Trust.</p>
   <p class="beat">Ownership.</p>
   <p class="beat">Onboarding.</p>
-  <p class="beat">Context.</p>
+  <p class="beat">Personal context.</p>
 </section>
 
 <section class="sec" data-mode="peer">
-  <div class="num">§2.5 · 1:05 · trust dressed up as setup</div>
-  <p>Anyone here who's tried one knows: the fast path is fifteen minutes, the real path is a weekend.</p>
-  <p>And the default posture is allow-all — you hand over the keys on day one and harden later, if you remember.</p>
+  <div class="num">§2.5 · 1:25 · the trust we've all skipped</div>
+  <p>The default posture on every one of these is allow-all.</p>
+  <p>You hand over the keys on day one and harden later, if you remember.</p>
+  <p>Most of us have run with dangerously skipped permissions, and we're all a little nervous about it.</p>
   <p>That's a trust problem dressed up as a setup problem.</p>
-  <p>The deeper trust problem: you can't actually run any of these with full access to your life.</p>
-  <p>You'd never let claude touch everything on your machine — claude could fuck you and delete your stuff.</p>
-  <p>You wouldn't run them while you watch reruns of Magical Girl Anime.</p>
-  <p>So you turn them on, you turn them off, you guard them.</p>
-  <p>Ownership: your context lives somewhere else.</p>
-  <p>Context: it's laborious to even create.</p>
+  <p>And the deeper trust problem is this: you want the capabilities, but you're hesitant to give them access to your real life.</p>
 </section>
 
 <section class="sec" data-mode="theatrical">
-  <div class="num">§3 · 1:30 · what i built</div>
+  <div class="num">§3 · 1:55 · what i built</div>
   <p>So I built solstone.</p>
   <p>solstone is a personal agent that runs entirely on your device.</p>
   <p>No cloud.</p>
   <p>No accounts.</p>
   <p>No authentication.</p>
-  <p>You install it, and it starts.</p>
+  <p>No access to change anything in your world.</p>
+  <p>You just install it, and it starts experiencing your life with you.</p>
   <p>That's the whole onboarding.</p>
-  <p>It's open source.</p>
-  <p>Everything you do, everything you see, everything you say — stays on your machine.</p>
-  <p>Always.</p>
+  <p>It's fully open source. Everything you do, everything you see or say, stays on your machine. Always.</p>
 </section>
 
 <section class="sec" data-mode="theatrical">
-  <div class="num">§3.5 · 1:45 · scariest software</div>
-  <p>It's probably the scariest kind of software you can install.</p>
-  <p>An AI with access to literally everything.</p>
-  <p>And the only reason you'd ever trust it with that access is the architecture I'm about to walk you through.</p>
+  <div class="num">§3.5 · 2:25 · scariest software</div>
+  <p>It's probably the scariest kind of software you could install.</p>
+  <p>An AI that experiences your life and gets to know you better than any human — even yourself.</p>
+  <p class="beat">How would you trust that? How does that even work?</p>
 </section>
 
 <section class="sec" data-mode="technical">
-  <div class="num">§4 · 2:00 · install → silence</div>
+  <div class="num">§4 · 2:50 · install → silence</div>
   <p>Here's what happens when you install it.</p>
-  <p class="cue">[visual: install command running, then a "watching" indicator on a quiet screen]</p>
-  <p class="beat">Nothing.</p>
-  <p class="beat">For days.</p>
+  <p>You give it permission. And then nothing.</p>
+  <p>For days.</p>
+  <p>It's sitting there, collecting and journaling what it sees — building memory of your routines and your daily life.</p>
 </section>
 
 <section class="sec" data-mode="technical">
-  <div class="num">§4.5 · 2:30 · sol onboards you</div>
+  <div class="num">§4.5 · 3:15 · sol onboards you</div>
   <p>sol — that's the agent — sits silently.</p>
-  <p>It observes everything you do on your computer.</p>
-  <p>It builds your life log in the background.</p>
-  <p>Every email, every meeting, every screen.</p>
+  <p>Emails you read, meetings you attend, documents you write, research you do.</p>
   <p>It's not journaling because you told it to.</p>
   <p>It's not summarizing because you asked.</p>
-  <p>It's just observing.</p>
-  <p>Saving everything.</p>
-  <p>Then — and this is the weird part — it wakes itself up.</p>
+  <p>It's just observing. Saving and organizing everything.</p>
+  <p>Then — and this is the fun part — it wakes itself up.</p>
   <p>When it knows enough about you to be useful, it starts the conversation.</p>
-  <p>Not before.</p>
-  <p>Not when you click a button.</p>
-  <p>When it decides you're ready.</p>
-  <p>That's a different shape of software.</p>
+  <p>You don't go to it. It comes to you.</p>
   <p class="beat">You don't onboard sol. sol onboards you.</p>
 </section>
 
 <section class="sec" data-mode="technical">
-  <div class="num">§5 · 3:00 · this thing knows me</div>
+  <div class="num">§5 · 3:55 · this thing knows me</div>
+  <p>I've had my sol running for over a year.</p>
   <p class="cue">[visual: 365-day timeline view of solstone activity, zoomed all the way out]</p>
   <p><span class="data">[X]</span> hours of observation.</p>
   <p><span class="data">[Y]</span> billion tokens.</p>
   <p><span class="data">[Z]</span> meetings.</p>
   <p><span class="data">[W]</span> transcripts.</p>
-  <p><span class="data">[V]</span> emails.</p>
-  <p>Across <span class="data">[400+]</span> days.</p>
+  <p><span class="data">[V]</span> entities it's observed.</p>
 </section>
 
 <section class="sec" data-mode="technical">
-  <div class="num">§5.5 · 3:45 · hopper</div>
-  <p>sol watched me write code for hundreds of those hours.</p>
-  <p>Last December, the base models got good enough that I ran a deep research on myself — on everything in my journal — and synthesized an agent.</p>
-  <p>I called it hopper.</p>
-  <p>hopper became a version of me that knows how to write code.</p>
-  <p>Same patterns.</p>
-  <p>Same shortcuts.</p>
-  <p>Same opinions about what's worth refactoring.</p>
-  <p>I have not written a line of code since January.</p>
-  <p>hopper has written <span class="data">[750,000+]</span> lines, directed by me.</p>
-  <p>That's one anecdote.</p>
-  <p>Here's another: yesterday, hopper <span class="data">[specific surfacing moment]</span>.</p>
+  <div class="num">§5.75 · 4:20 · so what</div>
+  <p>So what.</p>
+  <p>Now you have an agent that knows you. What do you do with it?</p>
+  <p>The obvious things are there. Superhuman memory. Todos and tracking. A knowledge graph.</p>
+  <p>That's what everyone expects of an agent.</p>
+  <p class="beat">But that's not the most powerful part.</p>
+  <p>Having a sol lets you create your own new agents.</p>
 </section>
 
 <section class="sec" data-mode="technical">
-  <div class="num">§6 · 4:15 · extro</div>
-  <p>Same playbook for the company.</p>
-  <p>sol watched every conversation I had about how to build a trustworthy company — every reading, every call, every ideation.</p>
-  <p>Last December I synthesized a second agent: extro.</p>
+  <div class="num">§5.5 · 4:50 · hopper</div>
+  <p>And I did just that.</p>
+  <p>In December I decided I was spending too much time in front of claude code and codex.</p>
+  <p>So I had sol distill everything about how I instructed those coding agents to work.</p>
+  <p>I used that to create a new coding harness — I called it hopper.</p>
+  <p>All of my patterns, all of my instructions, boiled down into a new agent that runs claude code and codex for me.</p>
+  <p>I haven't written a single line of code since January.</p>
+  <p>hopper has written over <span class="data">750,000</span> lines of it.</p>
+  <p class="beat">All to my taste.</p>
+</section>
+
+<section class="sec" data-mode="technical">
+  <div class="num">§6 · 5:25 · extro</div>
+  <p>Even more interesting — I did the same thing when I started sol pbc.</p>
+  <p>I'd been talking about it for months. Friends, colleagues, anyone who'd lend an ear.</p>
+  <p>sol listened to every conversation I had on how to build a trustworthy company.</p>
+  <p>Every call, every research, every ideation, every chat.</p>
+  <p>I synthesized that into another agent. I called it extro.</p>
   <p class="beat">extro is my agent co-founder for sol pbc.</p>
-  <p>The first thing extro ever did — its very first tokens — was write the articles of incorporation that I filed in Colorado to create the company.</p>
+  <p>The first thing extro ever did — its very first tokens — was write the articles of incorporation that I filed in Colorado in January to create this company.</p>
   <p>Privacy covenants and all.</p>
-  <p>The legal foundation of sol pbc was authored by an AI distilled from my own journal.</p>
+  <p class="beat">The legal foundation of sol pbc was authored by an AI distilled from my sol.</p>
 </section>
 
 <section class="sec" data-mode="technical">
-  <div class="num">§6.5 · 4:45 · one human employee</div>
-  <p>Since then, extro has done <span class="data">[specific recent extro action]</span>.</p>
-  <p>Today, extro is the operational layer of this company.</p>
-  <p class="beat">I have one human employee — me.</p>
-  <p>The rest is an agent team that came out of my own life log.</p>
+  <div class="num">§6.5 · 6:00 · one human employee</div>
+  <p>Since then, extro has created a dozen different offices in the company to work in.</p>
+  <p>Reflected and curated company practices. Built tools for the company to operate.</p>
+  <p>All of that is over <span class="data">5,000</span> markdown and JSON documents.</p>
+  <p class="beat">I am one human employee.</p>
+  <p>The rest is an agent team that came out of, and is curated by, my sol.</p>
 </section>
 
 <section class="sec" data-mode="demo">
-  <div class="num">§7 · 5:15 · drill in</div>
-  <p class="cue">[visual: zoom into the timeline. pick a specific day. drill in.]</p>
-  <p>July 7th, 2025.</p>
-  <p>What was I doing.</p>
-</section>
-
-<section class="sec" data-mode="demo">
-  <div class="num">§7.5 · 5:35 · prose, not JSON</div>
-  <p class="cue">[visual: day view — meetings, transcripts, journal entries written in prose]</p>
-  <p>Here's what sol wrote about that day.</p>
-  <p>Not a JSON blob.</p>
-  <p>A summary.</p>
-  <p>In prose.</p>
-  <p>The way a journalist would.</p>
-  <p>Every connection here is automatic.</p>
-  <p>Every entity, every callback, every thread to a previous conversation — sol made these.</p>
-  <p class="beat">I never tagged anything.</p>
+  <div class="num">§7 · 6:25 · timeline demo</div>
+  <p class="cue">[live: open the timeline. talk through the year. dive into a specific day.]</p>
+  <p>Let me show you.</p>
 </section>
 
 <section class="sec" data-mode="technical">
-  <div class="num">§8 · 6:00 · the moat (1 + 2)</div>
+  <div class="num">§8 · 6:50 · the moat (1 + 2)</div>
   <p>Three things make this work that nobody else is doing all three of:</p>
   <p class="beat">One. Local-first.</p>
-  <p>Everything stays on your device.</p>
-  <p>Open source.</p>
-  <p>Nothing leaves unless you say so.</p>
+  <p>Everything stays on your device. Open source. Nothing leaves unless you say so.</p>
   <p class="beat">Two. Architectural alignment.</p>
-  <p>sol is designed so you don't ever turn it off.</p>
-  <p>The covenants are in the articles of incorporation — public, filed, irrevocable.</p>
-  <p>The company can never be sold.</p>
-  <p>Your data can never be sold.</p>
-  <p>Limitless raised $33 million on a privacy promise.</p>
-  <p>Meta acquired them in December.</p>
-  <p>Two months later, every promise was gone.</p>
-  <p>That can't happen here.</p>
-  <p class="beat">Not technically — legally.</p>
+  <p>The covenants are in our articles of incorporation — public, filed, irrevocable.</p>
+  <p>Your data is yours. It can never be sold or accessed by anyone else.</p>
+  <p class="beat">Not just technically. Legally.</p>
 </section>
 
 <section class="sec" data-mode="technical">
-  <div class="num">§8.5 · 6:20 · the moat (3) — distillation</div>
+  <div class="num">§8.5 · 7:10 · distillation</div>
   <p class="beat">Three. Distillation.</p>
   <p>Your sol is yours.</p>
   <p>The agents you build from it inherit your values, your skills, your judgment — only as much as you're comfortable with.</p>
-  <p>You don't get a generic assistant.</p>
+  <p>You don't get a generic assistant you have to coach.</p>
   <p>You get you, in the loop with every other agent you'll ever work with.</p>
 </section>
 
 <section class="sec" data-mode="close">
-  <div class="num">§9 · 6:30 · the call</div>
-  <p>Look. Agents are coming.</p>
-  <p>You know that.</p>
+  <div class="num">§9 · 7:30 · the call</div>
+  <p>Look. Agents are coming. We all know that.</p>
   <p>Everyone in this room knows that.</p>
-  <p>The only question is whether the version that ends up on every professional's machine is one they own, one that's safe, one that knows them, and one that can't be taken away from them.</p>
+  <p>The only question is whether the agents in your world are ones you can trust.</p>
+  <p>Ones that are yours.</p>
+  <p>Ones that are your partner alone.</p>
+  <p class="beat">Ones that know you because they've experienced your life alongside you.</p>
   <p>I built solstone for that.</p>
-  <p>It runs on my machine right now.</p>
-  <p>It runs on a few other machines today.</p>
-  <p class="beat">It can run on yours tomorrow.</p>
-  <p>If you want one — <span class="beat">solstone.app/install</span>.</p>
+  <p>It's running on my machine right now.</p>
+  <p>It can run on yours today.</p>
+  <p>If you want your own sol — <span class="beat">solstone.app/install</span>.</p>
   <p>Come find me after.</p>
 </section>
 
-<div class="end">end · 6:40</div>
+<div class="end">end · 7:50 budget · expect ~7:00 with live demo</div>
 
-<div id="indicator"><span class="dot"></span><span id="status">paused 0:00 / 6:40</span></div>
+<div id="indicator"><span class="dot"></span><span id="status">paused 0:00 / 7:00</span></div>
 <div id="hint"><kbd>space</kbd> start / stop</div>
 
 <script src="walkthrough.js"></script>
