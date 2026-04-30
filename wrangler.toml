@@ -8,7 +8,9 @@ routes = [{ pattern = "solpbc.org", custom_domain = true }]
 [assets]
 directory = "./public"
 binding = "ASSETS"
-serve_directly = false
+# Force Worker invocation for /demo/* so applySecurityHeaders() can override
+# the default _headers CSP with DEMO_CSP. Other paths serve assets directly.
+run_worker_first = ["/demo/*"]
 
 [[unsafe.bindings]]
 name = "CONTACT_LIMITER"

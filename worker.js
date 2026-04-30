@@ -21,6 +21,13 @@ const CONTACT_CSP =
   "connect-src 'self' https://challenges.cloudflare.com; " +
   "frame-ancestors 'none'";
 
+// Scoped relaxed CSP for /demo/* — stage-tool walkthroughs that need same-origin
+// scripts and inline styles. Not a public surface.
+const DEMO_CSP =
+  "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; " +
+  "img-src 'self' data:; font-src 'self'; connect-src 'self'; " +
+  "base-uri 'self'; form-action 'self'; frame-ancestors 'none'";
+
 // --- helpers ---
 
 function jsonResponse(data, status = 200) {
@@ -45,10 +52,13 @@ function isValidEmail(value) {
 function applySecurityHeaders(response, pathname) {
   const newResponse = new Response(response.body, response);
   const isContactPage = pathname === '/contact' || pathname.startsWith('/contact/');
+  const isDemoPage = pathname.startsWith('/demo/');
 
   for (const [key, value] of Object.entries(SECURITY_HEADERS)) {
     if (key === 'Content-Security-Policy' && isContactPage) {
       newResponse.headers.set(key, CONTACT_CSP);
+    } else if (key === 'Content-Security-Policy' && isDemoPage) {
+      newResponse.headers.set(key, DEMO_CSP);
     } else {
       newResponse.headers.set(key, value);
     }
