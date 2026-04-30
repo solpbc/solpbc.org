@@ -10,456 +10,335 @@
   :root {
     --bg: #0a0a0c;
     --text: #f5f5f0;
-    --dim: #666;
+    --dim: #6b7280;
     --accent: #fbbf24;
-    --heading: #fef3c7;
     --rule: #1f2937;
     --running: #10b981;
     --paused: #555;
+    --m-peer:       #60a5fa;
+    --m-theatrical: #f472b6;
+    --m-technical:  #34d399;
+    --m-demo:       #c084fc;
+    --m-close:      #fbbf24;
   }
 
   html, body {
     background: var(--bg);
     color: var(--text);
     font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI", system-ui, sans-serif;
-    line-height: 1.45;
     -webkit-font-smoothing: antialiased;
+    font-size: clamp(22px, 2.1vw, 36px);
+    line-height: 1.5;
   }
 
-  html { scroll-behavior: auto; }
-
-  body {
-    font-size: clamp(22px, 2.4vw, 40px);
-  }
-
-  .section {
-    min-height: 100vh;
-    padding: 6vh 8vw 6vh 8vw;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    border-bottom: 1px solid var(--rule);
-    position: relative;
-  }
-
-  .section-header {
-    display: flex;
-    align-items: baseline;
-    gap: 1.5em;
-    margin-bottom: 1.5em;
+  .title {
+    padding: 30vh 8vw 6vh 8vw;
     color: var(--dim);
-    font-weight: 300;
+    font-size: 0.7em;
   }
-
-  .section-num {
-    font-size: 1.4em;
-    color: var(--accent);
-    font-weight: 500;
-    font-variant-numeric: tabular-nums;
-  }
-
-  .section-meta {
-    font-size: 0.55em;
-    text-transform: uppercase;
-    letter-spacing: 0.18em;
-  }
-
-  .section h2 {
-    font-size: 1.3em;
+  .title h1 {
+    font-size: 1.6em;
     font-weight: 600;
-    color: var(--heading);
-    margin-bottom: 0.8em;
+    color: #fef3c7;
+    margin-bottom: 0.4em;
     letter-spacing: -0.01em;
   }
-
-  .quote {
-    font-size: 1em;
-    border-left: 4px solid var(--accent);
-    padding-left: 1em;
-    max-width: 80%;
+  .title kbd {
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.15);
+    border-radius: 3px;
+    padding: 0.05em 0.4em;
+    font-family: inherit;
+    font-size: 0.95em;
+    color: var(--text);
   }
+  .title .legend { margin-top: 0.6em; font-size: 0.85em; }
 
-  .quote p + p { margin-top: 0.8em; }
-
-  .quote strong {
-    color: var(--heading);
-    font-weight: 600;
+  .sec {
+    border-left: 7px solid currentColor;
+    padding: 1.0em 0 1.0em 1.4em;
+    margin: 0 8vw;
   }
+  .sec[data-mode="peer"]       { color: var(--m-peer); }
+  .sec[data-mode="theatrical"] { color: var(--m-theatrical); }
+  .sec[data-mode="technical"]  { color: var(--m-technical); }
+  .sec[data-mode="demo"]       { color: var(--m-demo); }
+  .sec[data-mode="close"]      { color: var(--m-close); }
 
-  .quote em {
-    color: var(--accent);
-    font-style: italic;
-  }
-
-  .visual-cue {
+  .sec .num {
     font-size: 0.55em;
-    color: var(--dim);
+    color: currentColor;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    margin-bottom: 0.5em;
     text-transform: uppercase;
-    letter-spacing: 0.15em;
-    margin: 1em 0;
-    padding: 0.6em 1em;
-    border: 1px dashed var(--dim);
-    border-radius: 4px;
-    display: inline-block;
   }
 
-  .data-marker {
+  .sec p {
+    color: var(--text);
+    margin: 0.35em 0;
+    max-width: 32em;
+  }
+  .sec p.cue {
+    color: var(--dim);
+    font-style: italic;
+    font-size: 0.7em;
+    margin: 0.7em 0;
+  }
+  .sec p.beat { color: #fef3c7; font-weight: 600; }
+
+  .data {
     color: var(--accent);
     background: rgba(251, 191, 36, 0.08);
     padding: 0 0.2em;
     border-radius: 2px;
   }
 
-  /* progress bar */
+  .end {
+    padding: 30vh 8vw 30vh 8vw;
+    color: var(--dim);
+    font-size: 0.6em;
+  }
+
+  /* fixed UI */
   #progress {
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 2px;
-    width: 0;
-    background: var(--accent);
-    z-index: 200;
-    transition: width 0.1s linear;
+    position: fixed; top: 0; left: 0; height: 2px; width: 0;
+    background: var(--accent); z-index: 200;
   }
-
-  /* indicator */
-  #indicator {
-    position: fixed;
-    bottom: 1.5vh;
-    left: 1.5vw;
+  #indicator, #hint {
+    position: fixed; bottom: 1.5vh;
     background: rgba(0,0,0,0.65);
-    backdrop-filter: blur(6px);
-    -webkit-backdrop-filter: blur(6px);
-    padding: 0.5em 0.9em;
-    border-radius: 0.4em;
-    font-size: 14px;
-    color: var(--dim);
-    z-index: 100;
-    font-variant-numeric: tabular-nums;
+    backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px);
+    padding: 0.5em 0.9em; border-radius: 0.4em;
+    font-size: 14px; z-index: 100;
   }
-
+  #indicator { left: 1.5vw; color: var(--dim); font-variant-numeric: tabular-nums; }
   #indicator .dot {
-    display: inline-block;
-    width: 0.55em;
-    height: 0.55em;
-    border-radius: 50%;
-    background: var(--paused);
-    margin-right: 0.5em;
-    vertical-align: middle;
-    transition: background 0.2s;
+    display: inline-block; width: 0.55em; height: 0.55em;
+    border-radius: 50%; background: var(--paused);
+    margin-right: 0.5em; vertical-align: middle; transition: background 0.2s;
   }
-
-  #indicator.running .dot { background: var(--running); }
   #indicator.running { color: var(--text); }
-
-  #hint {
-    position: fixed;
-    bottom: 1.5vh;
-    right: 1.5vw;
-    background: rgba(0,0,0,0.65);
-    backdrop-filter: blur(6px);
-    -webkit-backdrop-filter: blur(6px);
-    padding: 0.5em 0.9em;
-    border-radius: 0.4em;
-    font-size: 14px;
-    color: var(--dim);
-    z-index: 100;
-  }
-
-  kbd {
+  #indicator.running .dot { background: var(--running); }
+  #hint { right: 1.5vw; color: var(--dim); }
+  #hint kbd {
     background: rgba(255,255,255,0.08);
     border: 1px solid rgba(255,255,255,0.15);
     border-radius: 3px;
     padding: 0.1em 0.5em;
-    font-family: inherit;
-    font-size: 0.9em;
-    color: var(--text);
+    font-family: inherit; font-size: 0.9em; color: var(--text);
   }
-
-  /* mode-tinted left rules */
-  .section[data-mode="peer"]       .quote { border-left-color: #60a5fa; }
-  .section[data-mode="theatrical"] .quote { border-left-color: #f472b6; }
-  .section[data-mode="technical"]  .quote { border-left-color: #34d399; }
-  .section[data-mode="demo"]       .quote { border-left-color: #c084fc; }
-  .section[data-mode="close"]      .quote { border-left-color: #fbbf24; }
-
-  /* title section is shorter and welcoming */
-  .title-section {
-    min-height: 100vh;
-    padding: 6vh 8vw;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    border-bottom: 1px solid var(--rule);
-  }
-  .title-section h1 {
-    font-size: 2.2em;
-    color: var(--heading);
-    font-weight: 700;
-    letter-spacing: -0.02em;
-    margin-bottom: 0.3em;
-  }
-  .title-section .subtitle {
-    color: var(--dim);
-    font-size: 0.8em;
-    margin-bottom: 2em;
-  }
-  .title-section .legend {
-    font-size: 0.6em;
-    color: var(--dim);
-    line-height: 1.8;
-  }
-  .title-section .legend kbd { font-size: 1em; }
 </style>
 </head>
 <body>
 
 <div id="progress"></div>
 
-<!-- TITLE -->
-<div class="title-section">
-  <h1>solstone — demo day</h1>
-  <div class="subtitle">7-min walkthrough · betaworks · may 5, 2026</div>
-  <div class="legend">
-    <kbd>space</kbd> start / stop slow scroll &nbsp;·&nbsp; manual scroll continues from new position<br>
-    pace: 6:40 total &nbsp;·&nbsp; one section per screen &nbsp;·&nbsp; modes: <span style="color:#60a5fa">peer</span> · <span style="color:#f472b6">theatrical</span> · <span style="color:#34d399">technical</span> · <span style="color:#c084fc">demo</span> · <span style="color:#fbbf24">close</span>
-  </div>
-</div>
+<header class="title">
+  <h1>solstone — demo day · 6:40</h1>
+  <p><kbd>space</kbd> start / stop slow scroll &nbsp;·&nbsp; manual scroll continues from new position</p>
+  <p class="legend">
+    <span style="color:var(--m-peer)">peer</span> ·
+    <span style="color:var(--m-theatrical)">theatrical</span> ·
+    <span style="color:var(--m-technical)">technical</span> ·
+    <span style="color:var(--m-demo)">demo</span> ·
+    <span style="color:var(--m-close)">close</span>
+  </p>
+</header>
 
-<!-- §1 -->
-<div class="section" data-mode="peer">
-  <div class="section-header">
-    <span class="section-num">§1</span>
-    <span class="section-meta">0:00 · peer · premise</span>
-  </div>
-  <h2>what we agree on</h2>
-  <div class="quote">
-    <p>Look. Everyone in this room is here because we all believe the same thing: personal agents are inevitable. Professional agents are inevitable. An interface that knows you and operates on your behalf — that's coming. We can stop pitching that.</p>
-  </div>
-</div>
+<section class="sec" data-mode="peer">
+  <div class="num">§1 · 0:00 · premise</div>
+  <p>Look. Everyone in this room is here because we all believe the same thing: personal agents are inevitable.</p>
+  <p>Professional agents are inevitable.</p>
+  <p>An interface that knows you and operates on your behalf — that's coming.</p>
+  <p>We can stop pitching that.</p>
+</section>
 
-<!-- §1.5 -->
-<div class="section" data-mode="peer">
-  <div class="section-header">
-    <span class="section-num">§1.5</span>
-    <span class="section-meta">0:25 · peer · the disagreement</span>
-  </div>
-  <h2>what we don't agree on</h2>
-  <div class="quote">
-    <p>What we <em>don't</em> agree on yet — and what I want to spend the next six minutes on — is <em>how</em> to build it.</p>
-    <p>If you've spent any time with OpenClaw, with Hermes, with any of the harnesses out there, you already know the gaps.</p>
-  </div>
-</div>
+<section class="sec" data-mode="peer">
+  <div class="num">§1.5 · 0:25 · the disagreement</div>
+  <p>What we don't agree on yet — and what I want to spend the next six minutes on — is how to build it.</p>
+  <p>If you've spent any time with OpenClaw, with Hermes, with any of the harnesses out there, you already know the gaps.</p>
+</section>
 
-<!-- §2 -->
-<div class="section" data-mode="peer">
-  <div class="section-header">
-    <span class="section-num">§2</span>
-    <span class="section-meta">0:45 · peer · the five gaps</span>
-  </div>
-  <h2>five things, specifically</h2>
-  <div class="quote">
-    <p><strong>Safety. Trust. Ownership. Onboarding. Context.</strong></p>
-  </div>
-</div>
+<section class="sec" data-mode="peer">
+  <div class="num">§2 · 0:45 · the five gaps</div>
+  <p>Five things, specifically.</p>
+  <p class="beat">Safety.</p>
+  <p class="beat">Trust.</p>
+  <p class="beat">Ownership.</p>
+  <p class="beat">Onboarding.</p>
+  <p class="beat">Context.</p>
+</section>
 
-<!-- §2.5 -->
-<div class="section" data-mode="peer">
-  <div class="section-header">
-    <span class="section-num">§2.5</span>
-    <span class="section-meta">1:05 · peer · landscape reality</span>
-  </div>
-  <h2>a trust problem dressed up as setup</h2>
-  <div class="quote">
-    <p>Anyone here who's tried one knows: the fast path is fifteen minutes, the real path is a weekend. And the default posture is allow-all — you hand over the keys on day one and harden later, if you remember. That's a trust problem dressed up as a setup problem.</p>
-    <p>The deeper trust problem: you can't actually run any of these with full access to your life. You'd never let claude touch everything on your machine — claude could fuck you and delete your stuff. You wouldn't run them while you watch reruns of Magical Girl Anime. So you turn them on, you turn them off, you guard them.</p>
-    <p>Ownership: your context lives somewhere else. Context: it's laborious to even create.</p>
-  </div>
-</div>
+<section class="sec" data-mode="peer">
+  <div class="num">§2.5 · 1:05 · trust dressed up as setup</div>
+  <p>Anyone here who's tried one knows: the fast path is fifteen minutes, the real path is a weekend.</p>
+  <p>And the default posture is allow-all — you hand over the keys on day one and harden later, if you remember.</p>
+  <p>That's a trust problem dressed up as a setup problem.</p>
+  <p>The deeper trust problem: you can't actually run any of these with full access to your life.</p>
+  <p>You'd never let claude touch everything on your machine — claude could fuck you and delete your stuff.</p>
+  <p>You wouldn't run them while you watch reruns of Magical Girl Anime.</p>
+  <p>So you turn them on, you turn them off, you guard them.</p>
+  <p>Ownership: your context lives somewhere else.</p>
+  <p>Context: it's laborious to even create.</p>
+</section>
 
-<!-- §3 -->
-<div class="section" data-mode="theatrical">
-  <div class="section-header">
-    <span class="section-num">§3</span>
-    <span class="section-meta">1:30 · theatrical · what i built</span>
-  </div>
-  <h2>so i built solstone</h2>
-  <div class="quote">
-    <p>solstone is a personal agent that runs entirely on your device. No cloud. No accounts. No authentication. You install it, and it starts. That's the whole onboarding.</p>
-    <p>It's open source. Everything you do, everything you see, everything you say — stays on your machine. Always.</p>
-  </div>
-</div>
+<section class="sec" data-mode="theatrical">
+  <div class="num">§3 · 1:30 · what i built</div>
+  <p>So I built solstone.</p>
+  <p>solstone is a personal agent that runs entirely on your device.</p>
+  <p>No cloud.</p>
+  <p>No accounts.</p>
+  <p>No authentication.</p>
+  <p>You install it, and it starts.</p>
+  <p>That's the whole onboarding.</p>
+  <p>It's open source.</p>
+  <p>Everything you do, everything you see, everything you say — stays on your machine.</p>
+  <p>Always.</p>
+</section>
 
-<!-- §3.5 -->
-<div class="section" data-mode="theatrical">
-  <div class="section-header">
-    <span class="section-num">§3.5</span>
-    <span class="section-meta">1:45 · theatrical · scariest software</span>
-  </div>
-  <h2>the scariest kind of software</h2>
-  <div class="quote">
-    <p>It's probably the scariest kind of software you can install. An AI with access to literally everything.</p>
-    <p>And the only reason you'd ever trust it with that access is the architecture I'm about to walk you through.</p>
-  </div>
-</div>
+<section class="sec" data-mode="theatrical">
+  <div class="num">§3.5 · 1:45 · scariest software</div>
+  <p>It's probably the scariest kind of software you can install.</p>
+  <p>An AI with access to literally everything.</p>
+  <p>And the only reason you'd ever trust it with that access is the architecture I'm about to walk you through.</p>
+</section>
 
-<!-- §4 -->
-<div class="section" data-mode="technical">
-  <div class="section-header">
-    <span class="section-num">§4</span>
-    <span class="section-meta">2:00 · technical · install → silence</span>
-  </div>
-  <h2>here's what happens when you install it</h2>
-  <div class="quote">
-    <p>Nothing. For days.</p>
-  </div>
-  <div class="visual-cue">visual: install command running, then a "watching" indicator on a quiet screen</div>
-</div>
+<section class="sec" data-mode="technical">
+  <div class="num">§4 · 2:00 · install → silence</div>
+  <p>Here's what happens when you install it.</p>
+  <p class="cue">[visual: install command running, then a "watching" indicator on a quiet screen]</p>
+  <p class="beat">Nothing.</p>
+  <p class="beat">For days.</p>
+</section>
 
-<!-- §4.5 -->
-<div class="section" data-mode="technical">
-  <div class="section-header">
-    <span class="section-num">§4.5</span>
-    <span class="section-meta">2:30 · technical · sol wakes itself up</span>
-  </div>
-  <h2>sol onboards you</h2>
-  <div class="quote">
-    <p>sol — that's the agent — sits silently. It observes everything you do on your computer. It builds your <em>life log</em> in the background. Every email, every meeting, every screen.</p>
-    <p>It's not journaling because you told it to. It's not summarizing because you asked. It's just observing. Saving everything.</p>
-    <p>Then — and this is the weird part — it wakes itself up. When it knows enough about you to be useful, it starts the conversation. Not before. Not when you click a button. When <em>it</em> decides you're ready.</p>
-    <p>That's a different shape of software. <strong>You don't onboard sol. sol onboards you.</strong></p>
-  </div>
-</div>
+<section class="sec" data-mode="technical">
+  <div class="num">§4.5 · 2:30 · sol onboards you</div>
+  <p>sol — that's the agent — sits silently.</p>
+  <p>It observes everything you do on your computer.</p>
+  <p>It builds your life log in the background.</p>
+  <p>Every email, every meeting, every screen.</p>
+  <p>It's not journaling because you told it to.</p>
+  <p>It's not summarizing because you asked.</p>
+  <p>It's just observing.</p>
+  <p>Saving everything.</p>
+  <p>Then — and this is the weird part — it wakes itself up.</p>
+  <p>When it knows enough about you to be useful, it starts the conversation.</p>
+  <p>Not before.</p>
+  <p>Not when you click a button.</p>
+  <p>When it decides you're ready.</p>
+  <p>That's a different shape of software.</p>
+  <p class="beat">You don't onboard sol. sol onboards you.</p>
+</section>
 
-<!-- §5 -->
-<div class="section" data-mode="technical">
-  <div class="section-header">
-    <span class="section-num">§5</span>
-    <span class="section-meta">3:00 · technical + data · the data dump</span>
-  </div>
-  <h2>this thing knows me</h2>
-  <div class="visual-cue">visual: 365-day timeline view of your solstone activity, zoomed all the way out</div>
-  <div class="quote">
-    <p><span class="data-marker">[X]</span> hours of observation. <span class="data-marker">[Y]</span> billion tokens. <span class="data-marker">[Z]</span> meetings. <span class="data-marker">[W]</span> transcripts. <span class="data-marker">[V]</span> emails.</p>
-    <p>Across <span class="data-marker">[400+]</span> days.</p>
-  </div>
-</div>
+<section class="sec" data-mode="technical">
+  <div class="num">§5 · 3:00 · this thing knows me</div>
+  <p class="cue">[visual: 365-day timeline view of solstone activity, zoomed all the way out]</p>
+  <p><span class="data">[X]</span> hours of observation.</p>
+  <p><span class="data">[Y]</span> billion tokens.</p>
+  <p><span class="data">[Z]</span> meetings.</p>
+  <p><span class="data">[W]</span> transcripts.</p>
+  <p><span class="data">[V]</span> emails.</p>
+  <p>Across <span class="data">[400+]</span> days.</p>
+</section>
 
-<!-- §5.5 -->
-<div class="section" data-mode="technical">
-  <div class="section-header">
-    <span class="section-num">§5.5</span>
-    <span class="section-meta">3:45 · technical · hopper origin + LOC</span>
-  </div>
-  <h2>hopper</h2>
-  <div class="quote">
-    <p>sol watched me write code for hundreds of those hours. Last December, the base models got good enough that I ran a deep research on myself — on everything in my journal — and synthesized an agent. I called it hopper.</p>
-    <p>hopper became a version of me that knows how to write code. Same patterns. Same shortcuts. Same opinions about what's worth refactoring.</p>
-    <p>I have not written a line of code since January. hopper has written <span class="data-marker">[750,000+]</span> lines, directed by me.</p>
-    <p>That's one anecdote. Here's another: yesterday, hopper <span class="data-marker">[specific surfacing moment]</span>.</p>
-  </div>
-</div>
+<section class="sec" data-mode="technical">
+  <div class="num">§5.5 · 3:45 · hopper</div>
+  <p>sol watched me write code for hundreds of those hours.</p>
+  <p>Last December, the base models got good enough that I ran a deep research on myself — on everything in my journal — and synthesized an agent.</p>
+  <p>I called it hopper.</p>
+  <p>hopper became a version of me that knows how to write code.</p>
+  <p>Same patterns.</p>
+  <p>Same shortcuts.</p>
+  <p>Same opinions about what's worth refactoring.</p>
+  <p>I have not written a line of code since January.</p>
+  <p>hopper has written <span class="data">[750,000+]</span> lines, directed by me.</p>
+  <p>That's one anecdote.</p>
+  <p>Here's another: yesterday, hopper <span class="data">[specific surfacing moment]</span>.</p>
+</section>
 
-<!-- §6 -->
-<div class="section" data-mode="technical">
-  <div class="section-header">
-    <span class="section-num">§6</span>
-    <span class="section-meta">4:15 · technical · extro origin</span>
-  </div>
-  <h2>extro</h2>
-  <div class="quote">
-    <p>Same playbook for the company. sol watched every conversation I had about how to build a trustworthy company — every reading, every call, every ideation. Last December I synthesized a second agent: extro. <strong>extro is my agent co-founder for sol pbc.</strong></p>
-    <p>The first thing extro ever did — its very first tokens — was write the articles of incorporation that I filed in Colorado to create the company. Privacy covenants and all.</p>
-    <p>The legal foundation of sol pbc was authored by an AI distilled from my own journal.</p>
-  </div>
-</div>
+<section class="sec" data-mode="technical">
+  <div class="num">§6 · 4:15 · extro</div>
+  <p>Same playbook for the company.</p>
+  <p>sol watched every conversation I had about how to build a trustworthy company — every reading, every call, every ideation.</p>
+  <p>Last December I synthesized a second agent: extro.</p>
+  <p class="beat">extro is my agent co-founder for sol pbc.</p>
+  <p>The first thing extro ever did — its very first tokens — was write the articles of incorporation that I filed in Colorado to create the company.</p>
+  <p>Privacy covenants and all.</p>
+  <p>The legal foundation of sol pbc was authored by an AI distilled from my own journal.</p>
+</section>
 
-<!-- §6.5 -->
-<div class="section" data-mode="technical">
-  <div class="section-header">
-    <span class="section-num">§6.5</span>
-    <span class="section-meta">4:45 · technical · extro today</span>
-  </div>
-  <h2>one human employee — me</h2>
-  <div class="quote">
-    <p>Since then, extro has done <span class="data-marker">[specific recent extro action — drafted X / coordinated Y / surfaced Z]</span>.</p>
-    <p>Today, extro is the operational layer of this company. I have one human employee — me. The rest is an agent team that came out of my own life log.</p>
-  </div>
-</div>
+<section class="sec" data-mode="technical">
+  <div class="num">§6.5 · 4:45 · one human employee</div>
+  <p>Since then, extro has done <span class="data">[specific recent extro action]</span>.</p>
+  <p>Today, extro is the operational layer of this company.</p>
+  <p class="beat">I have one human employee — me.</p>
+  <p>The rest is an agent team that came out of my own life log.</p>
+</section>
 
-<!-- §7 -->
-<div class="section" data-mode="demo">
-  <div class="section-header">
-    <span class="section-num">§7</span>
-    <span class="section-meta">5:15 · demo · zoom out → 365 days</span>
-  </div>
-  <h2>july 7th, 2025</h2>
-  <div class="visual-cue">visual: zoom into the timeline. pick a specific day. drill in.</div>
-  <div class="quote">
-    <p>July 7th, 2025. What was I doing.</p>
-  </div>
-</div>
+<section class="sec" data-mode="demo">
+  <div class="num">§7 · 5:15 · drill in</div>
+  <p class="cue">[visual: zoom into the timeline. pick a specific day. drill in.]</p>
+  <p>July 7th, 2025.</p>
+  <p>What was I doing.</p>
+</section>
 
-<!-- §7.5 -->
-<div class="section" data-mode="demo">
-  <div class="section-header">
-    <span class="section-num">§7.5</span>
-    <span class="section-meta">5:35 · demo · drill into the day</span>
-  </div>
-  <h2>not a JSON blob — a summary</h2>
-  <div class="visual-cue">visual: day view — meetings, transcripts, journal entries written in prose</div>
-  <div class="quote">
-    <p>Here's what sol wrote about that day. Not a JSON blob. A summary. In prose. The way a journalist would.</p>
-    <p>Every connection here is automatic. Every entity, every callback, every thread to a previous conversation — sol made these. <strong>I never tagged anything.</strong></p>
-  </div>
-</div>
+<section class="sec" data-mode="demo">
+  <div class="num">§7.5 · 5:35 · prose, not JSON</div>
+  <p class="cue">[visual: day view — meetings, transcripts, journal entries written in prose]</p>
+  <p>Here's what sol wrote about that day.</p>
+  <p>Not a JSON blob.</p>
+  <p>A summary.</p>
+  <p>In prose.</p>
+  <p>The way a journalist would.</p>
+  <p>Every connection here is automatic.</p>
+  <p>Every entity, every callback, every thread to a previous conversation — sol made these.</p>
+  <p class="beat">I never tagged anything.</p>
+</section>
 
-<!-- §8 -->
-<div class="section" data-mode="technical">
-  <div class="section-header">
-    <span class="section-num">§8</span>
-    <span class="section-meta">6:00 · peer + technical · the moat (1 + 2)</span>
-  </div>
-  <h2>three things nobody else does all of</h2>
-  <div class="quote">
-    <p><strong>One. Local-first.</strong> Everything stays on your device. Open source. Nothing leaves unless you say so.</p>
-    <p><strong>Two. Architectural alignment.</strong> sol is designed so you don't ever turn it off. The covenants are in the articles of incorporation — public, filed, irrevocable. The company can never be sold. Your data can never be sold.</p>
-    <p>Limitless raised $33 million on a privacy promise. Meta acquired them in December. Two months later, every promise was gone. <strong>That can't happen here. Not technically — <em>legally</em>.</strong></p>
-  </div>
-</div>
+<section class="sec" data-mode="technical">
+  <div class="num">§8 · 6:00 · the moat (1 + 2)</div>
+  <p>Three things make this work that nobody else is doing all three of:</p>
+  <p class="beat">One. Local-first.</p>
+  <p>Everything stays on your device.</p>
+  <p>Open source.</p>
+  <p>Nothing leaves unless you say so.</p>
+  <p class="beat">Two. Architectural alignment.</p>
+  <p>sol is designed so you don't ever turn it off.</p>
+  <p>The covenants are in the articles of incorporation — public, filed, irrevocable.</p>
+  <p>The company can never be sold.</p>
+  <p>Your data can never be sold.</p>
+  <p>Limitless raised $33 million on a privacy promise.</p>
+  <p>Meta acquired them in December.</p>
+  <p>Two months later, every promise was gone.</p>
+  <p>That can't happen here.</p>
+  <p class="beat">Not technically — legally.</p>
+</section>
 
-<!-- §8.5 -->
-<div class="section" data-mode="technical">
-  <div class="section-header">
-    <span class="section-num">§8.5</span>
-    <span class="section-meta">6:20 · peer + technical · the moat (3)</span>
-  </div>
-  <h2>distillation</h2>
-  <div class="quote">
-    <p><strong>Three. Distillation.</strong> Your sol is yours. The agents you build from it inherit your values, your skills, your judgment — only as much as you're comfortable with.</p>
-    <p>You don't get a generic assistant. You get <em>you</em>, in the loop with every other agent you'll ever work with.</p>
-  </div>
-</div>
+<section class="sec" data-mode="technical">
+  <div class="num">§8.5 · 6:20 · the moat (3) — distillation</div>
+  <p class="beat">Three. Distillation.</p>
+  <p>Your sol is yours.</p>
+  <p>The agents you build from it inherit your values, your skills, your judgment — only as much as you're comfortable with.</p>
+  <p>You don't get a generic assistant.</p>
+  <p>You get you, in the loop with every other agent you'll ever work with.</p>
+</section>
 
-<!-- §9 -->
-<div class="section" data-mode="close">
-  <div class="section-header">
-    <span class="section-num">§9</span>
-    <span class="section-meta">6:30 · close · the call</span>
-  </div>
-  <h2>solstone.app/install</h2>
-  <div class="quote">
-    <p>Look. Agents are coming. You know that. Everyone in this room knows that.</p>
-    <p>The only question is whether the version that ends up on every professional's machine is one they own, one that's safe, one that knows them, and one that can't be taken away from them.</p>
-    <p>I built solstone for that. It runs on my machine right now. It runs on a few other machines today. <strong>It can run on yours tomorrow.</strong></p>
-    <p>If you want one — <strong>solstone.app/install</strong>. Come find me after.</p>
-  </div>
-</div>
+<section class="sec" data-mode="close">
+  <div class="num">§9 · 6:30 · the call</div>
+  <p>Look. Agents are coming.</p>
+  <p>You know that.</p>
+  <p>Everyone in this room knows that.</p>
+  <p>The only question is whether the version that ends up on every professional's machine is one they own, one that's safe, one that knows them, and one that can't be taken away from them.</p>
+  <p>I built solstone for that.</p>
+  <p>It runs on my machine right now.</p>
+  <p>It runs on a few other machines today.</p>
+  <p class="beat">It can run on yours tomorrow.</p>
+  <p>If you want one — <span class="beat">solstone.app/install</span>.</p>
+  <p>Come find me after.</p>
+</section>
 
-<!-- spacer so the last section can scroll to top of viewport -->
-<div style="height: 100vh; display: flex; align-items: center; justify-content: center; color: var(--dim); font-size: 14px;">
-  end · 6:40
-</div>
+<div class="end">end · 6:40</div>
 
 <div id="indicator"><span class="dot"></span><span id="status">paused 0:00 / 6:40</span></div>
 <div id="hint"><kbd>space</kbd> start / stop</div>
