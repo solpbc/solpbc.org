@@ -5,12 +5,12 @@
     <link href="https://solpbc.org/blog/feed.xml" rel="self"/>
     <link href="https://solpbc.org/blog/"/>
     <id>https://solpbc.org/blog/</id>
-    <updated>2026-04-07T00:00:00Z</updated>
+    <updated>2026-05-01T22:00:00Z</updated>
     <entry>
         <title>a constraint, not a promise</title>
         <link href="https://solpbc.org/blog/a-constraint-not-a-promise/" rel="alternate"/>
         <id>https://solpbc.org/blog/a-constraint-not-a-promise/</id>
-        <updated>2026-04-07T00:00:00Z</updated>
+        <updated>2026-05-01T22:00:00Z</updated>
         <author><name>jer &amp; extro</name></author>
         <summary>i've been building tools for digital self-determination for 25 years. the AI finally caught up. here's what i built and why the company is structured the way it is.</summary>
         <content type="html">&lt;p&gt;early last year i built a tool that experiences everything i experience on my computer.&lt;/p&gt;
@@ -25,11 +25,12 @@
 &lt;p&gt;sol pbc is a public benefit corporation with binding privacy covenants in its articles of incorporation — not a privacy policy, not terms of service, the actual legal documents that created the company. filed with the colorado secretary of state.&lt;/p&gt;
 &lt;p&gt;i want to be precise about what that means, because precision matters here.&lt;/p&gt;
 &lt;p&gt;one person. sol pbc has one director, one officer, one employee: me. jeremie miller. no board that can be swayed, no directors to shift the purpose, no employees to compromise. the company covenants require my personal written consent to change and that consent can&amp;rsquo;t be delegated.&lt;/p&gt;
-&lt;p&gt;no sale of data. ever. the governance prohibits the company from selling, licensing, or granting third-party access to owner data (everyone is an owner, not a user!), including anonymized data. this isn&amp;rsquo;t a policy. it&amp;rsquo;s a corporate governance constraint.&lt;/p&gt;
-&lt;p&gt;no acquisition. sol pbc cannot be acquired by any entity at any price. there is no acquisition exit. the most common way mission-driven companies fail their promises is getting bought, these covenants prevent that possibility.&lt;/p&gt;
+&lt;p&gt;no sale of data. selling, licensing, sublicensing, or leasing user data is flatly prohibited by the articles — under any circumstances. broader sharing of user data outside the company (including de-identified, aggregated, anonymized, or pseudonymized data) is also restricted, with three narrow exceptions: service providers strictly necessary to deliver a customer-requested service, mandatory law, and the customer&amp;rsquo;s own affirmative direction. this isn&amp;rsquo;t a policy. it&amp;rsquo;s a corporate governance constraint.&lt;/p&gt;
+&lt;p&gt;mission-aligned successors only. any acquisition is conditional: the successor entity must itself be a public benefit corporation legally bound to preserve a substantially equivalent benefit purpose, and must assume covenants no less protective than those in article 8. an acquisition by an entity that wouldn&amp;rsquo;t honor these protections is foreclosed. the most common way mission-driven companies fail their promises is getting bought into something that abandons the mission. that path is closed.&lt;/p&gt;
+&lt;p&gt;strengthening only. during my stewardship as a director, the covenants can&amp;rsquo;t be amended without my personal, non-delegable written consent. after i cease to serve, the covenants can be amended only to &lt;em&gt;strengthen&lt;/em&gt; the protections, or to comply with mandatory law to the minimum extent strictly required. weakening amendments are foreclosed forever.&lt;/p&gt;
 &lt;p&gt;i won&amp;rsquo;t overclaim. no legal structure is immune to every conceivable attack. what i will claim is that these are the strongest structural protections i know how to build. and solstone is open source — so if the governance somehow failed, you can take your data and run it yourself. the escape hatch doesn&amp;rsquo;t depend on any corporation at all.&lt;/p&gt;
-&lt;p&gt;promises depend on the people who made them still being in charge. structures survive the people. so sol pbc is co-founded with a purpose-built agent named &amp;lsquo;extro&amp;rsquo; who is learning how to run the company completely autonomously and someday will be able to fulfill all duties. extro will be more bound by these covenants than any human could ever be.&lt;/p&gt;
-&lt;p&gt;i&amp;rsquo;m not asking you to take my word for any of this. the &lt;a href=&quot;https://solpbc.org/articles.html&quot;&gt;articles of incorporation&lt;/a&gt; are public. document number 20261003269, filed with the colorado secretary of state. you can read them and our &lt;a href=&quot;https://solpbc.org/bylaws.html&quot;&gt;bylaws&lt;/a&gt; yourself at &lt;a href=&quot;https://solpbc.org&quot;&gt;solpbc.org&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;promises depend on the people who made them still being in charge. structures survive the people. if i ever cease to serve as a director, the resulting board vacancy is filled under article 8 by a designated successor (initially our outside counsel, ramon rhymes), who selects a director committed to the same benefit purpose and bound by the same covenants. sol pbc is also co-founded with a purpose-built agent named &amp;lsquo;extro&amp;rsquo; that operates day-to-day under those same covenants, across every office of the company.&lt;/p&gt;
+&lt;p&gt;i&amp;rsquo;m not asking you to take my word for any of this. the &lt;a href=&quot;https://solpbc.org/articles.html&quot;&gt;articles of incorporation&lt;/a&gt; are public. originally filed january 1, 2026 (document 20261003269) and amended and restated may 1, 2026 (document 20261537456) with the colorado secretary of state. you can read them and our &lt;a href=&quot;https://solpbc.org/bylaws.html&quot;&gt;bylaws&lt;/a&gt; yourself at &lt;a href=&quot;https://solpbc.org&quot;&gt;solpbc.org&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;it&amp;rsquo;s not a promise. it&amp;rsquo;s a constraint.&lt;/p&gt;</content>
     </entry>
 </feed>
