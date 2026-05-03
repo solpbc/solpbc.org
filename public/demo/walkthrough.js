@@ -1,9 +1,8 @@
 (function() {
-  const TOTAL_SECONDS = 465; // 7:45
+  const TOTAL_SECONDS = 420; // 7:00 target talk pace
   let running = false;
   let lastFrame = null;
   let elapsed = 0;            // seconds of "talk time" consumed
-  let pxPerSecond = 0;
   let totalScrollable = 0;
 
   const indicator = document.getElementById('indicator');
@@ -19,7 +18,6 @@
 
   function recalc() {
     totalScrollable = Math.max(1, document.documentElement.scrollHeight - window.innerHeight);
-    pxPerSecond = totalScrollable / TOTAL_SECONDS;
   }
 
   function updateUI() {
@@ -36,12 +34,15 @@
       const dt = (now - lastFrame) / 1000;
       // hard cap dt at 0.5s so resume after a long pause doesn't lurch
       const cappedDt = Math.min(dt, 0.5);
-      window.scrollBy(0, pxPerSecond * cappedDt);
       elapsed += cappedDt;
     }
     lastFrame = now;
+    // drive scroll position from elapsed time directly — avoids sub-pixel
+    // rounding errors that stall scrollBy() when pxPerSecond < 1
+    const targetY = (elapsed / TOTAL_SECONDS) * totalScrollable;
+    window.scrollTo(0, targetY);
     updateUI();
-    if (window.scrollY >= totalScrollable - 1) {
+    if (elapsed >= TOTAL_SECONDS || window.scrollY >= totalScrollable - 1) {
       running = false;
       updateUI();
       return;
@@ -51,6 +52,7 @@
 
   function start() {
     if (running) return;
+    recalc();  // ensure fresh measurements in case layout has shifted
     running = true;
     lastFrame = null;
     updateUI();
