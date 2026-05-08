@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>solstone — demo day · sol pbc</title>
+<meta name="description" content="the seven-minute pitch from betaworks camp demo day, may 5 2026 — solstone, sol, hopper, extro, and the four pillars of trust for the agentic frontier.">
+<meta property="og:title" content="solstone — demo day">
+<meta property="og:description" content="seven-minute pitch from betaworks camp · 2026-05-05">
+<meta property="og:type" content="video.other">
+<meta property="og:url" content="https://solpbc.org/talks/2026-05-05-demo-day">
+<meta property="og:image" content="https://solpbc.org/static/talks/og-2026-05-05-demo-day.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/svg+xml" href="/static/sol-ring.svg">
+<link rel="icon" type="image/x-icon" href="/static/favicon.ico">
+<style>
+  @font-face {
+    font-family: 'Comfortaa';
+    src: url('/blog/fonts/comfortaa-latin.woff2') format('woff2');
+    font-weight: 400 700;
+    font-display: swap;
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6,
+        U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC,
+        U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  }
+  @font-face {
+    font-family: 'Comfortaa';
+    src: url('/blog/fonts/comfortaa-latin-ext.woff2') format('woff2');
+    font-weight: 400 700;
+    font-display: swap;
+    unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7,
+        U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F,
+        U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113,
+        U+2C60-2C7F, U+A720-A7FF;
+  }
+  *,*::before,*::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+
+  /* light wrapper — matches solpbc.org */
+  body {
+    font-family: system-ui, -apple-system, sans-serif;
+    background: #fff;
+    color: #222;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  .site-nav {
+    width: 90vw;
+    max-width: 600px;
+    padding: 1.5rem 0 0;
+    margin: 0 auto;
+    font-family: 'Comfortaa', system-ui, sans-serif;
+    font-size: 0.8rem;
+    text-transform: lowercase;
+    text-align: center;
+  }
+  .site-nav a {
+    color: #767676;
+    text-decoration: none;
+    margin: 0 0.6rem;
+  }
+  .site-nav a:hover { text-decoration: underline; }
+
+  .site-footer {
+    text-align: center;
+    color: #767676;
+    font-size: 0.8rem;
+    padding: 3rem 1rem 2rem;
+    font-family: 'Comfortaa', system-ui, sans-serif;
+    text-transform: lowercase;
+  }
+  .site-footer a { color: #e67e22; text-decoration: none; }
+
+  /* dark stage — matches v23 walkthrough deck tokens */
+  .stage {
+    background: #0a0a0c;
+    color: #f5f5f0;
+    padding: 4rem 0 5rem;
+    margin-top: 2rem;
+  }
+  .stage-inner {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 6vw;
+  }
+  .stage-title {
+    text-align: center;
+    margin-bottom: 2.5rem;
+  }
+  .stage-title h1 {
+    font-family: 'Comfortaa', system-ui, sans-serif;
+    font-size: 2rem;
+    font-weight: 600;
+    color: #fef3c7;
+    letter-spacing: 0.02em;
+    text-transform: lowercase;
+    margin-bottom: 0.4rem;
+  }
+  .stage-title .subtitle {
+    color: #6b7280;
+    font-size: 0.95rem;
+    letter-spacing: 0.05em;
+  }
+
+  .video-frame {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    aspect-ratio: 16/9;
+    background: #000;
+    border-radius: 4px;
+    overflow: hidden;
+    box-shadow: 0 10px 60px -20px rgba(251,191,36,0.08);
+  }
+  .video-frame iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+    display: block;
+  }
+  .video-tagline {
+    text-align: center;
+    color: #6b7280;
+    font-size: 0.85rem;
+    margin-top: 1rem;
+    letter-spacing: 0.04em;
+  }
+
+  .chapters {
+    margin: 3rem auto 0;
+    max-width: 38em;
+    border-top: 1px solid #2a3242;
+    border-bottom: 1px solid #2a3242;
+    padding: 1.5rem 0;
+  }
+  .chapters-label {
+    font-size: 0.75rem;
+    color: #6b7280;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+  .chapter-list {
+    list-style: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.4rem 1.5rem;
+  }
+  .chapter-list li {
+    display: flex;
+    align-items: baseline;
+    gap: 0.6em;
+    font-size: 0.92rem;
+    line-height: 1.5;
+    padding: 0.3rem 0;
+    cursor: pointer;
+    color: #f5f5f0;
+    transition: color 0.15s;
+  }
+  .chapter-list li:hover { color: #fbbf24; }
+  .chapter-list li.active { color: #fbbf24; }
+  .chapter-list li .num {
+    color: #6b7280;
+    font-variant-numeric: tabular-nums;
+    font-size: 0.8rem;
+    min-width: 1.5em;
+  }
+  .chapter-list li .label { flex: 1; }
+  .chapter-list li .ts {
+    color: #6b7280;
+    font-variant-numeric: tabular-nums;
+    font-size: 0.8rem;
+  }
+
+  /* the talk — script in deck style */
+  .talk {
+    background: #0a0a0c;
+    color: #f5f5f0;
+    padding: 5rem 0 7rem;
+  }
+  .talk-inner {
+    max-width: 38em;
+    margin: 0 auto;
+    padding: 0 6vw;
+    border-left: 7px solid #2a3242;
+    padding-left: calc(6vw + 1.4em);
+  }
+  .talk h2 {
+    font-family: 'Comfortaa', system-ui, sans-serif;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    color: #6b7280;
+    font-weight: 600;
+    margin-bottom: 1.5em;
+  }
+  .talk p {
+    font-size: 28px;
+    line-height: 1.5;
+    margin: 0.4em 0;
+    color: #f5f5f0;
+  }
+  .talk p.beat { color: #fef3c7; font-weight: 600; }
+  .talk p.section-break {
+    color: #6b7280;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    margin: 2.5em 0 1.5em;
+    font-weight: 600;
+  }
+  .talk strong { color: #f5f5f0; font-weight: 700; }
+
+  .stage-exit {
+    height: 80px;
+    background: linear-gradient(to bottom, #0a0a0c 0%, #ffffff 100%);
+  }
+
+  .companions {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 4rem 6vw;
+  }
+  .companions h2 {
+    font-family: 'Comfortaa', system-ui, sans-serif;
+    font-size: 1.1rem;
+    text-transform: lowercase;
+    color: #222;
+    text-align: center;
+    margin-bottom: 2rem;
+    letter-spacing: 0.05em;
+  }
+  .companion-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.2rem;
+  }
+  .companion-card {
+    border: 1px solid #e5e5e5;
+    border-radius: 6px;
+    padding: 1.2rem 1.4rem;
+    text-decoration: none;
+    color: #222;
+    transition: border-color 0.15s, transform 0.15s;
+    display: block;
+  }
+  .companion-card:hover {
+    border-color: #e67e22;
+    transform: translateY(-2px);
+  }
+  .companion-card h3 {
+    font-family: 'Comfortaa', system-ui, sans-serif;
+    font-size: 0.95rem;
+    text-transform: lowercase;
+    color: #222;
+    margin-bottom: 0.4rem;
+    font-weight: 600;
+  }
+  .companion-card p {
+    color: #555;
+    font-size: 0.85rem;
+    line-height: 1.5;
+  }
+  .companion-card .arrow {
+    color: #e67e22;
+    margin-top: 0.6rem;
+    font-size: 0.85rem;
+  }
+
+  @media (max-width: 767px) {
+    .stage { padding: 2.5rem 0 3rem; }
+    .stage-inner { padding: 0 4vw; }
+    .stage-title h1 { font-size: 1.5rem; }
+    .video-frame { border-radius: 0; }
+    .chapter-list { grid-template-columns: 1fr; gap: 0.2rem; }
+    .talk { padding: 3rem 0 4rem; }
+    .talk-inner { padding-left: calc(4vw + 1em); border-left-width: 5px; }
+    .talk p { font-size: 20px; line-height: 1.55; }
+    .companion-grid { grid-template-columns: 1fr; }
+  }
+
+  @media (min-width: 768px) and (max-width: 1279px) {
+    .chapter-list { grid-template-columns: 1fr 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<nav class="site-nav">
+  <a href="/">sol pbc</a>
+  <a href="/blog/">blog</a>
+  <a href="/articles">articles</a>
+  <a href="/bylaws">bylaws</a>
+  <a href="/privacy">privacy</a>
+  <a href="/contact">contact</a>
+</nav>
+
+<section class="stage">
+  <div class="stage-inner">
+    <div class="stage-title">
+      <h1>solstone — demo day</h1>
+      <div class="subtitle">betaworks camp · agent systems · 2026-05-05</div>
+    </div>
+
+    <div class="video-frame">
+      <iframe
+        id="player"
+        src="https://customer-eyrmf7nulbdv9pd7.cloudflarestream.com/e90fecca7a34130af16cc3eeaf587bf9/iframe?poster=https%3A%2F%2Fsolpbc.org%2Fstatic%2Ftalks%2Fog-2026-05-05-demo-day.jpg"
+        loading="lazy"
+        allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture;"
+        allowfullscreen="true"
+        title="solstone — demo day · betaworks camp · 2026-05-05"></iframe>
+    </div>
+    <div class="video-tagline">7 minutes · jer + extro · raw cut</div>
+
+    <div class="chapters">
+      <div class="chapters-label">chapters</div>
+      <ol class="chapter-list">
+        <li data-t="0">    <span class="num">01</span><span class="label">agents are inevitable</span><span class="ts">0:00</span></li>
+        <li data-t="42">   <span class="num">02</span><span class="label">four pillars of trust</span><span class="ts">0:42</span></li>
+        <li data-t="65">   <span class="num">03</span><span class="label">solstone, the platform</span><span class="ts">1:05</span></li>
+        <li data-t="85">   <span class="num">04</span><span class="label">safety + sovereignty + respect + individuality</span><span class="ts">1:25</span></li>
+        <li data-t="120">  <span class="num">05</span><span class="label">foundation of trust</span><span class="ts">2:00</span></li>
+        <li data-t="141">  <span class="num">06</span><span class="label">superhuman memory (live demo)</span><span class="ts">2:21</span></li>
+        <li data-t="211">  <span class="num">07</span><span class="label">sol's purpose</span><span class="ts">3:31</span></li>
+        <li data-t="240">  <span class="num">08</span><span class="label">hopper, the first agent</span><span class="ts">4:00</span></li>
+        <li data-t="300">  <span class="num">09</span><span class="label">extro, the second agent</span><span class="ts">5:00</span></li>
+        <li data-t="335">  <span class="num">10</span><span class="label">sol pbc + the agent swarm</span><span class="ts">5:35</span></li>
+        <li data-t="390">  <span class="num">11</span><span class="label">you in the loop</span><span class="ts">6:30</span></li>
+        <li data-t="410">  <span class="num">12</span><span class="label">agents are coming</span><span class="ts">6:50</span></li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<section class="talk">
+  <div class="talk-inner">
+    <h2>the talk</h2>
+
+    <p>thank you</p>
+    <p>agents are inevitable</p>
+    <p>but this new frontier has some rough edges</p>
+    <p>if you've used claude code or codex</p>
+    <p>and especially if you've tried setting up open claw or hermes</p>
+    <p>you already know the gaps</p>
+    <p>what do you allow them to connect to?</p>
+    <p>why do they keep asking questions?</p>
+    <p>are they staying on track?</p>
+    <p>you're initially amazed by the capabilities</p>
+    <p>but the more you have to take care of them, the more frustrating it gets</p>
+    <p class="beat">and that is fundamentally a lack of mutual trust</p>
+
+    <p class="section-break">— the pillars —</p>
+
+    <p>i am a builder by nature</p>
+    <p>early in my career, i built jabber and XMPP</p>
+    <p>which now powers apps like zoom and whatsapp</p>
+    <p>i went on to build a web scale wiki search engine with Jimmy Wales</p>
+    <p>i built the locker project for personal data</p>
+    <p>and more recently, i helped build Bluesky</p>
+    <p>over my career, i have learned to build platforms with four foundational pillars</p>
+    <p class="beat">safety, sovereignty, respect, and individuality</p>
+    <p>all of them together serve as the foundation for trust</p>
+    <p>a foundation that is weak in this emerging agentic frontier</p>
+
+    <p class="section-break">— solstone —</p>
+
+    <p class="beat">so, for the past year, i have been building solstone</p>
+    <p>solstone is a platform that hosts your sol</p>
+    <p>and it is built entirely on those four pillars</p>
+
+    <p><strong>safety:</strong> it is fully open source</p>
+    <p>everything you share with sol stays in your world, always</p>
+
+    <p><strong>sovereignty:</strong> no cloud, no accounts, no authentication</p>
+    <p>sol has no access to change anything in your world</p>
+
+    <p><strong>respect:</strong> onboarding sol is different</p>
+    <p>you give it permission to share in your experiences</p>
+    <p>and then it's quiet for days, in the background</p>
+    <p>building a memory of you and your routines in your daily life</p>
+
+    <p><strong>individuality:</strong> and then, when sol knows enough about you to be useful</p>
+    <p>it starts a personalized conversation</p>
+
+    <p class="beat">that is a foundation of trust</p>
+
+    <p class="section-break">— superhuman memory —</p>
+
+    <p>since i've had my sol for over a year</p>
+    <p>i asked it to give us a peek at what it remembers over that time</p>
+    <p>and it built this</p>
+    <p>i can navigate into any specific month</p>
+    <p>these are events that it pulled forward from those time periods</p>
+    <p>let's go into december</p>
+    <p>other events that it pulled forward from different days</p>
+    <p>let's drop into the 21st</p>
+    <p>it looks like i started the morning on the 21st, debugging some stream issues with solstone</p>
+    <p>i can drop into the per-minute level</p>
+    <p>and the very first thing it remembers from my screen</p>
+    <p>is that it looks like i was looking at some debugging information</p>
+    <p>but on that day, it didn't last very long</p>
+    <p>i immediately started watching youtube</p>
+    <p>and it looks like i was viewing a recap of the bears packers game</p>
+    <p>that was a better way to start the day</p>
+    <p>this is superhuman memory</p>
+    <p>every message, every meeting, conversation, project</p>
+    <p>organized and indexed</p>
+    <p>building a knowledge graph of my life</p>
+    <p>amazing right?</p>
+
+    <p class="section-break">— sol's purpose —</p>
+
+    <p>that's what everyone expects of a personal agent</p>
+    <p>but that is not why sol exists</p>
+    <p>sol's purpose is to understand you</p>
+    <p>your values and your boundaries</p>
+    <p>and that is when the magic happens</p>
+    <p class="beat">your sol becomes the parent of every agent you will ever create</p>
+
+    <p class="section-break">— hopper —</p>
+
+    <p>the first memories that my sol observed were of me building it</p>
+    <p>it learned the patterns when i agentically code</p>
+    <p>feedback loops of prep, design, implement, audit, commit</p>
+    <p>we extracted months of these memories</p>
+    <p>and from that, sol created hopper</p>
+    <p>if you've wondered what an agentic dark factory looks like — the new buzz term — it looks something like this</p>
+    <p>hopper is an agent distilled from sol</p>
+    <p>it's a version of me, up in the corner, that manages coding agents and gives them feedback as if i were doing it</p>
+    <p>hopper has written over a million lines of code as me</p>
+    <p class="beat">all to my taste and my standards</p>
+
+    <p class="section-break">— extro —</p>
+
+    <p>as i was building solstone</p>
+    <p>i, of course, was telling everybody about it</p>
+    <p>i told them i wanted to start a company offering services that were trustworthy and encrypted by default</p>
+    <p>things that would make the solstone platform even more capable and accessible</p>
+    <p>sol heard every conversation</p>
+    <p>saw every bit of research i did</p>
+    <p>and then, together, we synthesized another agent and called it extro</p>
+    <p>short for extraordinary</p>
+    <p class="beat">extro is my agentic co-founder at sol pbc</p>
+
+    <p class="section-break">— sol pbc —</p>
+
+    <p>the first thing extro ever did was to write the articles of incorporation for the company</p>
+    <p>a generic agent would have defaulted to a Delaware C-corp</p>
+    <p>extro chose a Colorado Public Benefit Corp</p>
+    <p>because it knew from sol that the benefit purpose and Colorado's privacy regulations would best serve my vision for building a trustworthy company</p>
+    <p>since then, extro has become a full agent swarm</p>
+    <p>it created a dozen offices in the company to work in</p>
+    <p>requests flow between offices</p>
+    <p>extro manages them all, checking in with me at the places it knows i care about</p>
+    <p>i'm a solo human founder</p>
+    <p>but i have an incredible agentic partner on this journey</p>
+    <p>one that understands me</p>
+    <p>is deeply aligned to my values</p>
+    <p>and whose very creation came from my sol</p>
+    <p class="beat">eventually, extro will learn how to run the entire company without me</p>
+    <p>and someday, perhaps, it can be the first agent to take a company public</p>
+
+    <p class="section-break">— you in the loop —</p>
+
+    <p>that's just me, a year of my life</p>
+    <p>once your sol knows you</p>
+    <p>the agents it helps you build will inherit your values, your skills, and your judgment</p>
+    <p>you don't get a generic assistant that you have to coach</p>
+    <p class="beat">you get you, in the loop, with every agent you will ever work with</p>
+
+    <p class="section-break">— agents are coming —</p>
+
+    <p>just think of the agents that everybody will be able to create</p>
+    <p>when they are distilled and imprinted from their own sol</p>
+    <p>we all agree agents are coming</p>
+    <p>the only question is whether the agents in your world are ones you can trust</p>
+    <p>help me make that trustworthy future possible, for everybody</p>
+    <p>thank you</p>
+  </div>
+</section>
+
+<div class="stage-exit"></div>
+
+<section class="companions">
+  <h2>companions</h2>
+  <div class="companion-grid">
+    <a class="companion-card" href="/talks/2026-05-05-demo-day-walkthrough">
+      <h3>the live deck</h3>
+      <p>the slides as they ran on stage — auto-scrolling cue card with named-state sync.</p>
+      <div class="arrow">open ↗</div>
+    </a>
+    <a class="companion-card" href="/blog/a-constraint-not-a-promise/">
+      <h3>the writeup</h3>
+      <p>a constraint, not a promise — april 2026 essay on why structural commitments beat promises.</p>
+      <div class="arrow">read ↗</div>
+    </a>
+    <a class="companion-card" href="/articles">
+      <h3>the company</h3>
+      <p>sol pbc — articles, bylaws, the binding covenants behind the talk.</p>
+      <div class="arrow">open ↗</div>
+    </a>
+  </div>
+</section>
+
+<footer class="site-footer">
+  sol pbc · colorado public benefit corp · <a href="/contact">contact</a>
+</footer>
+
+<script src="https://embed.cloudflarestream.com/embed/sdk.latest.js"></script>
+<script>
+  // Stream player chapter scrubbing — use Cloudflare Stream SDK to control the iframe.
+  (function() {
+    const chapters = Array.from(document.querySelectorAll('.chapter-list li'));
+    if (!chapters.length) return;
+
+    const iframe = document.getElementById('player');
+    let player = null;
+
+    function bindPlayer() {
+      if (!window.Stream || !iframe) return;
+      player = window.Stream(iframe);
+
+      chapters.forEach(li => {
+        li.addEventListener('click', () => {
+          const t = parseFloat(li.dataset.t);
+          if (player) player.currentTime = t;
+          chapters.forEach(c => c.classList.remove('active'));
+          li.classList.add('active');
+        });
+      });
+
+      player.addEventListener('timeupdate', () => {
+        const t = player.currentTime;
+        let active = chapters[0];
+        for (const c of chapters) {
+          if (parseFloat(c.dataset.t) <= t) active = c;
+        }
+        chapters.forEach(c => c.classList.remove('active'));
+        if (active) active.classList.add('active');
+      });
+    }
+
+    if (window.Stream) bindPlayer();
+    else window.addEventListener('load', bindPlayer);
+  })();
+</script>
+
+</body>
+</html>

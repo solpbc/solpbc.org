@@ -28,6 +28,19 @@ const DEMO_CSP =
   "img-src 'self' data:; font-src 'self'; connect-src 'self'; " +
   "base-uri 'self'; form-action 'self'; frame-ancestors 'none'";
 
+// Scoped CSP for /talks/* — recorded talk pages embed Cloudflare Stream.
+// Allows stream embed scripts, video frames, and HLS connections.
+const TALKS_CSP =
+  "default-src 'self'; " +
+  "script-src 'self' 'unsafe-inline' https://embed.cloudflarestream.com; " +
+  "style-src 'self' 'unsafe-inline'; " +
+  "img-src 'self' data: https://customer-eyrmf7nulbdv9pd7.cloudflarestream.com; " +
+  "font-src 'self'; " +
+  "connect-src 'self' https://customer-eyrmf7nulbdv9pd7.cloudflarestream.com; " +
+  "media-src 'self' https://customer-eyrmf7nulbdv9pd7.cloudflarestream.com; " +
+  "frame-src https://customer-eyrmf7nulbdv9pd7.cloudflarestream.com https://embed.cloudflarestream.com; " +
+  "base-uri 'self'; form-action 'self'; frame-ancestors 'none'";
+
 // --- helpers ---
 
 function jsonResponse(data, status = 200) {
@@ -53,12 +66,15 @@ function applySecurityHeaders(response, pathname) {
   const newResponse = new Response(response.body, response);
   const isContactPage = pathname === '/contact' || pathname.startsWith('/contact/');
   const isDemoPage = pathname.startsWith('/demo/');
+  const isTalksPage = pathname === '/talks' || pathname.startsWith('/talks/');
 
   for (const [key, value] of Object.entries(SECURITY_HEADERS)) {
     if (key === 'Content-Security-Policy' && isContactPage) {
       newResponse.headers.set(key, CONTACT_CSP);
     } else if (key === 'Content-Security-Policy' && isDemoPage) {
       newResponse.headers.set(key, DEMO_CSP);
+    } else if (key === 'Content-Security-Policy' && isTalksPage) {
+      newResponse.headers.set(key, TALKS_CSP);
     } else {
       newResponse.headers.set(key, value);
     }
@@ -248,6 +264,18 @@ export default {
     if (url.hostname === 'www.solpbc.org') {
       url.hostname = 'solpbc.org';
       return redirect(url.toString(), 301);
+    }
+
+    // Demo-day talk short aliases → canonical /talks/2026-05-05-demo-day
+    if (
+      url.pathname === '/demo' ||
+      url.pathname === '/demo/' ||
+      url.pathname === '/demo-day' ||
+      url.pathname === '/demo-day/' ||
+      url.pathname === '/demo/2026-05-05' ||
+      url.pathname === '/demo/2026-05-05/'
+    ) {
+      return redirect('/talks/2026-05-05-demo-day', 302);
     }
 
     // POST /api/contact → form handler

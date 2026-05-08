@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>solstone — demo day walkthrough</title>
+<style>
+  *,*::before,*::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --bg: #0a0a0c;
+    --text: #f5f5f0;
+    --dim: #6b7280;
+    --accent: #fbbf24;
+    --rule: #2a3242;
+  }
+
+  html, body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI", system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    line-height: 1.5;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+  }
+
+  /* ---- slide stack ----
+     One slide visible at a time. Each slide takes the full viewport with
+     generous top/bottom padding so its body never sits under the progress
+     dots (top, z=100) or the status pill (bottom, z=100). Slides scroll
+     INTERNALLY (overflow:hidden + JS-driven scrollTop) — the auto-scroll
+     paces ~166 wpm through each slide's content. Single font size for all
+     slides; long slides simply scroll for longer. */
+  #stack {
+    position: fixed;
+    inset: 0;
+    background: var(--bg);
+  }
+  .slide {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* TOP padding clears the 1.2vh progress dot row + a comfortable margin.
+       BOTTOM padding clears the 1.5vh status pill + margin. Both larger
+       than the controls so text is always readable. */
+    padding: 8vh 10vw 9vh 10vw;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.18s ease-out;
+    overflow: hidden;
+  }
+  .slide.active {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  /* Single font-size everywhere — content scrolls if it doesn't fit.
+     Single neutral left rule (no more mode tinting — labels + modes
+     removed in v26). */
+  .slide .body {
+    flex: 1 1 auto;
+    min-height: 0;
+    width: 100%;
+    max-width: 38em;
+    border-left: 7px solid var(--rule);
+    padding-left: 1.4em;
+    font-size: 28px;
+    line-height: 1.5;
+    /* Manual override of the auto-scroll: wheel/trackpad/touch can drag the
+       body to any position; the auto-scroll RAF reads scrollTop each tick
+       and resumes advancing from wherever you land. Scrollbar hidden to
+       keep the visual clean — drag still works on bare body. */
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    scrollbar-width: none;
+  }
+  .slide .body::-webkit-scrollbar { display: none; }
+  .slide .body p {
+    color: var(--text);
+    margin: 0.4em 0;
+  }
+  .slide .body p.beat { color: #fef3c7; font-weight: 600; }
+  .slide .body strong { color: var(--text); font-weight: 700; }
+
+  /* ---- title slide ---- */
+  .slide.title {
+    justify-content: center;
+  }
+  .slide.title .body {
+    text-align: center;
+    border: 0;
+    padding: 0;
+    flex: 0 0 auto;
+    overflow: visible;
+  }
+  .slide.title h1 {
+    font-size: 1.6em;
+    font-weight: 600;
+    color: #fef3c7;
+    margin-bottom: 0.4em;
+    letter-spacing: -0.01em;
+  }
+
+  /* ---- bottom indicator ---- */
+  #indicator {
+    position: fixed;
+    bottom: 1.5vh;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0,0,0,0.65);
+    backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px);
+    padding: 0.4em 1em;
+    border-radius: 0.4em;
+    font-size: 13px;
+    z-index: 100;
+    color: var(--dim);
+    font-variant-numeric: tabular-nums;
+    pointer-events: none;
+  }
+  #indicator strong { color: var(--text); font-weight: 600; margin-right: 0.4em; }
+  #indicator .key { color: var(--accent); margin-left: 0.6em; }
+
+  /* ---- progress dots: one per slide along the top ---- */
+  #progress {
+    position: fixed;
+    top: 1.2vh;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 4px;
+    z-index: 100;
+    pointer-events: none;
+  }
+  #progress .dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--rule);
+    transition: background 0.15s;
+  }
+  #progress .dot.passed { background: var(--dim); }
+  #progress .dot.active { background: var(--accent); width: 10px; border-radius: 3px; }
+</style>
+</head>
+<body>
+
+<div id="progress"></div>
+
+<div id="stack">
+
+<!-- Each <section class="slide"> carries data-state="..." matching a deck
+     STEPS[].name. The cue card builds a name → slide-index map at startup
+     and, on every walk-state event from the deck, snaps to the slide whose
+     data-state matches. Reorder/merge/split slides freely — only the
+     data-state ↔ deck-name mapping needs to stay valid. -->
+
+<section class="slide title active" data-state="pre-show">
+  <div class="body">
+    <h1>solstone — demo day · v27 · 7:00</h1>
+    <p>cue card + deck driver — both windows stay in sync via named states.</p>
+    <p style="margin-top:1.2em; color:var(--dim); font-size:0.85em">space → next · ← → previous · R → reset · either window drives both</p>
+  </div>
+</section>
+
+<!-- opening: the long monologue. Auto-scrolls during the 69s sunrise.
+     padding-top gives the opening line ~3em of head room so it lingers
+     before auto-scroll starts pushing content up. -->
+<section class="slide" data-state="opening">
+  <div class="body" style="padding-top: 3em">
+    <p>agents are inevitable</p>
+    <p>but this new frontier has some rough edges</p>
+    <p>if you've used claude code or codex</p>
+    <p>and especially if you've tried setting up open claw or hermes</p>
+    <p>you already know the gaps</p>
+    <p>what do you allow them to connect to?</p>
+    <p>why do they keep asking questions?</p>
+    <p>are they staying on track?</p>
+    <p>you're initially amazed by the capabilities</p>
+    <p>but the more you have to take care of them</p>
+    <p>the more frustrating it gets</p>
+    <p class="beat">and that is fundamentally a lack of mutual trust</p>
+    <p>i am a builder by nature</p>
+    <p>early in my career, i built jabber and XMPP</p>
+    <p>which now powers apps like whatsapp and zoom</p>
+    <p>i went on to build a web scale wiki search engine with Jimmy Wales</p>
+    <p>i built the locker project for personal data</p>
+    <p>and more recently, i helped build bluesky</p>
+    <p>over my career i have learned to build platforms with four foundational pillars</p>
+    <p>safety</p>
+    <p>sovereignty</p>
+    <p>respect</p>
+    <p>and individuality</p>
+    <p>all of them together serve as the foundation for trust</p>
+    <p>a foundation that is weak</p>
+    <p>in this emerging agentic frontier</p>
+  </div>
+</section>
+
+<section class="slide" data-state="ring">
+  <div class="body">
+    <p class="beat">so, for the past year, i have been building solstone</p>
+    <p>solstone is a platform that hosts your sol</p>
+  </div>
+</section>
+
+<section class="slide" data-state="sol">
+  <div class="body">
+    <p>and it is built entirely on those four pillars</p>
+  </div>
+</section>
+
+<section class="slide" data-state="safety">
+  <div class="body">
+    <p><strong>safety:</strong> it is fully open source</p>
+    <p>everything you share with sol stays in your world</p>
+    <p>always</p>
+  </div>
+</section>
+
+<section class="slide" data-state="sovereignty">
+  <div class="body">
+    <p><strong>sovereignty:</strong> no cloud. no accounts. no authentication</p>
+    <p>sol has no access to change anything in your world</p>
+  </div>
+</section>
+
+<section class="slide" data-state="respect">
+  <div class="body">
+    <p><strong>respect:</strong> onboarding sol is different</p>
+    <p>you give it permission to share in your experiences</p>
+    <p>and then it's quiet for days, in the background</p>
+    <p>building a memory of you and your routines in your daily life</p>
+  </div>
+</section>
+
+<section class="slide" data-state="individuality">
+  <div class="body">
+    <p><strong>individuality:</strong> and then</p>
+    <p>when sol knows enough about you to be useful</p>
+    <p>it starts a personalized conversation</p>
+    <p class="beat">that is a foundation of trust</p>
+  </div>
+</section>
+
+<section class="slide" data-state="trust">
+  <div class="body">
+    <p>since i've had my sol for over a year</p>
+    <p>i asked it to give us a peek at what it remembers</p>
+  </div>
+</section>
+
+<section class="slide" data-state="timeline">
+  <div class="body">
+    <p>and it built this</p>
+    <p>i can navigate into any specific month and see the highlights sol has selected</p>
+    <p>down into a day for more detail, into an hour</p>
+    <p>and then i can go all the way down to the minute</p>
+    <p>and see what sol noted as it was experiencing my life alongside me</p>
+    <p>in this instance last december, i started debugging solstone</p>
+    <p>and then ended up watching bears packers highlights</p>
+    <p>a good way to start the day</p>
+    <p>this is superhuman memory</p>
+    <p>every message, meeting, conversation, project</p>
+    <p>organized and indexed</p>
+    <p>building a knowledge graph of my life</p>
+  </div>
+</section>
+
+<!-- post-timeline auto-advances to sharp-sol; no slide for that transient -->
+<section class="slide" data-state="sharp-sol">
+  <div class="body">
+    <p>that's what everyone expects of a personal agent</p>
+    <p>but that's not why sol exists</p>
+  </div>
+</section>
+
+<section class="slide" data-state="you">
+  <div class="body">
+    <p>sol's purpose is to understand you</p>
+    <p>your values and your boundaries</p>
+    <p>and that's when the magic happens</p>
+  </div>
+</section>
+
+<!-- 4-ring cascade auto-runs through cascade-tl/tr/bl; cue card lands here when rings-done -->
+<section class="slide" data-state="rings-done">
+  <div class="body">
+    <p class="beat">your sol becomes the parent of every agent you will ever create</p>
+  </div>
+</section>
+
+<section class="slide" data-state="jer">
+  <div class="body">
+    <p>the first memories that my sol observed were of me building it</p>
+    <p>it learned the patterns when i agentically code</p>
+    <p>feedback loops of prep, design, implement, audit, and commit</p>
+    <p>we extracted months of those memories</p>
+    <p>and from that</p>
+    <p>sol created hopper</p>
+  </div>
+</section>
+
+<section class="slide" data-state="jer-hopper">
+  <div class="body">
+    <p>if you've wondered what an agentic dark factory looks like</p>
+    <p>it's something like this</p>
+  </div>
+</section>
+
+<section class="slide" data-state="termviz">
+  <div class="body">
+    <p>hopper is an agent, distilled from sol</p>
+    <p>it's a version of me (up in the corner) that manages coding agents and gives them feedback as i would</p>
+    <p>hopper has written over a million lines of code as me</p>
+    <p class="beat">all to my taste and my standards</p>
+  </div>
+</section>
+
+<section class="slide" data-state="jer-hopper-2">
+  <div class="body">
+    <p>as i was building solstone, i was of course telling everybody about it</p>
+    <p>i told them i wanted to start a company offering services that were trustworthy and encrypted by default</p>
+    <p>things that would make the solstone platform even more capable, and accessible</p>
+    <p>sol heard every conversation, saw every bit of research</p>
+    <p>and then, together, we synthesized another agent and called it extro</p>
+  </div>
+</section>
+
+<section class="slide" data-state="extro">
+  <div class="body">
+    <p>short for extraordinary</p>
+    <p class="beat">extro is my agentic co-founder at sol pbc</p>
+  </div>
+</section>
+
+<section class="slide" data-state="sol-pbc">
+  <div class="body">
+    <p>the first thing extro ever did</p>
+    <p>was to write the articles of incorporation for the company</p>
+    <p>a generic agent would have defaulted to Delaware C-corp</p>
+    <p>extro chose Colorado Public Benefit Corp because it knew</p>
+    <p>from sol</p>
+    <p>that the benefit purpose would best serve my vision building a trustworthy company</p>
+    <p>since then, extro has become a full agent swarm</p>
+  </div>
+</section>
+
+<section class="slide" data-state="buzz">
+  <div class="body">
+    <p>it created a dozen different offices in the company to work in</p>
+    <p>requests flow between offices, and extro manages them all</p>
+    <p>checking in with me at the places it knows i care about</p>
+    <p>i'm a solo human founder</p>
+    <p>but i have an incredible agentic partner on this journey</p>
+    <p>one that understands me</p>
+    <p>is deeply aligned to my values</p>
+    <p>and whose very creation came from my sol</p>
+    <p class="beat">eventually, extro will learn how to run the entire company without me</p>
+    <p>and someday, perhaps, to be the first agent to take a company public</p>
+  </div>
+</section>
+
+<section class="slide" data-state="you-hold">
+  <div class="body">
+    <p>that's just me</p>
+    <p>once your sol knows you</p>
+    <p>the agents it helps you build will inherit your values, your skills, and your judgment</p>
+    <p>you don't get a generic assistant you have to coach</p>
+    <p class="beat">you get you, in the loop with every agent you'll ever work with</p>
+  </div>
+</section>
+
+<!-- corners-start fires when the closing cascade KICKS OFF (deck enters
+     the first cascade step). The just-think narration runs while the
+     cascade auto-reveals porto → myco → coachr → homey in the background;
+     when the deck reaches the corners-done hold, the cue card stays here
+     (no slide bound to corners-done) until jer presses for final-trust. -->
+<section class="slide" data-state="corners-start">
+  <div class="body">
+    <p>just think of the agents that everyone will be able to create</p>
+    <p>when they are distilled and imprinted from their own sol</p>
+    <p>we all agree agents are coming</p>
+    <p>the only question is whether the agents in your world are ones you can trust</p>
+  </div>
+</section>
+
+<section class="slide" data-state="final-trust">
+  <div class="body">
+    <p>help me make that trustworthy future possible, for everybody</p>
+  </div>
+</section>
+
+</div>
+
+<div id="indicator"><strong id="status">pre-show · 1 / 23</strong><span id="hint">space to begin</span></div>
+
+<script src="/talks/2026-05-05-demo-day-walkthrough.js"></script>
+</body>
+</html>
