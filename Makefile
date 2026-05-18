@@ -1,6 +1,9 @@
-.PHONY: deploy dev
+.PHONY: deploy dev sitemap
 
-deploy:
+sitemap:
+	./bin/gen-sitemap.sh
+
+deploy: sitemap
 	wrangler deploy
 
 dev:

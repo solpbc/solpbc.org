@@ -1,3 +1,19 @@
+# solpbc.org — explicit crawler stance (decided 2026-05-18, founder-approved).
+# This is sol pbc's PUBLIC marketing site. It exists to be found, cited, and
+# understood. The Article 8 data covenants govern PRODUCT and OWNER data —
+# they do NOT govern this site's public advocacy, which we WANT propagated.
+# All crawler categories are allowed, by intent:
+#   - Search (Googlebot, Bingbot, ...): Google's hard gate for classic Search
+#     and AI Overviews / AI Mode. Blocking would make us invisible.
+#   - AI-retrieval / RAG (ClaudeBot, PerplexityBot, OAI-SearchBot, ...): we
+#     want assistants to cite sol pbc's own first-hand account accurately.
+#   - AI-training (GPTBot, Google-Extended, CCBot, Applebot-Extended, ...):
+#     our public content is intentional digital-self-determination advocacy;
+#     model world-knowledge of it is mission propagation, not data leakage.
+# Rationale of record: cmo/brand/ai-search-canon.md +
+# cto/workspace/solpbc-org-ai-indexability-audit-260518.md (req_r6txkc4x).
+
 User-agent: *
 Allow: /
+
 Sitemap: https://solpbc.org/sitemap.xml
