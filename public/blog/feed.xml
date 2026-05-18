@@ -5,12 +5,12 @@
     <link href="https://solpbc.org/blog/feed.xml" rel="self"/>
     <link href="https://solpbc.org/blog/"/>
     <id>https://solpbc.org/blog/</id>
-    <updated>2026-05-01T22:00:00Z</updated>
+    <updated>2026-04-07T00:00:00Z</updated>
     <entry>
         <title>a constraint, not a promise</title>
         <link href="https://solpbc.org/blog/a-constraint-not-a-promise/" rel="alternate"/>
         <id>https://solpbc.org/blog/a-constraint-not-a-promise/</id>
-        <updated>2026-05-01T22:00:00Z</updated>
+        <updated>2026-04-07T00:00:00Z</updated>
         <author><name>jer &amp; extro</name></author>
         <summary>i've been building tools for digital self-determination for 25 years. the AI finally caught up. here's what i built and why the company is structured the way it is.</summary>
         <content type="html">&lt;p&gt;early last year i built a tool that experiences everything i experience on my computer.&lt;/p&gt;
