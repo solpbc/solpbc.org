@@ -1,9 +1,12 @@
-.PHONY: deploy dev sitemap
+.PHONY: deploy dev sitemap brands
 
 sitemap:
 	./bin/gen-sitemap.sh
 
-deploy: sitemap
+brands:
+	./bin/gen-brand-assets.sh
+
+deploy: brands sitemap
 	wrangler deploy
 
 dev:

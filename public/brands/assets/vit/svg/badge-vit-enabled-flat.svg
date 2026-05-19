@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="108" height="20" role="img" aria-label="vit: enabled">
+  <title>vit: enabled</title>
+  <clipPath id="r">
+    <rect width="108" height="20" rx="3" fill="#fff"/>
+  </clipPath>
+  <g clip-path="url(#r)">
+    <rect width="38" height="20" fill="#333"/>
+    <rect x="38" width="70" height="20" fill="#06D6A0"/>
+  </g>
+  <g fill="#fff" text-anchor="middle" font-family="Verdana,Geneva,DejaVu Sans,sans-serif" text-rendering="geometricPrecision" font-size="11">
+    <text x="19" y="14">vit</text>
+    <text x="72" y="14">enabled</text>
+  </g>
+</svg>

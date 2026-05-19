@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="28" height="20" role="img" aria-label="vit">
+  <title>vit</title>
+  <clipPath id="r">
+    <rect width="28" height="20" rx="3" fill="#fff"/>
+  </clipPath>
+  <g clip-path="url(#r)">
+    <rect width="28" height="20" fill="#06D6A0"/>
+  </g>
+  <!-- vit mark scaled to badge -->
+  <circle cx="14" cy="5" r="1.8" fill="#fff"/>
+  <path d="M7 7.5 L14 16.5 L21 7.5" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+</svg>

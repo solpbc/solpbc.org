@@ -28,6 +28,15 @@ const DEMO_CSP =
   "img-src 'self' data:; font-src 'self'; connect-src 'self'; " +
   "base-uri 'self'; form-action 'self'; frame-ancestors 'none'";
 
+// Scoped CSP for /brands/ — the brand media portal needs same-origin clipboard
+// JS (the base CSP has no script-src, so page JS is otherwise blocked). Base
+// CSP + script-src 'self' only: no connect-src (the Clipboard API is not a
+// network fetch), no external origins. The page makes zero third-party
+// requests by design — that is the brand. (build spec §5.6)
+const BRANDS_CSP =
+  "default-src 'none'; style-src 'self' 'unsafe-inline'; font-src 'self'; " +
+  "img-src 'self'; script-src 'self'; frame-ancestors 'none'";
+
 // Scoped CSP for /talks/* — recorded talk pages embed Cloudflare Stream.
 // Allows stream embed scripts, video frames, and HLS connections.
 const TALKS_CSP =
@@ -67,6 +76,8 @@ function applySecurityHeaders(response, pathname) {
   const isContactPage = pathname === '/contact' || pathname.startsWith('/contact/');
   const isDemoPage = pathname.startsWith('/demo/');
   const isTalksPage = pathname === '/talks' || pathname.startsWith('/talks/');
+  const isBrandsPage =
+    pathname === '/brands' || pathname === '/brands.html' || pathname.startsWith('/brands/');
 
   for (const [key, value] of Object.entries(SECURITY_HEADERS)) {
     if (key === 'Content-Security-Policy' && isContactPage) {
@@ -75,6 +86,8 @@ function applySecurityHeaders(response, pathname) {
       newResponse.headers.set(key, DEMO_CSP);
     } else if (key === 'Content-Security-Policy' && isTalksPage) {
       newResponse.headers.set(key, TALKS_CSP);
+    } else if (key === 'Content-Security-Policy' && isBrandsPage) {
+      newResponse.headers.set(key, BRANDS_CSP);
     } else {
       newResponse.headers.set(key, value);
     }
@@ -276,6 +289,12 @@ export default {
       url.pathname === '/demo/2026-05-05/'
     ) {
       return redirect('/talks/2026-05-05-demo-day', 302);
+    }
+
+    // /brands and /brands.html → canonical /brands/ (the clean-URL handler
+    // only tries .html and would not dir-index /brands). 301 — build spec §5.6.
+    if (url.pathname === '/brands' || url.pathname === '/brands.html') {
+      return redirect('/brands/', 301);
     }
 
     // POST /api/contact → form handler

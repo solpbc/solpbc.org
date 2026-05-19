@@ -1,0 +1,15 @@
+<svg viewBox="3.75 3 49 25.75" xmlns="http://www.w3.org/2000/svg">
+  <!-- vit wordmark: all letters drawn with the same rounded stroke -->
+
+  <!-- v (the mark) -->
+  <circle cx="16" cy="6" r="3" fill="#06D6A0"/>
+  <path d="M5.5 11 L16 27 L26.5 11" stroke="#06D6A0" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+
+  <!-- i — dot + vertical stroke, same style as the mark -->
+  <circle cx="33.5" cy="6" r="3" fill="#06D6A0"/>
+  <line x1="33.5" y1="12.5" x2="33.5" y2="27" stroke="#06D6A0" stroke-width="3.5" stroke-linecap="round"/>
+
+  <!-- t — taller stem + crossbar -->
+  <line x1="45" y1="7" x2="45" y2="27" stroke="#06D6A0" stroke-width="3.5" stroke-linecap="round"/>
+  <line x1="39" y1="12.5" x2="51" y2="12.5" stroke="#06D6A0" stroke-width="3.5" stroke-linecap="round"/>
+</svg>
