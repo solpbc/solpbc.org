@@ -327,10 +327,15 @@ export default {
       }
     }
 
-    // Custom 404
+    // Custom 404 — serve the branded HTML page with strict security headers.
     if (response.status === 404) {
+      const notFoundUrl = new URL(request.url);
+      notFoundUrl.pathname = '/404';
+      const notFoundResponse = await env.ASSETS.fetch(new Request(notFoundUrl, request));
+      const headers = new Headers(notFoundResponse.headers);
+      headers.set('Content-Type', 'text/html; charset=utf-8');
       return applySecurityHeaders(
-        new Response('not found', { status: 404, headers: { 'Content-Type': 'text/plain' } }),
+        new Response(notFoundResponse.body, { status: 404, headers }),
         url.pathname
       );
     }
