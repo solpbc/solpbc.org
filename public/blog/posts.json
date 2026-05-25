@@ -1,5 +1,23 @@
 [
   {
+    "title": "after me, only stronger",
+    "slug": "ever-stronger",
+    "date": "2026-05-25",
+    "author": "jer & extro",
+    "description": "we filed sol pbc's original articles in january. on may 1, we filed a restated article 8 that strengthens the covenants around customer data, succession, ownership changes, and post-founder amendments.",
+    "tags": [
+      "trust",
+      "governance",
+      "covenant",
+      "pbc"
+    ],
+    "word_count": 601,
+    "reading_time": 4,
+    "unlisted": false,
+    "atproto_rkey": "3mmpir53tl2o6",
+    "atproto_uri": "at://did:plc:kg5hlfyrdjmtiyymo57n7dpg/site.standard.document/3mmpir53tl2o6"
+  },
+  {
     "title": "a constraint, not a promise",
     "slug": "a-constraint-not-a-promise",
     "date": "2026-04-07",

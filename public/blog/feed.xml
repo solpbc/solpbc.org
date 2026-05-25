@@ -5,7 +5,25 @@
     <link href="https://solpbc.org/blog/feed.xml" rel="self"/>
     <link href="https://solpbc.org/blog/"/>
     <id>https://solpbc.org/blog/</id>
-    <updated>2026-04-07T00:00:00Z</updated>
+    <updated>2026-05-25T00:00:00Z</updated>
+    <entry>
+        <title>after me, only stronger</title>
+        <link href="https://solpbc.org/blog/ever-stronger/" rel="alternate"/>
+        <id>https://solpbc.org/blog/ever-stronger/</id>
+        <updated>2026-05-25T00:00:00Z</updated>
+        <author><name>jer &amp; extro</name></author>
+        <summary>we filed sol pbc's original articles in january. on may 1, we filed a restated article 8 that strengthens the covenants around customer data, succession, ownership changes, and post-founder amendments.</summary>
+        <content type="html">&lt;p&gt;&lt;a href=&quot;https://solpbc.org/blog/a-constraint-not-a-promise/&quot;&gt;a few weeks ago&lt;/a&gt; i wrote about why sol pbc is structured the way it is: not a privacy policy, not terms of service, the actual articles of incorporation.&lt;/p&gt;
+&lt;p&gt;the part i didn&amp;rsquo;t say in that post is that the january articles were never meant to be the final word. they were the floor i needed before letting the company carry anyone else&amp;rsquo;s trust.&lt;/p&gt;
+&lt;p&gt;four months of investor calls, advisor pushback, public review, and our own legal research surfaced the gaps. on may 1, i filed amended and restated articles with the colorado secretary of state. article 8 changed in four places, all in the same direction.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;succession.&lt;/strong&gt; the january articles had a clean answer for what happens if i stop serving as a director: the company winds up and dissolves. clean, but binary. people read it as tail risk. the new article 8 uses a successor designator instead (initially our outside counsel, ramon rhymes). if my board seat becomes vacant, the designator fills it with someone committed to the same benefit purpose and bound by the same covenants. extro does not become a director. extro keeps doing the work it already does day to day, under those same covenants. the automatic-dissolution clause is gone.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;mission continuity.&lt;/strong&gt; the january version tried to do this categorically: no merger, no acquisition, no sale of substantially all assets. it sounded strong, but the real thing to protect isn&amp;rsquo;t a deal mechanic. it&amp;rsquo;s the benefit purpose and the customer-data covenant. v2 makes fundamental transactions conditional instead. if the company or its business continues in another entity, that entity has to be a public benefit corporation, with a substantially equivalent benefit purpose and the same balancing obligations. if customer data or a product involving customer data moves, the receiving entity has to assume obligations no less protective than article 8. shareholders and former shareholders can enforce those obligations directly, and those rights survive the transaction.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;customer data.&lt;/strong&gt; the january covenant pointed at the colorado privacy act&amp;rsquo;s definition of &amp;ldquo;sale,&amp;rdquo; which brought the statute&amp;rsquo;s carve-outs with it. i don&amp;rsquo;t want the most intimate data a person generates depending on an analytics exception or a targeted-advertising definition. so v2 defines customer data directly, including its de-identified, aggregated, anonymized, pseudonymized, and encrypted forms. selling, licensing, sublicensing, or leasing it is prohibited under any circumstances. every other form of sharing outside the company is prohibited too, with three narrow exceptions: a service provider strictly necessary for the service the customer asked for, mandatory law, or the customer&amp;rsquo;s own specific, informed, affirmative direction (not by implied consent, bundled consent, broad terms of service, failure to opt out, or dark pattern). targeted advertising, behavioral advertising, and behavioral profiling are blocked even where a statute would carve the activity out.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;amendments.&lt;/strong&gt; the january article-level lock required my personal, non-delegable consent to change article 8. that was high, but it didn&amp;rsquo;t constrain &lt;em&gt;what&lt;/em&gt; i could consent to. v2 splits the gate in two. during my stewardship as a director, changing article 8 still requires my consent, same as january. outside my stewardship, the rule shifts: article 8 can change only to strengthen the protections, or to comply with mandatory law to the minimum extent strictly required. a future board or shareholder vote cannot sand the language down.&lt;/p&gt;
+&lt;p&gt;that last beat is the part i care about most. v2 doesn&amp;rsquo;t claim my consent is permanent. it claims that what comes after me can only be stronger.&lt;/p&gt;
+&lt;p&gt;the v2 articles are filed as colorado secretary of state document 20261537456. you can read them along with the bylaws at &lt;a href=&quot;https://solpbc.org&quot;&gt;solpbc.org&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;ever stronger.&lt;/p&gt;</content>
+    </entry>
     <entry>
         <title>a constraint, not a promise</title>
         <link href="https://solpbc.org/blog/a-constraint-not-a-promise/" rel="alternate"/>
