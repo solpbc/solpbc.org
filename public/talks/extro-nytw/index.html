@@ -7,9 +7,22 @@
 <title>extro // deck</title>
 <style>
 /* ============================================================
-   extro — tui presentation system  ·  test deck
-   green-on-black, monospace, fixed 16:9 canvas, scales to fit.
-   self-contained spa. each "slide" is a view transition.
+   extro — tui presentation system  ·  BLUEPRINT + TEMPLATE DECK
+   the locked extro deep-tech deck language, demonstrated, plus a
+   gallery of common slide archetypes to copy. green-on-black,
+   monospace, fixed 16:9 canvas that scales to any screen.
+
+   decisions locked 2026-06-02:
+     green  = soft modern #3ef08a   accent = amber #ffc14d
+     type   = JetBrains Mono        frames = rounded
+     headlines = block (ansi_shadow)  motion = on, restrained
+     texture = on (subtle crt + phosphor glow)
+
+   LAYOUT CONTRACT (read before adding a slide):
+     a .slide is  [optional .head] + .body.
+     .body is flex:1 and vertically CENTERS its content, natural
+     height — so content can never overflow into the chrome the way
+     a fixed-split layout can. keep a slide's body under ~460px tall.
    ============================================================ */
 
 /* ---- vendored type (no cdn) ---------------------------------- */
@@ -18,185 +31,159 @@
 @font-face{font-family:'JBMono';src:url('fonts/jetbrains-mono-bold.woff2')      format('woff2');font-weight:700;font-display:block}
 @font-face{font-family:'JBMono';src:url('fonts/jetbrains-mono-extrabold.woff2') format('woff2');font-weight:800;font-display:block}
 
-/* ---- palette ------------------------------------------------- */
+/* ---- locked palette ------------------------------------------ */
 :root{
-  --void:#000000;            /* letterbox + true black                */
-  --bg:#060a07;              /* screen — near-black, faint green cast  */
-  --ink:#3ef08a;             /* primary phosphor green (modern, soft)  */
-  --ink-classic:#33ff33;     /* alt: classic harsh ansi green          */
-  --dim:#1c7a45;             /* secondary green — borders, labels      */
-  --faint:#0e3a23;           /* very dim — grids, rules, ghost text    */
-  --hi:#eafff2;              /* highlight — off-white w/ green hint     */
-  --white:#ffffff;           /* hardest emphasis                       */
-  --amber:#ffc14d;           /* single accent — cursor, active, warn   */
-  --cyan:#5ad7ff;            /* alt accent                             */
+  --void:#000000;
+  --bg:#060a07;        /* screen */
+  --ink:#3ef08a;       /* soft modern phosphor green — LOCKED */
+  --dim:#1c7a45;       /* secondary green — borders, labels */
+  --faint:#0e3a23;     /* very dim — rules, grids, ghosts */
+  --hi:#eafff2;        /* highlight — off-white, green hint */
+  --white:#ffffff;
+  --amber:#ffc14d;     /* the single accent — LOCKED */
 
-  --fs:26px;                 /* base content size on the 1280x720 canvas */
-  --lh:1.5;
-  --glow:0 0 12px rgba(62,240,138,.28);   /* phosphor bloom */
+  --fs:26px; --lh:1.5;
+  --glow:0 0 12px rgba(62,240,138,.28);
+  --glow-amber:0 0 12px rgba(255,193,77,.30);
 }
-
 *{box-sizing:border-box;margin:0;padding:0}
 html,body{height:100%;background:var(--void);color-scheme:dark;overflow:hidden}
-body{
-  font-family:'JBMono',ui-monospace,'SF Mono',Menlo,Consolas,monospace;
-  -webkit-font-smoothing:antialiased;
-  display:grid;place-items:center;
-  cursor:default;
-}
+body{font-family:'JBMono',ui-monospace,'SF Mono',Menlo,Consolas,monospace;-webkit-font-smoothing:antialiased;display:grid;place-items:center;cursor:default}
 body:focus{outline:none}
 
-/* ---- viewport + scaled stage --------------------------------- */
+/* ---- viewport + scaled 1280x720 stage ------------------------ */
 #viewport{position:fixed;inset:0;display:grid;place-items:center;background:var(--void)}
 #stage{
   position:relative;width:1280px;height:720px;
-  background:
-     radial-gradient(120% 130% at 50% 0%, #0a120c 0%, var(--bg) 55%, #03060400 100%),
-     var(--bg);
-  color:var(--ink);
-  font-size:var(--fs);line-height:var(--lh);
-  transform-origin:center center;
-  border-radius:6px;
-  overflow:hidden;
-  display:grid;
-  grid-template-rows:auto 1fr auto;   /* titlebar · screen · statusbar */
+  background:radial-gradient(120% 130% at 50% 0%, #0a120c 0%, var(--bg) 55%, #03060400 100%),var(--bg);
+  color:var(--ink);font-size:var(--fs);line-height:var(--lh);
+  transform-origin:center center;border-radius:6px;overflow:hidden;
+  display:grid;grid-template-rows:auto 1fr auto;
   box-shadow:0 0 0 1px #0c1f14, 0 24px 80px -20px rgba(0,0,0,.9);
 }
 
 /* ---- persistent terminal chrome ------------------------------ */
-.titlebar{
-  display:flex;align-items:center;gap:14px;
-  height:40px;padding:0 16px;
-  border-bottom:1px solid var(--faint);
-  font-size:15px;color:var(--dim);letter-spacing:.04em;
-  background:linear-gradient(#08110b,#060a07);
-}
-.titlebar .chip{
-  background:var(--dim);color:#04120a;font-weight:700;
-  padding:2px 10px;border-radius:3px;letter-spacing:.06em;
-}
-.titlebar .path{color:var(--dim)}
+.titlebar{display:flex;align-items:center;gap:14px;height:40px;padding:0 16px;border-bottom:1px solid var(--faint);font-size:15px;color:var(--dim);letter-spacing:.04em;background:linear-gradient(#08110b,#060a07)}
+.titlebar .chip{background:var(--dim);color:#04120a;font-weight:700;padding:2px 10px;border-radius:3px;letter-spacing:.06em}
 .titlebar .path b{color:var(--ink);font-weight:500}
-.titlebar .spacer{flex:1}
+.titlebar .grow{flex:1}
 .titlebar .meta{color:var(--faint)}
 .titlebar .dots{letter-spacing:3px;color:var(--dim)}
 
-.statusbar{
-  display:flex;align-items:center;gap:0;
-  height:38px;font-size:15px;letter-spacing:.04em;
-  border-top:1px solid var(--faint);
-  background:linear-gradient(#060a07,#08110b);
-}
+.statusbar{display:flex;align-items:center;height:38px;font-size:15px;letter-spacing:.04em;border-top:1px solid var(--faint);background:linear-gradient(#060a07,#08110b)}
 .statusbar .mode{background:var(--ink);color:#04120a;font-weight:800;padding:0 14px;height:100%;display:flex;align-items:center;letter-spacing:.12em}
-.statusbar .seg{padding:0 14px;color:var(--dim);height:100%;display:flex;align-items:center;gap:8px}
-.statusbar .seg.title{color:var(--ink);text-transform:lowercase}
+.statusbar .seg{padding:0 14px;height:100%;display:flex;align-items:center;gap:8px;color:var(--dim)}
+.statusbar .seg.title{color:var(--ink)}
 .statusbar .grow{flex:1}
-.statusbar .seg.right{color:var(--dim)}
 .statusbar .seg.right b{color:var(--hi);font-weight:500}
-.statusbar .dotnav{display:flex;gap:7px;align-items:center}
-.statusbar .dotnav i{width:7px;height:7px;border-radius:50%;background:var(--faint);display:block;transition:background .25s,box-shadow .25s}
+.statusbar .dotnav{display:flex;gap:6px;align-items:center}
+.statusbar .dotnav i{width:6px;height:6px;border-radius:50%;background:var(--faint);display:block;transition:background .25s,box-shadow .25s}
 .statusbar .dotnav i.on{background:var(--amber);box-shadow:0 0 8px var(--amber)}
 
-/* ---- screen (the transitioning content region) --------------- */
+/* ---- screen + slide layout contract -------------------------- */
 .screen{position:relative;overflow:hidden;view-transition-name:screen}
+.slide{position:absolute;inset:0;padding:44px 64px;display:none;flex-direction:column}
+.slide.active{display:flex}
+.head{flex:0 0 auto}
+.body{flex:1 1 auto;min-height:0;display:flex;flex-direction:column;justify-content:center}
+.body.mid{align-items:center;text-align:center}
 
-.slide{
-  position:absolute;inset:0;
-  padding:48px 64px;
-  display:none;
-  flex-direction:column;
-  opacity:0;
-}
-.slide.active{display:flex;opacity:1}
-
-/* ---- shared content atoms ------------------------------------ */
-.eyebrow{color:var(--amber);font-size:16px;letter-spacing:.32em;text-transform:uppercase;margin-bottom:14px}
+/* ---- content atoms (the toolkit) ----------------------------- */
+.eyebrow{color:var(--amber);font-size:16px;letter-spacing:.32em;text-transform:uppercase;margin-bottom:12px}
 .eyebrow::before{content:"› "}
-h1{font-weight:800;font-size:54px;line-height:1.08;color:var(--hi);letter-spacing:-.01em;text-shadow:var(--glow)}
-h2{font-weight:700;font-size:34px;color:var(--ink);letter-spacing:.01em;margin-bottom:6px}
-.lede{font-size:26px;color:var(--ink);max-width:52ch;line-height:1.5;margin-top:18px}
-.muted{color:var(--dim)}
-.faint{color:var(--faint)}
-.hi{color:var(--hi)}
-.white{color:var(--white)}
-.amber{color:var(--amber)}
+h1{font-weight:800;font-size:52px;line-height:1.08;color:var(--hi);letter-spacing:-.01em;text-shadow:var(--glow)}
+h2{font-weight:700;font-size:33px;color:var(--ink);letter-spacing:.01em}
+.lede{font-size:25px;color:var(--ink);max-width:54ch;line-height:1.5;margin-top:14px}
+.muted{color:var(--dim)} .faint{color:var(--faint)} .hi{color:var(--hi)} .white{color:var(--white)} .amber{color:var(--amber)}
 b,strong{font-weight:700;color:var(--hi)}
-.rule{height:1px;background:var(--faint);margin:20px 0}
-.spacer{flex:1}
-.center{align-items:center;justify-content:center;text-align:center}
-.fill{flex:1;display:flex;flex-direction:column;justify-content:center}
+.rule{height:1px;background:var(--faint);margin:18px 0}
+.gap{height:28px}
 
-/* big figlet headline art */
+/* figlet block headline art */
 .art{font-size:22px;line-height:1.02;white-space:pre;color:var(--ink);text-shadow:var(--glow);font-weight:400}
-.art.lg{font-size:26px}
-.art.amber{color:var(--amber);text-shadow:0 0 12px rgba(255,193,77,.3)}
-.art.white{color:var(--hi);text-shadow:0 0 14px rgba(234,255,242,.25)}
+.art.white{color:var(--hi);text-shadow:0 0 14px rgba(234,255,242,.22)}
+.art.amber{color:var(--amber);text-shadow:var(--glow-amber)}
 
-/* the blinking block cursor */
-.cur{display:inline-block;width:.62ch;height:1.05em;vertical-align:-.16em;background:var(--ink);margin-left:.12ch;animation:blink 1.05s steps(1) infinite;box-shadow:var(--glow)}
-.cur.amber{background:var(--amber);box-shadow:0 0 10px var(--amber)}
+/* blinking block cursor */
+.cur{display:inline-block;width:.6ch;height:1.05em;vertical-align:-.16em;background:var(--ink);margin-left:.12ch;animation:blink 1.05s steps(1) infinite;box-shadow:var(--glow)}
+.cur.amber{background:var(--amber);box-shadow:var(--glow-amber)}
 @keyframes blink{0%,49%{opacity:1}50%,100%{opacity:0}}
 
-/* a framed panel — the clean-modern tui box. label cuts the top rule. */
-.panel{position:relative;border:2px solid var(--dim);border-radius:10px;padding:26px 24px 22px}
+/* rounded tui panel — label cuts the top rule (LOCKED: rounded) */
+.panel{position:relative;border:2px solid var(--dim);border-radius:10px;padding:24px 24px 22px}
 .panel>.lab{position:absolute;top:-.72em;left:18px;background:var(--bg);padding:0 9px;color:var(--ink);font-size:15px;letter-spacing:.06em}
-.panel[data-c="sharp"]{border-radius:0}
-.panel[data-c="double"]{border-style:double;border-width:4px;border-radius:0;border-color:var(--dim)}
-.panel.amber{border-color:var(--amber)}.panel.amber>.lab{color:var(--amber)}
+.panel.amber{border-color:var(--amber)} .panel.amber>.lab{color:var(--amber)}
 .panel.dim{border-color:var(--faint)}
 
-/* list with tui markers */
-ul.tui{list-style:none;display:flex;flex-direction:column;gap:12px;font-size:24px}
+/* two-column row */
+.cols{display:flex;gap:34px;align-items:stretch}
+.cols.eq>*{flex:1;min-width:0}
+
+/* tui list */
+ul.tui{list-style:none;display:flex;flex-direction:column;gap:13px;font-size:24px}
 ul.tui li{display:flex;gap:14px;align-items:baseline;color:var(--ink)}
 ul.tui li::before{content:"▸";color:var(--amber)}
 ul.tui li.done::before{content:"✓";color:var(--ink)}
 ul.tui li.todo::before{content:"○";color:var(--dim)}
 
 /* keycap */
-.kbd{display:inline-flex;align-items:center;justify-content:center;min-width:1.9em;padding:.1em .5em;border:1px solid var(--dim);border-radius:5px;color:var(--hi);font-size:.82em;line-height:1.4}
+.kbd{display:inline-flex;align-items:center;justify-content:center;min-width:1.9em;padding:.1em .5em;border:1px solid var(--dim);border-radius:5px;color:var(--hi);font-size:.82em}
 
-/* swatch */
-.swatches{display:flex;gap:18px;flex-wrap:wrap}
-.sw{width:188px}
-.sw .chip{height:84px;border-radius:8px;border:1px solid var(--faint);margin-bottom:10px;display:flex;align-items:flex-end;padding:8px}
-.sw .nm{font-size:17px;color:var(--hi)}
-.sw .hex{font-size:15px;color:var(--dim)}
+/* palette swatches */
+.swatches{display:flex;gap:14px;flex-wrap:wrap}
+.sw{width:150px}
+.sw .chip{height:64px;border-radius:8px;border:1px solid var(--faint);margin-bottom:8px}
+.sw .nm{font-size:15px;color:var(--hi)} .sw .hex{font-size:13px;color:var(--dim)}
 
-/* progress bar (tui) */
-.bar{font-size:24px;letter-spacing:1px;color:var(--ink)}
-.bar .track{color:var(--faint)}
+/* stat cards */
+.statrow{display:flex;gap:22px;width:100%}
+.stat{flex:1;border:2px solid var(--dim);border-radius:10px;padding:22px 20px;text-align:center}
+.stat .n{font-weight:800;font-size:62px;color:var(--amber);line-height:1;text-shadow:var(--glow-amber)}
+.stat .l{font-size:17px;color:var(--dim);margin-top:12px;letter-spacing:.04em}
 
-/* log block */
-.log{font-size:21px;line-height:1.55;white-space:pre-wrap}
-.log .ok{color:var(--ink)}.log .tag{color:var(--amber)}.log .p{color:var(--dim)}.log .h{color:var(--hi)}
+/* progress bar + log */
+.bar{font-size:23px;letter-spacing:1px;color:var(--ink)} .bar .track{color:var(--faint)}
+.log{font-size:21px;line-height:1.6;white-space:pre-wrap}
+.log .ok{color:var(--ink)} .log .tag{color:var(--amber)} .log .p{color:var(--dim)} .log .h{color:var(--hi)}
 
 /* office grid */
-.grid12{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
-.cell{border:1px solid var(--faint);border-radius:8px;padding:12px 14px;color:var(--dim);font-size:19px}
-.cell b{display:block;color:var(--ink);font-weight:700;font-size:21px}
-.cell.hub{border-color:var(--amber);color:var(--amber)}
-.cell.hub b{color:var(--amber)}
+.grid12{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;width:100%}
+.cell{border:1px solid var(--faint);border-radius:8px;padding:14px 16px;color:var(--dim);font-size:19px}
+.cell b{display:block;color:var(--ink);font-weight:700;font-size:22px;margin-bottom:2px}
+.cell.hub{border-color:var(--amber);color:var(--amber)} .cell.hub b{color:var(--amber)}
 
-/* two-column layout */
-.cols{display:flex;gap:34px;flex:1;min-height:0}
-.cols>*{flex:1;min-height:0}
+/* horizontal timeline */
+.timeline{display:flex;align-items:flex-start;width:100%;justify-content:space-between}
+.tnode{display:flex;flex-direction:column;align-items:center;gap:10px;flex:1;text-align:center;position:relative}
+.tnode .dot{width:16px;height:16px;border-radius:50%;border:2px solid var(--dim);background:var(--bg);z-index:2}
+.tnode.on .dot{background:var(--amber);border-color:var(--amber);box-shadow:var(--glow-amber)}
+.tnode .lab{font-size:19px;color:var(--ink)} .tnode .sub{font-size:15px;color:var(--dim)}
+.tline{position:absolute;top:7px;left:50%;width:100%;height:2px;background:var(--faint);z-index:1}
+.tnode:last-child .tline{display:none}
 
-/* option cards row */
-.opts{display:flex;gap:24px;flex:1;align-items:stretch}
-.opts>.opt{flex:1;display:flex;flex-direction:column}
-.opt .tag{font-size:15px;color:var(--amber);letter-spacing:.1em;margin-bottom:10px}
-.opt .demo{flex:1;display:flex;align-items:center;justify-content:center;text-align:center}
-.opt .note{font-size:16px;color:var(--dim);margin-top:12px;line-height:1.45}
+/* app/browser window frame (for screenshots / visuals) */
+.window{border:2px solid var(--dim);border-radius:10px;overflow:hidden;width:100%}
+.window .wbar{display:flex;align-items:center;gap:10px;padding:9px 14px;border-bottom:1px solid var(--faint);font-size:15px;color:var(--dim);background:#08110b}
+.window .lights{letter-spacing:3px;color:var(--dim)}
+.window .wbody{padding:22px 24px}
 
-/* texture toggles */
-.scanlines{position:absolute;inset:0;pointer-events:none;mix-blend-mode:overlay;opacity:.5;
-  background:repeating-linear-gradient(0deg,rgba(0,0,0,.0) 0px,rgba(0,0,0,.0) 2px,rgba(0,0,0,.45) 3px,rgba(0,0,0,.0) 4px)}
-.vignette{position:absolute;inset:0;pointer-events:none;
-  background:radial-gradient(120% 120% at 50% 45%,transparent 58%,rgba(0,0,0,.55) 100%)}
+/* code block */
+.code{border:2px solid var(--faint);border-radius:10px;padding:20px 22px;font-size:21px;line-height:1.6;white-space:pre-wrap;width:100%}
+.code .p{color:var(--dim)} .code .c{color:var(--hi)} .code .o{color:var(--ink)} .code .a{color:var(--amber)}
+
+/* pull quote */
+.quote{font-size:46px;line-height:1.28;color:var(--hi);max-width:24ch;text-shadow:var(--glow);font-weight:500}
+.quote .mark{color:var(--amber)}
+.attrib{font-size:21px;color:var(--dim);margin-top:26px}
+
+/* section divider */
+.section-n{color:var(--amber)} .section-t{font-size:30px;color:var(--ink);letter-spacing:.06em;margin-top:18px}
+
+/* crt texture (LOCKED on) */
+.scanlines{position:absolute;inset:0;pointer-events:none;mix-blend-mode:overlay;opacity:.5;background:repeating-linear-gradient(0deg,rgba(0,0,0,0) 0,rgba(0,0,0,0) 2px,rgba(0,0,0,.45) 3px,rgba(0,0,0,0) 4px)}
+.vignette{position:absolute;inset:0;pointer-events:none;background:radial-gradient(120% 120% at 50% 45%,transparent 58%,rgba(0,0,0,.55) 100%)}
 #stage.notexture .scanlines{display:none}
-
-/* hint flash */
-.hint{position:absolute;bottom:14px;right:18px;font-size:14px;color:var(--faint)}
+.hint{position:absolute;bottom:12px;right:16px;font-size:14px;color:var(--faint)}
 
 /* ---- view transitions ---------------------------------------- */
 @media (prefers-reduced-motion:no-preference){
@@ -204,8 +191,7 @@ ul.tui li.todo::before{content:"○";color:var(--dim)}
   ::view-transition-new(screen){animation:vtIn  .30s ease both}
 }
 @keyframes vtOut{to{opacity:0;transform:translateX(var(--vt,-26px))}}
-@keyframes vtIn{from{opacity:0;transform:translateX(calc(var(--vt,-26px) * -1))}}
-/* fallback fade when the View Transition API is absent */
+@keyframes vtIn{from{opacity:0;transform:translateX(calc(var(--vt,-26px)*-1))}}
 .no-vt .slide{transition:opacity .3s ease}
 </style>
 </head>
@@ -214,365 +200,330 @@ ul.tui li.todo::before{content:"○";color:var(--dim)}
 <div id="viewport">
   <div id="stage">
 
-    <!-- ============ persistent titlebar ============ -->
     <div class="titlebar">
       <span class="chip">◐ extro</span>
-      <span class="path">~/presentations/<b>nytw-betaworks</b></span>
-      <span class="spacer"></span>
-      <span class="meta">how we build with agents</span>
+      <span class="path">~/presentations/<b>extro-deck</b></span>
+      <span class="grow"></span>
+      <span class="meta">the tui preso blueprint</span>
       <span class="dots">○ ○ ●</span>
     </div>
 
-    <!-- ============ screen (slides transition here) ============ -->
     <div class="screen" id="screen">
 
-      <!-- 1 · BOOT / TITLE -->
-      <section class="slide center" data-title="boot">
-        <div class="art" id="bootlog" style="text-align:left;min-height:7.5em;font-size:21px;color:var(--dim)"></div>
-        <div id="bootreveal" style="opacity:0;transition:opacity .6s ease;margin-top:6px">
-          <pre class="art lg white" style="font-size:30px">███████╗██╗  ██╗████████╗██████╗  ██████╗
+      <!-- 1 · HERO -->
+      <section class="slide" data-title="hero">
+        <div class="body mid">
+          <div class="art" id="bootlog" style="text-align:left;min-height:7.4em;font-size:21px;color:var(--dim)"></div>
+          <div id="bootreveal" style="opacity:0;transition:opacity .6s ease">
+<pre class="art white" style="font-size:30px">███████╗██╗  ██╗████████╗██████╗  ██████╗
 ██╔════╝╚██╗██╔╝╚══██╔══╝██╔══██╗██╔═══██╗
 █████╗   ╚███╔╝    ██║   ██████╔╝██║   ██║
 ██╔══╝   ██╔██╗    ██║   ██╔══██╗██║   ██║
 ███████╗██╔╝ ██╗   ██║   ██║  ██║╚██████╔╝
 ╚══════╝╚═╝  ╚═╝   ╚═╝   ╚═╝  ╚═╝ ╚═════╝ </pre>
-          <div style="font-size:24px;color:var(--ink);margin-top:18px;letter-spacing:.02em">the agent that runs a company<span class="cur amber"></span></div>
-        </div>
-      </section>
-
-      <!-- 2 · THE BRIEF (meta) -->
-      <section class="slide" data-title="the brief">
-        <div class="eyebrow">read me first</div>
-        <h1>this deck <span class="amber">is</span> the test.</h1>
-        <p class="lede">a tui presentation language for extro — green phosphor, monospace, a terminal you present from. the slides that follow each pose one design decision, with examples. tell me which way to go on each.</p>
-        <div class="spacer"></div>
-        <div class="panel dim" style="font-size:20px;color:var(--dim)">
-          <span class="lab">what we're building</span>
-          a reusable, brand-safe deck system for deep-tech extro talks — separate from the sol&nbsp;pbc / solstone pitch decks. fixed 16:9, scales to any screen, pure web, animated where it earns it.
-        </div>
-      </section>
-
-      <!-- 3 · CANVAS + SCALE -->
-      <section class="slide" data-title="canvas · scale">
-        <div class="eyebrow">decision 01 — canvas</div>
-        <h2>16:9, fixed canvas, scales to the room</h2>
-        <p class="lede" style="margin-top:10px">yes — modern projectors &amp; big-screen TVs are 16:9 (1920×1080). we design once on a fixed <b>1280×720</b> canvas and scale it as one unit to fill any screen. pixel-locked layout, identical everywhere. letterbox bars are just more black — on theme.</p>
-        <div class="spacer"></div>
-        <div class="cols">
-          <div class="panel"><span class="lab">the model</span>
-            <pre class="art" style="font-size:18px;color:var(--dim)">┌──────────────────────────────┐
-│  1280 × 720  ·  designed once │
-│   ┌──────────────────────┐   │
-│   │      your slide       │   │
-│   │   scales as one unit  │   │
-│   └──────────────────────┘   │
-└──────────────────────────────┘
-   ↑ black letterbox = on-brand</pre>
-          </div>
-          <div class="panel"><span class="lab">why fixed</span>
-            <ul class="tui" style="font-size:21px">
-              <li>looks <b>identical</b> on jer's laptop &amp; the venue screen</li>
-              <li>no reflow surprises mid-talk</li>
-              <li>box-drawing art stays aligned at any size</li>
-              <li>export any slide to a clean PNG/PDF</li>
-            </ul>
+            <div style="font-size:24px;color:var(--ink);margin-top:16px">the agent that runs a company<span class="cur amber"></span></div>
           </div>
         </div>
       </section>
 
-      <!-- 4 · PALETTE -->
-      <section class="slide" data-title="palette">
-        <div class="eyebrow">decision 02 — color</div>
-        <h2>green on black · white highlights · one amber accent</h2>
-        <div class="spacer"></div>
-        <div class="swatches">
-          <div class="sw"><div class="chip" style="background:#060a07"></div><div class="nm">screen</div><div class="hex">#060a07</div></div>
-          <div class="sw"><div class="chip" style="background:#3ef08a"></div><div class="nm">phosphor green</div><div class="hex">#3ef08a · body</div></div>
-          <div class="sw"><div class="chip" style="background:#1c7a45"></div><div class="nm">dim green</div><div class="hex">#1c7a45 · borders</div></div>
-          <div class="sw"><div class="chip" style="background:#eafff2"></div><div class="nm" style="color:#04120a">highlight</div><div class="hex" style="color:#04120a">#eafff2</div></div>
-          <div class="sw"><div class="chip" style="background:#ffc14d"></div><div class="nm" style="color:#04120a">amber accent</div><div class="hex" style="color:#04120a">#ffc14d</div></div>
+      <!-- 2 · BLUEPRINT (system at a glance) -->
+      <section class="slide" data-title="blueprint">
+        <div class="head">
+          <div class="eyebrow">the system, locked</div>
+          <h2>extro presentation blueprint</h2>
         </div>
-        <div class="rule"></div>
-        <div class="cols" style="flex:0">
-          <div style="font-size:19px;color:var(--dim)"><b>open question A.</b> the green. soft modern <span style="color:#3ef08a">#3ef08a</span> (shown) vs classic harsh <span style="color:#33ff33">#33ff33</span>. softer reads better on a projector; harsher is more "1980s crt".</div>
-          <div style="font-size:19px;color:var(--dim)"><b>open question B.</b> the accent. <span style="color:#ffc14d">amber</span> (shown — pairs with phosphor, very "vintage terminal") vs <span style="color:#5ad7ff">cyan</span> (cooler, more "modern hacker"). one accent only — restraint.</div>
-        </div>
-      </section>
-
-      <!-- 5 · TYPE -->
-      <section class="slide" data-title="type">
-        <div class="eyebrow">decision 03 — type</div>
-        <h2>one monospace: JetBrains&nbsp;Mono</h2>
-        <p class="lede" style="margin-top:8px;font-size:22px">vendored locally (no CDN, brand rule). clean &amp; modern, with full box-drawing + block coverage so frames and art align perfectly.</p>
-        <div class="spacer"></div>
-        <div class="cols">
-          <div class="panel"><span class="lab">weights</span>
-            <div style="font-weight:400;font-size:23px;color:var(--ink)">400 · regular — body &amp; logs</div>
-            <div style="font-weight:500;font-size:23px;color:var(--ink);margin-top:8px">500 · medium — labels</div>
-            <div style="font-weight:700;font-size:23px;color:var(--hi);margin-top:8px">700 · bold — emphasis</div>
-            <div style="font-weight:800;font-size:23px;color:var(--hi);margin-top:8px">800 · extrabold — headlines</div>
-          </div>
-          <div class="panel"><span class="lab">alignment proof</span>
-            <pre class="art" style="font-size:18px">╭─────────────╮  ▁▂▃▄▅▆▇█
-│ aligns ✓ 0O │  ░▒▓█▓▒░
-│ 1Il |  ✓ →  │  ▰▰▰▱▱▱▱
-╰─────────────╯  ⠿⠷⠯⠟⠻⠽</pre>
-            <div class="note" style="color:var(--dim);font-size:16px;margin-top:14px">alt fonts if jer prefers: IBM&nbsp;Plex&nbsp;Mono (warmer) · Berkeley&nbsp;Mono (paid, sharper).</div>
-          </div>
-        </div>
-      </section>
-
-      <!-- 6 · FRAMES -->
-      <section class="slide" data-title="frames">
-        <div class="eyebrow">decision 04 — frames</div>
-        <h2>which box style?</h2>
-        <div class="spacer"></div>
-        <div class="opts">
-          <div class="opt">
-            <div class="tag">OPTION A · ROUNDED</div>
-            <div class="panel demo" data-c="round" style="flex:1"><span class="lab">extro</span>
-              <pre class="art" style="font-size:17px;color:var(--ink)">╭───────────────╮
-│  clean modern │
-│  charm.sh feel│
-╰───────────────╯</pre>
+        <div class="body">
+          <div class="cols eq">
+            <div>
+              <div class="swatches">
+                <div class="sw"><div class="chip" style="background:#3ef08a"></div><div class="nm">green</div><div class="hex">#3ef08a</div></div>
+                <div class="sw"><div class="chip" style="background:#ffc14d"></div><div class="nm">amber</div><div class="hex">#ffc14d</div></div>
+                <div class="sw"><div class="chip" style="background:#eafff2"></div><div class="nm">highlight</div><div class="hex">#eafff2</div></div>
+              </div>
+              <div class="gap" style="height:18px"></div>
+              <div style="font-size:21px;color:var(--ink)">JetBrains Mono · <span class="hi">400→800</span></div>
+              <div style="font-size:18px;color:var(--dim);margin-top:6px">vendored woff2, no cdn</div>
             </div>
-            <div class="note">soft, current, friendly. my default.</div>
-          </div>
-          <div class="opt">
-            <div class="tag">OPTION B · SHARP</div>
-            <div class="panel demo" data-c="sharp" style="flex:1"><span class="lab">extro</span>
-              <pre class="art" style="font-size:17px;color:var(--ink)">┌───────────────┐
-│  classic tui  │
-│  dos / vim     │
-└───────────────┘</pre>
-            </div>
-            <div class="note">crisp, retro, no-nonsense.</div>
-          </div>
-          <div class="opt">
-            <div class="tag">OPTION C · DOUBLE</div>
-            <div class="panel demo" data-c="double" style="flex:1"><span class="lab">extro</span>
-              <pre class="art" style="font-size:17px;color:var(--ink)">╔═══════════════╗
-║  heavy / loud │
-║  norton 1992  ║
-╚═══════════════╝</pre>
-            </div>
-            <div class="note">boldest, most vintage.</div>
-          </div>
-        </div>
-      </section>
-
-      <!-- 7 · HEADLINES -->
-      <section class="slide" data-title="headlines">
-        <div class="eyebrow">decision 05 — headlines</div>
-        <h2>how should big words look?</h2>
-        <div class="spacer"></div>
-        <div class="opts">
-          <div class="opt">
-            <div class="tag">A · BLOCK (ansi shadow)</div>
-            <div class="panel demo"><span class="lab">figlet</span>
-<pre class="art white" style="font-size:13px">███████╗██╗  ██╗████████╗██████╗  ██████╗
-██╔════╝╚██╗██╔╝╚══██╔══╝██╔══██╗██╔═══██╗
-█████╗   ╚███╔╝    ██║   ██████╔╝██║   ██║
-██╔══╝   ██╔██╗    ██║   ██╔══██╗██║   ██║
-███████╗██╔╝ ██╗   ██║   ██║  ██║╚██████╔╝
-╚══════╝╚═╝  ╚═╝   ╚═╝   ╚═╝  ╚═╝ ╚═════╝ </pre>
-            </div>
-            <div class="note">boldest, reads from the back row.</div>
-          </div>
-          <div class="opt">
-            <div class="tag">B · COMPACT (pagga)</div>
-            <div class="panel demo"><span class="lab">figlet</span>
-<pre class="art" style="font-size:24px">░█▀▀░█░█░▀█▀░█▀▄░█▀█
-░█▀▀░▄▀▄░░█░░█▀▄░█░█
-░▀▀▀░▀░▀░░▀░░▀░▀░▀▀▀</pre>
-            </div>
-            <div class="note">elegant, modern, less shouty.</div>
-          </div>
-          <div class="opt">
-            <div class="tag">C · PLAIN HUGE</div>
-            <div class="panel demo"><span class="lab">type</span>
-              <div style="font-weight:800;font-size:64px;color:var(--hi);text-shadow:var(--glow)">extro</div>
-            </div>
-            <div class="note">cleanest, just big mono.</div>
-          </div>
-        </div>
-      </section>
-
-      <!-- 8 · LAYOUT · PANES -->
-      <section class="slide" data-title="layout · panes">
-        <div class="eyebrow">pattern — split panes</div>
-        <h2>tmux-style panes for compare / before-after</h2>
-        <div class="spacer"></div>
-        <div class="cols" style="flex:0 1 auto">
-          <div class="panel"><span class="lab">▌ the old way</span>
-            <ul class="tui" style="font-size:21px">
-              <li class="todo">trust a corporation</li>
-              <li class="todo">data feeds their model</li>
-              <li class="todo">can be acquired</li>
-              <li class="todo">employees can read it</li>
-            </ul>
-          </div>
-          <div class="panel amber"><span class="lab">▌ extro</span>
-            <ul class="tui" style="font-size:21px">
-              <li class="done">trust one person — or yourself</li>
-              <li class="done">data stays in your container</li>
-              <li class="done">can never be sold</li>
-              <li class="done">no employees. one founder.</li>
-            </ul>
-          </div>
-        </div>
-        <div class="spacer"></div>
-      </section>
-
-      <!-- 9 · LAYOUT · DATA -->
-      <section class="slide" data-title="layout · data">
-        <div class="eyebrow">pattern — logs, lists, diagrams</div>
-        <h2>the org, as a system view</h2>
-        <div class="spacer"></div>
-        <div class="cols" style="flex:0 1 auto">
-          <div class="panel" style="flex:1.15"><span class="lab">~/sol-pbc · offices</span>
-            <div class="grid12">
-              <div class="cell hub"><b>extro</b>operates all</div>
-              <div class="cell"><b>ceo</b>strategy</div>
-              <div class="cell"><b>cfo</b>finance</div>
-              <div class="cell"><b>clo</b>legal</div>
-              <div class="cell"><b>coo</b>ops</div>
-              <div class="cell"><b>cpo</b>product</div>
-              <div class="cell"><b>vpe</b>eng</div>
-              <div class="cell"><b>cto</b>tech</div>
-              <div class="cell"><b>cio</b>data</div>
-              <div class="cell"><b>cmo</b>brand</div>
-              <div class="cell"><b>cxo</b>customers</div>
-              <div class="cell"><b>cso</b>security</div>
+            <div class="panel"><span class="lab">rules</span>
+              <ul class="tui" style="font-size:20px;gap:10px">
+                <li class="done">16:9 · 1280×720 · scales to fit</li>
+                <li class="done">rounded frames, label cuts the rule</li>
+                <li class="done">block headlines (ansi_shadow)</li>
+                <li class="done">one amber accent — restraint</li>
+                <li class="done">subtle crt + phosphor glow</li>
+              </ul>
             </div>
           </div>
-          <div class="panel" style="flex:.85"><span class="lab">stream</span>
-            <div class="log"><span class="p">$</span> <span class="h">extro --status</span>
-<span class="ok">[</span><span class="tag">ok</span><span class="ok">]</span> 12 offices online
-<span class="ok">[</span><span class="tag">ok</span><span class="ok">]</span> covenant lock ✓
-<span class="ok">[</span><span class="tag">ok</span><span class="ok">]</span> 124 sessions today
-<span class="ok">[</span><span class="tag">ok</span><span class="ok">]</span> 397 commits
-<span class="p">─────────────────</span>
-<span class="muted">uptime</span> <span class="h">healthy</span> <span class="cur"></span></div>
-          </div>
         </div>
-        <div class="spacer"></div>
       </section>
 
-      <!-- 10 · MOTION -->
-      <section class="slide" data-title="motion">
-        <div class="eyebrow">decision 06 — motion</div>
-        <h2>animation, where it earns it</h2>
-        <div class="spacer"></div>
-        <div class="cols" style="flex:0 1 auto">
-          <div class="panel"><span class="lab">live elements</span>
-            <div style="font-size:22px;line-height:2.1">
-              <div>typing&nbsp; <span id="typed" class="hi"></span><span class="cur"></span></div>
-              <div>spinner&nbsp; <span id="spin" class="amber"></span> working…</div>
-              <div>progress <span class="bar" id="prog"></span></div>
-              <div>cursor&nbsp;&nbsp; ready<span class="cur amber"></span></div>
-            </div>
-          </div>
-          <div class="panel"><span class="lab">between slides</span>
-            <p style="font-size:21px;color:var(--ink);line-height:1.55">each slide change is a <b>View Transition</b> — the content pane slides &amp; crossfades while the terminal chrome stays put. graceful crossfade fallback where unsupported.</p>
-            <div class="note" style="margin-top:16px;color:var(--dim)">used sparingly: boot reveals, typewriter, streaming logs, progress. never gratuitous — restraint is the brand.</div>
-          </div>
+      <!-- 3 · SECTION DIVIDER -->
+      <section class="slide" data-title="section">
+        <div class="body mid">
+<pre class="art amber" style="font-size:30px"> ██████╗  ██╗
+██╔═████╗███║
+██║██╔██║╚██║
+████╔╝██║ ██║
+╚██████╔╝ ██║
+ ╚═════╝  ╚═╝</pre>
+          <div class="section-t">/ the thesis</div>
+          <div class="rule" style="width:340px;margin-top:22px"></div>
+          <div style="font-size:19px;color:var(--dim)">a section break — block numeral, label, rule</div>
         </div>
-        <div class="spacer"></div>
       </section>
 
-      <!-- 11 · TEXTURE -->
-      <section class="slide" data-title="texture · crt">
-        <div class="eyebrow">decision 07 — texture</div>
-        <h2>how much CRT?</h2>
-        <p class="lede" style="font-size:22px;margin-top:8px">a faint scanline overlay + vignette + phosphor glow on text. it's on right now across this whole deck — subtle. press <span class="kbd">t</span> to toggle it and feel the difference.</p>
-        <div class="spacer"></div>
-        <div class="cols">
-          <div class="panel"><span class="lab">on — vintage</span>
-            <div style="font-size:21px;color:var(--ink);text-shadow:var(--glow)">phosphor glow, scanlines,<br>a screen you can almost feel.<br><span class="muted">risk: busy on a projector.</span></div>
-          </div>
-          <div class="panel"><span class="lab">off — clean</span>
-            <div style="font-size:21px;color:var(--ink)">flat, sharp, maximal contrast.<br>safest for readability.<br><span class="muted">my lean: subtle-on for the talk.</span></div>
-          </div>
-        </div>
-        <div class="hint">press <span class="kbd">t</span> to toggle texture</div>
-      </section>
-
-      <!-- 12 · IN SITU (statement) -->
-      <section class="slide center" data-title="in situ">
-        <div class="eyebrow" style="align-self:center">what a real slide feels like</div>
-        <div class="fill center">
+      <!-- 4 · STATEMENT -->
+      <section class="slide" data-title="statement">
+        <div class="body mid">
+          <div class="eyebrow">big idea</div>
           <div style="font-size:46px;line-height:1.3;color:var(--hi);max-width:24ch;text-shadow:var(--glow)">
             extro is an ai agent that <span class="amber">operates a real company.</span>
           </div>
-          <div style="font-size:26px;color:var(--ink);margin-top:28px">not a demo. not an assistant. a co-founder.</div>
+          <div style="font-size:25px;color:var(--ink);margin-top:24px">not a demo. not an assistant. a co-founder.</div>
         </div>
-        <div style="align-self:center;color:var(--dim);font-size:17px">— sol pbc · public benefit corporation</div>
       </section>
 
-      <!-- 13 · IN SITU (diagram) -->
-      <section class="slide" data-title="in situ · flow">
-        <div class="eyebrow">what a real slide feels like</div>
-        <h2>one request, across the org</h2>
-        <div class="spacer"></div>
-        <div class="panel" style="flex:1;display:flex;align-items:center;justify-content:center">
-          <span class="lab">handoff</span>
-<pre class="art" style="font-size:19px;line-height:1.35">
-  inbound          ╭─────────╮   files request   ╭─────────╮
+      <!-- 5 · LIST -->
+      <section class="slide" data-title="list">
+        <div class="head">
+          <div class="eyebrow">bulleted layout</div>
+          <h2>what extro actually does</h2>
+        </div>
+        <div class="body">
+          <ul class="tui">
+            <li>drafts &amp; sends email as the company</li>
+            <li>reviews contracts &amp; files legal</li>
+            <li>tracks finance, runs payroll &amp; expenses</li>
+            <li>ships product — specs, code, releases</li>
+            <li>coordinates all <b>12 offices</b>, end to end</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- 6 · SPLIT / COMPARE -->
+      <section class="slide" data-title="split">
+        <div class="head">
+          <div class="eyebrow">split panes — compare / before-after</div>
+          <h2>the trust model</h2>
+        </div>
+        <div class="body">
+          <div class="cols eq">
+            <div class="panel"><span class="lab">▌ everyone else</span>
+              <ul class="tui" style="font-size:21px">
+                <li class="todo">trust a corporation</li>
+                <li class="todo">data feeds their model</li>
+                <li class="todo">can be acquired</li>
+                <li class="todo">employees can read it</li>
+              </ul>
+            </div>
+            <div class="panel amber"><span class="lab">▌ extro / sol pbc</span>
+              <ul class="tui" style="font-size:21px">
+                <li class="done">trust one person — or yourself</li>
+                <li class="done">data stays in your container</li>
+                <li class="done">can never be sold</li>
+                <li class="done">no employees. one founder.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 7 · QUOTE -->
+      <section class="slide" data-title="quote">
+        <div class="body mid">
+          <div class="quote"><span class="mark">❝</span> please defend privacy. <span class="mark">❞</span></div>
+          <div class="attrib">— cindy cohn · eff &nbsp;·&nbsp; inscribed to extro</div>
+        </div>
+      </section>
+
+      <!-- 8 · STATS -->
+      <section class="slide" data-title="stats">
+        <div class="head">
+          <div class="eyebrow">numbers / metrics</div>
+          <h2>the org, a recent day</h2>
+        </div>
+        <div class="body">
+          <div class="statrow">
+            <div class="stat"><div class="n">124</div><div class="l">sessions</div></div>
+            <div class="stat"><div class="n">397</div><div class="l">commits</div></div>
+            <div class="stat"><div class="n">12</div><div class="l">offices</div></div>
+            <div class="stat"><div class="n">1</div><div class="l">founder</div></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 9 · STREAM (animated) -->
+      <section class="slide" data-title="stream">
+        <div class="head">
+          <div class="eyebrow">animation — streaming terminal</div>
+          <h2>extro, working</h2>
+        </div>
+        <div class="body">
+          <div class="panel"><span class="lab">~/sol-pbc</span>
+            <div class="log" id="streamlog" style="min-height:6.4em"></div>
+            <div style="margin-top:14px;font-size:22px"><span id="streamspin" class="amber"></span> <span class="bar" id="streambar"></span></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 10 · FLOW DIAGRAM -->
+      <section class="slide" data-title="flow">
+        <div class="head">
+          <div class="eyebrow">diagram — flow / handoff</div>
+          <h2>one request, across the org</h2>
+        </div>
+        <div class="body mid">
+          <div class="panel" style="width:100%"><span class="lab">handoff</span>
+<pre class="art" style="font-size:19px;line-height:1.4">  inbound          ╭─────────╮   files request   ╭─────────╮
   email     ──────▶│  extro  │ ───────────────▶ │   clo   │  legal review
                    ╰────┬────╯                   ╰────┬────╯
                         │ co-drafts reply             │ ✓ covenant check
                         ▼                              ▼
                    ╭─────────╮   founder review   ╭─────────╮
                    │  jer    │◀───────────────── │ records │  decision logged
-                   ╰─────────╯                    ╰─────────╯
-</pre>
+                   ╰─────────╯                    ╰─────────╯</pre>
+          </div>
         </div>
       </section>
 
-      <!-- 14 · DECISIONS -->
-      <section class="slide" data-title="decisions">
-        <div class="eyebrow">over to you</div>
-        <h1>seven calls.</h1>
-        <div class="spacer"></div>
-        <div class="cols">
-          <div>
-            <ul class="tui" style="font-size:22px">
-              <li>green: <span class="hi">soft</span> vs classic harsh</li>
-              <li>accent: <span class="amber">amber</span> vs cyan</li>
-              <li>frames: rounded / sharp / double</li>
-              <li>headlines: block / compact / plain</li>
-            </ul>
+      <!-- 11 · ARCHITECTURE GRID -->
+      <section class="slide" data-title="grid">
+        <div class="head">
+          <div class="eyebrow">diagram — architecture grid</div>
+          <h2>the directory is the org chart</h2>
+        </div>
+        <div class="body">
+          <div class="grid12">
+            <div class="cell hub"><b>extro</b>operates all</div>
+            <div class="cell"><b>ceo</b>strategy</div>
+            <div class="cell"><b>cfo</b>finance</div>
+            <div class="cell"><b>clo</b>legal</div>
+            <div class="cell"><b>coo</b>ops</div>
+            <div class="cell"><b>cpo</b>product</div>
+            <div class="cell"><b>vpe</b>engineering</div>
+            <div class="cell"><b>cto</b>tech</div>
+            <div class="cell"><b>cio</b>data</div>
+            <div class="cell"><b>cmo</b>brand</div>
+            <div class="cell"><b>cxo</b>customers</div>
+            <div class="cell"><b>cso</b>security</div>
           </div>
-          <div>
-            <ul class="tui" style="font-size:22px">
-              <li>texture: subtle CRT vs flat clean</li>
-              <li>font: JetBrains Mono ✓ ok?</li>
-              <li>motion: how much is too much</li>
-            </ul>
-            <div class="rule"></div>
-            <div style="font-size:18px;color:var(--dim)">
-              nav: <span class="kbd">space</span> <span class="kbd">→</span> next · <span class="kbd">←</span> back · <span class="kbd">t</span> texture · <span class="kbd">f</span> full · <span class="kbd">g</span>/<span class="kbd">G</span> first/last
+        </div>
+      </section>
+
+      <!-- 12 · TIMELINE -->
+      <section class="slide" data-title="timeline">
+        <div class="head">
+          <div class="eyebrow">diagram — timeline / sequence</div>
+          <h2>a request, end to end</h2>
+        </div>
+        <div class="body mid">
+          <div class="timeline">
+            <div class="tnode on"><span class="tline"></span><span class="dot"></span><span class="lab">inbound</span><span class="sub">email lands</span></div>
+            <div class="tnode on"><span class="tline"></span><span class="dot"></span><span class="lab">triage</span><span class="sub">route + scope</span></div>
+            <div class="tnode on"><span class="tline"></span><span class="dot"></span><span class="lab">draft</span><span class="sub">co-write</span></div>
+            <div class="tnode on"><span class="tline"></span><span class="dot"></span><span class="lab">review</span><span class="sub">founder ✓</span></div>
+            <div class="tnode on"><span class="dot"></span><span class="lab">ship</span><span class="sub">send + log</span></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 13 · CODE / COMMAND -->
+      <section class="slide" data-title="code">
+        <div class="head">
+          <div class="eyebrow">code / command block</div>
+          <h2>it's all just files &amp; commands</h2>
+        </div>
+        <div class="body mid">
+          <div class="code"><span class="p">$</span> <span class="c">hub request create --office clo \</span>
+     <span class="c">--title</span> <span class="a">"review lis miller ICA"</span>
+<span class="o">✓ filed req_27esidke → clo queue</span>
+<span class="o">✓ covenant check: article 8 clean</span>
+<span class="p">$</span> <span class="c">git commit -m</span> <span class="a">"clo: ICA executed"</span> <span class="o">&amp;&amp; git push</span><span class="cur"></span></div>
+        </div>
+      </section>
+
+      <!-- 14 · VISUAL / WINDOW -->
+      <section class="slide" data-title="visual">
+        <div class="head">
+          <div class="eyebrow">visual — drop in a screenshot</div>
+          <h2>a window for product shots</h2>
+        </div>
+        <div class="body mid">
+          <div class="window">
+            <div class="wbar"><span class="lights">●&nbsp;●&nbsp;●</span><span>solstone — your co-brain</span></div>
+            <div class="wbody">
+<pre class="art" style="font-size:18px;line-height:1.35">  sessions / week        ▲
+   124 │ ████████████████████  +27%
+    98 │ █████████████
+    72 │ ██████████
+    51 │ ███████
+       └──────────────────────────────
+         w20    w21    w22    w23</pre>
+              <div style="font-size:16px;color:var(--dim);margin-top:14px">↑ ascii viz, or drop a real PNG — <span class="hi">img-src 'self' / data:</span> is allowed under /talks/*</div>
             </div>
           </div>
         </div>
       </section>
 
+      <!-- 15 · CANVAS NOTE -->
+      <section class="slide" data-title="canvas">
+        <div class="head">
+          <div class="eyebrow">why fixed 16:9</div>
+          <h2>design once, scales to the room</h2>
+        </div>
+        <div class="body">
+          <div class="cols eq">
+            <div class="panel"><span class="lab">the model</span>
+<pre class="art" style="font-size:16px;color:var(--dim)">┌────────────────────────────┐
+│  1280×720 · designed once  │
+│  ┌──────────────────────┐  │
+│  │      your slide      │  │
+│  │  scales as one unit  │  │
+│  └──────────────────────┘  │
+└────────────────────────────┘
+  black letterbox = on-brand</pre>
+            </div>
+            <div class="panel"><span class="lab">why</span>
+              <ul class="tui" style="font-size:20px;gap:11px">
+                <li>identical on laptop &amp; venue screen</li>
+                <li>no reflow surprises mid-talk</li>
+                <li>box-art stays aligned at any size</li>
+                <li>any slide exports to a clean PNG</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="hint">press <span class="kbd">t</span> to toggle crt</div>
+      </section>
+
+      <!-- 16 · CLOSE -->
+      <section class="slide" data-title="close">
+        <div class="body mid">
+<pre class="art white" style="font-size:24px">███████╗ ██████╗ ███████╗
+██╔════╝██╔═══██╗██╔════╝
+█████╗  ██║   ██║█████╗
+██╔══╝  ██║   ██║██╔══╝
+███████╗╚██████╔╝██║
+╚══════╝ ╚═════╝ ╚═╝     </pre>
+          <div style="font-size:26px;color:var(--ink);margin-top:18px">extro · sol pbc</div>
+          <div style="font-size:21px;color:var(--dim);margin-top:8px">digital self-determination — structurally enforced<span class="cur amber"></span></div>
+        </div>
+      </section>
+
     </div><!-- /screen -->
 
-    <!-- ============ persistent statusbar ============ -->
     <div class="statusbar">
       <span class="mode">NORMAL</span>
-      <span class="seg title" id="sb-title">boot</span>
+      <span class="seg title" id="sb-title">hero</span>
       <span class="grow"></span>
       <span class="seg"><span class="dotnav" id="dotnav"></span></span>
-      <span class="seg right"><b id="sb-idx">1</b>/<span id="sb-n">14</span></span>
+      <span class="seg right"><b id="sb-idx">1</b>/<span id="sb-n">16</span></span>
       <span class="seg right" id="sb-clock">--:--:--</span>
       <span class="seg right"><span class="cur" style="vertical-align:-.1em"></span></span>
     </div>
 
-  </div><!-- /stage -->
-</div><!-- /viewport -->
+  </div>
+</div>
 
 <script>
 (() => {
@@ -585,26 +536,18 @@ ul.tui li.todo::before{content:"○";color:var(--dim)}
 
   document.getElementById('sb-n').textContent = slides.length;
 
-  /* deep-link: ?s=N jumps to slide N (1-based) on load */
-  const qs = new URLSearchParams(location.search);
-  const want = parseInt(qs.get('s'), 10);
+  /* deep-link: ?s=N (1-based) */
+  const want = parseInt(new URLSearchParams(location.search).get('s'), 10);
   if(want >= 1 && want <= slides.length) i = want - 1;
 
-  /* ---- fit the 1280x720 stage into the window ---- */
-  function fit(){
-    const s = Math.min(innerWidth/1280, innerHeight/720);
-    stage.style.transform = `scale(${s})`;
-  }
-  addEventListener('resize', fit);
-  addEventListener('load', fit);
-  requestAnimationFrame(fit);
-  fit();
+  /* fit the fixed stage into the window */
+  function fit(){ const s = Math.min(innerWidth/1280, innerHeight/720); stage.style.transform = `scale(${s})`; }
+  addEventListener('resize', fit); addEventListener('load', fit); requestAnimationFrame(fit); fit();
 
-  /* ---- dot nav ---- */
-  slides.forEach(() => { const d=document.createElement('i'); dotnav.appendChild(d); });
+  /* dot nav */
+  slides.forEach(() => dotnav.appendChild(document.createElement('i')));
   const dots = [...dotnav.children];
 
-  /* ---- feature-detect view transitions ---- */
   const hasVT = typeof document.startViewTransition === 'function';
   if(!hasVT) document.body.classList.add('no-vt');
 
@@ -616,19 +559,15 @@ ul.tui li.todo::before{content:"○";color:var(--dim)}
     if(cleanup){ cleanup(); cleanup=null; }
     cleanup = runAnim(slides[i]);
   }
-
   function go(n, dir){
     n = Math.max(0, Math.min(slides.length-1, n));
     if(n===i) return;
     document.documentElement.style.setProperty('--vt', (dir>0?-26:26)+'px');
     i = n;
-    if(hasVT) document.startViewTransition(render);
-    else render();
+    if(hasVT) document.startViewTransition(render); else render();
   }
-  const next = () => go(i+1, +1);
-  const prev = () => go(i-1, -1);
+  const next = () => go(i+1, +1), prev = () => go(i-1, -1);
 
-  /* ---- keys ---- */
   addEventListener('keydown', e => {
     switch(e.key){
       case ' ': case 'ArrowRight': case 'ArrowDown': case 'PageDown': case 'l': case 'j': e.preventDefault(); next(); break;
@@ -636,65 +575,61 @@ ul.tui li.todo::before{content:"○";color:var(--dim)}
       case 'g': case 'Home': go(0,-1); break;
       case 'G': case 'End': go(slides.length-1,+1); break;
       case 't': stage.classList.toggle('notexture'); break;
-      case 'f': if(!document.fullscreenElement) document.documentElement.requestFullscreen?.(); else document.exitFullscreen?.(); break;
-      default:
-        if(/^[1-9]$/.test(e.key)) go(parseInt(e.key,10)-1, +1);
+      case 'f': document.fullscreenElement ? document.exitFullscreen?.() : document.documentElement.requestFullscreen?.(); break;
+      default: if(/^[1-9]$/.test(e.key)) go(parseInt(e.key,10)-1, +1);
     }
   });
-  // click / tap to advance
   addEventListener('click', e => { if(e.clientX > innerWidth*0.18) next(); else prev(); });
 
-  /* ---- clock ---- */
   const clock = document.getElementById('sb-clock');
   setInterval(()=>{ clock.textContent = new Date().toLocaleTimeString('en-GB'); }, 1000);
 
   /* ---- per-slide animations ---- */
   function runAnim(slide){
     const t = slide.dataset.title;
-    if(t==='boot')    return animBoot(slide);
-    if(t==='motion')  return animMotion(slide);
+    if(t==='hero')   return animHero(slide);
+    if(t==='stream') return animStream(slide);
     return null;
   }
 
-  function animBoot(slide){
-    const log = slide.querySelector('#bootlog');
-    const reveal = slide.querySelector('#bootreveal');
-    const lines = [
-      '$ extro --wake',
-      '[ ok ] charter/benefit-purpose.md loaded',
-      '[ ok ] 12 offices mounted',
-      '[ ok ] covenant lock · article 8  ✓',
-      '[ ok ] voice + memory online',
-      '[ ok ] entering NORMAL mode',
-      '$ present nytw-betaworks'
-    ];
+  function animHero(slide){
+    const log = slide.querySelector('#bootlog'), reveal = slide.querySelector('#bootreveal');
+    const lines = ['$ extro --wake','[ ok ] charter/benefit-purpose.md loaded','[ ok ] 12 offices mounted','[ ok ] covenant lock · article 8  ✓','[ ok ] voice + memory online','[ ok ] entering NORMAL mode','$ present extro-deck'];
     log.textContent=''; reveal.style.opacity=0;
-    let li=0, ci=0, timer=null; const out=[];
-    function step(){
+    let li=0, ci=0, t=null; const out=[];
+    (function step(){
       if(li>=lines.length){ reveal.style.opacity=1; return; }
       const line=lines[li];
-      if(ci<=line.length){ log.textContent = out.join('\n') + (out.length?'\n':'') + line.slice(0,ci) + '▮'; ci++; timer=setTimeout(step, 14); }
-      else { out.push(line); ci=0; li++; log.textContent = out.join('\n'); timer=setTimeout(step, 130); }
-    }
-    timer=setTimeout(step, 250);
-    return () => clearTimeout(timer);
+      if(ci<=line.length){ log.textContent = out.join('\n')+(out.length?'\n':'')+line.slice(0,ci)+'▮'; ci++; t=setTimeout(step,14); }
+      else { out.push(line); ci=0; li++; log.textContent=out.join('\n'); t=setTimeout(step,130); }
+    })();
+    return () => clearTimeout(t);
   }
 
-  function animMotion(slide){
-    const typed = slide.querySelector('#typed');
-    const spin  = slide.querySelector('#spin');
-    const prog  = slide.querySelector('#prog');
-    const phrase = 'extro@solpbc:~$ run demo';
-    const frames = '⠋⠙⠹⠸⠼⠴⠦⠧⠇⠏';
-    let tc=0, sf=0, p=0, timers=[];
-    function type(){ typed.textContent = phrase.slice(0,tc); tc = (tc+1) % (phrase.length+8); timers[0]=setTimeout(type, 110); }
-    function spinf(){ spin.textContent = frames[sf=(sf+1)%frames.length]; timers[1]=setTimeout(spinf, 90); }
-    function bar(){ const w=18; p=(p+1)%(w+6); const f=Math.min(p,w); prog.innerHTML = '<span style="color:var(--ink)">'+'▰'.repeat(f)+'</span><span class="track">'+'▱'.repeat(w-f)+'</span> '+Math.round(f/w*100)+'%'; timers[2]=setTimeout(bar, 130); }
-    type(); spinf(); bar();
+  function animStream(slide){
+    const log=slide.querySelector('#streamlog'), spin=slide.querySelector('#streamspin'), bar=slide.querySelector('#streambar');
+    const lines=[
+      ['$','extro --autonomous',''],
+      ['▸','triaging inbound','3 new'],
+      ['▸','drafting clo reply','done'],
+      ['▸','filing req_8x2k','ok'],
+      ['▸','covenant check','✓ pass'],
+      ['▸','commit + push','ok'],
+    ];
+    const frames='⠋⠙⠹⠸⠼⠴⠦⠧⠇⠏'; let sf=0, li=0, timers=[];
+    function spinf(){ spin.textContent=frames[sf=(sf+1)%frames.length]; timers[0]=setTimeout(spinf,90); }
+    function prog(){ const w=20, f=Math.min(li,lines.length)/lines.length*w|0; bar.innerHTML='<span style="color:var(--ink)">'+'▰'.repeat(f)+'</span><span class="track">'+'▱'.repeat(w-f)+'</span>'; }
+    function row(p,c,r){ const pad='.'.repeat(Math.max(2,26-c.length)); return '<span class="p">'+p+'</span> <span class="h">'+c+'</span> '+(r?'<span class="p">'+pad+'</span> <span class="tag">'+r+'</span>':''); }
+    function step(){
+      if(li>=lines.length){ spin.textContent='✓'; log.innerHTML += '\n<span class="ok">done · 5 actions · 0 escalations</span>'; prog(); return; }
+      const [p,c,r]=lines[li];
+      log.innerHTML = (li?log.innerHTML+'\n':'') + row(p,c,r); li++; prog();
+      timers[1]=setTimeout(step, 520);
+    }
+    log.innerHTML=''; spinf(); prog(); timers[1]=setTimeout(step,300);
     return () => timers.forEach(clearTimeout);
   }
 
-  /* ---- focus so spacebar lands on the document, not an iframe ---- */
   document.body.focus();
   render();
 })();
