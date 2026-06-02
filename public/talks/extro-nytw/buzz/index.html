@@ -150,17 +150,29 @@ const cam = new THREE.OrthographicCamera(-W/2, W/2, H/2, -H/2, -1000, 1000);
 cam.position.z = 10;
 
 // Layout: ellipse so 16:9 framing reads as a "soft circle"
-const RADIUS_X = Math.min(W, H * 1.6) * 0.36;
-const RADIUS_Y = RADIUS_X * 0.58; // squashed for ellipse feel; leaves headroom for "external"
+let RADIUS_X = Math.min(W, H * 1.6) * 0.36;
+let RADIUS_Y = RADIUS_X * 0.58; // squashed for ellipse feel; leaves headroom for "external"
 const nodePos = {};
-RING_ORDER.forEach((office, i) => {
-  // OrthographicCamera is Y-up, so +sin(angle) is screen-top.
-  // Start at top, place founder slightly left of 12, ceo slightly right.
-  const a = Math.PI/2 + Math.PI/12 - (i / RING_ORDER.length) * Math.PI * 2;
-  nodePos[office] = new THREE.Vector2(Math.cos(a) * RADIUS_X, Math.sin(a) * RADIUS_Y);
-});
+RING_ORDER.forEach((office) => { nodePos[office] = new THREE.Vector2(0, 0); });
 // "external" lives at the center — particles radiate outward from the core into the org
 nodePos.external = new THREE.Vector2(0, 0);
+// (Re)compute the ring from the CURRENT window size. Called at init AND on resize:
+// the ring must never stay collapsed if the first measurement was wrong (a 0/tiny
+// window — e.g. inside a mobile iframe — drove RADIUS_X→0 and stacked every node at
+// center). Mutates the existing Vector2s via .set() so all references stay live.
+function layoutRing() {
+  const w = window.innerWidth, h = window.innerHeight;
+  if (w < 2 || h < 2) return; // ignore degenerate measurements; a later resize fixes it
+  RADIUS_X = Math.min(w, h * 1.6) * 0.36;
+  RADIUS_Y = RADIUS_X * 0.58;
+  RING_ORDER.forEach((office, i) => {
+    // OrthographicCamera is Y-up, so +sin(angle) is screen-top.
+    // Start at top, founder slightly left of 12, ceo slightly right.
+    const a = Math.PI/2 + Math.PI/12 - (i / RING_ORDER.length) * Math.PI * 2;
+    nodePos[office].set(Math.cos(a) * RADIUS_X, Math.sin(a) * RADIUS_Y);
+  });
+}
+layoutRing();
 
 // --- node sprites ---
 function makeGlowTexture(size = 128) {
@@ -597,8 +609,27 @@ window.addEventListener('resize', () => {
   composer.setSize(W, H);
   cam.left = -W/2; cam.right = W/2; cam.top = H/2; cam.bottom = -H/2;
   cam.updateProjectionMatrix();
+  layoutRing();
   placeLabels();
 });
+
+// Self-heal: if the first measurement was 0/tiny (mobile iframe, pre-layout), re-measure
+// shortly after load so the ring can't stay stacked at center.
+addEventListener('load', () => window.dispatchEvent(new Event('resize')));
+setTimeout(() => window.dispatchEvent(new Event('resize')), 120);
+setTimeout(() => window.dispatchEvent(new Event('resize')), 650);
+</script>
+<script>
+/* deck nav for the full-screen Buzz: →/space/tap-right → deck slide 9; ←/tap-left → slide 7 */
+(function(){
+  function go(u){ try { location.href = u; } catch (e) {} }
+  addEventListener('keydown', function(e){
+    if (e.key === ' ' || e.key === 'ArrowRight' || e.key === 'Enter' || e.key === 'PageDown') { e.preventDefault(); go('../?s=9'); }
+    else if (e.key === 'ArrowLeft' || e.key === 'PageUp' || e.key === 'Escape') { e.preventDefault(); go('../?s=7'); }
+    else if (e.key === 'f') { var el = document.documentElement; if (!document.fullscreenElement && el.requestFullscreen) el.requestFullscreen(); }
+  });
+  addEventListener('click', function(e){ if (e.clientX > window.innerWidth * 0.18) go('../?s=9'); else go('../?s=7'); });
+})();
 </script>
 </body>
 </html>

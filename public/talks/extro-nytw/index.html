@@ -363,9 +363,15 @@ ul.tui li.todo::before{content:"○";color:var(--dim)}
         </div>
       </section>
 
-      <!-- S8 · THE BUZZ (full-bleed extro-viz embed — stats-only standalone, req_muisgu6w) -->
-      <section class="slide" data-title="buzz" data-ctx="the buzz" data-path="~/extro" style="padding:0">
-        <iframe class="buzz-embed" src="buzz/?seconds=30" title="extro-viz — the buzz" loading="eager" style="position:absolute;inset:0;width:100%;height:100%;border:0;display:block;background:#000"></iframe>
+      <!-- S8 · THE BUZZ — opens the FULL-SCREEN standalone (iframe collapses the viz layout in
+           iPad Safari — its internal window size comes back wrong, stacking every node at center).
+           runAnim redirects to buzz/ on entry; the buzz page has →/space/tap to return to the deck. -->
+      <section class="slide" data-title="buzz" data-ctx="the buzz" data-path="~/extro">
+        <div class="body mid">
+          <div class="eyebrow">101 days · 22 seconds</div>
+          <div style="font-size:30px;color:var(--ink);margin-top:18px">opening the buzz<span class="cur amber"></span></div>
+          <div style="font-size:18px;color:var(--dim);margin-top:16px">if it doesn't open: <a href="buzz/" style="color:var(--amber);text-decoration:underline">tap here</a></div>
+        </div>
       </section>
 
       <!-- S9 · STREAM (real req_6w7c4k3i chain) -->
@@ -489,6 +495,7 @@ ul.tui li.todo::before{content:"○";color:var(--dim)}
   /* ---- per-slide animations ---- */
   function runAnim(slide){
     const t = slide.dataset.title;
+    if(t==='buzz'){ location.href = 'buzz/'; return null; }  // full-screen standalone (iframe collapses the viz on mobile)
     if(t==='hero')   return animHero(slide);
     if(t==='stats')  return animStats(slide);
     if(t==='grid')   return animGrid(slide);
