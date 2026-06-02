@@ -424,6 +424,14 @@ ul.tui li.todo::before{content:"○";color:var(--dim)}
       <span class="seg right"><span class="cur" style="vertical-align:-.1em"></span></span>
     </div>
 
+    <!-- start hold: deck opens paused on this card; first space/→/tap removes it and
+         runs the hero boot (gated in JS so the boot becomes the presenter's "begin"). -->
+    <div id="startcard" style="position:absolute;left:0;right:0;top:40px;bottom:38px;background:var(--bg);z-index:40;display:flex;flex-direction:column;align-items:center;justify-content:center;transition:opacity .5s ease">
+      <div style="font-size:18px;color:var(--dim);letter-spacing:.06em">◐ extro // deck</div>
+      <div style="font-size:15px;color:var(--amber);letter-spacing:.24em;text-transform:uppercase;margin-top:14px">▸&nbsp;&nbsp;press space to begin&nbsp;&nbsp;◂</div>
+      <div style="margin-top:12px"><span class="cur amber"></span></div>
+    </div>
+
   </div>
 </div>
 
@@ -436,7 +444,7 @@ ul.tui li.todo::before{content:"○";color:var(--dim)}
   const dotnav  = document.getElementById('dotnav');
   const tbPath  = document.getElementById('tb-path');
   const tbCtx   = document.getElementById('tb-ctx');
-  let i = 0, cleanup = null;
+  let i = 0, cleanup = null, started = false;
 
   document.getElementById('sb-n').textContent = slides.length;
 
@@ -476,9 +484,19 @@ ul.tui li.todo::before{content:"○";color:var(--dim)}
   }
   const next = () => go(i+1, +1), prev = () => go(i-1, -1);
 
+  // first advance "begins" the deck: drop the start card and run the hero boot now.
+  function begin(){
+    if(started) return;
+    started = true;
+    const ov = document.getElementById('startcard');
+    if(ov){ ov.style.opacity = '0'; setTimeout(() => { ov.style.display = 'none'; }, 520); }
+    if(cleanup){ cleanup(); cleanup = null; }
+    cleanup = runAnim(slides[i]); // slide 0 = hero; now started → boot plays
+  }
+
   addEventListener('keydown', e => {
     switch(e.key){
-      case ' ': case 'ArrowRight': case 'ArrowDown': case 'PageDown': case 'l': case 'j': e.preventDefault(); next(); break;
+      case ' ': case 'ArrowRight': case 'ArrowDown': case 'PageDown': case 'l': case 'j': e.preventDefault(); started ? next() : begin(); break;
       case 'ArrowLeft': case 'ArrowUp': case 'PageUp': case 'h': case 'k': e.preventDefault(); prev(); break;
       case 'g': case 'Home': go(0,-1); break;
       case 'G': case 'End': go(slides.length-1,+1); break;
@@ -487,7 +505,7 @@ ul.tui li.todo::before{content:"○";color:var(--dim)}
       default: if(/^[1-9]$/.test(e.key)) go(parseInt(e.key,10)-1, +1);
     }
   });
-  addEventListener('click', e => { if(e.clientX > innerWidth*0.18) next(); else prev(); });
+  addEventListener('click', e => { if(!started){ begin(); return; } if(e.clientX > innerWidth*0.18) next(); else prev(); });
 
   const clock = document.getElementById('sb-clock');
   setInterval(()=>{ clock.textContent = new Date().toLocaleTimeString('en-GB'); }, 1000);
@@ -496,7 +514,7 @@ ul.tui li.todo::before{content:"○";color:var(--dim)}
   function runAnim(slide){
     const t = slide.dataset.title;
     if(t==='buzz'){ location.href = 'buzz/?hold=1&seconds=30'; return null; }  // full-screen standalone, paused until space (iframe collapses the viz on mobile)
-    if(t==='hero')   return animHero(slide);
+    if(t==='hero')   return started ? animHero(slide) : null;
     if(t==='stats')  return animStats(slide);
     if(t==='grid')   return animGrid(slide);
     if(t==='stream') return animStream(slide);
