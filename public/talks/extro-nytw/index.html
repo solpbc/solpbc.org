@@ -495,7 +495,7 @@ ul.tui li.todo::before{content:"○";color:var(--dim)}
   /* ---- per-slide animations ---- */
   function runAnim(slide){
     const t = slide.dataset.title;
-    if(t==='buzz'){ location.href = 'buzz/'; return null; }  // full-screen standalone (iframe collapses the viz on mobile)
+    if(t==='buzz'){ location.href = 'buzz/?hold=1&seconds=30'; return null; }  // full-screen standalone, paused until space (iframe collapses the viz on mobile)
     if(t==='hero')   return animHero(slide);
     if(t==='stats')  return animStats(slide);
     if(t==='grid')   return animGrid(slide);

@@ -557,7 +557,27 @@ composer.addPass(bloom);
 composer.addPass(new OutputPass());
 
 // --- animate ---
-const clock = new THREE.Clock();
+// "hold" mode: start PAUSED on the static template frame (the laid-out ring at t=0)
+// and begin the replay on demand. The deck embed passes ?hold=1 so the presenter
+// starts on their cue (space/tap). Default (no param) auto-plays — keeps the
+// `record` MP4 + standalone behavior unchanged.
+const HOLD = /^(1|true|yes)$/i.test(new URLSearchParams(location.search).get('hold') || '');
+window.__vizStarted = !HOLD;
+const clock = new THREE.Clock(!HOLD); // autoStart=false while holding → elapsed stays 0
+window.__startViz = function () {
+  if (window.__vizStarted) return;
+  window.__vizStarted = true;
+  clock.start();
+  const o = document.getElementById('startcard');
+  if (o) o.style.opacity = '0';
+};
+if (HOLD) {
+  const card = document.createElement('div');
+  card.id = 'startcard';
+  card.style.cssText = 'position:fixed;left:0;right:0;bottom:0;top:0;display:flex;align-items:flex-end;justify-content:center;padding-bottom:8vh;pointer-events:none;z-index:50;transition:opacity .6s ease;font:600 15px/1.5 system-ui,-apple-system,sans-serif;letter-spacing:.22em;text-transform:uppercase;color:#8fe8b4;text-shadow:0 0 12px rgba(120,220,160,.45);';
+  card.innerHTML = '<div>▸&nbsp;&nbsp;press space to begin&nbsp;&nbsp;◂</div>';
+  document.body.appendChild(card);
+}
 let frame = 0;
 
 function animate() {
@@ -620,15 +640,17 @@ setTimeout(() => window.dispatchEvent(new Event('resize')), 120);
 setTimeout(() => window.dispatchEvent(new Event('resize')), 650);
 </script>
 <script>
-/* deck nav for the full-screen Buzz: →/space/tap-right → deck slide 9; ←/tap-left → slide 7 */
+/* deck nav for the full-screen Buzz. In hold mode the FIRST space/tap-right begins the
+   replay; once running, →/space/tap-right → deck slide 9, ←/tap-left → slide 7. */
 (function(){
   function go(u){ try { location.href = u; } catch (e) {} }
+  function fwd(){ if (!window.__vizStarted) { if (window.__startViz) window.__startViz(); } else { go('../?s=9'); } }
   addEventListener('keydown', function(e){
-    if (e.key === ' ' || e.key === 'ArrowRight' || e.key === 'Enter' || e.key === 'PageDown') { e.preventDefault(); go('../?s=9'); }
+    if (e.key === ' ' || e.key === 'ArrowRight' || e.key === 'Enter' || e.key === 'PageDown') { e.preventDefault(); fwd(); }
     else if (e.key === 'ArrowLeft' || e.key === 'PageUp' || e.key === 'Escape') { e.preventDefault(); go('../?s=7'); }
     else if (e.key === 'f') { var el = document.documentElement; if (!document.fullscreenElement && el.requestFullscreen) el.requestFullscreen(); }
   });
-  addEventListener('click', function(e){ if (e.clientX > window.innerWidth * 0.18) go('../?s=9'); else go('../?s=7'); });
+  addEventListener('click', function(e){ if (e.clientX > window.innerWidth * 0.18) fwd(); else go('../?s=7'); });
 })();
 </script>
 </body>
