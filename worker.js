@@ -91,6 +91,12 @@ function applySecurityHeaders(response, pathname) {
       newResponse.headers.set(key, TALKS_CSP);
     } else if (key === 'Content-Security-Policy' && isBrandsPage) {
       newResponse.headers.set(key, BRANDS_CSP);
+    } else if (key === 'X-Frame-Options' && isTalksPage) {
+      // /talks/* may iframe a same-origin sibling (the extro-viz "Buzz" standalone
+      // in the NYTW deck). X-Frame-Options: DENY is absolute and would block that
+      // even with TALKS_CSP frame-ancestors 'self'; SAMEORIGIN is the legacy-header
+      // equivalent — same-origin framing only, no cross-origin surface opened.
+      newResponse.headers.set(key, 'SAMEORIGIN');
     } else {
       newResponse.headers.set(key, value);
     }

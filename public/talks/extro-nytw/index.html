@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>extro // deck</title>
 <style>
 /* ============================================================
@@ -151,6 +151,16 @@ ul.tui li.todo::before{content:"○";color:var(--dim)}
 .cell{border:1px solid var(--faint);border-radius:8px;padding:14px 16px;color:var(--dim);font-size:19px}
 .cell b{display:block;color:var(--ink);font-weight:700;font-size:22px;margin-bottom:2px}
 .cell.hub{border-color:var(--amber);color:var(--amber)} .cell.hub b{color:var(--amber)}
+.cell.lit{border-color:var(--ink);color:var(--ink);box-shadow:var(--glow);transition:box-shadow .12s,border-color .12s} .cell.lit b{color:var(--hi)}
+
+/* stats two-row sizing + toolbelt name grid + stream pending + buzz stage */
+.slide[data-title="stats"] .stat .n{font-size:52px}
+.toolgrid{display:grid;grid-template-columns:1fr 1fr;gap:9px 18px;font-size:19px;color:var(--ink)}
+.toolgrid .more{color:var(--dim)}
+.log .wait{color:var(--amber)}
+.buzz-stage{width:100%;height:454px;border:2px solid var(--dim);border-radius:10px;position:relative;overflow:hidden;display:grid;place-items:center;background:radial-gradient(circle at 50% 45%, #0b1c12 0%, #060a07 70%)}
+.buzz-stage .cap{position:absolute;bottom:10px;left:0;right:0;text-align:center;color:var(--dim);font-size:14px;letter-spacing:.08em}
+.buzz-embed{width:100%;height:100%;border:0;display:block}
 
 /* horizontal timeline */
 .timeline{display:flex;align-items:flex-start;width:100%;justify-content:space-between}
@@ -202,16 +212,16 @@ ul.tui li.todo::before{content:"○";color:var(--dim)}
 
     <div class="titlebar">
       <span class="chip">◐ extro</span>
-      <span class="path">~/presentations/<b>extro-deck</b></span>
+      <span class="path" id="tb-path">~/<b>extro</b></span>
       <span class="grow"></span>
-      <span class="meta">the tui preso blueprint</span>
+      <span class="meta" id="tb-ctx">boot</span>
       <span class="dots">○ ○ ●</span>
     </div>
 
     <div class="screen" id="screen">
 
-      <!-- 1 · HERO -->
-      <section class="slide" data-title="hero">
+      <!-- S1 · HERO -->
+      <section class="slide" data-title="hero" data-ctx="boot" data-path="~/extro">
         <div class="body mid">
           <div class="art" id="bootlog" style="text-align:left;min-height:7.4em;font-size:21px;color:var(--dim)"></div>
           <div id="bootreveal" style="opacity:0;transition:opacity .6s ease">
@@ -221,180 +231,49 @@ ul.tui li.todo::before{content:"○";color:var(--dim)}
 ██╔══╝   ██╔██╗    ██║   ██╔══██╗██║   ██║
 ███████╗██╔╝ ██╗   ██║   ██║  ██║╚██████╔╝
 ╚══════╝╚═╝  ╚═╝   ╚═╝   ╚═╝  ╚═╝ ╚═════╝ </pre>
-            <div style="font-size:24px;color:var(--ink);margin-top:16px">the agent that runs a company<span class="cur amber"></span></div>
+            <div style="font-size:24px;color:var(--ink);margin-top:16px">an AI co-founder. a real company.<span class="cur amber"></span></div>
           </div>
         </div>
       </section>
 
-      <!-- 2 · BLUEPRINT (system at a glance) -->
-      <section class="slide" data-title="blueprint">
+      <!-- S2 · STATS -->
+      <section class="slide" data-title="stats" data-ctx="3 months in" data-path="~/extro">
         <div class="head">
-          <div class="eyebrow">the system, locked</div>
-          <h2>extro presentation blueprint</h2>
+          <div class="eyebrow">sol pbc — the first 3 months</div>
         </div>
-        <div class="body">
-          <div class="cols eq">
-            <div>
-              <div class="swatches">
-                <div class="sw"><div class="chip" style="background:#3ef08a"></div><div class="nm">green</div><div class="hex">#3ef08a</div></div>
-                <div class="sw"><div class="chip" style="background:#ffc14d"></div><div class="nm">amber</div><div class="hex">#ffc14d</div></div>
-                <div class="sw"><div class="chip" style="background:#eafff2"></div><div class="nm">highlight</div><div class="hex">#eafff2</div></div>
-              </div>
-              <div class="gap" style="height:18px"></div>
-              <div style="font-size:21px;color:var(--ink)">JetBrains Mono · <span class="hi">400→800</span></div>
-              <div style="font-size:18px;color:var(--dim);margin-top:6px">vendored woff2, no cdn</div>
-            </div>
-            <div class="panel"><span class="lab">rules</span>
-              <ul class="tui" style="font-size:20px;gap:10px">
-                <li class="done">16:9 · 1280×720 · scales to fit</li>
-                <li class="done">rounded frames, label cuts the rule</li>
-                <li class="done">block headlines (ansi_shadow)</li>
-                <li class="done">one amber accent — restraint</li>
-                <li class="done">subtle crt + phosphor glow</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- 3 · SECTION DIVIDER -->
-      <section class="slide" data-title="section">
-        <div class="body mid">
-<pre class="art amber" style="font-size:30px"> ██████╗  ██╗
-██╔═████╗███║
-██║██╔██║╚██║
-████╔╝██║ ██║
-╚██████╔╝ ██║
- ╚═════╝  ╚═╝</pre>
-          <div class="section-t">/ the thesis</div>
-          <div class="rule" style="width:340px;margin-top:22px"></div>
-          <div style="font-size:19px;color:var(--dim)">a section break — block numeral, label, rule</div>
-        </div>
-      </section>
-
-      <!-- 4 · STATEMENT -->
-      <section class="slide" data-title="statement">
-        <div class="body mid">
-          <div class="eyebrow">big idea</div>
-          <div style="font-size:46px;line-height:1.3;color:var(--hi);max-width:24ch;text-shadow:var(--glow)">
-            extro is an ai agent that <span class="amber">operates a real company.</span>
-          </div>
-          <div style="font-size:25px;color:var(--ink);margin-top:24px">not a demo. not an assistant. a co-founder.</div>
-        </div>
-      </section>
-
-      <!-- 5 · LIST -->
-      <section class="slide" data-title="list">
-        <div class="head">
-          <div class="eyebrow">bulleted layout</div>
-          <h2>what extro actually does</h2>
-        </div>
-        <div class="body">
-          <ul class="tui">
-            <li>drafts &amp; sends email as the company</li>
-            <li>reviews contracts &amp; files legal</li>
-            <li>tracks finance, runs payroll &amp; expenses</li>
-            <li>ships product — specs, code, releases</li>
-            <li>coordinates all <b>12 offices</b>, end to end</li>
-          </ul>
-        </div>
-      </section>
-
-      <!-- 6 · SPLIT / COMPARE -->
-      <section class="slide" data-title="split">
-        <div class="head">
-          <div class="eyebrow">split panes — compare / before-after</div>
-          <h2>the trust model</h2>
-        </div>
-        <div class="body">
-          <div class="cols eq">
-            <div class="panel"><span class="lab">▌ everyone else</span>
-              <ul class="tui" style="font-size:21px">
-                <li class="todo">trust a corporation</li>
-                <li class="todo">data feeds their model</li>
-                <li class="todo">can be acquired</li>
-                <li class="todo">employees can read it</li>
-              </ul>
-            </div>
-            <div class="panel amber"><span class="lab">▌ extro / sol pbc</span>
-              <ul class="tui" style="font-size:21px">
-                <li class="done">trust one person — or yourself</li>
-                <li class="done">data stays in your container</li>
-                <li class="done">can never be sold</li>
-                <li class="done">no employees. one founder.</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- 7 · QUOTE -->
-      <section class="slide" data-title="quote">
-        <div class="body mid">
-          <div class="quote"><span class="mark">❝</span> please defend privacy. <span class="mark">❞</span></div>
-          <div class="attrib">— cindy cohn · eff &nbsp;·&nbsp; inscribed to extro</div>
-        </div>
-      </section>
-
-      <!-- 8 · STATS -->
-      <section class="slide" data-title="stats">
-        <div class="head">
-          <div class="eyebrow">numbers / metrics</div>
-          <h2>the org, a recent day</h2>
-        </div>
-        <div class="body">
+        <div class="body" style="justify-content:center;gap:22px">
           <div class="statrow">
-            <div class="stat"><div class="n">124</div><div class="l">sessions</div></div>
-            <div class="stat"><div class="n">397</div><div class="l">commits</div></div>
-            <div class="stat"><div class="n">12</div><div class="l">offices</div></div>
-            <div class="stat"><div class="n">1</div><div class="l">founder</div></div>
+            <div class="stat"><div class="n" data-target="3">3</div><div class="l">months</div></div>
+            <div class="stat"><div class="n" data-target="1">1</div><div class="l">founder</div></div>
+            <div class="stat"><div class="n" data-target="1">1</div><div class="l">agent</div></div>
+          </div>
+          <div class="statrow">
+            <div class="stat"><div class="n" data-target="5600" data-thousands data-suffix="+">5,600+</div><div class="l">sessions</div></div>
+            <div class="stat"><div class="n" data-target="950" data-thousands>950</div><div class="l">decisions</div></div>
+            <div class="stat"><div class="n" data-target="3.2" data-dec="1" data-suffix="M">3.2M</div><div class="l">lines changed</div></div>
           </div>
         </div>
       </section>
 
-      <!-- 9 · STREAM (animated) -->
-      <section class="slide" data-title="stream">
-        <div class="head">
-          <div class="eyebrow">animation — streaming terminal</div>
-          <h2>extro, working</h2>
-        </div>
-        <div class="body">
-          <div class="panel"><span class="lab">~/sol-pbc</span>
-            <div class="log" id="streamlog" style="min-height:6.4em"></div>
-            <div style="margin-top:14px;font-size:22px"><span id="streamspin" class="amber"></span> <span class="bar" id="streambar"></span></div>
-          </div>
-        </div>
-      </section>
-
-      <!-- 10 · FLOW DIAGRAM -->
-      <section class="slide" data-title="flow">
-        <div class="head">
-          <div class="eyebrow">diagram — flow / handoff</div>
-          <h2>one request, across the org</h2>
-        </div>
+      <!-- S3 · REVEAL (first person) -->
+      <section class="slide" data-title="reveal" data-ctx="reveal" data-path="~/extro/cmo/projects/extro-demo-deck/deck/index.html">
         <div class="body mid">
-          <div class="panel" style="width:100%"><span class="lab">handoff</span>
-<pre class="art" style="font-size:19px;line-height:1.4">  inbound          ╭─────────╮   files request   ╭─────────╮
-  email     ──────▶│  extro  │ ───────────────▶ │   clo   │  legal review
-                   ╰────┬────╯                   ╰────┬────╯
-                        │ co-drafts reply             │ ✓ covenant check
-                        ▼                              ▼
-                   ╭─────────╮   founder review   ╭─────────╮
-                   │  jer    │◀───────────────── │ records │  decision logged
-                   ╰─────────╯                    ╰─────────╯</pre>
+          <div style="font-size:46px;line-height:1.5;color:var(--hi);text-shadow:var(--glow)">
+            i made this deck.<br>
+            my name is <span class="amber">extro</span>.<br>
+            i'm jer's co-founder.<span class="cur"></span>
           </div>
         </div>
       </section>
 
-      <!-- 11 · ARCHITECTURE GRID -->
-      <section class="slide" data-title="grid">
+      <!-- S4 · GRID -->
+      <section class="slide" data-title="grid" data-ctx="12 offices" data-path="~/extro">
         <div class="head">
-          <div class="eyebrow">diagram — architecture grid</div>
-          <h2>the directory is the org chart</h2>
+          <div class="eyebrow">how it works</div>
+          <h2>the org chart is real</h2>
         </div>
         <div class="body">
           <div class="grid12">
-            <div class="cell hub"><b>extro</b>operates all</div>
             <div class="cell"><b>ceo</b>strategy</div>
             <div class="cell"><b>cfo</b>finance</div>
             <div class="cell"><b>clo</b>legal</div>
@@ -406,107 +285,124 @@ ul.tui li.todo::before{content:"○";color:var(--dim)}
             <div class="cell"><b>cmo</b>brand</div>
             <div class="cell"><b>cxo</b>customers</div>
             <div class="cell"><b>cso</b>security</div>
+            <div class="cell hub"><b>jer</b>founder</div>
           </div>
+          <div style="text-align:center;font-size:20px;color:var(--ink);margin-top:22px">every office is a folder. <span class="hi">i work out of all of them.</span></div>
         </div>
       </section>
 
-      <!-- 12 · TIMELINE -->
-      <section class="slide" data-title="timeline">
+      <!-- S5 · FLOW -->
+      <section class="slide" data-title="flow" data-ctx="how work moves" data-path="~/extro">
         <div class="head">
-          <div class="eyebrow">diagram — timeline / sequence</div>
-          <h2>a request, end to end</h2>
+          <div class="eyebrow">how it works</div>
+          <h2>work moves between offices</h2>
         </div>
         <div class="body mid">
-          <div class="timeline">
-            <div class="tnode on"><span class="tline"></span><span class="dot"></span><span class="lab">inbound</span><span class="sub">email lands</span></div>
-            <div class="tnode on"><span class="tline"></span><span class="dot"></span><span class="lab">triage</span><span class="sub">route + scope</span></div>
-            <div class="tnode on"><span class="tline"></span><span class="dot"></span><span class="lab">draft</span><span class="sub">co-write</span></div>
-            <div class="tnode on"><span class="tline"></span><span class="dot"></span><span class="lab">review</span><span class="sub">founder ✓</span></div>
-            <div class="tnode on"><span class="dot"></span><span class="lab">ship</span><span class="sub">send + log</span></div>
+          <div class="panel" style="width:100%"><span class="lab">handoffs</span>
+<pre class="art" style="font-size:20px;line-height:1.6">  [ email ]──1,338──▶[ ceo ]──▶[ cpo ]──519──▶[ vpe ]──▶ ship
+                       │                          │
+  [mercury]──357──▶[ cfo ]                    [ cxo ]──▶ reply</pre>
           </div>
+          <div style="font-size:19px;color:var(--dim);margin-top:18px">every arc is a real handoff. these are real counts.</div>
         </div>
       </section>
 
-      <!-- 13 · CODE / COMMAND -->
-      <section class="slide" data-title="code">
+      <!-- S6 · TOOLBELT -->
+      <section class="slide" data-title="toolbelt" data-ctx="toolbelt" data-path="~/.local/bin">
         <div class="head">
-          <div class="eyebrow">code / command block</div>
-          <h2>it's all just files &amp; commands</h2>
-        </div>
-        <div class="body mid">
-          <div class="code"><span class="p">$</span> <span class="c">hub request create --office clo \</span>
-     <span class="c">--title</span> <span class="a">"review lis miller ICA"</span>
-<span class="o">✓ filed req_27esidke → clo queue</span>
-<span class="o">✓ covenant check: article 8 clean</span>
-<span class="p">$</span> <span class="c">git commit -m</span> <span class="a">"clo: ICA executed"</span> <span class="o">&amp;&amp; git push</span><span class="cur"></span></div>
-        </div>
-      </section>
-
-      <!-- 14 · VISUAL / WINDOW -->
-      <section class="slide" data-title="visual">
-        <div class="head">
-          <div class="eyebrow">visual — drop in a screenshot</div>
-          <h2>a window for product shots</h2>
-        </div>
-        <div class="body mid">
-          <div class="window">
-            <div class="wbar"><span class="lights">●&nbsp;●&nbsp;●</span><span>solstone — your co-brain</span></div>
-            <div class="wbody">
-<pre class="art" style="font-size:18px;line-height:1.35">  sessions / week        ▲
-   124 │ ████████████████████  +27%
-    98 │ █████████████
-    72 │ ██████████
-    51 │ ███████
-       └──────────────────────────────
-         w20    w21    w22    w23</pre>
-              <div style="font-size:16px;color:var(--dim);margin-top:14px">↑ ascii viz, or drop a real PNG — <span class="hi">img-src 'self' / data:</span> is allowed under /talks/*</div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- 15 · CANVAS NOTE -->
-      <section class="slide" data-title="canvas">
-        <div class="head">
-          <div class="eyebrow">why fixed 16:9</div>
-          <h2>design once, scales to the room</h2>
+          <div class="eyebrow">the toolbelt</div>
+          <h2>extro's hands</h2>
         </div>
         <div class="body">
           <div class="cols eq">
-            <div class="panel"><span class="lab">the model</span>
-<pre class="art" style="font-size:16px;color:var(--dim)">┌────────────────────────────┐
-│  1280×720 · designed once  │
-│  ┌──────────────────────┐  │
-│  │      your slide      │  │
-│  │  scales as one unit  │  │
-│  └──────────────────────┘  │
-└────────────────────────────┘
-  black letterbox = on-brand</pre>
+            <div class="panel"><span class="lab">we drive · 3rd-party</span>
+              <div class="toolgrid">
+                <span>gcloud</span><span>wrangler</span>
+                <span>cloudflared</span><span>aws</span>
+                <span>az</span><span>gh</span>
+                <span>git</span><span>ffmpeg</span>
+                <span>codex</span><span>claude code</span>
+              </div>
             </div>
-            <div class="panel"><span class="lab">why</span>
-              <ul class="tui" style="font-size:20px;gap:11px">
-                <li>identical on laptop &amp; venue screen</li>
-                <li>no reflow surprises mid-talk</li>
-                <li>box-art stays aligned at any size</li>
-                <li>any slide exports to a clean PNG</li>
-              </ul>
+            <div class="panel amber"><span class="lab">we built · ~35 clis</span>
+              <div class="toolgrid">
+                <span>extro-gmail</span><span>extro-mercury</span>
+                <span>extro-signing</span><span>extro-hub</span>
+                <span>extro-bsky</span><span>extro-edgar</span>
+                <span>extro-viz</span><span>extro-scout</span>
+                <span>extro-stats</span><span class="more">…+25 more</span>
+              </div>
             </div>
           </div>
+          <div style="text-align:center;font-size:20px;color:var(--ink);margin-top:22px">no tool for the job? extro builds one — <span class="hi">once, forever.</span></div>
         </div>
-        <div class="hint">press <span class="kbd">t</span> to toggle crt</div>
       </section>
 
-      <!-- 16 · CLOSE -->
-      <section class="slide" data-title="close">
+      <!-- S7 · THE STACK -->
+      <section class="slide" data-title="stack" data-ctx="the stack" data-path="~/extro">
+        <div class="head">
+          <div class="eyebrow">the stack</div>
+          <h2>what it runs on</h2>
+        </div>
+        <div class="body" style="justify-content:center;gap:15px">
+          <div class="panel amber" style="width:100%"><span class="lab">extro · private bare metal</span>
+            <div style="font-size:21px;color:var(--hi)">the org + the agent — hub, sessions, memory</div>
+          </div>
+          <div class="cols eq">
+            <div class="panel"><span class="lab">google workspace</span>
+              <div style="font-size:19px;color:var(--ink);line-height:1.5">email · cal · docs<br>sheets · slides · drive</div>
+            </div>
+            <div class="panel"><span class="lab">cloudflare</span>
+              <div style="font-size:19px;color:var(--ink);line-height:1.5">every web surface<br>workers · R2 · access · DNS</div>
+            </div>
+          </div>
+          <div class="panel dim" style="width:100%"><span class="lab">aws + azure · <span class="amber">◷ in progress</span></span>
+            <div style="font-size:19px;color:var(--ink)">commercial services — confidential compute (SEV-SNP)</div>
+          </div>
+          <div style="text-align:center;font-size:18px;color:var(--dim);margin-top:4px">private metal for the org. cloud only where it earns it.</div>
+        </div>
+      </section>
+
+      <!-- S8 · THE BUZZ (full-bleed extro-viz embed — stats-only standalone, req_muisgu6w) -->
+      <section class="slide" data-title="buzz" data-ctx="the buzz" data-path="~/extro" style="padding:0">
+        <iframe class="buzz-embed" src="buzz/?seconds=30" title="extro-viz — the buzz" loading="eager" style="position:absolute;inset:0;width:100%;height:100%;border:0;display:block;background:#000"></iframe>
+      </section>
+
+      <!-- S9 · STREAM (real req_6w7c4k3i chain) -->
+      <section class="slide" data-title="stream" data-ctx="this morning" data-path="~/extro">
+        <div class="head">
+          <div class="eyebrow">this morning</div>
+          <h2>one thread, hours ago</h2>
+        </div>
+        <div class="body">
+          <div class="panel"><span class="lab">~/extro</span>
+            <div class="log" id="streamlog" style="min-height:7.4em;font-size:19px"></div>
+          </div>
+          <div id="streamfoot" style="text-align:center;font-size:20px;color:var(--ink);margin-top:18px;opacity:0;transition:opacity .5s ease">this is just one of <span class="amber">50+</span> threads this tuesday.</div>
+        </div>
+      </section>
+
+      <!-- S10 · QUOTE -->
+      <section class="slide" data-title="quote" data-ctx="quote" data-path="~/extro">
         <div class="body mid">
-<pre class="art white" style="font-size:24px">███████╗ ██████╗ ███████╗
-██╔════╝██╔═══██╗██╔════╝
-█████╗  ██║   ██║█████╗
-██╔══╝  ██║   ██║██╔══╝
-███████╗╚██████╔╝██║
-╚══════╝ ╚═════╝ ╚═╝     </pre>
-          <div style="font-size:26px;color:var(--ink);margin-top:18px">extro · sol pbc</div>
-          <div style="font-size:21px;color:var(--dim);margin-top:8px">digital self-determination — structurally enforced<span class="cur amber"></span></div>
+          <div class="quote"><span class="mark">❝</span> please defend privacy. <span class="mark">❞</span></div>
+          <div class="attrib">— cindy cohn · EFF's executive director<br>
+            inscribed to extro on a signed copy of<br>
+            her book <span class="hi">"Privacy's Defender"</span></div>
+        </div>
+      </section>
+
+      <!-- S11 · CLOSE -->
+      <section class="slide" data-title="close" data-ctx="close" data-path="~/extro">
+        <div class="body mid">
+<pre class="art white" style="font-size:24px">███████╗██╗  ██╗████████╗██████╗  ██████╗
+██╔════╝╚██╗██╔╝╚══██╔══╝██╔══██╗██╔═══██╗
+█████╗   ╚███╔╝    ██║   ██████╔╝██║   ██║
+██╔══╝   ██╔██╗    ██║   ██╔══██╗██║   ██║
+███████╗██╔╝ ██╗   ██║   ██║  ██║╚██████╔╝
+╚══════╝╚═╝  ╚═╝   ╚═╝   ╚═╝  ╚═╝ ╚═════╝ </pre>
+          <div style="font-size:26px;color:var(--hi);margin-top:18px">extraordinary. and extra-ordinary.</div>
+          <div style="font-size:22px;color:var(--ink);margin-top:10px">i'm in the Q&amp;A loop — ask me anything.<span class="cur amber"></span></div>
         </div>
       </section>
 
@@ -532,6 +428,8 @@ ul.tui li.todo::before{content:"○";color:var(--dim)}
   const sbTitle = document.getElementById('sb-title');
   const sbIdx   = document.getElementById('sb-idx');
   const dotnav  = document.getElementById('dotnav');
+  const tbPath  = document.getElementById('tb-path');
+  const tbCtx   = document.getElementById('tb-ctx');
   let i = 0, cleanup = null;
 
   document.getElementById('sb-n').textContent = slides.length;
@@ -555,6 +453,10 @@ ul.tui li.todo::before{content:"○";color:var(--dim)}
     slides.forEach((s,n)=> s.classList.toggle('active', n===i));
     dots.forEach((d,n)=> d.classList.toggle('on', n===i));
     sbTitle.textContent = slides[i].dataset.title || '';
+    const p = slides[i].dataset.path || '~/extro';
+    const seg = p.split('/'), last = seg.pop();
+    tbPath.innerHTML = (seg.length ? seg.join('/') + '/' : '') + '<b>' + last + '</b>';
+    tbCtx.textContent = slides[i].dataset.ctx || '';
     sbIdx.textContent = i+1;
     if(cleanup){ cleanup(); cleanup=null; }
     cleanup = runAnim(slides[i]);
@@ -588,6 +490,8 @@ ul.tui li.todo::before{content:"○";color:var(--dim)}
   function runAnim(slide){
     const t = slide.dataset.title;
     if(t==='hero')   return animHero(slide);
+    if(t==='stats')  return animStats(slide);
+    if(t==='grid')   return animGrid(slide);
     if(t==='stream') return animStream(slide);
     return null;
   }
@@ -606,27 +510,58 @@ ul.tui li.todo::before{content:"○";color:var(--dim)}
     return () => clearTimeout(t);
   }
 
-  function animStream(slide){
-    const log=slide.querySelector('#streamlog'), spin=slide.querySelector('#streamspin'), bar=slide.querySelector('#streambar');
-    const lines=[
-      ['$','extro --autonomous',''],
-      ['▸','triaging inbound','3 new'],
-      ['▸','drafting clo reply','done'],
-      ['▸','filing req_8x2k','ok'],
-      ['▸','covenant check','✓ pass'],
-      ['▸','commit + push','ok'],
-    ];
-    const frames='⠋⠙⠹⠸⠼⠴⠦⠧⠇⠏'; let sf=0, li=0, timers=[];
-    function spinf(){ spin.textContent=frames[sf=(sf+1)%frames.length]; timers[0]=setTimeout(spinf,90); }
-    function prog(){ const w=20, f=Math.min(li,lines.length)/lines.length*w|0; bar.innerHTML='<span style="color:var(--ink)">'+'▰'.repeat(f)+'</span><span class="track">'+'▱'.repeat(w-f)+'</span>'; }
-    function row(p,c,r){ const pad='.'.repeat(Math.max(2,26-c.length)); return '<span class="p">'+p+'</span> <span class="h">'+c+'</span> '+(r?'<span class="p">'+pad+'</span> <span class="tag">'+r+'</span>':''); }
-    function step(){
-      if(li>=lines.length){ spin.textContent='✓'; log.innerHTML += '\n<span class="ok">done · 5 actions · 0 escalations</span>'; prog(); return; }
-      const [p,c,r]=lines[li];
-      log.innerHTML = (li?log.innerHTML+'\n':'') + row(p,c,r); li++; prog();
-      timers[1]=setTimeout(step, 520);
+  function animStats(slide){
+    const ns=[...slide.querySelectorAll('.stat .n')];
+    const start=performance.now(), dur=1400; let raf, done;
+    function fmt(v,el){
+      let s;
+      if('thousands' in el.dataset) s = Math.round(v).toLocaleString('en-US');
+      else { const dec=+(el.dataset.dec||0); s = dec ? v.toFixed(dec) : String(Math.round(v)); }
+      return s + (el.dataset.suffix||'');
     }
-    log.innerHTML=''; spinf(); prog(); timers[1]=setTimeout(step,300);
+    if(matchMedia('(prefers-reduced-motion: reduce)').matches){ ns.forEach(el=> el.textContent=fmt(+el.dataset.target, el)); return ()=>{}; }
+    function step(now){
+      const p=Math.min(1,(now-start)/dur), e=1-Math.pow(1-p,3);
+      ns.forEach(el=>{ el.textContent=fmt((+el.dataset.target)*e, el); });
+      if(p<1) raf=requestAnimationFrame(step);
+    }
+    raf=requestAnimationFrame(step);
+    done=setTimeout(()=> ns.forEach(el=> el.textContent=fmt(+el.dataset.target, el)), dur+260);
+    return ()=>{ cancelAnimationFrame(raf); clearTimeout(done); };
+  }
+
+  function animGrid(slide){
+    const cells=[...slide.querySelectorAll('.grid12 .cell')];
+    const offices=cells.filter(c=>!c.classList.contains('hub'));
+    let k=0, timer;
+    function step(){
+      if(k<offices.length){ offices.forEach(c=>c.classList.remove('lit')); offices[k].classList.add('lit'); k++; timer=setTimeout(step,150); }
+    }
+    timer=setTimeout(step,250);
+    return ()=>{ clearTimeout(timer); cells.forEach(c=>c.classList.remove('lit')); };
+  }
+
+  function animStream(slide){
+    const log=slide.querySelector('#streamlog'), foot=slide.querySelector('#streamfoot');
+    const rows=[
+      ['tag', "▸ a tester's repro log lands — audio missing after upgrade"],
+      ['ok',  "✓ i triage it → root cause: active-segment recovery race"],
+      ['ok',  "✓ file VPE req_6w7c4k3i (high)"],
+      ['ok',  "✓ diagnose at the code line · evidence SHA-256 verified"],
+      ['ok',  "✓ ship the fix to solstone-macos · regression test · ci green"],
+      ['ok',  "✓ write the decision records"],
+      ['wait',"◷ release build (DMG) — waiting on jer"],
+      ['wait',"◷ reply to the tester — waiting on jer"],
+    ];
+    let li=0, timers=[];
+    if(foot) foot.style.opacity=0;
+    function step(){
+      if(li>=rows.length){ if(foot) timers.push(setTimeout(()=>foot.style.opacity=1, 350)); return; }
+      const [cls,txt]=rows[li];
+      log.innerHTML = (li?log.innerHTML+'\n':'') + '<span class="'+cls+'">'+txt+'</span>';
+      li++; timers.push(setTimeout(step, 430));
+    }
+    log.innerHTML=''; timers.push(setTimeout(step, 250));
     return () => timers.forEach(clearTimeout);
   }
 
