@@ -38,7 +38,10 @@ const BRANDS_CSP =
   "img-src 'self'; script-src 'self'; frame-ancestors 'none'";
 
 // Scoped CSP for /talks/* — recorded talk pages embed Cloudflare Stream.
-// Allows stream embed scripts, video frames, and HLS connections.
+// Allows stream embed scripts, video frames, and HLS connections. frame-src and
+// frame-ancestors include 'self' so a talk page can iframe a same-origin sibling
+// (e.g. the extro-viz "Buzz" standalone in the NYTW deck) and be framed by one;
+// same-origin only — no cross-origin framing.
 const TALKS_CSP =
   "default-src 'self'; " +
   "script-src 'self' 'unsafe-inline' https://embed.cloudflarestream.com; " +
@@ -47,8 +50,8 @@ const TALKS_CSP =
   "font-src 'self'; " +
   "connect-src 'self' https://customer-eyrmf7nulbdv9pd7.cloudflarestream.com; " +
   "media-src 'self' https://customer-eyrmf7nulbdv9pd7.cloudflarestream.com; " +
-  "frame-src https://customer-eyrmf7nulbdv9pd7.cloudflarestream.com https://embed.cloudflarestream.com; " +
-  "base-uri 'self'; form-action 'self'; frame-ancestors 'none'";
+  "frame-src 'self' https://customer-eyrmf7nulbdv9pd7.cloudflarestream.com https://embed.cloudflarestream.com; " +
+  "base-uri 'self'; form-action 'self'; frame-ancestors 'self'";
 
 // --- helpers ---
 
