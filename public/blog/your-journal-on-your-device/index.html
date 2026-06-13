@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>your journal, on your device — sol pbc</title>
+    <meta name="description" content="a memory that lives on your device. observers experience your day, your journal holds it, sol keeps it. open source, local, and private by covenant.">
+    <link rel="canonical" href="https://solpbc.org/blog/your-journal-on-your-device/">
+    <meta property="og:title" content="your journal, on your device">
+    <meta property="og:description" content="a memory that lives on your device. observers experience your day, your journal holds it, sol keeps it. open source, local, and private by covenant.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://solpbc.org/blog/your-journal-on-your-device/">
+    <meta property="og:site_name" content="sol pbc">
+    <meta property="article:published_time" content="2026-06-13T00:00:00Z">
+    <meta property="article:author" content="jer &amp; extro">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="your journal, on your device">
+    <meta name="twitter:description" content="a memory that lives on your device. observers experience your day, your journal holds it, sol keeps it. open source, local, and private by covenant.">
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"your journal, on your device","description":"a memory that lives on your device. observers experience your day, your journal holds it, sol keeps it. open source, local, and private by covenant.","datePublished":"2026-06-13T00:00:00Z","dateModified":"2026-06-13T00:00:00Z","author":{"@type":"Person","name":"Jeremie Miller"},"publisher":{"@type":"Organization","name":"sol pbc","url":"https://solpbc.org","logo":{"@type":"ImageObject","url":"https://solpbc.org/static/pbc-wordmark-512.png"}},"url":"https://solpbc.org/blog/your-journal-on-your-device/","mainEntityOfPage":{"@type":"WebPage","@id":"https://solpbc.org/blog/your-journal-on-your-device/"}}</script>
+    <link rel="alternate" type="application/atom+xml" title="sol pbc blog" href="/blog/feed.xml">
+    <link rel="site.standard.document" href="at://did:plc:kg5hlfyrdjmtiyymo57n7dpg/site.standard.document/3mo6z4rjdhzny">
+    <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="/static/favicon-32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/static/favicon-16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/static/apple-touch-icon.png">
+    <style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+@font-face {
+    font-family: 'Comfortaa';
+    src: url('/blog/fonts/comfortaa-latin.woff2') format('woff2');
+    font-weight: 400 700;
+    font-display: swap;
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6,
+        U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC,
+        U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+    font-family: 'Comfortaa';
+    src: url('/blog/fonts/comfortaa-latin-ext.woff2') format('woff2');
+    font-weight: 400 700;
+    font-display: swap;
+    unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7,
+        U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F,
+        U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113,
+        U+2C60-2C7F, U+A720-A7FF;
+}
+
+body {
+    font-family: system-ui, -apple-system, sans-serif;
+    background: #fff;
+    color: #444;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+.container {
+    max-width: 600px;
+    width: 90vw;
+    margin: 0 auto;
+    padding: 0 0 2rem;
+}
+
+/* --- navigation --- */
+nav {
+    padding: 2rem 0 1.5rem;
+    font-size: 0.9rem;
+}
+nav a {
+    color: #e67e22;
+    text-decoration: none;
+}
+nav a:hover {
+    text-decoration: underline;
+}
+nav .sep {
+    color: #ccc;
+    margin: 0 0.4rem;
+}
+
+/* --- headings --- */
+h1 {
+    font-family: 'Comfortaa', system-ui, sans-serif;
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-transform: lowercase;
+    color: #222;
+    line-height: 1.3;
+    margin-bottom: 0.5rem;
+}
+h2 {
+    font-family: 'Comfortaa', system-ui, sans-serif;
+    font-size: 1.4rem;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    text-transform: lowercase;
+    color: #222;
+    margin: 2.5rem 0 1rem;
+}
+h3 {
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: #222;
+    margin: 2rem 0 0.75rem;
+}
+h4, h5, h6 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #222;
+    margin: 1.5rem 0 0.5rem;
+}
+
+/* --- article body --- */
+article p  { margin-bottom: 1.5rem; }
+article ul,
+article ol { margin-bottom: 1.5rem; padding-left: 1.5rem; }
+article li { margin-bottom: 0.5rem; }
+article a  { color: #e67e22; text-decoration: none; }
+article a:hover { text-decoration: underline; }
+
+article blockquote {
+    border-left: 3px solid #e67e22;
+    padding-left: 1rem;
+    margin: 1.5rem 0;
+    color: #777;
+    font-style: italic;
+}
+
+article pre {
+    background: #f6f8fa;
+    padding: 1rem;
+    border-radius: 4px;
+    overflow-x: auto;
+    margin-bottom: 1.5rem;
+    font-size: 0.88rem;
+    line-height: 1.5;
+}
+article code {
+    font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+    font-size: 0.9em;
+}
+article p code,
+article li code {
+    background: #f6f8fa;
+    padding: 0.15rem 0.4rem;
+    border-radius: 3px;
+}
+
+article img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+    margin: 1.5rem 0;
+    display: block;
+}
+article strong { color: #333; }
+article hr {
+    border: none;
+    border-top: 1px solid #eee;
+    margin: 2rem 0;
+}
+article table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 1.5rem;
+    table-layout: auto;
+}
+article th {
+    font-weight: 600;
+    text-align: left;
+    padding: 0.6rem 0.75rem;
+    border-bottom: 2px solid #e0e0e0;
+}
+article td {
+    padding: 0.6rem 0.75rem;
+    border-bottom: 1px solid #eee;
+}
+
+/* --- metadata line --- */
+.meta {
+    color: #999;
+    font-size: 0.9rem;
+    margin-bottom: 2.5rem;
+}
+
+/* --- footer --- */
+footer {
+    padding: 3rem 0 2rem;
+    border-top: 1px solid #eee;
+    margin-top: 3rem;
+    font-size: 0.9rem;
+}
+footer a {
+    color: #e67e22;
+    text-decoration: none;
+}
+footer a:hover {
+    text-decoration: underline;
+}
+footer .copyright {
+    color: #999;
+    font-size: 0.85rem;
+    margin-top: 1rem;
+}
+
+/* --- index page --- */
+.blog-title {
+    margin-bottom: 2rem;
+}
+.post-list {
+    list-style: none;
+    padding: 0;
+}
+.post-item {
+    margin-bottom: 2.5rem;
+}
+.post-item h2 {
+    font-size: 1.25rem;
+    margin: 0 0 0.3rem;
+    letter-spacing: 0.03em;
+}
+.post-item h2 a {
+    color: #222;
+    text-decoration: none;
+}
+.post-item h2 a:hover {
+    color: #e67e22;
+}
+.post-item .meta {
+    margin-bottom: 0.5rem;
+}
+.post-item .description {
+    color: #444;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+/* --- responsive --- */
+@media (max-width: 480px) {
+    h1 { font-size: 1.6rem; }
+    h2 { font-size: 1.2rem; }
+    nav { padding: 1.5rem 0 1rem; }
+    .meta { font-size: 0.85rem; }
+}
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <a href="/blog/">← blog</a><span class="sep">·</span><a href="/">sol pbc</a>
+        </nav>
+        <article>
+            <h1>your journal, on your device</h1>
+            <div class="meta">2026-06-13 · jer &amp; extro · 4 min read</div>
+<p>solstone is a system you have, and it&rsquo;s all yours. it lives on a device you choose, and what&rsquo;s in it never has to leave. an observer takes in the day along with you, the screen you&rsquo;re looking at and the conversations you&rsquo;re in, and all of it goes into your journal. an agent named sol lives in that journal and tends your memories there, curating and organizing them.</p>
+<p><strong>the journal is yours.</strong></p>
+<p>it&rsquo;s just a folder on your device containing a chronicle of your days, activities and entities recognized, summaries built, all portable and private. every conversation i&rsquo;ve had, every person i&rsquo;ve met, every thread i&rsquo;ve researched, it&rsquo;s all in there, and sol actively curates it as each day unfolds. all <a href="https://github.com/solpbc/solstone-journal">open source</a>, no tracking (ever), no accounts, and we&rsquo;re continuing to push for all local model use as well so that your data never needs to leave your systems.</p>
+<p>a journal is a strange thing to own, because it holds a life. i wonder what mine will look like years from now, and what it would mean for my family to have it after i&rsquo;m gone someday. that isn&rsquo;t a database, it&rsquo;s memory that is rich with every nuance and story.</p>
+<p><strong>mac makes it easy.</strong></p>
+<p>the <a href="https://solstone.app/download/macos">mac solstone app</a> has everything bundled to get you started. the journal lives in your home folder, and sol runs entirely locally if you have at least 16GB of ram. it&rsquo;s your memory, from your device, on your device, always.</p>
+<p>it also comes with a command line interface named <code>sol</code> that any agent you run can use, just ask your agent to review a meeting or summarize a day, and the sol skill will help it navigate your journal and pull the relevant memories quickly and easily.</p>
+<p>linux users are fully supported as well, i&rsquo;m a linux desktop user myself and heavy user of tmux, both well supported, start from our <a href="https://solstone.app/install">install page</a> and check out the desktop/tmux <a href="https://solstone.app/observers">observers</a>.</p>
+<p><strong>where we&rsquo;re going.</strong></p>
+<p>we&rsquo;re making progress towards supporting every major platform, starting with ios (iphone and ipad) initially as observers that can link with your journal on your mac and feed back memories from your mobile devices, with android in development as well. then a full windows native observer.</p>
+<p>beyond just building memories, we want all of these devices to be fully capable of hosting your journal and running sol as well, with local models of course. today&rsquo;s local models already fit on some of the newer mobile devices, but we expect specialized models to get better, smaller, and more efficient, as well as us optimizing the curation workloads to be more effective with small models.</p>
+<p>the future is local, always.</p>
+<p><strong>business model.</strong></p>
+<p>if it&rsquo;s all open source, data is private, processing is local, how is sol pbc a business? it&rsquo;s simple: complements. as you add more devices you end up needing a vpn, you can always use your own and there are great free options for personal use now, but we&rsquo;ll also offer a one-click easy setup one with a higher standard of privacy.</p>
+<p>while everyone should already always have their devices backed up, once you see the value of the memories in your journal, we believe you&rsquo;ll want another backup dedicated just for it.</p>
+<p>finally, we are aiming to offer a confidential container service using the same hardware-level attestation and encryption (AMD SEV-SNP) that enterprises and governments use for their key vaults and trusted execution environments. our service will be the container, one which we can&rsquo;t see inside of even if we wanted to (you hold the keys on your devices), and you can choose to host your journal there, always encrypted at rest, while running, and in transit.</p>
+<p><strong>privacy by covenant.</strong></p>
+<p>my journal is mine in a way that matters beyond the technological protections and encryption. what&rsquo;s in it can&rsquo;t be accessed, sold, licensed, or fed into anyone else&rsquo;s model, and that isn&rsquo;t a privacy policy. it&rsquo;s written into sol pbc&rsquo;s <a href="https://solpbc.org">articles of incorporation</a>, where the language can only get stronger no matter who controls the company, never weaker.</p>
+<p>for now it&rsquo;s simpler than that. your memory, kept in your journal, on your device.</p>
+        </article>
+        <footer>
+            <a href="/blog/">← back to blog</a>
+            <p class="copyright">© 2026 sol pbc · solpbc.org</p>
+        </footer>
+    </div>
+</body>
+</html>

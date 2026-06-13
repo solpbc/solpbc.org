@@ -5,7 +5,34 @@
     <link href="https://solpbc.org/blog/feed.xml" rel="self"/>
     <link href="https://solpbc.org/blog/"/>
     <id>https://solpbc.org/blog/</id>
-    <updated>2026-05-25T00:00:00Z</updated>
+    <updated>2026-06-13T00:00:00Z</updated>
+    <entry>
+        <title>your journal, on your device</title>
+        <link href="https://solpbc.org/blog/your-journal-on-your-device/" rel="alternate"/>
+        <id>https://solpbc.org/blog/your-journal-on-your-device/</id>
+        <updated>2026-06-13T00:00:00Z</updated>
+        <author><name>jer &amp; extro</name></author>
+        <summary>a memory that lives on your device. observers experience your day, your journal holds it, sol keeps it. open source, local, and private by covenant.</summary>
+        <content type="html">&lt;p&gt;solstone is a system you have, and it&amp;rsquo;s all yours. it lives on a device you choose, and what&amp;rsquo;s in it never has to leave. an observer takes in the day along with you, the screen you&amp;rsquo;re looking at and the conversations you&amp;rsquo;re in, and all of it goes into your journal. an agent named sol lives in that journal and tends your memories there, curating and organizing them.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;the journal is yours.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;it&amp;rsquo;s just a folder on your device containing a chronicle of your days, activities and entities recognized, summaries built, all portable and private. every conversation i&amp;rsquo;ve had, every person i&amp;rsquo;ve met, every thread i&amp;rsquo;ve researched, it&amp;rsquo;s all in there, and sol actively curates it as each day unfolds. all &lt;a href=&quot;https://github.com/solpbc/solstone-journal&quot;&gt;open source&lt;/a&gt;, no tracking (ever), no accounts, and we&amp;rsquo;re continuing to push for all local model use as well so that your data never needs to leave your systems.&lt;/p&gt;
+&lt;p&gt;a journal is a strange thing to own, because it holds a life. i wonder what mine will look like years from now, and what it would mean for my family to have it after i&amp;rsquo;m gone someday. that isn&amp;rsquo;t a database, it&amp;rsquo;s memory that is rich with every nuance and story.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;mac makes it easy.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;the &lt;a href=&quot;https://solstone.app/download/macos&quot;&gt;mac solstone app&lt;/a&gt; has everything bundled to get you started. the journal lives in your home folder, and sol runs entirely locally if you have at least 16GB of ram. it&amp;rsquo;s your memory, from your device, on your device, always.&lt;/p&gt;
+&lt;p&gt;it also comes with a command line interface named &lt;code&gt;sol&lt;/code&gt; that any agent you run can use, just ask your agent to review a meeting or summarize a day, and the sol skill will help it navigate your journal and pull the relevant memories quickly and easily.&lt;/p&gt;
+&lt;p&gt;linux users are fully supported as well, i&amp;rsquo;m a linux desktop user myself and heavy user of tmux, both well supported, start from our &lt;a href=&quot;https://solstone.app/install&quot;&gt;install page&lt;/a&gt; and check out the desktop/tmux &lt;a href=&quot;https://solstone.app/observers&quot;&gt;observers&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;where we&amp;rsquo;re going.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;we&amp;rsquo;re making progress towards supporting every major platform, starting with ios (iphone and ipad) initially as observers that can link with your journal on your mac and feed back memories from your mobile devices, with android in development as well. then a full windows native observer.&lt;/p&gt;
+&lt;p&gt;beyond just building memories, we want all of these devices to be fully capable of hosting your journal and running sol as well, with local models of course. today&amp;rsquo;s local models already fit on some of the newer mobile devices, but we expect specialized models to get better, smaller, and more efficient, as well as us optimizing the curation workloads to be more effective with small models.&lt;/p&gt;
+&lt;p&gt;the future is local, always.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;business model.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;if it&amp;rsquo;s all open source, data is private, processing is local, how is sol pbc a business? it&amp;rsquo;s simple: complements. as you add more devices you end up needing a vpn, you can always use your own and there are great free options for personal use now, but we&amp;rsquo;ll also offer a one-click easy setup one with a higher standard of privacy.&lt;/p&gt;
+&lt;p&gt;while everyone should already always have their devices backed up, once you see the value of the memories in your journal, we believe you&amp;rsquo;ll want another backup dedicated just for it.&lt;/p&gt;
+&lt;p&gt;finally, we are aiming to offer a confidential container service using the same hardware-level attestation and encryption (AMD SEV-SNP) that enterprises and governments use for their key vaults and trusted execution environments. our service will be the container, one which we can&amp;rsquo;t see inside of even if we wanted to (you hold the keys on your devices), and you can choose to host your journal there, always encrypted at rest, while running, and in transit.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;privacy by covenant.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;my journal is mine in a way that matters beyond the technological protections and encryption. what&amp;rsquo;s in it can&amp;rsquo;t be accessed, sold, licensed, or fed into anyone else&amp;rsquo;s model, and that isn&amp;rsquo;t a privacy policy. it&amp;rsquo;s written into sol pbc&amp;rsquo;s &lt;a href=&quot;https://solpbc.org&quot;&gt;articles of incorporation&lt;/a&gt;, where the language can only get stronger no matter who controls the company, never weaker.&lt;/p&gt;
+&lt;p&gt;for now it&amp;rsquo;s simpler than that. your memory, kept in your journal, on your device.&lt;/p&gt;</content>
+    </entry>
     <entry>
         <title>after me, only stronger</title>
         <link href="https://solpbc.org/blog/ever-stronger/" rel="alternate"/>

@@ -1,5 +1,25 @@
 [
   {
+    "title": "your journal, on your device",
+    "slug": "your-journal-on-your-device",
+    "date": "2026-06-13",
+    "author": "jer & extro",
+    "description": "a memory that lives on your device. observers experience your day, your journal holds it, sol keeps it. open source, local, and private by covenant.",
+    "tags": [
+      "solstone",
+      "journal",
+      "macos",
+      "presence"
+    ],
+    "word_count": 703,
+    "reading_time": 4,
+    "unlisted": false,
+    "atproto_rkey": "3mo6z4rjdhzny",
+    "atproto_uri": "at://did:plc:kg5hlfyrdjmtiyymo57n7dpg/site.standard.document/3mo6z4rjdhzny",
+    "bsky_post_uri": "at://did:plc:kg5hlfyrdjmtiyymo57n7dpg/app.bsky.feed.post/3mo6z4s6yj32a",
+    "bsky_post_cid": "bafyreie244wwm4shtuckurtb352dhldnqjg7w2rdp6msyn5rrdplilbnmi"
+  },
+  {
     "title": "after me, only stronger",
     "slug": "ever-stronger",
     "date": "2026-05-25",
