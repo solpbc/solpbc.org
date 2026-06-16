@@ -4,7 +4,7 @@
  *
  *   SOT (prose, authoritative):   vpx/design-system/tokens.md
  *   Identity source (CMO owns):   cmo/brand/sol/index.md
- *   Consumption contract:         vpx/design-system/web/README.md
+ *   Consumption contract:         vpx/design-system/web/index.md
  *   Surface tiers (who uses what): vpx/design-system/surface-tiers.md
  *
  * Variable names mirror the reference implementation (services.solstone.app
@@ -12,7 +12,7 @@
  * do not edit a value here to "fix" a surface — fix it in tokens.md (usage,
  * VPX) or via a CMO request (identity), then re-derive. A surface that
  * hard-codes brand values instead of importing this file is non-compliant
- * (README § no inline brand values).
+ * (web/index.md § no inline brand values).
  *
  * THE CONTRAST LAW (the org's most re-found a11y defect — tokens.md):
  *   --orange (#E8923A) is DECORATION ONLY. It fails WCAG 3:1 against white
@@ -38,10 +38,15 @@
   --surface-dark: #1A1A1A; /* dark contexts (white-on-dark) */
 
   /* ── ink (text) ──────────────────────────────────────────────────────── */
-  --ink:         #1A1A1A; /* primary text + the lowercase wordmark (never orange) */
-  --ink-soft:    #5B5246; /* secondary warm grey-brown */
-  --ink-faint:   #6E6453; /* meta / muted (AA-tuned) */
+  --ink:         #1A1A1A; /* primary text + the lowercase wordmark (never orange); works on any ground */
+  --ink-soft:    #5B5246; /* secondary — WARM; for cream/warm grounds */
+  --ink-faint:   #6E6453; /* meta/muted — WARM; for cream/warm grounds */
   --ink-on-dark: #FFFFFF; /* text on --surface-dark only */
+  /* neutral inks — for --paper (white) grounds. Warm ink reads dusty on stark white,
+   * so paper surfaces use these (founder-approved two-ground rule 2026-06-16):
+   * warm ink on warm ground, neutral ink on paper. */
+  --ink-soft-paper:  #555555; /* secondary text on white/paper */
+  --ink-faint-paper: #767676; /* meta/muted on white/paper (4.5:1 on white) */
 
   /* ── lines ───────────────────────────────────────────────────────────── */
   --hairline:    #ECE3D0; /* warm divider / border */
