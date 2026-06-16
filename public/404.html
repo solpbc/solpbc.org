@@ -11,6 +11,7 @@
     <link rel="icon" type="image/png" sizes="32x32" href="/static/favicon-32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/static/favicon-16.png">
     <link rel="apple-touch-icon" sizes="180x180" href="/static/apple-touch-icon.png">
+    <link rel="stylesheet" href="/static/tokens.css">
     <style>
 @font-face {
     font-family: 'Comfortaa';
@@ -43,7 +44,7 @@
             align-items: center;
             justify-content: center;
             font-family: system-ui, -apple-system, sans-serif;
-            background: #fff;
+            background: var(--paper);
             padding: 2rem 0;
         }
         a {
@@ -60,7 +61,7 @@
             font-weight: 700;
             letter-spacing: 0.1em;
             text-transform: lowercase;
-            color: #222;
+            color: var(--ink);
             margin-bottom: 1.5rem;
         }
         .message {
@@ -68,7 +69,7 @@
             width: 90vw;
             font-size: 1.05rem;
             line-height: 1.6;
-            color: #555;
+            color: var(--ink-soft-paper);
             text-align: center;
             margin-bottom: 2.5rem;
         }
@@ -79,13 +80,13 @@
         }
         .links a {
             display: block;
-            color: #767676;
+            color: var(--ink-faint-paper);
             font-size: 0.95rem;
             margin-bottom: 0.6rem;
             transition: color 0.15s;
         }
         .links a:hover {
-            color: #e67e22;
+            color: var(--orange-ink);
         }
         footer {
             margin-top: auto;
@@ -95,13 +96,13 @@
             text-align: center;
             font-size: 0.85rem;
             line-height: 1.6;
-            color: #767676;
+            color: var(--ink-faint-paper);
         }
         footer a {
-            color: #767676;
+            color: var(--ink-faint-paper);
         }
         footer a:hover {
-            color: #e67e22;
+            color: var(--orange-ink);
             text-decoration: underline;
         }
     </style>
