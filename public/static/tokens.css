@@ -1,0 +1,92 @@
+/* ============================================================================
+ * sol pbc — web design tokens
+ * The single consumable embodiment of the design-token SOT.
+ *
+ *   SOT (prose, authoritative):   vpx/design-system/tokens.md
+ *   Identity source (CMO owns):   cmo/brand/sol/index.md
+ *   Consumption contract:         vpx/design-system/web/README.md
+ *   Surface tiers (who uses what): vpx/design-system/surface-tiers.md
+ *
+ * Variable names mirror the reference implementation (services.solstone.app
+ * `portal.css`) so surfaces adopt with minimal churn. Derivation is ONE-WAY:
+ * do not edit a value here to "fix" a surface — fix it in tokens.md (usage,
+ * VPX) or via a CMO request (identity), then re-derive. A surface that
+ * hard-codes brand values instead of importing this file is non-compliant
+ * (README § no inline brand values).
+ *
+ * THE CONTRAST LAW (the org's most re-found a11y defect — tokens.md):
+ *   --orange (#E8923A) is DECORATION ONLY. It fails WCAG 3:1 against white
+ *   (2.44:1), cream-bright (2.38:1), and cream (2.21:1) — it may fill shapes
+ *   and sit behind dark ink, never BE text/links on a light surface.
+ *   --orange-ink (#B06A1A) is the accessible orange — ALL orange text and
+ *   links on light surfaces use it (4.27:1 / 4.16:1 / 3.86:1 ✓).
+ *   Primary buttons are dark-ink-on-orange (#1A1A1A on #E8923A → 7.13:1 ✓),
+ *   never white-on-orange.
+ * ========================================================================== */
+
+:root {
+  /* ── brand identity — CMO owns (cmo/brand/sol/index.md) ───────────────── */
+  --gold:        #F5C740; /* sun rays — decoration only */
+  --orange:      #E8923A; /* THE sol orange. DECORATION ONLY (see contrast law) */
+  --orange-ink:  #B06A1A; /* accessible orange — ALL orange text + links on light */
+  --orange-wash: #FBEFDD; /* soft orange tint — pill / avatar / badge fills */
+
+  /* ── surfaces (canon background set — no off-canon page colors) ───────── */
+  --cream:        #FAF3E4; /* warm page bg (product-chrome / trust surfaces) */
+  --cream-bright: #FEFCF8; /* elevated cards / inputs on cream */
+  --paper:        #FFFFFF; /* white page bg / grouped-list rows */
+  --surface-dark: #1A1A1A; /* dark contexts (white-on-dark) */
+
+  /* ── ink (text) ──────────────────────────────────────────────────────── */
+  --ink:         #1A1A1A; /* primary text + the lowercase wordmark (never orange) */
+  --ink-soft:    #5B5246; /* secondary warm grey-brown */
+  --ink-faint:   #6E6453; /* meta / muted (AA-tuned) */
+  --ink-on-dark: #FFFFFF; /* text on --surface-dark only */
+
+  /* ── lines ───────────────────────────────────────────────────────────── */
+  --hairline:    #ECE3D0; /* warm divider / border */
+  --hairline-2:  #E2D7BF; /* stronger warm border */
+
+  /* ── semantic ────────────────────────────────────────────────────────── */
+  --danger:      #9F2D2D; /* destructive text */
+  --focus:       #B06A1A; /* visible focus ring (= orange-ink) */
+
+  /* ── type ────────────────────────────────────────────────────────────────
+   * --font-display: brand register — headings + wordmark, Comfortaa Bold 700.
+   *   REQUIRED wherever the brand speaks (display, wordmark, T1 hero) — non-negotiable.
+   * --font-body: body. CMO ruling 2026-06-15 (b): Inter PREFERRED, system fallback
+   *   acceptable — a surface that doesn't ship the Inter woff2 still degrades cleanly
+   *   on the stack below. Inter, when loaded, is self-hosted (cmo/brand/fonts/); no
+   *   external font CDN, ever. Decision: records/decisions/260615-cmo-web-alignment-identity-rulings.md */
+  --font-display: 'Comfortaa', ui-rounded, 'Trebuchet MS', system-ui, sans-serif;
+  --font-body:    'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --font-mono:    ui-monospace, 'SF Mono', Menlo, monospace;
+
+  --text-min:  12px; /* hard floor — nothing smaller, anywhere */
+  --text-body: 16px; /* preferred body size */
+
+  --weight-body:    400;
+  --weight-medium:  600;
+  --weight-display: 700; /* Comfortaa Bold */
+
+  /* ── radius ──────────────────────────────────────────────────────────── */
+  --radius:    14px; /* cards, groups, menus */
+  --radius-sm:  9px; /* buttons, inputs */
+
+  /* ── space scale (from the reference impl) ───────────────────────────── */
+  --space-1:  4px;
+  --space-2:  8px;
+  --space-3: 14px;
+  --space-4: 18px;
+  --space-5: 22px;
+  --space-6: 28px;
+  --space-7: 36px;
+  --space-8: 48px;
+
+  /* ── touch ───────────────────────────────────────────────────────────── */
+  --touch-min: 44px; /* 46px on primary buttons/inputs */
+}
+
+/* Breakpoints are documented here but live in @media (custom properties can't
+ * be used in media queries). Mobile-first: every surface works at mobile before
+ * desktop. Test widths: mobile 390 · tablet 768 · desktop 1280. */

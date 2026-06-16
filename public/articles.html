@@ -10,6 +10,7 @@
     <link rel="icon" type="image/png" sizes="32x32" href="/static/favicon-32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/static/favicon-16.png">
     <link rel="apple-touch-icon" sizes="180x180" href="/static/apple-touch-icon.png">
+    <link rel="stylesheet" href="/static/tokens.css">
     <style>
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
@@ -35,10 +36,15 @@
 
 body {
     font-family: system-ui, -apple-system, sans-serif;
-    background: #fff;
+    background: var(--paper);
     color: #555;
     line-height: 1.6;
     -webkit-font-smoothing: antialiased;
+}
+
+:focus-visible {
+    outline: 2px solid var(--focus);
+    outline-offset: 2px;
 }
 
 .container {
@@ -50,7 +56,7 @@ body {
 
 nav {
     padding: 1.5rem 0 1.5rem;
-    font-family: 'Comfortaa', system-ui, sans-serif;
+    font-family: var(--font-display);
     font-size: 0.8rem;
     text-transform: lowercase;
 }
@@ -64,7 +70,7 @@ nav a:hover {
 }
 
 h1 {
-    font-family: 'Comfortaa', system-ui, sans-serif;
+    font-family: var(--font-display);
     font-size: 2rem;
     font-weight: 700;
     letter-spacing: 0.05em;
@@ -79,7 +85,7 @@ h1 {
     margin-bottom: 2.5rem;
 }
 h2 {
-    font-family: 'Comfortaa', system-ui, sans-serif;
+    font-family: var(--font-display);
     font-size: 1.4rem;
     font-weight: 600;
     letter-spacing: 0.05em;
@@ -89,7 +95,7 @@ h2 {
 }
 
 .content p { margin-bottom: 1.5rem; }
-.content a { color: #e67e22; text-decoration: none; }
+.content a { color: var(--orange-ink); text-decoration: none; }
 .content a:hover { text-decoration: underline; }
 .content strong { color: #333; }
 .content hr {
@@ -113,7 +119,7 @@ h2 {
     margin-bottom: 2rem;
 }
 .formats a {
-    color: #e67e22;
+    color: var(--orange-ink);
     text-decoration: none;
 }
 .formats a:hover {
@@ -127,7 +133,7 @@ h2 {
     margin-bottom: 2rem;
 }
 .toc summary {
-    font-family: 'Comfortaa', system-ui, sans-serif;
+    font-family: var(--font-display);
     font-size: 0.9rem;
     font-weight: 600;
     color: #767676;
@@ -149,7 +155,7 @@ h2 {
     font-size: 0.9rem;
 }
 .toc a:hover {
-    color: #e67e22;
+    color: var(--orange-ink);
     text-decoration: underline;
 }
 
@@ -160,7 +166,7 @@ footer {
     font-size: 0.9rem;
 }
 footer a {
-    color: #e67e22;
+    color: var(--orange-ink);
     text-decoration: none;
 }
 footer a:hover {

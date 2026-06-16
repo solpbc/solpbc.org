@@ -17,6 +17,7 @@
     <link rel="icon" type="image/png" sizes="32x32" href="static/favicon-32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="static/favicon-16.png">
     <link rel="apple-touch-icon" sizes="180x180" href="static/apple-touch-icon.png">
+    <link rel="stylesheet" href="/static/tokens.css">
     <style>
 @font-face {
     font-family: 'Comfortaa';
@@ -49,13 +50,17 @@
             align-items: center;
             justify-content: flex-start;
             font-family: system-ui, -apple-system, sans-serif;
-            background: #fff;
+            background: var(--paper);
+        }
+        :focus-visible {
+            outline: 2px solid var(--focus);
+            outline-offset: 2px;
         }
         .site-nav {
             width: 90vw;
             max-width: 600px;
             padding: 1.5rem 0 0;
-            font-family: 'Comfortaa', system-ui, sans-serif;
+            font-family: var(--font-display);
             font-size: 0.8rem;
             text-transform: lowercase;
             text-align: center;
@@ -69,7 +74,7 @@
             text-decoration: underline;
         }
         h1 {
-            font-family: 'Comfortaa', system-ui, sans-serif;
+            font-family: var(--font-display);
             font-size: 2.5rem;
             font-weight: 700;
             letter-spacing: 0.1em;
@@ -91,7 +96,7 @@
             text-align: center;
         }
         .purpose .highlight {
-            color: #e67e22;
+            color: var(--orange-ink);
             font-weight: 500;
         }
         .hero {
@@ -112,14 +117,14 @@
             text-align: center;
         }
         .founder a {
-            color: #e67e22;
+            color: var(--orange-ink);
             text-decoration: none;
         }
         .founder a:hover {
             text-decoration: underline;
         }
         h2 {
-            font-family: 'Comfortaa', system-ui, sans-serif;
+            font-family: var(--font-display);
             font-size: 1.5rem;
             font-weight: 600;
             letter-spacing: 0.05em;
@@ -162,7 +167,7 @@
             text-align: center;
         }
         .filing a {
-            color: #e67e22;
+            color: var(--orange-ink);
             text-decoration: none;
             font-weight: 500;
         }
@@ -187,7 +192,7 @@
             color: #555;
         }
         .product a {
-            color: #e67e22;
+            color: var(--orange-ink);
             text-decoration: none;
             font-weight: 500;
         }
@@ -198,7 +203,7 @@
             font-size: 1.1rem;
         }
         .secondary-heading {
-            font-family: 'Comfortaa', system-ui, sans-serif;
+            font-family: var(--font-display);
             font-size: 1rem;
             font-weight: 600;
             letter-spacing: 0.05em;
@@ -219,7 +224,7 @@
             text-align: center;
         }
         .cta-link {
-            color: #e67e22;
+            color: var(--orange-ink);
             text-decoration: none;
             font-size: 1.1rem;
             font-weight: 500;
@@ -245,7 +250,7 @@
         }
         .founder-links a:hover {
             text-decoration: underline;
-            color: #e67e22;
+            color: var(--orange-ink);
         }
         footer {
             width: 100%;
@@ -255,7 +260,7 @@
             color: #767676;
         }
         footer a {
-            color: #e67e22;
+            color: var(--orange-ink);
             text-decoration: none;
         }
         footer a:hover {
