@@ -179,7 +179,7 @@ footer .copyright {
 
             <h2 id="summary">the short version</h2>
 
-            <p>sol pbc makes open source software, and now operates one optional paid service: <strong>solstone hosted — private link</strong>, a relay that lets you reach your own journal from your phone. we don't sell your data — and we never will. the <em>relay</em> is <strong>blind by construction</strong>: it passes encrypted bytes between your devices and can't read what's inside. the <em>billing system</em> is not blind — to run your subscription we knowingly hold a small, named set of data (your email, your subscription status, and a reference to your sign-in), which you can see, export, or delete anytime. nothing from your journal reaches either one. the no-sale promise isn't just a promise: it's a binding legal covenant in our <a href="/articles">articles of incorporation</a>, enforceable against the company forever.</p>
+            <p>sol pbc makes open source software, and now operates one optional paid service: <strong>private network</strong> — a relay sol pbc runs that lets you reach your own journal from your phone. we don't sell your data — and we never will. the <em>relay</em> is <strong>blind by construction</strong>: it passes encrypted bytes between your devices and can't read what's inside. the <em>billing system</em> is not blind — to run your subscription we knowingly hold a small, named set of data (your email, your subscription status, and a reference to your sign-in), which you can see, export, or delete anytime. nothing from your journal reaches either one. the no-sale promise isn't just a promise: it's a binding legal covenant in our <a href="/articles">articles of incorporation</a>, enforceable against the company forever.</p>
 
             <p>this is still a comparatively short policy: most of what sol pbc makes runs on your hardware and never reaches us, and our one hosted service is a relay that can't see what flows through it. but now that we operate a paid service, this policy discloses in full what that service collects and who processes it.</p>
 
@@ -207,7 +207,7 @@ footer .copyright {
             <p>sol pbc also operates one optional, paid hosted service:</p>
 
             <ul>
-                <li><strong>solstone hosted — private link</strong>: a relay sol pbc runs so you can reach your own journal from your phone (or any of your devices) without running your own relay. it's a convenience, never a requirement: the free paths — connecting directly on your own network, or bringing your own transport, or self-hosting the open-source relay — are always available and are private by the same construction. the relay is <strong>blind</strong>: it moves encrypted bytes between your devices and can't read them.</li>
+                <li><strong>private network</strong>: a relay sol pbc runs so you can reach your own journal from your phone (or any of your devices) without running your own relay. it's a convenience, never a requirement: the free paths — connecting directly on your own network, or bringing your own transport, or self-hosting the open-source relay — are always available and are private by the same construction. the relay is <strong>blind</strong>: it moves encrypted bytes between your devices and can't read them.</li>
             </ul>
 
             <hr>
@@ -220,7 +220,7 @@ footer .copyright {
 
             <p>the source code is public. you can verify this yourself.</p>
 
-            <h3>from the hosted relay (solstone hosted): connection metadata, never content</h3>
+            <h3>from the hosted relay (private network): connection metadata, never content</h3>
 
             <p>when you use the hosted relay, your devices open an encrypted tunnel to each other and the relay passes the encrypted bytes between them. the encryption is end-to-end between your own devices — the relay holds no key to it and keeps no copy of what flows through. sol pbc cannot read your journal or anything inside the tunnel.</p>
 
@@ -338,7 +338,7 @@ footer .copyright {
 
             <h2 id="hosted-services">the hosted service in detail</h2>
 
-            <p>sol pbc's one hosted service today is <strong>solstone hosted — private link</strong>: the relay described above. here is exactly what it does with data:</p>
+            <p>sol pbc's one hosted service today is <strong>private network</strong>: the relay described above. here is exactly what it does with data:</p>
 
             <ul>
                 <li><strong>what we collect and why</strong> — to run the relay, the network handles connection metadata (your devices' network addresses, timing, data amounts) and the encrypted bytes themselves. to bill you, we hold your email, your subscription status and renewal dates, and a reference linking the subscription to your sign-in. that's all. nothing from your journal reaches the relay or sol pbc.</li>
@@ -374,6 +374,10 @@ footer .copyright {
                     </tr>
                 </thead>
                 <tbody>
+                    <tr>
+                        <td>2026-06-20</td>
+                        <td>renamed the hosted service from "solstone hosted — private link" to <strong>private network</strong> to match sol pbc's v2.1 brand model (the brand lives at the layer; services are named by mechanism). naming-only — no data practice, processor, or covenant changed.</td>
+                    </tr>
                     <tr>
                         <td>2026-06-16</td>
                         <td>updated for sol pbc's first hosted service, <strong>solstone hosted — private link</strong> (a paid, blind-by-construction relay). added the hosted-relay and billing data-collection disclosures; named <strong>Stripe</strong> (payments) and <strong>Cloudflare</strong> (relay network) as processors, with a processor table; described the hosted service in detail (data, processors, encryption, export/delete, graceful cancellation, rights); updated "your rights" with the services.solstone.app self-service + support@solstone.app channels, the CPA appeal mechanism, and the CPA/CCPA/GDPR rights. the binding covenants are unchanged.</td>
