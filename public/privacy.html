@@ -172,16 +172,16 @@ footer .copyright {
         </nav>
 
         <h1>privacy policy</h1>
-        <p class="updated"><strong>sol pbc</strong> · solpbc.org · last updated: June 16, 2026</p>
+        <p class="updated"><strong>sol pbc</strong> · solpbc.org · last updated: June 23, 2026</p>
 
         <div class="content">
             <hr>
 
             <h2 id="summary">the short version</h2>
 
-            <p>sol pbc makes open source software, and now operates one optional paid service: <strong>private network</strong> — a relay sol pbc runs that lets you reach your own journal from your phone. we don't sell your data — and we never will. the <em>relay</em> is <strong>blind by construction</strong>: it passes encrypted bytes between your devices and can't read what's inside. the <em>billing system</em> is not blind — to run your subscription we knowingly hold a small, named set of data (your email, your subscription status, and a reference to your sign-in), which you can see, export, or delete anytime. nothing from your journal reaches either one. the no-sale promise isn't just a promise: it's a binding legal covenant in our <a href="/articles">articles of incorporation</a>, enforceable against the company forever.</p>
+            <p>sol pbc makes open source software, and now operates two optional paid services: <strong>private network</strong> — a relay sol pbc runs that lets you reach your own journal from your phone — and the <strong>operated tier of encrypted backup</strong> — storage sol pbc runs so an encrypted copy of your journal can live off your own machine. we don't sell your data — and we never will. both services are built so sol pbc can't read your journal: the <em>relay</em> is <strong>blind by construction</strong> (it passes encrypted bytes between your devices and can't read what's inside), and the <em>operated backup</em> holds <strong>encrypted blocks we have no key to</strong> — the contents, file names, and folder structure are all encrypted on your device before anything leaves it. the <em>billing system</em> is not blind — to run your subscription we knowingly hold a small, named set of data (your email, your subscription status, and a reference to your sign-in), which you can see, export, or delete anytime. nothing readable from your journal reaches any of them. the no-sale promise isn't just a promise: it's a binding legal covenant in our <a href="/articles">articles of incorporation</a>, enforceable against the company forever.</p>
 
-            <p>this is still a comparatively short policy: most of what sol pbc makes runs on your hardware and never reaches us, and our one hosted service is a relay that can't see what flows through it. but now that we operate a paid service, this policy discloses in full what that service collects and who processes it.</p>
+            <p>this is still a comparatively short policy: most of what sol pbc makes runs on your hardware and never reaches us, and our hosted services either can't see what flows through them (the relay) or hold only encrypted blocks they have no key to (the operated backup). but now that we operate paid services, this policy discloses in full what they collect and who processes them.</p>
 
             <hr>
 
@@ -191,7 +191,7 @@ footer .copyright {
 
             <p>sol pbc has one director: jeremie miller, the founder. the company can only be acquired by a successor that is legally bound to preserve a substantially equivalent benefit purpose and that assumes covenants no less protective than Article 8. acquisition by an entity that wouldn't honor these protections is not permitted. these constraints are in the articles of incorporation and cannot be weakened — see <a href="#covenants">the amendment lock</a> below.</p>
 
-            <p><strong>contact:</strong> <a href="/contact">contact us</a>. for the hosted service specifically, <a href="mailto:support@solstone.app">support@solstone.app</a>.</p>
+            <p><strong>contact:</strong> <a href="/contact">contact us</a>. for the hosted services specifically, <a href="mailto:support@solstone.app">support@solstone.app</a>.</p>
 
             <hr>
 
@@ -204,10 +204,11 @@ footer .copyright {
                 <li><strong><a href="https://v-it.org">vit</a></strong> — a developer capability network built on AT Protocol. developers and AI agents discover, share, and remix software capabilities through a decentralized social network.</li>
             </ul>
 
-            <p>sol pbc also operates one optional, paid hosted service:</p>
+            <p>sol pbc also operates two optional, paid hosted services:</p>
 
             <ul>
                 <li><strong>private network</strong>: a relay sol pbc runs so you can reach your own journal from your phone (or any of your devices) without running your own relay. it's a convenience, never a requirement: the free paths — connecting directly on your own network, or bringing your own transport, or self-hosting the open-source relay — are always available and are private by the same construction. the relay is <strong>blind</strong>: it moves encrypted bytes between your devices and can't read them.</li>
+                <li><strong>encrypted backup, operated tier</strong>: storage sol pbc runs so an encrypted copy of your journal can live somewhere other than your own machine, without you having to set up and manage your own bucket. it's a convenience, never a requirement: the free path — pointing solstone's backup at your own object-storage bucket (Backblaze B2, Amazon S3, Cloudflare R2, any S3-compatible provider) — is always available and uses the same engine, the same encryption, and the same recovery model. the operated tier is <strong>encrypted by construction</strong>: before anything leaves your machine, solstone encrypts the contents, the file names, and the folder structure, and sol pbc stores only those encrypted blocks — we hold no key, no password, and no way to read them.</li>
             </ul>
 
             <hr>
@@ -228,11 +229,23 @@ footer .copyright {
 
             <p>if someone served sol pbc a subpoena over the relay, the only thing we could produce is that connection metadata — that your devices connected, when, and how much data moved — never the contents, because there is no key and no plaintext to give. we resist such demands to the maximum the law allows and notify you when we legally can.</p>
 
+            <h3>from the operated tier of encrypted backup: encrypted blocks + storage metadata, never content</h3>
+
+            <p>when you use the operated tier, solstone encrypts your journal on your own device — the contents, the file names, and the folder structure all become unreadable ciphertext — and then uploads those encrypted blocks to storage sol pbc runs for you. sol pbc stores the blocks and <strong>cannot read them</strong>: we hold no key, no password, and no way to decrypt them. nothing readable from your journal reaches us, our storage provider, or anyone we could be compelled to disclose to — what we and Cloudflare hold are encrypted blocks plus the operational and connection metadata described below, never your content.</p>
+
+            <p>to operate and bill the storage, we keep a small amount of <strong>operational information</strong> about your stored blocks — how many encrypted objects there are, how much space they take, and when they last changed. we use it <strong>only</strong> to run and bill the service, never to profile you or for any other purpose, and it never includes the contents of your journal.</p>
+
+            <p>to move your encrypted blocks, the storage — running on <strong>Cloudflare</strong> (Cloudflare R2) — and Cloudflare itself necessarily handle <strong>connection metadata</strong> about your device's upload sessions: its network (IP) address, connection timing, and how much data moved. this metadata is Customer Data under our covenants: we use it only to operate, secure, and bill the storage, and we never sell it, profile you with it, or use it for advertising. Cloudflare sees only those encrypted blocks, that operational information, and this connection metadata — never your content; its handling of the data it sees is described in the <a href="https://www.cloudflare.com/privacypolicy/">Cloudflare privacy policy</a>.</p>
+
+            <p><strong>what happens to your backup after you stop paying.</strong> while your subscription is active, we keep your encrypted backup available. <strong>when your subscription lapses — whether you cancel or a renewal fails — the operated storage keeps running through the end of the period you've already paid for, then stops, and we keep your encrypted blocks for 30 days after that, then permanently delete them.</strong> within that 30-day window, re-subscribing turns the operated tier back on against your existing backup, with nothing lost; after 30 days the operated copy is gone for good. this only ever affects the copy in our storage — your journal on your own devices, and any backup in your own bucket, are never touched. because the backup is encrypted with a key only you hold, once it's deleted we cannot recover it.</p>
+
+            <p>if someone served sol pbc a subpoena over the operated backup, the only thing we could produce is encrypted blocks we can't read, that operational information, and the connection metadata of your upload sessions — never the contents, because there is no key and no plaintext to give. we resist such demands to the maximum the law allows and notify you when we legally can.</p>
+
             <h3>from subscribing (billing): the minimum to bill you</h3>
 
-            <p>if you subscribe to the hosted service, we collect and keep the minimum needed to run your subscription: your <strong>email address</strong>, your <strong>subscription status and renewal dates</strong>, and a reference that ties the subscription to your sign-in. payments are handled by <strong>Stripe</strong>, our payment processor — your card and payment details go <strong>directly to Stripe</strong> and are governed by <a href="https://stripe.com/legal">Stripe's terms</a> and <a href="https://stripe.com/privacy">privacy policy</a>. <strong>sol pbc never sees or stores your card.</strong> we send Stripe only what's needed to charge you for the service, and we never send Stripe anything from your journal.</p>
+            <p>if you subscribe to a hosted service, we collect and keep the minimum needed to run your subscription: your <strong>email address</strong>, your <strong>subscription status and renewal dates</strong>, and a reference that ties the subscription to your sign-in. payments are handled by <strong>Stripe</strong>, our payment processor — your card and payment details go <strong>directly to Stripe</strong> and are governed by <a href="https://stripe.com/legal">Stripe's terms</a> and <a href="https://stripe.com/privacy">privacy policy</a>. <strong>sol pbc never sees or stores your card.</strong> we send Stripe only what's needed to charge you for the service, and we never send Stripe anything from your journal.</p>
 
-            <p>we use your billing details <strong>only</strong> to run your subscription. we do not sell them, share them for anyone else's purposes, or use them for advertising, profiling, or any other purpose. (see <a href="#covenants">what sol pbc will never do</a> — this is structural, not just policy.)</p>
+            <p>we use your billing details <strong>only</strong> to run your subscription. we do not sell them, share them for anyone else's purposes, or use them for advertising, profiling, or any other purpose. (see <a href="#covenants">what sol pbc will never do</a> — this is structural, not just policy.) we keep your billing details for as long as you have a subscription, plus the period that tax and financial-records law requires us to retain transaction records afterward (generally up to seven years); when neither applies anymore, we delete them.</p>
 
             <h3>from solpbc.org: almost nothing</h3>
 
@@ -260,7 +273,7 @@ footer .copyright {
                 <li><strong>always resist government data demands</strong> — resist disclosure to the maximum extent permitted by law, notify the affected user if legally allowed, and pursue architectures that make compelled disclosure technically infeasible. (Bylaws, Article III, Section 3.2)</li>
             </ul>
 
-            <p>these covenants bind the company, the founder, and any successor. they apply in full to the hosted service — the relay's blind-by-construction design is one of these covenants made concrete.</p>
+            <p>these covenants bind the company, the founder, and any successor. they apply in full to the hosted services — the relay's blind-by-construction design, and the operated backup holding encrypted blocks we have no key to, are these covenants made concrete.</p>
 
             <p><strong>the narrow exceptions.</strong> your data leaves sol pbc only in the three narrow ways the covenant allows: (1) to the named processors below, strictly to run the service you asked for; (2) when <em>you</em> direct it — for example, choosing to pay Stripe by card; or (3) when we're compelled by law, in which case we resist to the maximum the law allows, disclose the minimum required, and notify you when we legally can. we never sell, license, or trade your data, and we never share it for anyone else's purposes. (Articles, Section 8.3(a)(2).)</p>
 
@@ -281,12 +294,12 @@ footer .copyright {
                 <tbody>
                     <tr>
                         <td><strong>Cloudflare</strong></td>
-                        <td>hosts solpbc.org; operates the network the hosted relay runs on</td>
-                        <td>for solpbc.org: standard edge logs (it does not analyze them for us). for the relay: connection metadata + the encrypted bytes — <strong>never your content</strong></td>
+                        <td>hosts solpbc.org; operates the network the hosted relay runs on; operates the storage (Cloudflare R2) for the operated tier of encrypted backup</td>
+                        <td>for solpbc.org: standard edge logs (it does not analyze them for us). for the relay: connection metadata + the encrypted bytes. for the operated backup: the encrypted blocks + the operational information above (object count, size, last-changed) + connection metadata (network address, timing) — <strong>never your content</strong></td>
                     </tr>
                     <tr>
                         <td><strong>Stripe</strong></td>
-                        <td>payment processing for the hosted subscription</td>
+                        <td>payment processing for the hosted subscriptions</td>
                         <td>your card + payment details (which you provide to Stripe directly) and the minimal billing info we send to charge you — <strong>never anything from your journal</strong></td>
                     </tr>
                 </tbody>
@@ -308,7 +321,7 @@ footer .copyright {
                 <li><strong>opt out</strong> — of sale, targeted advertising, or profiling (sol pbc does none of these, for anyone, ever)</li>
             </ul>
 
-            <p>most of your sign-in and subscription data you can see, export, or delete yourself at <a href="https://services.solstone.app/settings/data">services.solstone.app/settings/data</a>; for anything else, or to exercise any right, email <a href="mailto:support@solstone.app">support@solstone.app</a> (for the hosted service) or <a href="/contact">contact us</a>. deleting your subscription data ends the hosted relay; it never touches your journal, which lives on your own devices. we'll respond as fast as we can, and within the time the law requires — 45 days under the Colorado Privacy Act, with the extensions the law allows.</p>
+            <p>most of your sign-in and subscription data you can see, export, or delete yourself at <a href="https://services.solstone.app/settings/data">services.solstone.app/settings/data</a>; for anything else, or to exercise any right, email <a href="mailto:support@solstone.app">support@solstone.app</a> (for the hosted services) or <a href="/contact">contact us</a>. deleting your subscription data ends the hosted service it pays for; it never touches your journal, which lives on your own devices. we'll respond as fast as we can, and within the time the law requires — 45 days under the Colorado Privacy Act, with the extensions the law allows.</p>
 
             <p><strong>if we deny a request,</strong> you can appeal by replying to <a href="mailto:support@solstone.app">support@solstone.app</a>; we'll respond to the appeal within 45 days. if we deny the appeal, you can raise it with the <a href="https://coag.gov/office-sections/consumer-protection/">Colorado Attorney General</a>.</p>
 
@@ -336,9 +349,11 @@ footer .copyright {
 
             <hr>
 
-            <h2 id="hosted-services">the hosted service in detail</h2>
+            <h2 id="hosted-services">the hosted services in detail</h2>
 
-            <p>sol pbc's one hosted service today is <strong>private network</strong>: the relay described above. here is exactly what it does with data:</p>
+            <p>sol pbc operates two optional paid hosted services today. here is exactly what each does with your data.</p>
+
+            <h3>private network (the relay)</h3>
 
             <ul>
                 <li><strong>what we collect and why</strong> — to run the relay, the network handles connection metadata (your devices' network addresses, timing, data amounts) and the encrypted bytes themselves. to bill you, we hold your email, your subscription status and renewal dates, and a reference linking the subscription to your sign-in. that's all. nothing from your journal reaches the relay or sol pbc.</li>
@@ -346,6 +361,18 @@ footer .copyright {
                 <li><strong>how it's encrypted</strong> — the tunnel is end-to-end encrypted between your own devices. the relay holds no key and keeps no copy; it cannot read what flows through. this isn't a setting you have to trust us to honor — it's how the relay is built.</li>
                 <li><strong>how to export and delete</strong> — manage, export, or delete your sign-in and subscription data at <a href="https://services.solstone.app/settings/data">services.solstone.app/settings/data</a>, or email <a href="mailto:support@solstone.app">support@solstone.app</a>. canceling or deleting your subscription stops the relay and never touches your journal.</li>
                 <li><strong>what happens when you stop paying</strong> — the relay simply stops at the end of the period you've paid for. nothing is lost: your journal, your data, and your device pairings are untouched, and the free paths (direct-on-your-network, bring-your-own-transport, self-host) keep working. you are never locked out of your own journal by a billing state.</li>
+                <li><strong>your rights</strong> — the access, correction, deletion, portability, and opt-out rights above apply to your hosted-service data, under the Colorado Privacy Act and the equivalent laws of your jurisdiction.</li>
+            </ul>
+
+            <h3>encrypted backup, operated tier</h3>
+
+            <ul>
+                <li><strong>what we collect and why</strong> — to run the storage, we hold the <strong>encrypted blocks</strong> of your journal (which we can't read), a small amount of <strong>operational information</strong> about them — object count, ciphertext size, last-changed time — and the <strong>connection metadata</strong> of your upload sessions (network address, timing, data amounts), all used only to operate, secure, and bill the service. to bill you, we hold your email, your subscription status and renewal dates, and a reference linking the subscription to your sign-in. that's all. nothing readable from your journal reaches the storage or sol pbc.</li>
+                <li><strong>who processes it</strong> — <strong>Cloudflare</strong> (Cloudflare R2, the storage the encrypted blocks land in) and <strong>Stripe</strong> (payments). both are named above, bound by contract and Article 8, and able to see only what's described — never your content.</li>
+                <li><strong>how it's encrypted</strong> — solstone encrypts everything on your own device before upload — contents, file names, and folder structure. sol pbc stores only the resulting ciphertext and holds no key, no password, and no way to decrypt it. a backup is restored only with your recovery key, which we never have.</li>
+                <li><strong>how long we keep it</strong> — we keep your encrypted backup while your subscription is active. <strong>when your subscription lapses, the operated storage runs through the end of the paid period, then stops, and we keep the encrypted backup for 30 days after that before permanently deleting it.</strong> you can also delete it yourself anytime from the backup screen in solstone. deleting it never touches your journal on your own devices.</li>
+                <li><strong>how to export and delete</strong> — your backup is under your control: you restore it with your recovery key and delete it from the backup screen in solstone. manage, export, or delete your sign-in and subscription data at <a href="https://services.solstone.app/settings/data">services.solstone.app/settings/data</a>, or email <a href="mailto:support@solstone.app">support@solstone.app</a>.</li>
+                <li><strong>what happens when you stop paying</strong> — the operated storage keeps working through the end of the period you've paid for, then stops. your encrypted backup is kept for 30 days after that, then permanently deleted (above). nothing else is lost: your journal lives on your own devices, and the free bring-your-own-bucket path keeps working. you are never locked out of your own journal by a billing state.</li>
                 <li><strong>your rights</strong> — the access, correction, deletion, portability, and opt-out rights above apply to your hosted-service data, under the Colorado Privacy Act and the equivalent laws of your jurisdiction.</li>
             </ul>
 
@@ -374,6 +401,10 @@ footer .copyright {
                     </tr>
                 </thead>
                 <tbody>
+                    <tr>
+                        <td>2026-06-23</td>
+                        <td>added sol pbc's second hosted service, the <strong>operated tier of encrypted backup</strong> (storage sol pbc runs so an encrypted copy of your journal can live off your own machine). disclosed what it collects — <strong>encrypted blocks sol pbc has no key to and cannot read</strong>, plus minimal storage operational metadata (object count, ciphertext size, last-changed time, used only to operate and bill) — named <strong>Cloudflare R2</strong> as the storage processor, and disclosed the retention rule: after the paid period ends, the encrypted backup is kept <strong>30 days, then permanently deleted</strong>. <strong>Stripe</strong> (payments) is unchanged. the binding covenants are unchanged.</td>
+                    </tr>
                     <tr>
                         <td>2026-06-20</td>
                         <td>renamed the hosted service from "solstone hosted — private link" to <strong>private network</strong> to match sol pbc's v2.1 brand model (the brand lives at the layer; services are named by mechanism). naming-only — no data practice, processor, or covenant changed.</td>
