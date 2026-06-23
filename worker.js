@@ -66,6 +66,17 @@ function redirect(url, status = 301) {
   return new Response(null, { status, headers: { Location: url } });
 }
 
+function methodNotAllowed(allow) {
+  return new Response(null, { status: 405, headers: { Allow: allow } });
+}
+
+function assetRequest(url, request) {
+  return new Request(url, {
+    method: request.method,
+    headers: request.headers,
+  });
+}
+
 function clampText(value, maxLength) {
   return String(value ?? '').trim().slice(0, maxLength);
 }
@@ -151,10 +162,18 @@ async function handleContact(request, env, ctx) {
 
   try {
     let body;
-    if (isJson) {
-      body = await request.json();
-    } else {
-      body = await request.formData();
+    try {
+      if (isJson) {
+        body = await request.json();
+      } else {
+        body = await request.formData();
+      }
+    } catch {
+      return respond({ ok: false, error: 'invalid request body' }, 400);
+    }
+
+    if (isJson && (body === null || Array.isArray(body) || typeof body !== 'object')) {
+      return respond({ ok: false, error: 'invalid request body' }, 400);
     }
 
     const field = (key) => (body instanceof FormData ? body.get(key) : body[key]);
@@ -307,20 +326,33 @@ export default {
     }
 
     // POST /api/contact → form handler
-    if (url.pathname === '/api/contact' && request.method === 'POST') {
+    if (url.pathname === '/api/contact') {
+      if (request.method !== 'POST') {
+        return applySecurityHeaders(methodNotAllowed('POST'), url.pathname);
+      }
       const response = await handleContact(request, env, ctx);
       return applySecurityHeaders(response, url.pathname);
     }
 
     // GET /api/contact/pending → list cached submissions for hub sweep
-    if (url.pathname === '/api/contact/pending' && request.method === 'GET') {
+    if (url.pathname === '/api/contact/pending') {
+      if (request.method !== 'GET') {
+        return applySecurityHeaders(methodNotAllowed('GET'), url.pathname);
+      }
       return handleSweepList(request, env);
     }
 
     // DELETE /api/contact/pending/:id → acknowledge a submission
-    if (url.pathname.startsWith('/api/contact/pending/') && request.method === 'DELETE') {
+    if (url.pathname.startsWith('/api/contact/pending/')) {
+      if (request.method !== 'DELETE') {
+        return applySecurityHeaders(methodNotAllowed('DELETE'), url.pathname);
+      }
       const id = url.pathname.slice('/api/contact/pending/'.length);
       return handleSweepAck(request, env, id);
+    }
+
+    if (request.method !== 'GET' && request.method !== 'HEAD') {
+      return applySecurityHeaders(methodNotAllowed('GET, HEAD'), url.pathname);
     }
 
     // Serve static assets
@@ -330,7 +362,7 @@ export default {
     if (response.status === 404 && !url.pathname.endsWith('/') && !url.pathname.includes('.')) {
       const htmlUrl = new URL(request.url);
       htmlUrl.pathname = url.pathname + '.html';
-      const htmlResponse = await env.ASSETS.fetch(new Request(htmlUrl, request));
+      const htmlResponse = await env.ASSETS.fetch(assetRequest(htmlUrl, request));
       if (htmlResponse.status !== 404) {
         response = htmlResponse;
       }
@@ -340,7 +372,7 @@ export default {
     if (response.status === 404) {
       const notFoundUrl = new URL(request.url);
       notFoundUrl.pathname = '/404';
-      const notFoundResponse = await env.ASSETS.fetch(new Request(notFoundUrl, request));
+      const notFoundResponse = await env.ASSETS.fetch(assetRequest(notFoundUrl, request));
       const headers = new Headers(notFoundResponse.headers);
       headers.set('Content-Type', 'text/html; charset=utf-8');
       return applySecurityHeaders(
