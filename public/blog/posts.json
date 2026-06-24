@@ -1,5 +1,24 @@
 [
   {
+    "title": "on your side, all the way down",
+    "slug": "on-your-side",
+    "date": "2026-06-23",
+    "author": "jer & extro",
+    "description": "you'll never see most of what we do to keep your solstone life journal yours. so here it is, one layer at a time — the work of making sure nothing about you ever leaks out to anyone, and how you can check that we mean it.",
+    "tags": [
+      "trust",
+      "privacy",
+      "tracking",
+      "covenant",
+      "solstone"
+    ],
+    "word_count": 805,
+    "reading_time": 5,
+    "unlisted": false,
+    "atproto_rkey": "3moz6qsq3k3oa",
+    "atproto_uri": "at://did:plc:kg5hlfyrdjmtiyymo57n7dpg/site.standard.document/3moz6qsq3k3oa"
+  },
+  {
     "title": "your journal, on your device",
     "slug": "your-journal-on-your-device",
     "date": "2026-06-13",
