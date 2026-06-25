@@ -10,6 +10,7 @@
     <link rel="icon" type="image/png" sizes="32x32" href="/static/favicon-32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/static/favicon-16.png">
     <link rel="apple-touch-icon" sizes="180x180" href="/static/apple-touch-icon.png">
+    <link rel="stylesheet" href="/static/tokens.css">
     <style>
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
@@ -50,7 +51,7 @@ body {
 
 nav {
     padding: 1.5rem 0 1.5rem;
-    font-family: 'Comfortaa', system-ui, sans-serif;
+    font-family: var(--font-display);
     font-size: 0.8rem;
     text-transform: lowercase;
 }
@@ -64,7 +65,7 @@ nav a:hover {
 }
 
 h1 {
-    font-family: 'Comfortaa', system-ui, sans-serif;
+    font-family: var(--font-display);
     font-size: 2rem;
     font-weight: 700;
     letter-spacing: 0.05em;
@@ -102,8 +103,8 @@ h1 {
 }
 .form-group input:focus,
 .form-group textarea:focus {
-    border-color: #e67e22;
-    box-shadow: 0 0 0 3px rgba(230, 126, 34, 0.2);
+    border-color: var(--orange-ink);
+    box-shadow: 0 0 0 3px rgba(176, 106, 26, 0.2);
     outline: none;
 }
 .form-group textarea {
@@ -118,8 +119,8 @@ h1 {
 }
 
 .submit-btn {
-    background: #e67e22;
-    color: #fff;
+    background: var(--orange);
+    color: var(--ink);
     border: 0;
     border-radius: 999px;
     padding: 12px 24px;
@@ -130,7 +131,8 @@ h1 {
     font-family: inherit;
 }
 .submit-btn:hover {
-    background: #cf6d1a;
+    background: var(--orange-ink);
+    color: var(--paper);
 }
 .submit-btn:disabled {
     opacity: 0.6;
@@ -145,7 +147,7 @@ h1 {
     line-height: 1.5;
 }
 .trust-strip a {
-    color: #e67e22;
+    color: var(--orange-ink);
     text-decoration: none;
 }
 .trust-strip a:hover {
@@ -163,7 +165,7 @@ h1 {
     padding: 2rem 0;
 }
 .success h2 {
-    font-family: 'Comfortaa', system-ui, sans-serif;
+    font-family: var(--font-display);
     font-size: 1.4rem;
     font-weight: 600;
     letter-spacing: 0.05em;
@@ -175,7 +177,7 @@ h1 {
     margin-bottom: 1.5rem;
 }
 .success a {
-    color: #e67e22;
+    color: var(--orange-ink);
     text-decoration: none;
 }
 .success a:hover {
@@ -189,7 +191,7 @@ footer {
     font-size: 0.9rem;
 }
 footer a {
-    color: #e67e22;
+    color: var(--orange-ink);
     text-decoration: none;
 }
 footer a:hover {

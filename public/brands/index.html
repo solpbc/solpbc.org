@@ -17,6 +17,7 @@
 <link rel="icon" type="image/png" sizes="32x32" href="/static/favicon-32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/static/favicon-16.png">
 <link rel="apple-touch-icon" sizes="180x180" href="/static/apple-touch-icon.png">
+<link rel="stylesheet" href="/static/tokens.css">
 <style>
 /* self-hosted only — no font CDN, no third-party request. that is the point. */
 @font-face {
@@ -119,7 +120,7 @@ nav.bar {
 nav.bar ul {
   list-style: none; display: flex; flex-wrap: wrap; gap: .15rem .3rem;
   max-width: 940px; width: 90vw; margin: 0 auto;
-  font-family: 'Comfortaa', system-ui, sans-serif;
+  font-family: var(--font-display);
   font-size: .82rem; padding: .55rem 0;
 }
 nav.bar a {
@@ -132,18 +133,18 @@ nav.bar a[aria-current="true"] { color: var(--accent); }
 
 /* --- typography --- */
 h1 {
-  font-family: 'Comfortaa', system-ui, sans-serif;
+  font-family: var(--font-display);
   font-weight: 700; font-size: clamp(2.2rem, 6vw, 3.2rem);
   letter-spacing: -.01em; text-transform: lowercase; line-height: 1.05;
 }
 h2.section {
-  font-family: 'Comfortaa', system-ui, sans-serif;
+  font-family: var(--font-display);
   font-weight: 700; font-size: clamp(1.6rem, 4vw, 2.2rem);
   text-transform: lowercase; letter-spacing: -.01em;
   scroll-margin-top: 76px;
 }
 h3.sub {
-  font-family: 'Comfortaa', system-ui, sans-serif;
+  font-family: var(--font-display);
   font-weight: 600; font-size: .8rem; text-transform: lowercase;
   letter-spacing: .06em; color: var(--muted);
   margin: 2.4rem 0 1rem;
@@ -183,7 +184,7 @@ section.brand:first-of-type { border-top: 0; }
 .spec .stage.wide svg { width: 188px; }
 .spec .meta { padding: .85rem 1rem 1rem; border-top: 1px solid var(--line); }
 .spec .name {
-  font-family: 'Comfortaa', system-ui, sans-serif;
+  font-family: var(--font-display);
   font-size: .82rem; color: var(--ink); margin-bottom: .1rem;
 }
 .spec .note { font-size: .76rem; color: var(--muted); margin-bottom: .7rem; }

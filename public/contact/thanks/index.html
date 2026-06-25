@@ -11,6 +11,7 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/static/favicon-16.png">
     <link rel="apple-touch-icon" sizes="180x180" href="/static/apple-touch-icon.png">
     <meta name="robots" content="noindex">
+    <link rel="stylesheet" href="/static/tokens.css">
     <style>
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
@@ -51,7 +52,7 @@ body {
 
 nav {
     padding: 1.5rem 0 1.5rem;
-    font-family: 'Comfortaa', system-ui, sans-serif;
+    font-family: var(--font-display);
     font-size: 0.8rem;
     text-transform: lowercase;
 }
@@ -69,7 +70,7 @@ nav a:hover {
     padding: 4rem 0;
 }
 .success h1 {
-    font-family: 'Comfortaa', system-ui, sans-serif;
+    font-family: var(--font-display);
     font-size: 2rem;
     font-weight: 700;
     letter-spacing: 0.05em;
@@ -82,7 +83,7 @@ nav a:hover {
     margin-bottom: 1.5rem;
 }
 .success a {
-    color: #e67e22;
+    color: var(--orange-ink);
     text-decoration: none;
 }
 .success a:hover {
@@ -96,7 +97,7 @@ footer {
     font-size: 0.9rem;
 }
 footer a {
-    color: #e67e22;
+    color: var(--orange-ink);
     text-decoration: none;
 }
 footer a:hover {
