@@ -2,39 +2,47 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://solpbc.org/articles</loc>
-    <lastmod>2026-05-01</lastmod>
+    <lastmod>2026-06-16</lastmod>
   </url>
   <url>
     <loc>https://solpbc.org/blog/a-constraint-not-a-promise/</loc>
-    <lastmod>2026-05-25</lastmod>
+    <lastmod>2026-06-24</lastmod>
   </url>
   <url>
     <loc>https://solpbc.org/blog/ever-stronger/</loc>
-    <lastmod>2026-05-25</lastmod>
+    <lastmod>2026-06-24</lastmod>
   </url>
   <url>
     <loc>https://solpbc.org/blog/</loc>
-    <lastmod>2026-05-25</lastmod>
+    <lastmod>2026-06-24</lastmod>
+  </url>
+  <url>
+    <loc>https://solpbc.org/blog/on-your-side/</loc>
+    <lastmod>2026-06-24</lastmod>
+  </url>
+  <url>
+    <loc>https://solpbc.org/blog/your-journal-on-your-device/</loc>
+    <lastmod>2026-06-24</lastmod>
   </url>
   <url>
     <loc>https://solpbc.org/brands/</loc>
-    <lastmod>2026-05-26</lastmod>
+    <lastmod>2026-06-24</lastmod>
   </url>
   <url>
     <loc>https://solpbc.org/bylaws</loc>
-    <lastmod>2026-05-01</lastmod>
+    <lastmod>2026-06-21</lastmod>
   </url>
   <url>
     <loc>https://solpbc.org/contact</loc>
-    <lastmod>2026-04-09</lastmod>
+    <lastmod>2026-06-24</lastmod>
   </url>
   <url>
     <loc>https://solpbc.org/</loc>
-    <lastmod>2026-05-18</lastmod>
+    <lastmod>2026-06-16</lastmod>
   </url>
   <url>
     <loc>https://solpbc.org/privacy</loc>
-    <lastmod>2026-05-01</lastmod>
+    <lastmod>2026-06-23</lastmod>
   </url>
   <url>
     <loc>https://solpbc.org/talks/2026-05-05-demo-day-walkthrough</loc>
