@@ -46,6 +46,8 @@ sol-pbc   sol-ring            sol/sol-ring.svg
 solstone  sol-wordmark        sol/sol-wordmark.svg
 solstone  sol-wordmark-white  sol/sol-wordmark-white.svg
 solstone  sol-ring            sol/sol-ring.svg
+solstone  sol-app-icon-cream        sol/app-icon/sol-app-icon-cream.svg
+solstone  sol-app-icon-transparent  sol/app-icon/sol-app-icon-transparent.svg
 vit       vit-mark            vit/vit-mark.svg
 vit       vit-mark-dark       vit/vit-mark-dark.svg
 vit       vit-mark-white      vit/vit-mark-white.svg
@@ -175,6 +177,27 @@ echo "$MANIFEST" | while read -r brand name relsrc; do
   done
   echo "  $brand/$name  (svg + pdf + png x$(echo $LADDER | wc -w))"
 done
+
+# --- QR code (special asset — NOT laddered) ---------------------------------
+# The sol QR is a raster-backed styled logo-QR: a 16px render is unscannable
+# and the .svg is a raster-wrapper that won't vectorize, so it bypasses the
+# svg+png-ladder+pdf pipeline above. Copy the canonical (cream) + secondary
+# (white) masters straight into solstone/qr/ at their authored sizes; they
+# ride solstone.zip + the global zip via the directory include below, and the
+# mtime-pin (find ... touch, further down) keeps the zips deterministic.
+QR_SRC="$BRAND_SRC/sol/qr"
+QR_OUT="$OUT/solstone/qr"
+mkdir -p "$QR_OUT"
+for f in "sol-qr-solstone-app.svg" \
+         "png/sol-qr-cream-512.png"  "png/sol-qr-cream-1024.png"  "png/sol-qr-cream-2048.png" \
+         "png/sol-qr-white-512.png"  "png/sol-qr-white-1024.png"  "png/sol-qr-white-2048.png"; do
+  if [ ! -f "$QR_SRC/$f" ]; then
+    echo "gen-brand-assets: missing QR source $QR_SRC/$f" >&2
+    exit 1
+  fi
+  cp "$QR_SRC/$f" "$QR_OUT/"
+done
+echo "  solstone/qr  (svg + cream/white png 512/1024/2048, not laddered)"
 
 # --- deterministic zips -----------------------------------------------------
 # Pin every generated file's mtime, then zip from a sorted file list with
