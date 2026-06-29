@@ -48,6 +48,9 @@ solstone  sol-wordmark-white  sol/sol-wordmark-white.svg
 solstone  sol-ring            sol/sol-ring.svg
 solstone  sol-app-icon-cream        sol/app-icon/sol-app-icon-cream.svg
 solstone  sol-app-icon-transparent  sol/app-icon/sol-app-icon-transparent.svg
+solstone  sol-lockup-solstone-app             sol/sol-lockup-solstone-app.svg
+solstone  sol-lockup-solstone-app-accessible  sol/sol-lockup-solstone-app-accessible.svg
+solstone  sol-lockup-solstone-app-white       sol/sol-lockup-solstone-app-white.svg
 vit       vit-mark            vit/vit-mark.svg
 vit       vit-mark-dark       vit/vit-mark-dark.svg
 vit       vit-mark-white      vit/vit-mark-white.svg
