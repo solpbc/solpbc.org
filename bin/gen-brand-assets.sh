@@ -65,6 +65,9 @@ vit       badge-vit-enabled       vit/badge-vit-enabled.svg
 vit       badge-vit-enabled-flat  vit/badge-vit-enabled-flat.svg
 vit       badge-social-open-source vit/badge-social-open-source.svg
 vit       badge-vit-icon-only     vit/badge-vit-icon-only.svg
+rooks     rook-mark            rooks/rook-mark.svg
+rooks     rook-mark-dark       rooks/rook-mark-dark.svg
+rooks     rook-lockup-sticker  rooks/rook-lockup-sticker.svg
 "
 
 LADDER="16 32 64 128 256 512 1024"
@@ -220,13 +223,14 @@ build_zip() {
 }
 
 # Per-brand zip = that brand's full svg + png-ladder + pdf set.
-( cd "$OUT" && rm -f sol-pbc.zip solstone.zip vit.zip sol-pbc-brand-all.zip )
+( cd "$OUT" && rm -f sol-pbc.zip solstone.zip vit.zip rooks.zip sol-pbc-brand-all.zip )
 build_zip sol-pbc.zip  sol-pbc
 build_zip solstone.zip solstone
 build_zip vit.zip      vit
+build_zip rooks.zip    rooks
 # Global zip = union of all brands (zips live at $OUT root, not under the
 # brand dirs, so they are never recursively included in one another).
-build_zip sol-pbc-brand-all.zip sol-pbc solstone vit
+build_zip sol-pbc-brand-all.zip sol-pbc solstone vit rooks
 
 echo "gen-brand-assets: done -> $OUT"
 ( cd "$OUT" && ls -1 *.zip )

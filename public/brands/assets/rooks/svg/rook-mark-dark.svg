@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 565 742" role="img" aria-label="rook">
+  <title>rook</title>
+  <!-- dark-surface variant of the rook mark: same geometry, body in bone (#ECEAE4)
+       with the gold eye (#F0B43C) kept. facet cuts are negative space (the dark
+       surface shows through). no gradient, no iridescence. -->
+  <g fill="#ECEAE4">
+    <!-- head, beak, breast, lower body, right leg, ground bar -->
+    <path d="M564 309 L470 278 L418 278 L364 332 L462 433 L279 626 L376 725 L302 726 L288 741 L450 741 L437 726 L387 726 L351 647 L484 484 L484 330 Z"/>
+    <!-- folded wing / back triangle -->
+    <path d="M446 433 L369 355 L126 594 L343 539 Z"/>
+    <!-- lower tail block + left leg -->
+    <path d="M328 555 L169 595 L58 741 L158 741 Z"/>
+  </g>
+  <!-- gold eye: downward-pointing triangle -->
+  <path fill="#F0B43C" d="M449 297 L471 297 L460 308 Z"/>
+</svg>

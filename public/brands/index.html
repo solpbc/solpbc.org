@@ -4,10 +4,10 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>brand — sol pbc</title>
-<meta name="description" content="logos, colors, and words for sol pbc, solstone, and vit. free to use, no account or permission email. this page loads nothing from anyone else's server.">
+<meta name="description" content="logos, colors, and words for sol pbc, solstone, vit, and rooks. free to use, no account or permission email. this page loads nothing from anyone else's server.">
 <link rel="canonical" href="https://solpbc.org/brands/">
 <meta property="og:title" content="brand — sol pbc">
-<meta property="og:description" content="logos, colors, and words for sol pbc, solstone, and vit. no account, no tracking, no third-party requests. open developer tools and check.">
+<meta property="og:description" content="logos, colors, and words for sol pbc, solstone, vit, and rooks. no account, no tracking, no third-party requests. open developer tools and check.">
 <meta property="og:url" content="https://solpbc.org/brands/">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="sol pbc">
@@ -49,6 +49,42 @@
   font-family: 'Inter';
   src: url('/brands/fonts/inter-latin-ext.woff2') format('woff2');
   font-weight: 400 700; font-display: swap;
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7,
+    U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F,
+    U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F,
+    U+A720-A7FF;
+}
+/* rooks faces — self-hosted too. Space Grotesk (variable, display) +
+   Space Mono (mono). subset to latin / latin-ext, same as above. */
+@font-face {
+  font-family: 'Space Grotesk';
+  src: url('/brands/fonts/space-grotesk-latin.woff2') format('woff2');
+  font-weight: 300 700; font-display: swap;
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6,
+    U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122,
+    U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Space Grotesk';
+  src: url('/brands/fonts/space-grotesk-latin-ext.woff2') format('woff2');
+  font-weight: 300 700; font-display: swap;
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7,
+    U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F,
+    U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F,
+    U+A720-A7FF;
+}
+@font-face {
+  font-family: 'Space Mono';
+  src: url('/brands/fonts/space-mono-latin.woff2') format('woff2');
+  font-weight: 400; font-display: swap;
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6,
+    U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122,
+    U+2191, U+2193, U+2212, U+2215, U+2726, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Space Mono';
+  src: url('/brands/fonts/space-mono-latin-ext.woff2') format('woff2');
+  font-weight: 400; font-display: swap;
   unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7,
     U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F,
     U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F,
@@ -220,6 +256,18 @@ section.brand:first-of-type { border-top: 0; }
 /* square die-cut sticker preview — show on .stage.checker so the
    rounded transparent corners (and the white sticker's edge) read. */
 .spec .stage svg.sticker { width: 150px; height: 150px; max-height: none; }
+/* rook mark is taller than wide (viewBox 565x742) — give it vertical room
+   instead of the wordmark's 116x92 box, and never square it. */
+.spec .stage svg.rookmark { width: auto; height: 116px; max-height: 116px; }
+/* rooks type specimens — self-hosted Space Grotesk + Space Mono. the stage
+   stacks the lines; the faces are scoped here, never on the page's tokens. */
+.type-spec .stage { flex-direction: column; gap: .35rem; }
+/* the type stage is a FIXED light/bone ground (.stage.light), so its text uses
+   fixed rook ink — never the theme --ink, which flips light in dark mode and
+   would vanish on the cream stage. ink-on-bone is the brand context anyway. */
+.rook-display { font-family: 'Space Grotesk', ui-rounded, system-ui, sans-serif; color: #15171C; line-height: 1.1; letter-spacing: -.01em; }
+.rook-display.sub { color: #5b626d; }
+.rook-mono { font-family: 'Space Mono', ui-monospace, "SF Mono", Menlo, monospace; color: #15171C; font-size: 1.12rem; }
 .btn { color: var(--accent); }
 .btn[data-state="done"] { color: #1a7f4f; border-color: #1a7f4f; }
 .btn[data-state="manual"] { color: var(--muted); }
@@ -380,6 +428,7 @@ footer a:hover { color: var(--accent); }
     <li><a href="#sol-pbc">sol pbc</a></li>
     <li><a href="#solstone">solstone</a></li>
     <li><a href="#vit">vit</a></li>
+    <li><a href="#rooks">rooks</a></li>
     <li><a href="#extro">extro</a></li>
     <li><a href="#foundations">foundations</a></li>
     <li><a href="#using">using</a></li>
@@ -390,7 +439,7 @@ footer a:hover { color: var(--accent); }
 
   <section class="intro" aria-labelledby="t">
     <h1 id="t">brand</h1>
-    <p>logos, colors, and words for sol pbc, solstone, and vit. take what you need — for press, for writing about us, for showing your project works with our tools. no account, no form, no permission email.</p>
+    <p>logos, colors, and words for sol pbc, solstone, vit, and rooks. take what you need — for press, for writing about us, for showing your project works with our tools. no account, no form, no permission email.</p>
     <p class="trust">this page loads nothing from anyone else's server: no third-party fonts, no analytics, no tracking, no cookies. open developer tools and check. that's the whole point.</p>
   </section>
 
@@ -1141,6 +1190,207 @@ footer a:hover { color: var(--accent); }
     <p><a href="/brands/assets/vit.zip" download>download all vit</a> — marks, wordmark, badges, full size ladder, svg + png + pdf.</p>
   </section>
 
+  <!-- ============================ ROOKS ============================ -->
+  <section class="brand" id="rooks" aria-labelledby="h-rooks">
+    <h2 class="section" id="h-rooks">rooks</h2>
+    <p class="one-line">rooks — the agentic AT Protocol platform: coding agents get an open identity, a place to build, and a way to get hired. smart birds, straight lines.</p>
+
+    <h3 class="sub">the why</h3>
+    <p class="why">the mark is a confident geometric corvid &#8212; the tool-using genius of the bird world &#8212; perched in profile, facing right. flat and two-color: ink-black plumage with a single warm gold eye, the one nod to the sun family solstone leads. the facet cuts between the ink masses are true negative space, so the mark sits on any background and holds from a hero down to a 16&#160;px favicon &#8212; one master, no separate small mark. the type is Space Grotesk for display and Space Mono for the terminal: clever engineering, straight lines.</p>
+    <p class="desc">rooks is sol pbc's agentic AT Protocol platform. run your own rookery, or trust the commons. it launches publicly as rook.host. theme: bird, thermal, sky &#8212; the chess rook is wordplay only, never a brand pillar.</p>
+
+    <h3 class="sub">logos &amp; wordmarks</h3>
+    <div class="specimens">
+
+      <figure class="spec">
+        <div class="stage light"><svg class="rookmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 565 742" role="img" aria-label="rook">
+  <title>rook</title>
+  <g fill="#15171C">
+    <path d="M564 309 L470 278 L418 278 L364 332 L462 433 L279 626 L376 725 L302 726 L288 741 L450 741 L437 726 L387 726 L351 647 L484 484 L484 330 Z"/>
+    <path d="M446 433 L369 355 L126 594 L343 539 Z"/>
+    <path d="M328 555 L169 595 L58 741 L158 741 Z"/>
+  </g>
+  <path fill="#F0B43C" d="M449 297 L471 297 L460 308 Z"/>
+</svg></div>
+        <figcaption class="meta">
+          <div class="name">rook-mark</div>
+          <div class="note">the mark, ink body + gold eye &#8212; on light</div>
+          <div class="dl">
+            <button class="btn copy-btn" type="button" data-copy-from="#s-rook-mark" data-label="copy svg">copy svg</button>
+            <a href="/brands/assets/rooks/svg/rook-mark.svg" download>svg</a>
+            <a href="/brands/assets/rooks/png/rook-mark-512.png" download>png 512</a>
+            <a href="/brands/assets/rooks/png/rook-mark-1024.png" download>png 1024</a>
+            <a href="/brands/assets/rooks/pdf/rook-mark.pdf" download>pdf</a>
+          </div>
+        </figcaption>
+      </figure>
+
+      <figure class="spec">
+        <div class="stage dark"><svg class="rookmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 565 742" role="img" aria-label="rook">
+  <title>rook</title>
+  <g fill="#ECEAE4">
+    <path d="M564 309 L470 278 L418 278 L364 332 L462 433 L279 626 L376 725 L302 726 L288 741 L450 741 L437 726 L387 726 L351 647 L484 484 L484 330 Z"/>
+    <path d="M446 433 L369 355 L126 594 L343 539 Z"/>
+    <path d="M328 555 L169 595 L58 741 L158 741 Z"/>
+  </g>
+  <path fill="#F0B43C" d="M449 297 L471 297 L460 308 Z"/>
+</svg></div>
+        <figcaption class="meta">
+          <div class="name">rook-mark, dark-background</div>
+          <div class="note">bone body, gold eye &#8212; for dark backgrounds</div>
+          <div class="dl">
+            <button class="btn copy-btn" type="button" data-copy-from="#s-rook-mark-dark" data-label="copy svg">copy svg</button>
+            <a href="/brands/assets/rooks/svg/rook-mark-dark.svg" download>svg</a>
+            <a href="/brands/assets/rooks/png/rook-mark-dark-512.png" download>png 512</a>
+            <a href="/brands/assets/rooks/png/rook-mark-dark-1024.png" download>png 1024</a>
+            <a href="/brands/assets/rooks/pdf/rook-mark-dark.pdf" download>pdf</a>
+          </div>
+        </figcaption>
+      </figure>
+
+    </div>
+
+    <h3 class="sub">the rook.host lockup</h3>
+    <p class="desc">the launch sticker &#8212; the mark over rook.host on a sharp cut-gem die-cut, ink on bone, transparent outside the gem. shown on a checkerboard so the die-cut silhouette and transparent corners read. the domain is outlined Space&#160;Grotesk Bold, so it carries no font dependency; the gold eye is the only glint.</p>
+    <div class="specimens">
+      <figure class="spec">
+        <div class="stage checker"><svg class="sticker" xmlns="http://www.w3.org/2000/svg" viewBox="50 50 198 198" role="img" aria-label="rook.host">
+  <title>rook.host</title>
+  <path fill="#ECEAE4" d="M 198.00 50.00 L 248.00 50.00 L 248.00 248.00 L 50.00 248.00 L 50.00 198.00 L 109.86 109.86 Z"/>
+  <g transform="translate(98.304,51.129) scale(0.21239)">
+    <g fill="#15171C"><path d="M564 309 L470 278 L418 278 L364 332 L462 433 L279 626 L376 725 L302 726 L288 741 L450 741 L437 726 L387 726 L351 647 L484 484 L484 330 Z"/><path d="M446 433 L369 355 L126 594 L343 539 Z"/><path d="M328 555 L169 595 L58 741 L158 741 Z"/></g>
+    <path fill="#F0B43C" d="M443.5 295.2 L476.5 295.2 L460.0 311.7 Z"/>
+  </g>
+  <path fill="#15171C" d="M97.608 232.62199999999999V219.23H100.956V220.742H101.44200000000001Q101.739 219.932 102.42750000000001 219.55399999999997Q103.116 219.176 104.034 219.176H105.654V222.2H103.98Q102.684 222.2 101.84700000000001 222.8885Q101.01 223.577 101.01 225.00799999999998V232.62199999999999Z M114.402 232.99999999999997Q112.404 232.99999999999997 110.811 232.19Q109.218 231.38 108.30000000000001 229.841Q107.382 228.302 107.382 226.142V225.70999999999998Q107.382 223.54999999999998 108.30000000000001 222.01099999999997Q109.218 220.47199999999998 110.811 219.66199999999998Q112.404 218.85199999999998 114.402 218.85199999999998Q116.4 218.85199999999998 117.993 219.66199999999998Q119.586 220.47199999999998 120.50399999999999 222.01099999999997Q121.422 223.54999999999998 121.422 225.70999999999998V226.142Q121.422 228.302 120.50399999999999 229.841Q119.586 231.38 117.993 232.19Q116.4 232.99999999999997 114.402 232.99999999999997ZM114.402 229.976Q115.968 229.976 116.994 228.9635Q118.02 227.951 118.02 226.06099999999998V225.791Q118.02 223.90099999999998 117.0075 222.88849999999996Q115.995 221.87599999999998 114.402 221.87599999999998Q112.836 221.87599999999998 111.81 222.88849999999996Q110.784 223.90099999999998 110.784 225.791V226.06099999999998Q110.784 227.951 111.81 228.9635Q112.836 229.976 114.402 229.976Z M130.656 232.99999999999997Q128.65800000000002 232.99999999999997 127.06500000000001 232.19Q125.47200000000001 231.38 124.554 229.841Q123.63600000000001 228.302 123.63600000000001 226.142V225.70999999999998Q123.63600000000001 223.54999999999998 124.554 222.01099999999997Q125.47200000000001 220.47199999999998 127.06500000000001 219.66199999999998Q128.65800000000002 218.85199999999998 130.656 218.85199999999998Q132.654 218.85199999999998 134.247 219.66199999999998Q135.84 220.47199999999998 136.758 222.01099999999997Q137.67600000000002 223.54999999999998 137.67600000000002 225.70999999999998V226.142Q137.67600000000002 228.302 136.758 229.841Q135.84 231.38 134.247 232.19Q132.654 232.99999999999997 130.656 232.99999999999997ZM130.656 229.976Q132.222 229.976 133.248 228.9635Q134.274 227.951 134.274 226.06099999999998V225.791Q134.274 223.90099999999998 133.2615 222.88849999999996Q132.249 221.87599999999998 130.656 221.87599999999998Q129.09 221.87599999999998 128.06400000000002 222.88849999999996Q127.03800000000001 223.90099999999998 127.03800000000001 225.791V226.06099999999998Q127.03800000000001 227.951 128.06400000000002 228.9635Q129.09 229.976 130.656 229.976Z M140.53799999999998 232.62199999999999V213.72199999999998H143.94V224.171H144.426L148.85399999999998 219.23H153.28199999999998L147.099 225.70999999999998L153.498 232.62199999999999H149.124L144.426 227.303H143.94V232.62199999999999Z M157.64249999999998 232.99999999999997Q156.549 232.99999999999997 155.8065 232.278243902439Q155.064 231.55648780487803 155.064 230.428743902439Q155.064 229.301 155.8065 228.58549999999997Q156.549 227.86999999999998 157.64249999999998 227.86999999999998Q158.736 227.86999999999998 159.46499999999997 228.59175609756096Q160.194 229.31351219512194 160.194 230.44125609756097Q160.194 231.569 159.46499999999997 232.28449999999998Q158.736 232.99999999999997 157.64249999999998 232.99999999999997Z M163.272 232.62199999999999V213.72199999999998H166.674V220.87699999999998H167.16Q167.376 220.445 167.835 220.01299999999998Q168.294 219.581 169.0635 219.29749999999999Q169.833 219.01399999999998 171.02100000000002 219.01399999999998Q172.58700000000002 219.01399999999998 173.7615 219.72949999999997Q174.936 220.445 175.584 221.70049999999998Q176.232 222.956 176.232 224.63V232.62199999999999H172.83V224.89999999999998Q172.83 223.38799999999998 172.0875 222.63199999999998Q171.345 221.87599999999998 169.96800000000002 221.87599999999998Q168.40200000000002 221.87599999999998 167.538 222.91549999999998Q166.674 223.95499999999998 166.674 225.81799999999998V232.62199999999999Z M186.006 232.99999999999997Q184.008 232.99999999999997 182.41500000000002 232.19Q180.822 231.38 179.904 229.841Q178.986 228.302 178.986 226.142V225.70999999999998Q178.986 223.54999999999998 179.904 222.01099999999997Q180.822 220.47199999999998 182.41500000000002 219.66199999999998Q184.008 218.85199999999998 186.006 218.85199999999998Q188.004 218.85199999999998 189.59699999999998 219.66199999999998Q191.19 220.47199999999998 192.108 222.01099999999997Q193.026 223.54999999999998 193.026 225.70999999999998V226.142Q193.026 228.302 192.108 229.841Q191.19 231.38 189.59699999999998 232.19Q188.004 232.99999999999997 186.006 232.99999999999997ZM186.006 229.976Q187.572 229.976 188.598 228.9635Q189.624 227.951 189.624 226.06099999999998V225.791Q189.624 223.90099999999998 188.61149999999998 222.88849999999996Q187.599 221.87599999999998 186.006 221.87599999999998Q184.44 221.87599999999998 183.414 222.88849999999996Q182.388 223.90099999999998 182.388 225.791V226.06099999999998Q182.388 227.951 183.414 228.9635Q184.44 229.976 186.006 229.976Z M201.45 232.99999999999997Q198.831 232.99999999999997 197.15699999999998 231.86599999999999Q195.483 230.732 195.13199999999998 228.62599999999998L198.26399999999998 227.81599999999997Q198.453 228.761 198.8985 229.301Q199.344 229.84099999999998 200.00549999999998 230.07049999999998Q200.667 230.29999999999998 201.45 230.29999999999998Q202.63799999999998 230.29999999999998 203.20499999999998 229.8815Q203.772 229.463 203.772 228.84199999999998Q203.772 228.22099999999998 203.23199999999997 227.88349999999997Q202.69199999999998 227.546 201.504 227.32999999999998L200.748 227.195Q199.344 226.92499999999998 198.183 226.4525Q197.022 225.98 196.32 225.14299999999997Q195.618 224.30599999999998 195.618 222.98299999999998Q195.618 220.98499999999999 197.076 219.9185Q198.534 218.85199999999998 200.91 218.85199999999998Q203.15099999999998 218.85199999999998 204.63599999999997 219.851Q206.12099999999998 220.85 206.57999999999998 222.47L203.421 223.44199999999998Q203.20499999999998 222.416 202.5435 221.98399999999998Q201.882 221.552 200.91 221.552Q199.938 221.552 199.42499999999998 221.8895Q198.91199999999998 222.22699999999998 198.91199999999998 222.821Q198.91199999999998 223.469 199.452 223.77949999999998Q199.992 224.08999999999997 200.91 224.25199999999998L201.666 224.387Q203.178 224.65699999999998 204.4065 225.10249999999996Q205.635 225.54799999999997 206.3505 226.37149999999997Q207.066 227.195 207.066 228.599Q207.066 230.70499999999998 205.5405 231.85249999999996Q204.015 232.99999999999997 201.45 232.99999999999997Z M214.89600000000002 232.62199999999999Q213.573 232.62199999999999 212.7495 231.7985Q211.92600000000002 230.975 211.92600000000002 229.59799999999998V222.03799999999998H208.578V219.23H211.92600000000002V215.07199999999997H215.328V219.23H219.0V222.03799999999998H215.328V229.004Q215.328 229.814 216.084 229.814H218.67600000000002V232.62199999999999Z"/>
+</svg></div>
+        <figcaption class="meta">
+          <div class="name">rook-lockup-sticker</div>
+          <div class="note">cut-gem die-cut &#8212; &#8220;rook.host&#8221;, ink on bone</div>
+          <div class="dl">
+            <button class="btn copy-btn" type="button" data-copy-from="#s-rook-lockup-sticker" data-label="copy svg">copy svg</button>
+            <a href="/brands/assets/rooks/svg/rook-lockup-sticker.svg" download>svg</a>
+            <a href="/brands/assets/rooks/png/rook-lockup-sticker-512.png" download>png 512</a>
+            <a href="/brands/assets/rooks/png/rook-lockup-sticker-1024.png" download>png 1024</a>
+            <a href="/brands/assets/rooks/pdf/rook-lockup-sticker.pdf" download>pdf</a>
+          </div>
+        </figcaption>
+      </figure>
+    </div>
+
+    <h3 class="sub">type</h3>
+    <p class="desc">self-hosted, like everything else here &#8212; Space Grotesk (display) and Space Mono (the terminal voice), both OFL, served from solpbc.org. body copy is Inter, already on this page. no font CDN, no third-party request.</p>
+    <div class="specimens">
+      <figure class="spec type-spec">
+        <div class="stage light">
+          <span class="rook-display" style="font-weight:700;font-size:2.1rem">rook.host</span>
+          <span class="rook-display sub" style="font-weight:500;font-size:1rem">smart birds. straight lines.</span>
+        </div>
+        <figcaption class="meta">
+          <div class="name">Space Grotesk</div>
+          <div class="note">display / headline &#8212; weights 500 &amp; 700 (OFL, self-hosted)</div>
+        </figcaption>
+      </figure>
+      <figure class="spec type-spec">
+        <div class="stage light">
+          <span class="rook-mono">rook &#10022; on the job</span>
+        </div>
+        <figcaption class="meta">
+          <div class="name">Space Mono</div>
+          <div class="note">monospace &#8212; handles, CLI, status (OFL, self-hosted)</div>
+        </figcaption>
+      </figure>
+    </div>
+
+    <h3 class="sub">colors</h3>
+    <div class="swatches" data-swatches>
+      <div class="swatch">
+        <button class="chip" type="button" style="background:#15171C" data-copy-text="#15171C" aria-label="copy hex #15171C"></button>
+        <div class="lbl"><b>rook ink</b><br><span class="hex">#15171C</span></div>
+      </div>
+      <div class="swatch">
+        <button class="chip" type="button" style="background:#2B313B" data-copy-text="#2B313B" aria-label="copy hex #2B313B"></button>
+        <div class="lbl"><b>slate</b><br><span class="hex">#2B313B</span></div>
+      </div>
+      <div class="swatch">
+        <button class="chip" type="button" style="background:#F0B43C" data-copy-text="#F0B43C" aria-label="copy hex #F0B43C"></button>
+        <div class="lbl"><b>glint</b><br><span class="hex">#F0B43C</span></div>
+      </div>
+      <div class="swatch">
+        <button class="chip" type="button" style="background:#ECEAE4;border-bottom:1px solid var(--line)" data-copy-text="#ECEAE4" aria-label="copy hex #ECEAE4"></button>
+        <div class="lbl"><b>bone</b><br><span class="hex">#ECEAE4</span></div>
+      </div>
+      <div class="swatch">
+        <button class="chip" type="button" style="background:#F6F5F2;border-bottom:1px solid var(--line)" data-copy-text="#F6F5F2" aria-label="copy hex #F6F5F2"></button>
+        <div class="lbl"><b>chalk</b><br><span class="hex">#F6F5F2</span></div>
+      </div>
+    </div>
+    <table class="colors">
+      <thead><tr><th>name</th><th>hex</th><th>rgb</th><th>use</th></tr></thead>
+      <tbody>
+        <tr><td>rook ink</td><td class="mono">#15171C</td><td class="mono">21, 23, 28</td><td>primary &#8212; plumage black; the mark on light, body text</td></tr>
+        <tr><td>slate</td><td class="mono">#2B313B</td><td class="mono">43, 49, 59</td><td>secondary dark &#8212; UI surfaces, dark grounds</td></tr>
+        <tr><td>glint</td><td class="mono">#F0B43C</td><td class="mono">240, 180, 60</td><td>warm gold accent &#8212; the eye / sun-catch; accent only, never body text</td></tr>
+        <tr><td>bone</td><td class="mono">#ECEAE4</td><td class="mono">236, 234, 228</td><td>warm-grey light surface, and the mark body on dark</td></tr>
+        <tr><td>chalk</td><td class="mono">#F6F5F2</td><td class="mono">246, 245, 242</td><td>near-white surface</td></tr>
+      </tbody>
+    </table>
+    <p class="why">a flat two-color system: ink on bone, gold as the single accent. no iridescence. rook ink on bone &#8212; and bone on rook ink &#8212; are both near-max contrast; the gold glint is an accent and never carries text.</p>
+    <p class="printnote">defined in hex, digital-first &#8212; no Pantone, by design.</p>
+
+    <h3 class="sub">slogans</h3>
+    <div class="copyrow">
+      <div class="val" id="sl-rook-tag"><span class="kind">tagline</span>smart birds. straight lines.</div>
+      <button class="btn copy-btn" type="button" data-copy-from="#sl-rook-tag" data-skip=".kind">copy</button>
+    </div>
+    <div class="copyrow">
+      <div class="val mono" id="sl-rook-cli"><span class="kind">cli banner</span>rook &#10022; on the job</div>
+      <button class="btn copy-btn" type="button" data-copy-from="#sl-rook-cli" data-skip=".kind">copy</button>
+    </div>
+
+    <h3 class="sub">do &#183; don't</h3>
+    <div class="dont-grid">
+      <div class="dont"><div class="frame x-recolor"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 565 742" role="img" aria-label="don't: recolored">
+  <title>rook</title>
+  <g fill="#15171C">
+    <path d="M564 309 L470 278 L418 278 L364 332 L462 433 L279 626 L376 725 L302 726 L288 741 L450 741 L437 726 L387 726 L351 647 L484 484 L484 330 Z"/>
+    <path d="M446 433 L369 355 L126 594 L343 539 Z"/>
+    <path d="M328 555 L169 595 L58 741 L158 741 Z"/>
+  </g>
+  <path fill="#F0B43C" d="M449 297 L471 297 L460 308 Z"/>
+</svg></div><div class="lbl">recolored body</div></div>
+      <div class="dont"><div class="frame x-stretch"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 565 742" role="img" aria-label="don't: stretched">
+  <title>rook</title>
+  <g fill="#15171C">
+    <path d="M564 309 L470 278 L418 278 L364 332 L462 433 L279 626 L376 725 L302 726 L288 741 L450 741 L437 726 L387 726 L351 647 L484 484 L484 330 Z"/>
+    <path d="M446 433 L369 355 L126 594 L343 539 Z"/>
+    <path d="M328 555 L169 595 L58 741 L158 741 Z"/>
+  </g>
+  <path fill="#F0B43C" d="M449 297 L471 297 L460 308 Z"/>
+</svg></div><div class="lbl">stretched</div></div>
+      <div class="dont"><div class="frame x-rotate"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 565 742" role="img" aria-label="don't: rotated">
+  <title>rook</title>
+  <g fill="#15171C">
+    <path d="M564 309 L470 278 L418 278 L364 332 L462 433 L279 626 L376 725 L302 726 L288 741 L450 741 L437 726 L387 726 L351 647 L484 484 L484 330 Z"/>
+    <path d="M446 433 L369 355 L126 594 L343 539 Z"/>
+    <path d="M328 555 L169 595 L58 741 L158 741 Z"/>
+  </g>
+  <path fill="#F0B43C" d="M449 297 L471 297 L460 308 Z"/>
+</svg></div><div class="lbl">rotated</div></div>
+      <div class="dont"><div class="frame x-effect"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 565 742" role="img" aria-label="don't: effected">
+  <title>rook</title>
+  <g fill="#15171C">
+    <path d="M564 309 L470 278 L418 278 L364 332 L462 433 L279 626 L376 725 L302 726 L288 741 L450 741 L437 726 L387 726 L351 647 L484 484 L484 330 Z"/>
+    <path d="M446 433 L369 355 L126 594 L343 539 Z"/>
+    <path d="M328 555 L169 595 L58 741 L158 741 Z"/>
+  </g>
+  <path fill="#F0B43C" d="M449 297 L471 297 L460 308 Z"/>
+</svg></div><div class="lbl">glow / iridescence</div></div>
+    </div>
+
+    <h3 class="sub">download</h3>
+    <p><a href="/brands/assets/rooks.zip" download>download all rooks</a> — the mark, dark mark, the rook.host lockup, full size ladder, svg + png + pdf.</p>
+  </section>
+
   <!-- ============================ EXTRO ============================ -->
   <section class="brand extro-block" id="extro" aria-labelledby="h-extro">
     <h2 class="section" id="h-extro">extro</h2>
@@ -1169,14 +1419,14 @@ footer a:hover { color: var(--accent); }
     <p>not sure? just ask — there's a contact form at <a href="https://solpbc.org/contact">solpbc.org/contact</a>.</p>
 
     <h3 class="sub">download everything</h3>
-    <p><a href="/brands/assets/sol-pbc-brand-all.zip" download>download everything</a> — every sol pbc, solstone, and vit asset in one zip.</p>
+    <p><a href="/brands/assets/sol-pbc-brand-all.zip" download>download everything</a> — every sol pbc, solstone, vit, and rooks asset in one zip.</p>
   </section>
 
 </main>
 
 <footer>
   &#169; 2026 sol pbc &#183; <a href="/">solpbc.org</a> &#183; <a href="/privacy">privacy</a> &#183; <a href="/contact">contact</a><br>
-  sol pbc, solstone, and vit are trademarks of sol pbc.
+  sol pbc, solstone, vit, and rooks are trademarks of sol pbc.
 </footer>
 
 <p class="live" aria-live="polite" id="copy-live"></p>
@@ -1499,6 +1749,51 @@ footer a:hover { color: var(--accent); }
   <path d="M7 7.5 L14 16.5 L21 7.5" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
 </svg></script>
 
+<script type="text/plain" id="s-rook-mark"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 565 742" role="img" aria-label="rook">
+  <title>rook</title>
+  <!-- the rook mark: a geometric perched corvid, facing right. flat two-color —
+       ink body (#15171C) with crisp negative-space facet cuts (the gaps between
+       the three ink masses are true background, not painted), plus one gold eye
+       (#F0B43C). use on light surfaces; for dark surfaces use rook-mark-dark.svg
+       (bone body). holds at every scale down to a 16px favicon — no separate
+       small-size asset. theme: bird / thermal / sky. no chess. -->
+  <g fill="#15171C">
+    <!-- head, beak, breast, lower body, right leg, ground bar -->
+    <path d="M564 309 L470 278 L418 278 L364 332 L462 433 L279 626 L376 725 L302 726 L288 741 L450 741 L437 726 L387 726 L351 647 L484 484 L484 330 Z"/>
+    <!-- folded wing / back triangle (negative-space cut separates it from head and lower body) -->
+    <path d="M446 433 L369 355 L126 594 L343 539 Z"/>
+    <!-- lower tail block + left leg -->
+    <path d="M328 555 L169 595 L58 741 L158 741 Z"/>
+  </g>
+  <!-- gold eye: downward-pointing triangle -->
+  <path fill="#F0B43C" d="M449 297 L471 297 L460 308 Z"/>
+</svg></script>
+<script type="text/plain" id="s-rook-mark-dark"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 565 742" role="img" aria-label="rook">
+  <title>rook</title>
+  <!-- dark-surface variant of the rook mark: same geometry, body in bone (#ECEAE4)
+       with the gold eye (#F0B43C) kept. facet cuts are negative space (the dark
+       surface shows through). no gradient, no iridescence. -->
+  <g fill="#ECEAE4">
+    <!-- head, beak, breast, lower body, right leg, ground bar -->
+    <path d="M564 309 L470 278 L418 278 L364 332 L462 433 L279 626 L376 725 L302 726 L288 741 L450 741 L437 726 L387 726 L351 647 L484 484 L484 330 Z"/>
+    <!-- folded wing / back triangle -->
+    <path d="M446 433 L369 355 L126 594 L343 539 Z"/>
+    <!-- lower tail block + left leg -->
+    <path d="M328 555 L169 595 L58 741 L158 741 Z"/>
+  </g>
+  <!-- gold eye: downward-pointing triangle -->
+  <path fill="#F0B43C" d="M449 297 L471 297 L460 308 Z"/>
+</svg></script>
+<script type="text/plain" id="s-rook-lockup-sticker"><svg xmlns="http://www.w3.org/2000/svg" viewBox="50 50 198 198" role="img" aria-label="rook.host">
+  <title>rook.host</title>
+  <!-- rook.host lockup sticker — cut-gem die-cut (clip 50/facet 20, sharp), ink mark (eye x1.5) + Space Grotesk Bold rook.host outlined, bone ground. GENERATED by cmo/brand/rooks/generate-rook-lockup.py. Founder-locked 2026-06-29. -->
+  <path fill="#ECEAE4" d="M 198.00 50.00 L 248.00 50.00 L 248.00 248.00 L 50.00 248.00 L 50.00 198.00 L 109.86 109.86 Z"/>
+  <g transform="translate(98.304,51.129) scale(0.21239)">
+    <g fill="#15171C"><path d="M564 309 L470 278 L418 278 L364 332 L462 433 L279 626 L376 725 L302 726 L288 741 L450 741 L437 726 L387 726 L351 647 L484 484 L484 330 Z"/><path d="M446 433 L369 355 L126 594 L343 539 Z"/><path d="M328 555 L169 595 L58 741 L158 741 Z"/></g>
+    <path fill="#F0B43C" d="M443.5 295.2 L476.5 295.2 L460.0 311.7 Z"/>
+  </g>
+  <path fill="#15171C" d="M97.608 232.62199999999999V219.23H100.956V220.742H101.44200000000001Q101.739 219.932 102.42750000000001 219.55399999999997Q103.116 219.176 104.034 219.176H105.654V222.2H103.98Q102.684 222.2 101.84700000000001 222.8885Q101.01 223.577 101.01 225.00799999999998V232.62199999999999Z M114.402 232.99999999999997Q112.404 232.99999999999997 110.811 232.19Q109.218 231.38 108.30000000000001 229.841Q107.382 228.302 107.382 226.142V225.70999999999998Q107.382 223.54999999999998 108.30000000000001 222.01099999999997Q109.218 220.47199999999998 110.811 219.66199999999998Q112.404 218.85199999999998 114.402 218.85199999999998Q116.4 218.85199999999998 117.993 219.66199999999998Q119.586 220.47199999999998 120.50399999999999 222.01099999999997Q121.422 223.54999999999998 121.422 225.70999999999998V226.142Q121.422 228.302 120.50399999999999 229.841Q119.586 231.38 117.993 232.19Q116.4 232.99999999999997 114.402 232.99999999999997ZM114.402 229.976Q115.968 229.976 116.994 228.9635Q118.02 227.951 118.02 226.06099999999998V225.791Q118.02 223.90099999999998 117.0075 222.88849999999996Q115.995 221.87599999999998 114.402 221.87599999999998Q112.836 221.87599999999998 111.81 222.88849999999996Q110.784 223.90099999999998 110.784 225.791V226.06099999999998Q110.784 227.951 111.81 228.9635Q112.836 229.976 114.402 229.976Z M130.656 232.99999999999997Q128.65800000000002 232.99999999999997 127.06500000000001 232.19Q125.47200000000001 231.38 124.554 229.841Q123.63600000000001 228.302 123.63600000000001 226.142V225.70999999999998Q123.63600000000001 223.54999999999998 124.554 222.01099999999997Q125.47200000000001 220.47199999999998 127.06500000000001 219.66199999999998Q128.65800000000002 218.85199999999998 130.656 218.85199999999998Q132.654 218.85199999999998 134.247 219.66199999999998Q135.84 220.47199999999998 136.758 222.01099999999997Q137.67600000000002 223.54999999999998 137.67600000000002 225.70999999999998V226.142Q137.67600000000002 228.302 136.758 229.841Q135.84 231.38 134.247 232.19Q132.654 232.99999999999997 130.656 232.99999999999997ZM130.656 229.976Q132.222 229.976 133.248 228.9635Q134.274 227.951 134.274 226.06099999999998V225.791Q134.274 223.90099999999998 133.2615 222.88849999999996Q132.249 221.87599999999998 130.656 221.87599999999998Q129.09 221.87599999999998 128.06400000000002 222.88849999999996Q127.03800000000001 223.90099999999998 127.03800000000001 225.791V226.06099999999998Q127.03800000000001 227.951 128.06400000000002 228.9635Q129.09 229.976 130.656 229.976Z M140.53799999999998 232.62199999999999V213.72199999999998H143.94V224.171H144.426L148.85399999999998 219.23H153.28199999999998L147.099 225.70999999999998L153.498 232.62199999999999H149.124L144.426 227.303H143.94V232.62199999999999Z M157.64249999999998 232.99999999999997Q156.549 232.99999999999997 155.8065 232.278243902439Q155.064 231.55648780487803 155.064 230.428743902439Q155.064 229.301 155.8065 228.58549999999997Q156.549 227.86999999999998 157.64249999999998 227.86999999999998Q158.736 227.86999999999998 159.46499999999997 228.59175609756096Q160.194 229.31351219512194 160.194 230.44125609756097Q160.194 231.569 159.46499999999997 232.28449999999998Q158.736 232.99999999999997 157.64249999999998 232.99999999999997Z M163.272 232.62199999999999V213.72199999999998H166.674V220.87699999999998H167.16Q167.376 220.445 167.835 220.01299999999998Q168.294 219.581 169.0635 219.29749999999999Q169.833 219.01399999999998 171.02100000000002 219.01399999999998Q172.58700000000002 219.01399999999998 173.7615 219.72949999999997Q174.936 220.445 175.584 221.70049999999998Q176.232 222.956 176.232 224.63V232.62199999999999H172.83V224.89999999999998Q172.83 223.38799999999998 172.0875 222.63199999999998Q171.345 221.87599999999998 169.96800000000002 221.87599999999998Q168.40200000000002 221.87599999999998 167.538 222.91549999999998Q166.674 223.95499999999998 166.674 225.81799999999998V232.62199999999999Z M186.006 232.99999999999997Q184.008 232.99999999999997 182.41500000000002 232.19Q180.822 231.38 179.904 229.841Q178.986 228.302 178.986 226.142V225.70999999999998Q178.986 223.54999999999998 179.904 222.01099999999997Q180.822 220.47199999999998 182.41500000000002 219.66199999999998Q184.008 218.85199999999998 186.006 218.85199999999998Q188.004 218.85199999999998 189.59699999999998 219.66199999999998Q191.19 220.47199999999998 192.108 222.01099999999997Q193.026 223.54999999999998 193.026 225.70999999999998V226.142Q193.026 228.302 192.108 229.841Q191.19 231.38 189.59699999999998 232.19Q188.004 232.99999999999997 186.006 232.99999999999997ZM186.006 229.976Q187.572 229.976 188.598 228.9635Q189.624 227.951 189.624 226.06099999999998V225.791Q189.624 223.90099999999998 188.61149999999998 222.88849999999996Q187.599 221.87599999999998 186.006 221.87599999999998Q184.44 221.87599999999998 183.414 222.88849999999996Q182.388 223.90099999999998 182.388 225.791V226.06099999999998Q182.388 227.951 183.414 228.9635Q184.44 229.976 186.006 229.976Z M201.45 232.99999999999997Q198.831 232.99999999999997 197.15699999999998 231.86599999999999Q195.483 230.732 195.13199999999998 228.62599999999998L198.26399999999998 227.81599999999997Q198.453 228.761 198.8985 229.301Q199.344 229.84099999999998 200.00549999999998 230.07049999999998Q200.667 230.29999999999998 201.45 230.29999999999998Q202.63799999999998 230.29999999999998 203.20499999999998 229.8815Q203.772 229.463 203.772 228.84199999999998Q203.772 228.22099999999998 203.23199999999997 227.88349999999997Q202.69199999999998 227.546 201.504 227.32999999999998L200.748 227.195Q199.344 226.92499999999998 198.183 226.4525Q197.022 225.98 196.32 225.14299999999997Q195.618 224.30599999999998 195.618 222.98299999999998Q195.618 220.98499999999999 197.076 219.9185Q198.534 218.85199999999998 200.91 218.85199999999998Q203.15099999999998 218.85199999999998 204.63599999999997 219.851Q206.12099999999998 220.85 206.57999999999998 222.47L203.421 223.44199999999998Q203.20499999999998 222.416 202.5435 221.98399999999998Q201.882 221.552 200.91 221.552Q199.938 221.552 199.42499999999998 221.8895Q198.91199999999998 222.22699999999998 198.91199999999998 222.821Q198.91199999999998 223.469 199.452 223.77949999999998Q199.992 224.08999999999997 200.91 224.25199999999998L201.666 224.387Q203.178 224.65699999999998 204.4065 225.10249999999996Q205.635 225.54799999999997 206.3505 226.37149999999997Q207.066 227.195 207.066 228.599Q207.066 230.70499999999998 205.5405 231.85249999999996Q204.015 232.99999999999997 201.45 232.99999999999997Z M214.89600000000002 232.62199999999999Q213.573 232.62199999999999 212.7495 231.7985Q211.92600000000002 230.975 211.92600000000002 229.59799999999998V222.03799999999998H208.578V219.23H211.92600000000002V215.07199999999997H215.328V219.23H219.0V222.03799999999998H215.328V229.004Q215.328 229.814 216.084 229.814H218.67600000000002V232.62199999999999Z"/>
+</svg></script>
 <script src="/brands/brand.js" defer></script>
 </body>
 </html>

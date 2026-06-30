@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 565 742" role="img" aria-label="rook">
+  <title>rook</title>
+  <!-- the rook mark: a geometric perched corvid, facing right. flat two-color —
+       ink body (#15171C) with crisp negative-space facet cuts (the gaps between
+       the three ink masses are true background, not painted), plus one gold eye
+       (#F0B43C). use on light surfaces; for dark surfaces use rook-mark-dark.svg
+       (bone body). holds at every scale down to a 16px favicon — no separate
+       small-size asset. theme: bird / thermal / sky. no chess. -->
+  <g fill="#15171C">
+    <!-- head, beak, breast, lower body, right leg, ground bar -->
+    <path d="M564 309 L470 278 L418 278 L364 332 L462 433 L279 626 L376 725 L302 726 L288 741 L450 741 L437 726 L387 726 L351 647 L484 484 L484 330 Z"/>
+    <!-- folded wing / back triangle (negative-space cut separates it from head and lower body) -->
+    <path d="M446 433 L369 355 L126 594 L343 539 Z"/>
+    <!-- lower tail block + left leg -->
+    <path d="M328 555 L169 595 L58 741 L158 741 Z"/>
+  </g>
+  <!-- gold eye: downward-pointing triangle -->
+  <path fill="#F0B43C" d="M449 297 L471 297 L460 308 Z"/>
+</svg>
