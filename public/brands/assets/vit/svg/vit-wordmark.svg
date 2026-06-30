@@ -11,7 +11,9 @@
   <circle cx="32" cy="6" r="3" fill="#06D6A0"/>
   <line x1="32" y1="12.5" x2="32" y2="27" stroke="#06D6A0" stroke-width="3.5" stroke-linecap="round"/>
 
-  <!-- t — taller stem (tops out with the dots) + crossbar -->
-  <line x1="45" y1="4" x2="45" y2="27" stroke="#06D6A0" stroke-width="3.5" stroke-linecap="round"/>
+  <!-- t — taller stem; y1=4.75 so the round cap (half-width 1.75) tops out at
+       y=3.0, level with the dot tops and inside the viewBox top (y=3). Do NOT
+       set y1 below 4.75 — a round cap above y=3 gets clipped by the viewBox. -->
+  <line x1="45" y1="4.75" x2="45" y2="27" stroke="#06D6A0" stroke-width="3.5" stroke-linecap="round"/>
   <line x1="39" y1="12.5" x2="51" y2="12.5" stroke="#06D6A0" stroke-width="3.5" stroke-linecap="round"/>
 </svg>
