@@ -26,7 +26,7 @@
 
 :root {
   /* ── brand identity — CMO owns (cmo/brand/sol/index.md) ───────────────── */
-  --gold:        #F5C740; /* sun rays — decoration only */
+  --gold:        #FFCF33; /* sun rays — radiant; decoration only */
   --orange:      #E8923A; /* THE sol orange. DECORATION ONLY (see contrast law) */
   --orange-ink:  #B06A1A; /* accessible orange — ALL orange text + links on light */
   --orange-wash: #FBEFDD; /* soft orange tint — pill / avatar / badge fills */

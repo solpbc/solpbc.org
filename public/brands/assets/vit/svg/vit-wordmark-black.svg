@@ -1,0 +1,17 @@
+<svg viewBox="3.75 3 49 25.75" xmlns="http://www.w3.org/2000/svg">
+  <!-- vit wordmark: all letters drawn with the same rounded stroke.
+       Refined 2026-06-29 (Mike Salamon brand-read): t-stem topped up to the dot
+       line (was stunted) + i nudged left to tighten the v/i negative space. -->
+
+  <!-- v (the mark) -->
+  <circle cx="16" cy="6" r="3" fill="#0A0A0A"/>
+  <path d="M5.5 11 L16 27 L26.5 11" stroke="#0A0A0A" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+
+  <!-- i — dot + vertical stroke, same style as the mark -->
+  <circle cx="32" cy="6" r="3" fill="#0A0A0A"/>
+  <line x1="32" y1="12.5" x2="32" y2="27" stroke="#0A0A0A" stroke-width="3.5" stroke-linecap="round"/>
+
+  <!-- t — taller stem (tops out with the dots) + crossbar -->
+  <line x1="45" y1="4" x2="45" y2="27" stroke="#0A0A0A" stroke-width="3.5" stroke-linecap="round"/>
+  <line x1="39" y1="12.5" x2="51" y2="12.5" stroke="#0A0A0A" stroke-width="3.5" stroke-linecap="round"/>
+</svg>

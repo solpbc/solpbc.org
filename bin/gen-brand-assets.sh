@@ -42,20 +42,23 @@ fi
 MANIFEST="
 sol-pbc   pbc-wordmark        sol/pbc-wordmark.svg
 sol-pbc   pbc-wordmark-white  sol/pbc-wordmark-white.svg
+sol-pbc   pbc-wordmark-black  sol/pbc-wordmark-black.svg
 sol-pbc   sol-ring            sol/sol-ring.svg
 solstone  sol-wordmark        sol/sol-wordmark.svg
 solstone  sol-wordmark-white  sol/sol-wordmark-white.svg
+solstone  sol-wordmark-black  sol/sol-wordmark-black.svg
 solstone  sol-ring            sol/sol-ring.svg
 solstone  sol-app-icon-cream-squircle  sol/app-icon/sol-app-icon-cream-squircle.svg
 solstone  sol-app-icon-cream        sol/app-icon/sol-app-icon-cream.svg
 solstone  sol-app-icon-transparent  sol/app-icon/sol-app-icon-transparent.svg
 solstone  sol-lockup-solstone-app             sol/sol-lockup-solstone-app.svg
-solstone  sol-lockup-solstone-app-accessible  sol/sol-lockup-solstone-app-accessible.svg
 solstone  sol-lockup-solstone-app-white       sol/sol-lockup-solstone-app-white.svg
 vit       vit-mark            vit/vit-mark.svg
 vit       vit-mark-dark       vit/vit-mark-dark.svg
 vit       vit-mark-white      vit/vit-mark-white.svg
+vit       vit-mark-black      vit/vit-mark-black.svg
 vit       vit-wordmark        vit/vit-wordmark.svg
+vit       vit-wordmark-black  vit/vit-wordmark-black.svg
 vit       vit-lockup-sticker-white  vit/vit-lockup-sticker-white.svg
 vit       vit-lockup-sticker-black  vit/vit-lockup-sticker-black.svg
 vit       badge-vit-enabled       vit/badge-vit-enabled.svg
