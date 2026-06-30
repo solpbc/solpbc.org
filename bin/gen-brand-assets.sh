@@ -56,6 +56,8 @@ vit       vit-mark            vit/vit-mark.svg
 vit       vit-mark-dark       vit/vit-mark-dark.svg
 vit       vit-mark-white      vit/vit-mark-white.svg
 vit       vit-wordmark        vit/vit-wordmark.svg
+vit       vit-lockup-sticker-white  vit/vit-lockup-sticker-white.svg
+vit       vit-lockup-sticker-black  vit/vit-lockup-sticker-black.svg
 vit       badge-vit-enabled       vit/badge-vit-enabled.svg
 vit       badge-vit-enabled-flat  vit/badge-vit-enabled-flat.svg
 vit       badge-social-open-source vit/badge-social-open-source.svg
