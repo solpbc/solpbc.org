@@ -46,6 +46,7 @@ sol-pbc   sol-ring            sol/sol-ring.svg
 solstone  sol-wordmark        sol/sol-wordmark.svg
 solstone  sol-wordmark-white  sol/sol-wordmark-white.svg
 solstone  sol-ring            sol/sol-ring.svg
+solstone  sol-app-icon-cream-squircle  sol/app-icon/sol-app-icon-cream-squircle.svg
 solstone  sol-app-icon-cream        sol/app-icon/sol-app-icon-cream.svg
 solstone  sol-app-icon-transparent  sol/app-icon/sol-app-icon-transparent.svg
 solstone  sol-lockup-solstone-app             sol/sol-lockup-solstone-app.svg
