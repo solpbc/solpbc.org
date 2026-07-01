@@ -252,14 +252,18 @@ async function handleContact(request, env, ctx) {
 
 // --- sweep endpoints for hub recovery ---
 
-function verifyHubSecret(request, env) {
-  const secret = env.HUB_WEBHOOK_SECRET;
+// Sweep-endpoint auth uses a DISTINCT secret from the outbound-push
+// HUB_WEBHOOK_SECRET (non-coupling: webhook-ingest and contact-sweep are two
+// trust paths and must not share one credential). The hub presents this value
+// as X-Hub-Secret on its GET/DELETE /api/contact/pending calls.
+function verifySweepSecret(request, env) {
+  const secret = env.CONTACT_SWEEP_SECRET;
   if (!secret) return false;
   return request.headers.get('X-Hub-Secret') === secret;
 }
 
 async function handleSweepList(request, env) {
-  if (!verifyHubSecret(request, env)) {
+  if (!verifySweepSecret(request, env)) {
     return jsonResponse({ error: 'unauthorized' }, 401);
   }
   if (!env.CONTACT_SUBMISSIONS) {
@@ -281,7 +285,7 @@ async function handleSweepList(request, env) {
 }
 
 async function handleSweepAck(request, env, submissionId) {
-  if (!verifyHubSecret(request, env)) {
+  if (!verifySweepSecret(request, env)) {
     return jsonResponse({ error: 'unauthorized' }, 401);
   }
   if (!env.CONTACT_SUBMISSIONS) {

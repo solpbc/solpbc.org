@@ -30,4 +30,6 @@ id = "f1a2b62b145346179858ef66612b58cb"
 # Secrets (set with: wrangler secret put <NAME> --name solpbc-org)
 # TURNSTILE_SECRET — Turnstile secret key from Cloudflare dashboard
 # HUB_WEBHOOK_URL — outbound hub webhook endpoint
-# HUB_WEBHOOK_SECRET — shared secret for outbound hub webhook delivery
+# HUB_WEBHOOK_SECRET — secret sent on OUTBOUND contact-form webhook delivery to the hub
+# CONTACT_SWEEP_SECRET — DISTINCT secret the hub presents to authenticate its INBOUND
+#   GET/DELETE /api/contact/pending sweep calls (non-coupling: split from HUB_WEBHOOK_SECRET)
