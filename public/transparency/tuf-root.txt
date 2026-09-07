@@ -1,0 +1,4 @@
+# sol pbc v2 transparency root — witness log
+# published at solpbc.org/transparency/tuf-root.txt, the public solstone-transparency
+# repository, and @solpbc.org on Bluesky. append-only: each new root version adds two
+# lines below; prior lines are never removed.
