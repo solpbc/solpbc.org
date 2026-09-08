@@ -1,4 +1,11 @@
 # sol pbc v2 transparency root — witness log
-# published at solpbc.org/transparency/tuf-root.txt, the public solstone-transparency
-# repository, and @solpbc.org on Bluesky. append-only: each new root version adds two
-# lines below; prior lines are never removed.
+# each v2 root's fingerprint is carried at more than one location sol pbc controls:
+# its two lines here, and the root file itself at protocol/tuf-root.json, which holds
+# one version at a time, in the public solpbc/solstone-transparency repository.
+# each root version adds a key id line and a sha256 line over its own root file's
+# bytes; only the sha256 line names the version. to check a pinned root, match it
+# against the pair whose version equals your copy's signed.version, then confirm no
+# higher version line follows. a version with no pair here is not yet recorded.
+# these lines are a cross-check for a root you have already pinned, not a trust root
+# themselves.
+# append-only: prior lines are never removed.
