@@ -1,11 +1,13 @@
 # sol pbc v2 transparency root — witness log
-# each v2 root's fingerprint is carried at more than one location sol pbc controls:
-# its two lines here, and the root file itself at protocol/tuf-root.json, which holds
-# one version at a time, in the public solpbc/solstone-transparency repository.
-# each root version adds a key id line and a sha256 line over its own root file's
-# bytes; only the sha256 line names the version. to check a pinned root, match it
-# against the pair whose version equals your copy's signed.version, then confirm no
-# higher version line follows. a version with no pair here is not yet recorded.
+# each v2 root's fingerprint is published at more than one location sol pbc controls:
+# its lines here, and the root file itself at protocol/tuf-root.json, which holds one
+# version at a time, in the public solpbc/solstone-transparency repository.
+# every root version adds a sha256 line naming that version, taken over its own root
+# file's bytes; a key id line covers the sha256 lines below it and reappears only when
+# the key set changes. to check a pinned root, match its digest against the sha256 line
+# for your copy's signed.version, and its key ids against the nearest key id line
+# above that; then confirm no higher version line appears. a version with no sha256
+# line here is not yet recorded.
 # these lines are a cross-check for a root you have already pinned, not a trust root
 # themselves.
 # append-only: prior lines are never removed.
