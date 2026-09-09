@@ -13,3 +13,6 @@
 # append-only: prior lines are never removed.
 solpbc-tuf-root keyid: 050ecd6f44be9fefb96e67f07a568c838c747f2d7e9289d517b8797a04405606
 solpbc-tuf-root v1  sha256:    3a3f2f8eba390aa466ca77cd226d2609e415943008a55dea4fa3187f2223344a
+# clarifying append: in the header above, "its key ids" means the key ids in the pinned
+# root's signed.roles.root.keyids. it does not mean signed.keys, which also carries keys
+# for the other roles.
