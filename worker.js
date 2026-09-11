@@ -220,7 +220,6 @@ async function handleContact(request, env, ctx) {
       name,
       email,
       message,
-      ip: request.headers.get('CF-Connecting-IP') || '',
       timestamp: new Date().toISOString(),
     };
 
