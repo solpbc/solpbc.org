@@ -20,8 +20,7 @@
 # via the build graph rather than a decision.
 #
 # Source of truth for the SVGs is the (private) extro repo's cmo/brand/ tree.
-# solstone/ is the ruled mark family; sol/ retains only pbc-wordmark* (the
-# company wordmark, founder-deferred) — see that tree's README.
+# solstone/ is the ruled mark family; sol-pbc/ holds the company wordmark.
 # Override with BRAND_SRC=/abs/path if it is not the sibling default.
 #
 # Renderer: the spec names `rsvg-convert` (librsvg). librsvg2-tools is not
@@ -30,7 +29,7 @@
 # rsvg-convert when present and otherwise fall back to cairosvg in a
 # self-bootstrapped local venv. Both are Cairo-family renderers; both render
 # PNGs natively at the target size (never downsample — founder rule,
-# cmo/brand/sol/index.md § rendering rule) and both emit true-vector PDFs
+# cmo/brand/identity/index.md § rendering rule) and both emit true-vector PDFs
 # (zero raster image rows under `pdfimages -list` — acceptance gate §7.6).
 # The portal's sol pbc + solstone assets (pbc-wordmark, mark + white/black
 # variants) have no per-size hand-tuned source, so a uniform native render
@@ -64,9 +63,9 @@ fi
 # One line per asset: "<brand> <asset-name> <source-svg-path-relative-to-BRAND_SRC>"
 # <brand> in sol-pbc | solstone | vit ; names match the portal's download set.
 MANIFEST="
-sol-pbc   pbc-wordmark        sol/pbc-wordmark.svg
-sol-pbc   pbc-wordmark-white  sol/pbc-wordmark-white.svg
-sol-pbc   pbc-wordmark-black  sol/pbc-wordmark-black.svg
+sol-pbc   pbc-wordmark        sol-pbc/pbc-wordmark.svg
+sol-pbc   pbc-wordmark-white  sol-pbc/pbc-wordmark-white.svg
+sol-pbc   pbc-wordmark-black  sol-pbc/pbc-wordmark-black.svg
 solstone  mark                solstone/mark.svg
 solstone  mark-white          solstone/mark-white.svg
 solstone  mark-black          solstone/mark-black.svg
