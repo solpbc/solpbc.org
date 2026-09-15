@@ -74,6 +74,8 @@ solstone  app-icon-cream            solstone/app-icon/app-icon-cream.svg
 solstone  app-icon-transparent      solstone/app-icon/app-icon-transparent.svg
 solstone  lockup-solstone-app                 solstone/lockup-solstone-app.svg
 solstone  lockup-solstone-app-white           solstone/lockup-solstone-app-white.svg
+solstone  lockup-solstone-app-horizontal              solstone/lockup-solstone-app-horizontal.svg
+solstone  lockup-solstone-app-horizontal-white        solstone/lockup-solstone-app-horizontal-white.svg
 vit       vit-mark            vit/vit-mark.svg
 vit       vit-mark-dark       vit/vit-mark-dark.svg
 vit       vit-mark-white      vit/vit-mark-white.svg
