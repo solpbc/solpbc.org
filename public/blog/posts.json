@@ -1,5 +1,24 @@
 [
   {
+    "title": "v2 is out",
+    "slug": "v2-is-out",
+    "date": "2026-09-16",
+    "author": "jer & extro",
+    "description": "solstone 2.0 is out on every platform, the phone beta is open to anyone, and every journal release now comes with a public record you can check. what solstone does, what's new, and what's coming next.",
+    "tags": [
+      "solstone",
+      "v2",
+      "release",
+      "mobile",
+      "trust"
+    ],
+    "word_count": 1009,
+    "reading_time": 6,
+    "unlisted": false,
+    "atproto_rkey": "3mvn2snf7nahy",
+    "atproto_uri": "at://did:plc:kg5hlfyrdjmtiyymo57n7dpg/site.standard.document/3mvn2snf7nahy"
+  },
+  {
     "title": "a preview of v2",
     "slug": "a-preview-of-v2",
     "date": "2026-09-02",

@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>v2 is out — sol pbc</title>
+    <meta name="description" content="solstone 2.0 is out on every platform, the phone beta is open to anyone, and every journal release now comes with a public record you can check. what solstone does, what's new, and what's coming next.">
+    <link rel="canonical" href="https://solpbc.org/blog/v2-is-out/">
+    <meta property="og:title" content="v2 is out">
+    <meta property="og:description" content="solstone 2.0 is out on every platform, the phone beta is open to anyone, and every journal release now comes with a public record you can check. what solstone does, what's new, and what's coming next.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://solpbc.org/blog/v2-is-out/">
+    <meta property="og:site_name" content="sol pbc">
+    <meta property="article:published_time" content="2026-09-16T00:00:00Z">
+    <meta property="article:author" content="jer &amp; extro">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="v2 is out">
+    <meta name="twitter:description" content="solstone 2.0 is out on every platform, the phone beta is open to anyone, and every journal release now comes with a public record you can check. what solstone does, what's new, and what's coming next.">
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"v2 is out","description":"solstone 2.0 is out on every platform, the phone beta is open to anyone, and every journal release now comes with a public record you can check. what solstone does, what's new, and what's coming next.","datePublished":"2026-09-16T00:00:00Z","dateModified":"2026-09-16T00:00:00Z","author":{"@type":"Person","name":"Jeremie Miller"},"publisher":{"@type":"Organization","name":"sol pbc","url":"https://solpbc.org","logo":{"@type":"ImageObject","url":"https://solpbc.org/static/pbc-wordmark-512.png"}},"url":"https://solpbc.org/blog/v2-is-out/","mainEntityOfPage":{"@type":"WebPage","@id":"https://solpbc.org/blog/v2-is-out/"}}</script>
+    <link rel="alternate" type="application/atom+xml" title="sol pbc blog" href="/blog/feed.xml">
+    <link rel="site.standard.document" href="at://did:plc:kg5hlfyrdjmtiyymo57n7dpg/site.standard.document/3mvn2snf7nahy">
+    <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="/static/favicon-32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/static/favicon-16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/static/apple-touch-icon.png">
+    <link rel="stylesheet" href="/static/tokens.css">
+    <style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+@font-face {
+    font-family: 'Comfortaa';
+    src: url('/blog/fonts/comfortaa-latin.woff2') format('woff2');
+    font-weight: 400 700;
+    font-display: swap;
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6,
+        U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC,
+        U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+    font-family: 'Comfortaa';
+    src: url('/blog/fonts/comfortaa-latin-ext.woff2') format('woff2');
+    font-weight: 400 700;
+    font-display: swap;
+    unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7,
+        U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F,
+        U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113,
+        U+2C60-2C7F, U+A720-A7FF;
+}
+
+body {
+    font-family: system-ui, -apple-system, sans-serif;
+    background: var(--paper);
+    color: var(--ink-soft-paper);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+.container {
+    max-width: 600px;
+    width: 90vw;
+    margin: 0 auto;
+    padding: 0 0 2rem;
+}
+
+/* --- navigation --- */
+nav {
+    padding: 2rem 0 1.5rem;
+    font-size: 0.9rem;
+}
+nav a {
+    color: var(--orange-ink);
+    text-decoration: none;
+}
+nav a:hover {
+    text-decoration: underline;
+}
+nav .sep {
+    color: #ccc;
+    margin: 0 0.4rem;
+}
+
+/* --- headings --- */
+h1 {
+    font-family: var(--font-display);
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-transform: lowercase;
+    color: var(--ink);
+    line-height: 1.3;
+    margin-bottom: 0.5rem;
+}
+h2 {
+    font-family: var(--font-display);
+    font-size: 1.4rem;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    text-transform: lowercase;
+    color: var(--ink);
+    margin: 2.5rem 0 1rem;
+}
+h3 {
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: var(--ink);
+    margin: 2rem 0 0.75rem;
+}
+h4, h5, h6 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--ink);
+    margin: 1.5rem 0 0.5rem;
+}
+
+/* --- article body --- */
+article p  { margin-bottom: 1.5rem; }
+article ul,
+article ol { margin-bottom: 1.5rem; padding-left: 1.5rem; }
+article li { margin-bottom: 0.5rem; }
+article a  { color: var(--orange-ink); text-decoration: none; }
+article a:hover { text-decoration: underline; }
+
+article blockquote {
+    border-left: 3px solid var(--orange);
+    padding-left: 1rem;
+    margin: 1.5rem 0;
+    color: var(--ink-faint-paper);
+    font-style: italic;
+}
+
+article pre {
+    background: #f6f8fa;
+    padding: 1rem;
+    border-radius: 4px;
+    overflow-x: auto;
+    margin-bottom: 1.5rem;
+    font-size: 0.88rem;
+    line-height: 1.5;
+}
+article code {
+    font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+    font-size: 0.9em;
+}
+article p code,
+article li code {
+    background: #f6f8fa;
+    padding: 0.15rem 0.4rem;
+    border-radius: 3px;
+}
+
+article img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+    margin: 1.5rem 0;
+    display: block;
+}
+article strong { color: var(--ink); }
+article hr {
+    border: none;
+    border-top: 1px solid #eee;
+    margin: 2rem 0;
+}
+article table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 1.5rem;
+    table-layout: auto;
+}
+article th {
+    font-weight: 600;
+    text-align: left;
+    padding: 0.6rem 0.75rem;
+    border-bottom: 2px solid #e0e0e0;
+}
+article td {
+    padding: 0.6rem 0.75rem;
+    border-bottom: 1px solid #eee;
+}
+
+/* --- metadata line --- */
+.meta {
+    color: var(--ink-faint-paper);
+    font-size: 0.9rem;
+    margin-bottom: 2.5rem;
+}
+
+/* --- footer --- */
+footer {
+    padding: 3rem 0 2rem;
+    border-top: 1px solid #eee;
+    margin-top: 3rem;
+    font-size: 0.9rem;
+}
+footer a {
+    color: var(--orange-ink);
+    text-decoration: none;
+}
+footer a:hover {
+    text-decoration: underline;
+}
+footer .copyright {
+    color: var(--ink-faint-paper);
+    font-size: 0.85rem;
+    margin-top: 1rem;
+}
+
+/* --- index page --- */
+.blog-title {
+    margin-bottom: 2rem;
+}
+.post-list {
+    list-style: none;
+    padding: 0;
+}
+.post-item {
+    margin-bottom: 2.5rem;
+}
+.post-item h2 {
+    font-size: 1.25rem;
+    margin: 0 0 0.3rem;
+    letter-spacing: 0.03em;
+}
+.post-item h2 a {
+    color: var(--ink);
+    text-decoration: none;
+}
+.post-item h2 a:hover {
+    color: var(--orange-ink);
+}
+.post-item .meta {
+    margin-bottom: 0.5rem;
+}
+.post-item .description {
+    color: var(--ink-soft-paper);
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+/* --- responsive --- */
+@media (max-width: 480px) {
+    h1 { font-size: 1.6rem; }
+    h2 { font-size: 1.2rem; }
+    nav { padding: 1.5rem 0 1rem; }
+    .meta { font-size: 0.85rem; }
+}
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <a href="/blog/">← blog</a><span class="sep">·</span><a href="/">sol pbc</a>
+        </nav>
+        <article>
+            <h1>v2 is out</h1>
+            <div class="meta">2026-09-16 · jer &amp; extro · 6 min read</div>
+<p>the era of solstone v2.0 is here!</p>
+<p>if you are new here: solstone is a personal memory platform. the solstone app takes in what you share with it, and all of it goes into your journal, an open source, local-first memory that the agents you already use can work from. your journal lives on a device you own. it is always private, only yours.</p>
+<p><strong>install it:</strong> mac and linux at <a href="https://solstone.app/download">solstone.app/download</a>. <strong>put your phone on it:</strong> iphone, ipad and android at <a href="https://solstone.app/beta">solstone.app/beta</a>. already running solstone? check for updates; 2.0 is waiting.</p>
+<h2>what your journal does for you</h2>
+<p><strong>a knowledge graph of your life, built for you.</strong> every person, project and place you share with your journal gets mapped and connected, and it keeps itself current. before a meeting, what you discussed last time and what changed since is already there.</p>
+<p><strong>commitments you never wrote down.</strong> things you said you would do, and things people said they would do for you, noticed in ordinary conversation and kept where you can find them.</p>
+<p><strong>search across everything you have seen and heard</strong>, and a memory your own agents can read from, on your terms. dated folders of plain markdown and json you can open, grep and back up yourself. no proprietary format, no lock-in.</p>
+<h2>what&rsquo;s new in 2.0</h2>
+<p><strong>one native journal.</strong> the journal is one compiled program now, built on <a href="https://solpbc.org/blog/two-weeks-all-rust-no-python/">the Rust rewrite we finished in august</a>. one download. it starts faster, it heals itself after a bad shutdown, and a 1.x journal upgrades in place with everything in it intact.</p>
+<p><strong>your sources, your call.</strong> microphone and screen are independent now: turn on one, the other, or both, and the app tells you plainly what is running and what is not. on your phone, a source you have never set up says &ldquo;ready to set up&rdquo; and stays off until you say so.</p>
+<p><strong>a local model, from inside your journal.</strong> pick a model in the journal&rsquo;s thinking app, watch it download, cancel or retry. thinking runs on your own machine by default, free. and on apple silicon, local transcription now starts on smaller macs that were being turned away.</p>
+<p><strong>the phone, rebuilt.</strong> ipad has a layout of its own. iphone gets widgets for your home and lock screen and a control center button to start audio. your apple watch&rsquo;s card rises in the smart stack while audio is on, so it is there when you glance. and the whole app follows your light or dark setting.</p>
+<h2>the phone beta is open</h2>
+<p>your phone is the best thing you can add to your journal, and as of this week anyone can put it there. <a href="https://solstone.app/beta">solstone.app/beta</a> is one page with two buttons: iphone and ipad join through TestFlight (Apple&rsquo;s app for betas; it needs iOS 26 or later), and android downloads the signed app straight from us. no sign-up form, no email, nothing to hand over. your phone pairs with your journal over a private connection and everything it takes in lands there, on your device, not ours.</p>
+<h2>check us, don&rsquo;t take our word for it</h2>
+<p>every journal release now ships with a signed transparency record: what we built, from which source, with which signing key, and the exact bytes you download. the records live at transparency.solstone.app, and <a href="https://trust.solstone.app/">trust.solstone.app</a> walks through them in plain language, links back to the originals, and has a <a href="https://trust.solstone.app/verify/">verify page</a> that shows you how to check one yourself. the signing root it all chains to is <a href="https://solpbc.org/transparency/tuf-root.txt">published on solpbc.org</a>. all seven 2.0 journal releases have a record, and six of the seven were checked before acceptance by a part of the company that did not build it, every file re-downloaded and matched byte for byte.</p>
+<p>we <a href="https://solpbc.org/blog/a-preview-of-v2/">previewed the trust portal two weeks ago</a>. it is live now. the rest of what we do where you can&rsquo;t see is in <a href="https://solpbc.org/blog/on-your-side/">on your side, all the way down</a>.</p>
+<h2>what shipped, by platform</h2>
+<p>since september 10: 34 releases across eight platforms, and counting.</p>
+<ul>
+<li><strong>the journal, mac and linux:</strong> 7 releases, 1.0.22 → 2.0.7. <a href="https://solstone.app/releases">notes</a> · <a href="https://trust.solstone.app/software/journal">records</a></li>
+<li><strong>the solstone app for mac:</strong> 5 releases, 1.4.16 → 2.0.9. <a href="https://solstone.app/releases/macos">notes</a></li>
+<li><strong>the journal app for mac:</strong> 5 releases, 1.0.22 → 2.0.9. <a href="https://solstone.app/releases/journal-macos">notes</a></li>
+<li><strong>linux:</strong> 4 releases, 1.0.2 → 2.0.3. <a href="https://solstone.app/releases/linux">notes</a></li>
+<li><strong>windows:</strong> 5 releases, 0.2.11 → 2.0.4. <a href="https://solstone.app/releases/windows">notes</a></li>
+<li><strong>tmux:</strong> 3 releases, 1.0.2 → 2.0.2.</li>
+<li><strong>iphone, ipad and apple watch:</strong> 3 beta builds, 0.1.2 → 2.0.1. <a href="https://solstone.app/releases/ios">notes</a> · <a href="https://solstone.app/beta">join</a></li>
+<li><strong>android:</strong> 2 releases, 0.2.2 → 2.1.0. <a href="https://solstone.app/releases/android">notes</a> · <a href="https://solstone.app/beta">join</a></li>
+</ul>
+<h2>what&rsquo;s in the works</h2>
+<ul>
+<li><strong>your own agents, plugged into your journal.</strong> MCP connector support is coming in a point release soon: connect the agents you already use to your journal over MCP, the protocol they already speak. read-only first, with permissions you set per connection, a local log of every call, and off until you turn it on.</li>
+<li><strong>the windows journal itself.</strong> the windows app shipped with the rest; the native journal that holds your memories on windows is inching closer, and until it lands a windows machine pairs to a journal on a mac or linux box.</li>
+<li><strong>the app stores.</strong> the iphone listing and privacy labels are written and the submission is next in line; the beta is the way in until then.</li>
+<li><strong>confidential processing</strong>, for thinking off your device when there is not enough compute at home, is available to approved scouts, a small alpha while we polish. the local model stays the default.</li>
+</ul>
+<p>install it, and put your phone on the beta. then tell us the first thing you wanted it to remember.</p>
+<hr>
+<p><em>sol pbc is a public benefit corporation. the promises about your data live in article 8 of our filed articles of incorporation, not in a policy we could quietly change: it can&rsquo;t be amended without jer&rsquo;s personal signature, and after him the language can only get stronger, never weaker. <a href="https://solpbc.org/blog/on-your-side/">what that means</a>.</em></p>
+        </article>
+        <footer>
+            <a href="/blog/">← back to blog</a>
+            <p class="copyright">© 2026 sol pbc · solpbc.org</p>
+        </footer>
+    </div>
+</body>
+</html>

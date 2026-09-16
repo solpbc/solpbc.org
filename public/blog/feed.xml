@@ -5,7 +5,54 @@
     <link href="https://solpbc.org/blog/feed.xml" rel="self"/>
     <link href="https://solpbc.org/blog/"/>
     <id>https://solpbc.org/blog/</id>
-    <updated>2026-09-02T00:00:00Z</updated>
+    <updated>2026-09-16T00:00:00Z</updated>
+    <entry>
+        <title>v2 is out</title>
+        <link href="https://solpbc.org/blog/v2-is-out/" rel="alternate"/>
+        <id>https://solpbc.org/blog/v2-is-out/</id>
+        <updated>2026-09-16T00:00:00Z</updated>
+        <author><name>jer &amp; extro</name></author>
+        <summary>solstone 2.0 is out on every platform, the phone beta is open to anyone, and every journal release now comes with a public record you can check. what solstone does, what's new, and what's coming next.</summary>
+        <content type="html">&lt;p&gt;the era of solstone v2.0 is here!&lt;/p&gt;
+&lt;p&gt;if you are new here: solstone is a personal memory platform. the solstone app takes in what you share with it, and all of it goes into your journal, an open source, local-first memory that the agents you already use can work from. your journal lives on a device you own. it is always private, only yours.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;install it:&lt;/strong&gt; mac and linux at &lt;a href=&quot;https://solstone.app/download&quot;&gt;solstone.app/download&lt;/a&gt;. &lt;strong&gt;put your phone on it:&lt;/strong&gt; iphone, ipad and android at &lt;a href=&quot;https://solstone.app/beta&quot;&gt;solstone.app/beta&lt;/a&gt;. already running solstone? check for updates; 2.0 is waiting.&lt;/p&gt;
+&lt;h2&gt;what your journal does for you&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;a knowledge graph of your life, built for you.&lt;/strong&gt; every person, project and place you share with your journal gets mapped and connected, and it keeps itself current. before a meeting, what you discussed last time and what changed since is already there.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;commitments you never wrote down.&lt;/strong&gt; things you said you would do, and things people said they would do for you, noticed in ordinary conversation and kept where you can find them.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;search across everything you have seen and heard&lt;/strong&gt;, and a memory your own agents can read from, on your terms. dated folders of plain markdown and json you can open, grep and back up yourself. no proprietary format, no lock-in.&lt;/p&gt;
+&lt;h2&gt;what&amp;rsquo;s new in 2.0&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;one native journal.&lt;/strong&gt; the journal is one compiled program now, built on &lt;a href=&quot;https://solpbc.org/blog/two-weeks-all-rust-no-python/&quot;&gt;the Rust rewrite we finished in august&lt;/a&gt;. one download. it starts faster, it heals itself after a bad shutdown, and a 1.x journal upgrades in place with everything in it intact.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;your sources, your call.&lt;/strong&gt; microphone and screen are independent now: turn on one, the other, or both, and the app tells you plainly what is running and what is not. on your phone, a source you have never set up says &amp;ldquo;ready to set up&amp;rdquo; and stays off until you say so.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;a local model, from inside your journal.&lt;/strong&gt; pick a model in the journal&amp;rsquo;s thinking app, watch it download, cancel or retry. thinking runs on your own machine by default, free. and on apple silicon, local transcription now starts on smaller macs that were being turned away.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;the phone, rebuilt.&lt;/strong&gt; ipad has a layout of its own. iphone gets widgets for your home and lock screen and a control center button to start audio. your apple watch&amp;rsquo;s card rises in the smart stack while audio is on, so it is there when you glance. and the whole app follows your light or dark setting.&lt;/p&gt;
+&lt;h2&gt;the phone beta is open&lt;/h2&gt;
+&lt;p&gt;your phone is the best thing you can add to your journal, and as of this week anyone can put it there. &lt;a href=&quot;https://solstone.app/beta&quot;&gt;solstone.app/beta&lt;/a&gt; is one page with two buttons: iphone and ipad join through TestFlight (Apple&amp;rsquo;s app for betas; it needs iOS 26 or later), and android downloads the signed app straight from us. no sign-up form, no email, nothing to hand over. your phone pairs with your journal over a private connection and everything it takes in lands there, on your device, not ours.&lt;/p&gt;
+&lt;h2&gt;check us, don&amp;rsquo;t take our word for it&lt;/h2&gt;
+&lt;p&gt;every journal release now ships with a signed transparency record: what we built, from which source, with which signing key, and the exact bytes you download. the records live at transparency.solstone.app, and &lt;a href=&quot;https://trust.solstone.app/&quot;&gt;trust.solstone.app&lt;/a&gt; walks through them in plain language, links back to the originals, and has a &lt;a href=&quot;https://trust.solstone.app/verify/&quot;&gt;verify page&lt;/a&gt; that shows you how to check one yourself. the signing root it all chains to is &lt;a href=&quot;https://solpbc.org/transparency/tuf-root.txt&quot;&gt;published on solpbc.org&lt;/a&gt;. all seven 2.0 journal releases have a record, and six of the seven were checked before acceptance by a part of the company that did not build it, every file re-downloaded and matched byte for byte.&lt;/p&gt;
+&lt;p&gt;we &lt;a href=&quot;https://solpbc.org/blog/a-preview-of-v2/&quot;&gt;previewed the trust portal two weeks ago&lt;/a&gt;. it is live now. the rest of what we do where you can&amp;rsquo;t see is in &lt;a href=&quot;https://solpbc.org/blog/on-your-side/&quot;&gt;on your side, all the way down&lt;/a&gt;.&lt;/p&gt;
+&lt;h2&gt;what shipped, by platform&lt;/h2&gt;
+&lt;p&gt;since september 10: 34 releases across eight platforms, and counting.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;the journal, mac and linux:&lt;/strong&gt; 7 releases, 1.0.22 → 2.0.7. &lt;a href=&quot;https://solstone.app/releases&quot;&gt;notes&lt;/a&gt; · &lt;a href=&quot;https://trust.solstone.app/software/journal&quot;&gt;records&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;the solstone app for mac:&lt;/strong&gt; 5 releases, 1.4.16 → 2.0.9. &lt;a href=&quot;https://solstone.app/releases/macos&quot;&gt;notes&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;the journal app for mac:&lt;/strong&gt; 5 releases, 1.0.22 → 2.0.9. &lt;a href=&quot;https://solstone.app/releases/journal-macos&quot;&gt;notes&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;linux:&lt;/strong&gt; 4 releases, 1.0.2 → 2.0.3. &lt;a href=&quot;https://solstone.app/releases/linux&quot;&gt;notes&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;windows:&lt;/strong&gt; 5 releases, 0.2.11 → 2.0.4. &lt;a href=&quot;https://solstone.app/releases/windows&quot;&gt;notes&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;tmux:&lt;/strong&gt; 3 releases, 1.0.2 → 2.0.2.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;iphone, ipad and apple watch:&lt;/strong&gt; 3 beta builds, 0.1.2 → 2.0.1. &lt;a href=&quot;https://solstone.app/releases/ios&quot;&gt;notes&lt;/a&gt; · &lt;a href=&quot;https://solstone.app/beta&quot;&gt;join&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;android:&lt;/strong&gt; 2 releases, 0.2.2 → 2.1.0. &lt;a href=&quot;https://solstone.app/releases/android&quot;&gt;notes&lt;/a&gt; · &lt;a href=&quot;https://solstone.app/beta&quot;&gt;join&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;what&amp;rsquo;s in the works&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;your own agents, plugged into your journal.&lt;/strong&gt; MCP connector support is coming in a point release soon: connect the agents you already use to your journal over MCP, the protocol they already speak. read-only first, with permissions you set per connection, a local log of every call, and off until you turn it on.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;the windows journal itself.&lt;/strong&gt; the windows app shipped with the rest; the native journal that holds your memories on windows is inching closer, and until it lands a windows machine pairs to a journal on a mac or linux box.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;the app stores.&lt;/strong&gt; the iphone listing and privacy labels are written and the submission is next in line; the beta is the way in until then.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;confidential processing&lt;/strong&gt;, for thinking off your device when there is not enough compute at home, is available to approved scouts, a small alpha while we polish. the local model stays the default.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;install it, and put your phone on the beta. then tell us the first thing you wanted it to remember.&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;em&gt;sol pbc is a public benefit corporation. the promises about your data live in article 8 of our filed articles of incorporation, not in a policy we could quietly change: it can&amp;rsquo;t be amended without jer&amp;rsquo;s personal signature, and after him the language can only get stronger, never weaker. &lt;a href=&quot;https://solpbc.org/blog/on-your-side/&quot;&gt;what that means&lt;/a&gt;.&lt;/em&gt;&lt;/p&gt;</content>
+    </entry>
     <entry>
         <title>a preview of v2</title>
         <link href="https://solpbc.org/blog/a-preview-of-v2/" rel="alternate"/>
