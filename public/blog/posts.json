@@ -16,7 +16,9 @@
     "reading_time": 6,
     "unlisted": false,
     "atproto_rkey": "3mvn2snf7nahy",
-    "atproto_uri": "at://did:plc:kg5hlfyrdjmtiyymo57n7dpg/site.standard.document/3mvn2snf7nahy"
+    "atproto_uri": "at://did:plc:kg5hlfyrdjmtiyymo57n7dpg/site.standard.document/3mvn2snf7nahy",
+    "bsky_post_uri": "at://did:plc:kg5hlfyrdjmtiyymo57n7dpg/app.bsky.feed.post/3mvn2yb5wzs2g",
+    "bsky_post_cid": "bafyreicqc3ahq64u6enwz3styzmqks4apmzpaejqz2ogcqhrkskqmdksnu"
   },
   {
     "title": "a preview of v2",
