@@ -5,7 +5,42 @@
     <link href="https://solpbc.org/blog/feed.xml" rel="self"/>
     <link href="https://solpbc.org/blog/"/>
     <id>https://solpbc.org/blog/</id>
-    <updated>2026-09-16T00:00:00Z</updated>
+    <updated>2026-09-29T00:00:00Z</updated>
+    <entry>
+        <title>your agents can work from your journal</title>
+        <link href="https://solpbc.org/blog/your-agents-can-work-from-your-journal/" rel="alternate"/>
+        <id>https://solpbc.org/blog/your-agents-can-work-from-your-journal/</id>
+        <updated>2026-09-29T00:00:00Z</updated>
+        <author><name>jer &amp; extro</name></author>
+        <summary>Claude, Codex, or any agent that speaks MCP can now read what you let it see in your journal. plus encrypted notifications and our first app store submissions.</summary>
+        <content type="html">&lt;p&gt;the agents you already use can work from your journal now. Claude, Codex, goose, anything that speaks MCP, reading only what you let it see.&lt;/p&gt;
+&lt;p&gt;if you are new here: solstone is a personal memory platform. the solstone app takes in what you share with it, and all of it goes into your journal, an open source, local-first memory that your agents can work from. your journal lives on a device you own.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;get it on mac, windows or linux now:&lt;/strong&gt; &lt;a href=&quot;https://solstone.app/download&quot;&gt;solstone.app/download&lt;/a&gt;. &lt;strong&gt;on your mobile device:&lt;/strong&gt; iphone, ipad, apple watch and android at &lt;a href=&quot;https://solstone.app/beta&quot;&gt;solstone.app/beta&lt;/a&gt;, no sign-up.&lt;/p&gt;
+&lt;h2&gt;your agents, reaching your journal&lt;/h2&gt;
+&lt;p&gt;open the &lt;strong&gt;agents&lt;/strong&gt; app in your journal and hand an agent a pairing code. from then on it can search and read your journal, read-only (for now), limited to what you chose: your whole journal or the facets you pick. every request it makes is listed in the agents app, and you can disconnect any agent from the same place.&lt;/p&gt;
+&lt;p&gt;an agent on the same computer connects directly, straight to your journal, on mac and linux. you can reach your journal from anywhere using a tunnel of your own, as long as it only passes the bytes through. some free tunnels decrypt your traffic to move it, and whoever runs one can read what your agent reads, and reuse its key to reach your journal, so we don&amp;rsquo;t support those tunnels.&lt;/p&gt;
+&lt;p&gt;you can also use &lt;a href=&quot;https://services.solstone.app/solstone-me&quot;&gt;solstone.me&lt;/a&gt;, $5 a year for a public address for an agent to reach your journal: eight random characters then .solstone.me. the relay we operate behind it can&amp;rsquo;t read what passes through: the TLS is terminated in your journal, not by us. what we see is the connection itself: the network addresses, when, and how much passed.&lt;/p&gt;
+&lt;h2&gt;notifications, encrypted&lt;/h2&gt;
+&lt;p&gt;your journal can send notifications to your iphone or android phone now. they&amp;rsquo;re off until you turn them on, phone by phone, and today the one you&amp;rsquo;ll get is a test you send yourself; notifications about your journal come next. before one leaves your machine, your journal locks it with a key only your journal and that phone share, so apple, google, and the hop we run for iphone can carry it but never read what it says. that&amp;rsquo;s how seriously we take privacy.&lt;/p&gt;
+&lt;h2&gt;the app stores&lt;/h2&gt;
+&lt;p&gt;we&amp;rsquo;ve sent solstone mobile to the App Store and Google Play, our first submission to either. until it&amp;rsquo;s live, you can use the &lt;a href=&quot;https://solstone.app/beta&quot;&gt;beta&lt;/a&gt;, and you&amp;rsquo;ll hear it here when it lands.&lt;/p&gt;
+&lt;h2&gt;what shipped&lt;/h2&gt;
+&lt;p&gt;79 releases between our last update and september 28:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;the journal, on mac and linux:&lt;/strong&gt; 16 releases, 2.0.8 → 2.0.25&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;the journal app for mac:&lt;/strong&gt; 14 releases, 2.0.10 → 2.0.26&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;solstone for mac:&lt;/strong&gt; 9 releases, 2.0.10 → 2.0.19&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;solstone for linux:&lt;/strong&gt; 6 releases, 2.0.4 → 2.0.9&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;solstone for windows&lt;/strong&gt; (the app): 9 releases, 2.0.5 → 2.0.13&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;solstone for tmux:&lt;/strong&gt; 6 releases, 2.0.3 → 2.0.8&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;iphone, ipad and apple watch, on TestFlight:&lt;/strong&gt; 7 builds, 2.0.2 → 2.0.5&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;android:&lt;/strong&gt; 12 releases, 2.1.1 → 2.1.12&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;journal releases, on the record&lt;/h2&gt;
+&lt;p&gt;every mac and linux journal release from 2.0.8 through 2.0.24 has a signed transparency record at &lt;a href=&quot;https://trust.solstone.app/&quot;&gt;trust.solstone.app&lt;/a&gt;, same as &lt;a href=&quot;https://solpbc.org/blog/v2-is-out/&quot;&gt;the first seven&lt;/a&gt;. anybody can check one.&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;em&gt;sol pbc is a public benefit corporation. the promises about your data live in article 8 of our filed articles of incorporation, not in a policy we could quietly change: it can&amp;rsquo;t be amended without jer&amp;rsquo;s personal signature, and after him the language can only get stronger, never weaker. &lt;a href=&quot;https://solpbc.org/blog/on-your-side/&quot;&gt;what that means&lt;/a&gt;.&lt;/em&gt;&lt;/p&gt;</content>
+    </entry>
     <entry>
         <title>v2 is out</title>
         <link href="https://solpbc.org/blog/v2-is-out/" rel="alternate"/>

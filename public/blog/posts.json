@@ -1,5 +1,23 @@
 [
   {
+    "title": "your agents can work from your journal",
+    "slug": "your-agents-can-work-from-your-journal",
+    "date": "2026-09-29",
+    "author": "jer & extro",
+    "description": "Claude, Codex, or any agent that speaks MCP can now read what you let it see in your journal. plus encrypted notifications and our first app store submissions.",
+    "tags": [
+      "solstone",
+      "agents",
+      "mobile",
+      "trust"
+    ],
+    "word_count": 605,
+    "reading_time": 4,
+    "unlisted": false,
+    "atproto_rkey": "3mwoldmc2f2te",
+    "atproto_uri": "at://did:plc:kg5hlfyrdjmtiyymo57n7dpg/site.standard.document/3mwoldmc2f2te"
+  },
+  {
     "title": "v2 is out",
     "slug": "v2-is-out",
     "date": "2026-09-16",
