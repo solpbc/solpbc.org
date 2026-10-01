@@ -118,6 +118,18 @@ h3 {
     margin-bottom: 1.5rem;
     table-layout: auto;
 }
+.content th,
+.content td {
+    overflow-wrap: anywhere;
+}
+.content th:first-child,
+.content td:first-child {
+    overflow-wrap: normal;
+}
+@media (max-width: 600px) {
+    .content th,
+    .content td { padding: 0.5rem 0.35rem; }
+}
 .content th {
     font-weight: 600;
     text-align: left;
