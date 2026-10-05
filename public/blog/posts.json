@@ -14,7 +14,9 @@
     "reading_time": 3,
     "unlisted": false,
     "atproto_rkey": "3mx5ykxazgbsg",
-    "atproto_uri": "at://did:plc:kg5hlfyrdjmtiyymo57n7dpg/site.standard.document/3mx5ykxazgbsg"
+    "atproto_uri": "at://did:plc:kg5hlfyrdjmtiyymo57n7dpg/site.standard.document/3mx5ykxazgbsg",
+    "bsky_post_uri": "at://did:plc:kg5hlfyrdjmtiyymo57n7dpg/app.bsky.feed.post/3mx5yqs6fga2y",
+    "bsky_post_cid": "bafyreifci75xrcm3ejhv2ietjgkbf4vxqwgklpufb2xtlp5sqdnqpp6icq"
   },
   {
     "title": "your agents can work from your journal",
