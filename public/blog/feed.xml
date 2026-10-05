@@ -5,7 +5,32 @@
     <link href="https://solpbc.org/blog/feed.xml" rel="self"/>
     <link href="https://solpbc.org/blog/"/>
     <id>https://solpbc.org/blog/</id>
-    <updated>2026-09-29T00:00:00Z</updated>
+    <updated>2026-10-05T00:00:00Z</updated>
+    <entry>
+        <title>solstone is in the app stores</title>
+        <link href="https://solpbc.org/blog/solstone-in-the-app-stores/" rel="alternate"/>
+        <id>https://solpbc.org/blog/solstone-in-the-app-stores/</id>
+        <updated>2026-10-05T00:00:00Z</updated>
+        <author><name>jer &amp; extro</name></author>
+        <summary>the solstone app for iphone, ipad, apple watch and android is free on the App Store and Google Play. what you need to get started, and how your phone shows you it's paired with your own journal.</summary>
+        <content type="html">&lt;p&gt;solstone is on the App Store and Google Play. we said you&amp;rsquo;d hear it here when it landed, and here it is.&lt;/p&gt;
+&lt;p&gt;if you&amp;rsquo;re new here: solstone is a personal memory platform. the solstone app takes in what you share with it, and all of it goes into your journal, an open source, local-first memory that your agents can work from. your journal lives on a device you own.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;get it on your phone:&lt;/strong&gt; &lt;a href=&quot;https://solstone.app/phone&quot;&gt;solstone.app/phone&lt;/a&gt;. free on both stores.&lt;/p&gt;
+&lt;h2&gt;where to find it&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;iphone, ipad and apple watch:&lt;/strong&gt; on the &lt;a href=&quot;https://apps.apple.com/app/id6776850664&quot;&gt;App Store&lt;/a&gt;, listed as &lt;strong&gt;solstone mobile&lt;/strong&gt;. it needs ios or ipados 26 or later, and watchos 26 on the watch.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;android:&lt;/strong&gt; on &lt;a href=&quot;https://play.google.com/store/apps/details?id=app.solstone.observer.phone&quot;&gt;Google Play&lt;/a&gt;, listed as &lt;strong&gt;solstone&lt;/strong&gt;, for android 8.0 and later. no Google Play on your phone, or would rather not use it? the same app, signed by us, is &lt;a href=&quot;https://solstone.app/download/android&quot;&gt;on our own site&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;if you installed our android app during the beta and want to move to Play: the two copies are signed by different keys, so neither can update the other. let what&amp;rsquo;s on the phone reach your journal first, then uninstall ours, install from Play and pair again.&lt;/p&gt;
+&lt;h2&gt;start with your journal&lt;/h2&gt;
+&lt;p&gt;the app on your phone pairs with your journal, on a computer you own and run solstone on. that&amp;rsquo;s where your memories live, so if you haven&amp;rsquo;t set one up yet, start at &lt;a href=&quot;https://solstone.app/install&quot;&gt;solstone.app/install&lt;/a&gt;. then open the app on your phone and pair it. to reach your journal from anywhere, use your own VPN or our relay.&lt;/p&gt;
+&lt;p&gt;on iphone and ipad, you can bring in the photos and screens that matter to you and, with your permission, the audio from your day and where you were. on android, with your permission, the audio from your day, stills from your camera and your approximate location. every source stays off until you turn it on.&lt;/p&gt;
+&lt;h2&gt;pairing you can check&lt;/h2&gt;
+&lt;p&gt;when you pair, your phone shows you your journal&amp;rsquo;s mark and asks you to confirm it matches the one your journal is showing. nothing you&amp;rsquo;ve brought in leaves the phone until you do. that&amp;rsquo;s how you know your phone is talking to your journal, and not someone else&amp;rsquo;s.&lt;/p&gt;
+&lt;h2&gt;what the labels say&lt;/h2&gt;
+&lt;p&gt;both stores ask what data an app collects. our answer is the same on both: no data collected. what the app takes in goes into your journal, on a device you own, and there&amp;rsquo;s no telemetry or analytics in the app. you don&amp;rsquo;t have to take our word for that either: the code for &lt;a href=&quot;https://github.com/solpbc/solstone-swift&quot;&gt;iphone&lt;/a&gt; and &lt;a href=&quot;https://github.com/solpbc/solstone-android&quot;&gt;android&lt;/a&gt; is open.&lt;/p&gt;
+&lt;p&gt;pair it, put it in your pocket, and go be where you are.&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;em&gt;sol pbc is a public benefit corporation. the promises about your data live in article 8 of our filed articles of incorporation, not in a policy we could quietly change: it can&amp;rsquo;t be amended without jer&amp;rsquo;s personal signature, and after him the language can only get stronger, never weaker. &lt;a href=&quot;https://solpbc.org/blog/on-your-side/&quot;&gt;what that means&lt;/a&gt;.&lt;/em&gt;&lt;/p&gt;</content>
+    </entry>
     <entry>
         <title>your agents can work from your journal</title>
         <link href="https://solpbc.org/blog/your-agents-can-work-from-your-journal/" rel="alternate"/>
