@@ -36,8 +36,8 @@
 
 body {
     font-family: system-ui, -apple-system, sans-serif;
-    background: #fff;
-    color: #555;
+    background: var(--paper);
+    color: var(--ink-soft-paper);
     line-height: 1.6;
     -webkit-font-smoothing: antialiased;
 }
@@ -56,7 +56,7 @@ nav {
     text-transform: lowercase;
 }
 nav a {
-    color: #767676;
+    color: var(--ink-faint-paper);
     text-decoration: none;
     margin-right: 1.2rem;
 }
@@ -70,13 +70,13 @@ h1 {
     font-weight: 700;
     letter-spacing: 0.05em;
     text-transform: lowercase;
-    color: #222;
+    color: var(--ink);
     line-height: 1.3;
     margin-bottom: 0.5rem;
 }
 
 .intro {
-    color: #555;
+    color: var(--ink-soft-paper);
     margin-bottom: 2rem;
     line-height: 1.6;
 }
@@ -88,23 +88,23 @@ h1 {
     display: block;
     margin-bottom: 6px;
     font-weight: 600;
-    color: #222;
+    color: var(--ink);
     font-size: 0.95rem;
 }
 .form-group input,
 .form-group textarea {
     width: 100%;
     padding: 11px 12px;
-    border: 1px solid #e0e0e0;
+    border: 1px solid var(--hairline-2);
     border-radius: 8px;
     font: inherit;
-    color: #333;
-    background: #fff;
+    color: var(--ink);
+    background: var(--paper);
 }
 .form-group input:focus,
 .form-group textarea:focus {
     border-color: var(--orange-ink);
-    box-shadow: 0 0 0 3px rgba(176, 106, 26, 0.2);
+    box-shadow: 0 0 0 3px color-mix(in srgb, var(--orange-ink) 20%, transparent);
     outline: none;
 }
 .form-group textarea {
@@ -131,7 +131,7 @@ h1 {
     font-family: inherit;
 }
 .submit-btn:hover {
-    background: var(--orange-ink);
+    background: var(--orange-text-aa);
     color: var(--paper);
 }
 .submit-btn:disabled {
@@ -141,13 +141,13 @@ h1 {
 
 .trust-strip {
     font-size: 0.8125rem;
-    color: #666;
+    color: var(--ink-soft-paper);
     text-align: center;
     margin-top: 1rem;
     line-height: 1.5;
 }
 .trust-strip a {
-    color: var(--orange-ink);
+    color: var(--orange-text-aa);
     text-decoration: none;
 }
 .trust-strip a:hover {
@@ -155,7 +155,7 @@ h1 {
 }
 
 .error-message {
-    color: #c0392b;
+    color: var(--danger);
     margin-top: 0.5rem;
     font-size: 0.9rem;
 }
@@ -170,14 +170,14 @@ h1 {
     font-weight: 600;
     letter-spacing: 0.05em;
     text-transform: lowercase;
-    color: #222;
+    color: var(--ink);
     margin-bottom: 1rem;
 }
 .success p {
     margin-bottom: 1.5rem;
 }
 .success a {
-    color: var(--orange-ink);
+    color: var(--orange-text-aa);
     text-decoration: none;
 }
 .success a:hover {
@@ -186,19 +186,19 @@ h1 {
 
 footer {
     padding: 3rem 0 2rem;
-    border-top: 1px solid #eee;
+    border-top: 1px solid var(--hairline);
     margin-top: 3rem;
     font-size: 0.9rem;
 }
 footer a {
-    color: var(--orange-ink);
+    color: var(--orange-text-aa);
     text-decoration: none;
 }
 footer a:hover {
     text-decoration: underline;
 }
 footer .copyright {
-    color: #767676;
+    color: var(--ink-faint-paper);
     font-size: 0.85rem;
     margin-top: 1rem;
 }
@@ -230,11 +230,11 @@ footer .copyright {
                 <input type="text" id="name" name="name" maxlength="200" autocomplete="name">
             </div>
             <div class="form-group">
-                <label for="email">your email <span style="color: #c0392b;">*</span></label>
+                <label for="email">your email <span style="color: var(--danger);">*</span></label>
                 <input type="email" id="email" name="email" required maxlength="200" autocomplete="email">
             </div>
             <div class="form-group">
-                <label for="message">what's on your mind? <span style="color: #c0392b;">*</span></label>
+                <label for="message">what's on your mind? <span style="color: var(--danger);">*</span></label>
                 <textarea id="message" name="message" required maxlength="5000"></textarea>
             </div>
 

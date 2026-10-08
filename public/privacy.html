@@ -104,7 +104,7 @@ h3 {
 .content ul,
 .content ol { margin-bottom: 1.5rem; padding-left: 1.5rem; }
 .content li { margin-bottom: 0.5rem; }
-.content a { color: var(--orange-ink); text-decoration: none; }
+.content a { color: var(--orange-text-aa); text-decoration: none; }
 .content a:hover { text-decoration: underline; }
 .content strong { color: var(--ink); }
 .content hr {
@@ -121,14 +121,11 @@ h3 {
 .content th,
 .content td {
     overflow-wrap: anywhere;
+    vertical-align: top;
 }
 .content th:first-child,
 .content td:first-child {
     overflow-wrap: normal;
-}
-@media (max-width: 600px) {
-    .content th,
-    .content td { padding: 0.5rem 0.35rem; }
 }
 .content th {
     font-weight: 600;
@@ -140,6 +137,11 @@ h3 {
 .content td {
     padding: 0.6rem 0.75rem;
     border-bottom: 1px solid var(--hairline);
+}
+/* after the base padding, so it wins on a phone */
+@media (max-width: 600px) {
+    .content th,
+    .content td { padding: 0.5rem 0.35rem; }
 }
 .content em {
     color: var(--ink-faint-paper);
@@ -153,7 +155,7 @@ footer {
     font-size: 0.9rem;
 }
 footer a {
-    color: var(--orange-ink);
+    color: var(--orange-text-aa);
     text-decoration: none;
 }
 footer a:hover {
@@ -182,7 +184,7 @@ footer .copyright {
 }
 .heading-link:hover,
 .heading-link:focus {
-    color: var(--orange-ink);
+    color: var(--orange-text-aa);
     text-decoration: none;
 }
 
