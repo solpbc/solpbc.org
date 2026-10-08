@@ -267,62 +267,6 @@ footer .copyright {
     </div>
 
     <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
-    <script>
-    (function() {
-        var form = document.getElementById('contact-form');
-        var errorEl = document.getElementById('error-message');
-        var successEl = document.getElementById('success-state');
-
-        // Show error from URL param (non-JS fallback redirect)
-        if (window.location.search.indexOf('error=1') !== -1) {
-            errorEl.textContent = 'something went wrong — please try again, or email jer at solpbc dot org directly.';
-            errorEl.hidden = false;
-        }
-
-        form.addEventListener('submit', function(e) {
-            e.preventDefault();
-            errorEl.hidden = true;
-
-            var btn = form.querySelector('.submit-btn');
-            btn.disabled = true;
-            btn.textContent = 'sending...';
-
-            var turnstileInput = form.querySelector('[name="cf-turnstile-response"]');
-            var data = {
-                name: document.getElementById('name').value,
-                email: document.getElementById('email').value,
-                message: document.getElementById('message').value,
-                company: document.getElementById('company').value,
-                'cf-turnstile-response': turnstileInput ? turnstileInput.value : ''
-            };
-
-            fetch('/api/contact', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify(data)
-            })
-            .then(function(res) { return res.json(); })
-            .then(function(result) {
-                if (result.ok) {
-                    form.hidden = true;
-                    successEl.hidden = false;
-                } else {
-                    errorEl.textContent = result.error || 'something went wrong — please try again, or email jer at solpbc dot org directly.';
-                    errorEl.hidden = false;
-                    btn.disabled = false;
-                    btn.textContent = 'send message';
-                    if (window.turnstile) { turnstile.reset(); }
-                }
-            })
-            .catch(function() {
-                errorEl.textContent = 'something went wrong — please try again, or email jer at solpbc dot org directly.';
-                errorEl.hidden = false;
-                btn.disabled = false;
-                btn.textContent = 'send message';
-                if (window.turnstile) { turnstile.reset(); }
-            });
-        });
-    })();
-    </script>
+    <script src="/contact/contact.js" defer></script>
 </body>
 </html>
