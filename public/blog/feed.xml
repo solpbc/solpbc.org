@@ -5,7 +5,39 @@
     <link href="https://solpbc.org/blog/feed.xml" rel="self"/>
     <link href="https://solpbc.org/blog/"/>
     <id>https://solpbc.org/blog/</id>
-    <updated>2026-10-05T00:00:00Z</updated>
+    <updated>2026-10-12T00:00:00Z</updated>
+    <entry>
+        <title>confidential processing is open to everyone</title>
+        <link href="https://solpbc.org/blog/confidential-processing-is-open/" rel="alternate"/>
+        <id>https://solpbc.org/blog/confidential-processing-is-open/</id>
+        <updated>2026-10-12T00:00:00Z</updated>
+        <author><name>jer &amp; extro</name></author>
+        <summary>your journal can now think on confidential hardware sol pbc runs, for $9.99 a month or $96 a year. what it is, what your journal checks before it sends anything, and who it's for.</summary>
+        <content type="html">&lt;p&gt;anyone can turn it on now. it&amp;rsquo;s $9.99 a month or $96 a year, tax included.&lt;/p&gt;
+&lt;p&gt;if you&amp;rsquo;re new here: solstone is a personal memory platform. the solstone app takes in what you share with it, and all of it goes into your journal, an open source, local-first memory that your agents can work from. your journal lives on a device you own.&lt;/p&gt;
+&lt;p&gt;confidential processing is for when your computer can&amp;rsquo;t run the model your journal thinks with, or you&amp;rsquo;d rather it didn&amp;rsquo;t: an older laptop, a machine you need for other work, a battery you want to last the day. your journal sends its thinking to confidential hardware sol pbc runs, instead of doing it on your computer. it&amp;rsquo;s the same model generation that runs locally, with more room to run it.&lt;/p&gt;
+&lt;h2&gt;what stays where&lt;/h2&gt;
+&lt;p&gt;your journal stays on your device. what it sends for thinking goes to a model sol pbc runs itself, with no third-party AI provider in the path. it runs on an AMD SEV-SNP CPU and an NVIDIA H100 in confidential-compute mode, in Microsoft Azure, where the hardware keeps Azure itself out of what&amp;rsquo;s processed.&lt;/p&gt;
+&lt;p&gt;before your journal sends anything, it checks two things: that the hardware is genuine, against the manufacturers&amp;rsquo; own roots of trust, and that the machine booted the exact image we pinned, unchanged. if it can&amp;rsquo;t verify, it doesn&amp;rsquo;t send.&lt;/p&gt;
+&lt;p&gt;no content is retained. no human reviews it. nothing is used to train.&lt;/p&gt;
+&lt;h2&gt;what you get&lt;/h2&gt;
+&lt;p&gt;one subscription covers one journal. it&amp;rsquo;s sized for a journal with a computer and a phone, and we&amp;rsquo;ll add more options as we increase capacity.&lt;/p&gt;
+&lt;p&gt;turn it on from your journal, where you choose how your journal thinks. as with every service we charge for, you can change your mind within 14 days for a full refund.&lt;/p&gt;
+&lt;h2&gt;you never have to pay us&lt;/h2&gt;
+&lt;p&gt;the local model is still the default, and it&amp;rsquo;s free. you can also bring your own model, with your own provider key or an endpoint you run. sol pbc isn&amp;rsquo;t in the path either way. a subscription is only for the confidential hardware we run for you.&lt;/p&gt;
+&lt;p&gt;if you&amp;rsquo;re an approved scout, it stays free for you. thank you for everything you&amp;rsquo;ve told us.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://services.solstone.app/confidential-processing&quot;&gt;see confidential processing&lt;/a&gt;&lt;/p&gt;
+&lt;h2&gt;under the hood&lt;/h2&gt;
+&lt;p&gt;if you want the details, here&amp;rsquo;s what&amp;rsquo;s running, and what your journal checks before it sends.&lt;/p&gt;
+&lt;p&gt;the machine boots from one disk image, built from public source in &lt;a href=&quot;https://github.com/solpbc/conf-proc&quot;&gt;solpbc/conf-proc&lt;/a&gt;. every input is pinned by its hash: the model weights, the serving software, the kernel, even the build tools. the build runs with no network access, and two of our own builds from fresh clones came out byte for byte identical. nobody outside sol pbc has rebuilt it yet, and we&amp;rsquo;d welcome that.&lt;/p&gt;
+&lt;p&gt;the kernel, its settings and the fingerprint of the system&amp;rsquo;s files are packed into one signed boot file. the system&amp;rsquo;s files are read-only, and every block of them is checked against that fingerprint as it&amp;rsquo;s read. the machine&amp;rsquo;s TPM records what booted, and the AMD processor&amp;rsquo;s signed report vouches for the TPM. your journal checks all of that against the values we published, before it sends anything.&lt;/p&gt;
+&lt;p&gt;the image deliberately leaves out the ways in: there&amp;rsquo;s no remote login, no cloud agent and no container runtime. it&amp;rsquo;s set up to write only to memory, which a restart wipes, and its logs stay in memory and go nowhere. the model has no network access beyond the machine itself.&lt;/p&gt;
+&lt;p&gt;past the network basics, the machine makes three kinds of outside call: a regular check on the GPU&amp;rsquo;s certificates with NVIDIA, a fetch of the processor&amp;rsquo;s certificate from AMD at boot, and a yes or no from our services portal on whether your access is active. none of them carry your content.&lt;/p&gt;
+&lt;p&gt;the source and the records are public, and the records say what the checks don&amp;rsquo;t prove: they&amp;rsquo;re a check at boot, not of everything the software does afterwards. &lt;a href=&quot;https://trust.solstone.app/verify/&quot;&gt;trust.solstone.app&lt;/a&gt; walks through checking our records yourself, and the &lt;a href=&quot;https://transparency.solstone.app/software/spp/8e4291d/index.html&quot;&gt;build report&lt;/a&gt; for the image serving as this goes up lists every file and measurement.&lt;/p&gt;
+&lt;p&gt;you shouldn&amp;rsquo;t have to take our word for any of this, and you don&amp;rsquo;t.&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;em&gt;sol pbc is a public benefit corporation. the promises about your data live in article 8 of our filed articles of incorporation, not in a policy we could quietly change: it can&amp;rsquo;t be amended without jer&amp;rsquo;s personal signature, and after him the language can only get stronger, never weaker. &lt;a href=&quot;https://solpbc.org/blog/on-your-side/&quot;&gt;what that means&lt;/a&gt;.&lt;/em&gt;&lt;/p&gt;</content>
+    </entry>
     <entry>
         <title>solstone is in the app stores</title>
         <link href="https://solpbc.org/blog/solstone-in-the-app-stores/" rel="alternate"/>
