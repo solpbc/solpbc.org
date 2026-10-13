@@ -21,7 +21,9 @@
       "4b76ab14f2cc65fad27f011102ab7ce010e809e05e49f0f7f5d71004a2531075.png"
     ],
     "atproto_rkey": "3mxs5kmohvpkh",
-    "atproto_uri": "at://did:plc:kg5hlfyrdjmtiyymo57n7dpg/site.standard.document/3mxs5kmohvpkh"
+    "atproto_uri": "at://did:plc:kg5hlfyrdjmtiyymo57n7dpg/site.standard.document/3mxs5kmohvpkh",
+    "bsky_post_uri": "at://did:plc:kg5hlfyrdjmtiyymo57n7dpg/app.bsky.feed.post/3mxs5qeikyx2u",
+    "bsky_post_cid": "bafyreicyc4mhyj5v5mc6vnms6rt6mxupfitsvrisizbr4yxbl4gfwaxy4e"
   },
   {
     "title": "confidential processing is open to everyone",
