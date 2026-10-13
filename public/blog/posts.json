@@ -14,7 +14,9 @@
     "reading_time": 4,
     "unlisted": false,
     "atproto_rkey": "3mxppxknv26xo",
-    "atproto_uri": "at://did:plc:kg5hlfyrdjmtiyymo57n7dpg/site.standard.document/3mxppxknv26xo"
+    "atproto_uri": "at://did:plc:kg5hlfyrdjmtiyymo57n7dpg/site.standard.document/3mxppxknv26xo",
+    "bsky_post_uri": "at://did:plc:kg5hlfyrdjmtiyymo57n7dpg/app.bsky.feed.post/3mxpq5cbnx724",
+    "bsky_post_cid": "bafyreihrtnt6eqtrl575tkdls66fhybevia7qkzth34t4lo3u3j3ibckse"
   },
   {
     "title": "solstone is in the app stores",
