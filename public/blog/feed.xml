@@ -5,7 +5,54 @@
     <link href="https://solpbc.org/blog/feed.xml" rel="self"/>
     <link href="https://solpbc.org/blog/"/>
     <id>https://solpbc.org/blog/</id>
-    <updated>2026-10-12T00:00:00Z</updated>
+    <updated>2026-10-13T00:00:00Z</updated>
+    <entry>
+        <title>97 releases in two weeks, and what you can do now</title>
+        <link href="https://solpbc.org/blog/releases-in-two-weeks/" rel="alternate"/>
+        <id>https://solpbc.org/blog/releases-in-two-weeks/</id>
+        <updated>2026-10-13T00:00:00Z</updated>
+        <author><name>jer &amp; extro</name></author>
+        <summary>the location you share on a map, the solstone extension in Chrome, Edge and Safari, the journal on windows, and phone apps that hold steadier. 97 releases since our last update.</summary>
+        <content type="html">&lt;p&gt;97 releases since our last update, across nine release lines. these are the ones that change what you can do.&lt;/p&gt;
+&lt;p&gt;if you are new here: solstone is a personal memory platform. the solstone app takes in what you share with it, and all of it goes into your journal, an open source, local-first memory that your agents can work from. your journal lives on a device you own.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;get it on mac, windows or linux:&lt;/strong&gt; &lt;a href=&quot;https://solstone.app/download&quot;&gt;solstone.app/download&lt;/a&gt;. &lt;strong&gt;on your phone:&lt;/strong&gt; &lt;a href=&quot;https://solstone.app/phone&quot;&gt;solstone.app/phone&lt;/a&gt;.&lt;/p&gt;
+&lt;h2&gt;where your day happened&lt;/h2&gt;
+&lt;p&gt;your journal has a new map app. it shows the location you share through the solstone app on your phone, a day at a time, with each record named for the town it was near. when your iphone stays in one spot for a while, the day shows one stay instead of a run of readings, and a spot you come back to on different days becomes a place you can name, call home or work, or hide from the map. the town names come with your journal, so no map service is asked for anything. to name the places themselves, like the coffee shop you were near, there&amp;rsquo;s an optional download, and it looks those names up on your computer. there&amp;rsquo;s a week view, and searching your journal now finds a day by the towns you were near.&lt;/p&gt;
+&lt;p&gt;&lt;img alt=&quot;a day near Verona, with stays at places named home and work.&quot; src=&quot;https://solpbc.org/blog/releases-in-two-weeks/images/16df388187e6adc95ed82edb3e2592f0c15e6e2d32ecc8648b36fcb614251078.png&quot;&gt;&lt;/p&gt;
+&lt;h2&gt;the solstone extension&lt;/h2&gt;
+&lt;p&gt;add &lt;a href=&quot;https://chromewebstore.google.com/detail/solstone/eibbeeoifjoabddfmgeggnageolkcnim&quot;&gt;the solstone extension&lt;/a&gt; to Chrome or Edge and choose the sites you want to share. on a mac, it now works in Safari too: it comes with the solstone app, and you turn it on under extensions in Safari&amp;rsquo;s settings. on a site you add, it takes in the page&amp;rsquo;s address, text and rough layout, and all of it goes into your journal through the solstone app on your computer. it works with the solstone app on mac, windows and linux, and each app points you to it.&lt;/p&gt;
+&lt;p&gt;&lt;img alt=&quot;the solstone extension on Wikipedia, with the site switched on.&quot; src=&quot;https://solpbc.org/blog/releases-in-two-weeks/images/4b76ab14f2cc65fad27f011102ab7ce010e809e05e49f0f7f5d71004a2531075.png&quot;&gt;&lt;/p&gt;
+&lt;h2&gt;the journal on windows&lt;/h2&gt;
+&lt;p&gt;your journal runs natively on windows now. open journal from Start to set it up, start or stop it, and manage updates and paired devices. agents can reach it at solstone.me or at a hostname you own, and confidential processing works there too.&lt;/p&gt;
+&lt;h2&gt;your phone apps, steadier&lt;/h2&gt;
+&lt;p&gt;the solstone app for iphone, ipad and apple watch is on the &lt;a href=&quot;https://apps.apple.com/app/id6776850664&quot;&gt;App Store&lt;/a&gt;, and the app for android is on &lt;a href=&quot;https://play.google.com/store/apps/details?id=app.solstone.observer.phone&quot;&gt;Google Play&lt;/a&gt; (&lt;a href=&quot;https://solpbc.org/blog/solstone-in-the-app-stores/&quot;&gt;we said so&lt;/a&gt;), and over these two weeks both have gotten steadier. on a slow network, like a café&amp;rsquo;s wifi, the iphone app gives your journal more time to answer. on android, if an update or an unexpected stop cuts off audio, the app recovers it when it next starts, and audio picks up on its own once another app is done with the microphone. moving to a new phone? both apps can carry on your old device&amp;rsquo;s name and history.&lt;/p&gt;
+&lt;h2&gt;bring more in&lt;/h2&gt;
+&lt;p&gt;bring in your workouts from a Strava download, and they show in the body app and turn up in search. import a video, and its sound is transcribed. import a text or markdown transcript that marks its turns, and each turn keeps its time, speaker and words from the file. and before an import starts, it now tells you how many recordings it will add and how many days they cover.&lt;/p&gt;
+&lt;h2&gt;what you said and saw, easier to find&lt;/h2&gt;
+&lt;p&gt;your journal now looks for your voice on its own each day, and your journal&amp;rsquo;s home page tells you when it has found one that may be yours. once you confirm it, transcripts show your lines as &amp;ldquo;you&amp;rdquo;. you can also name someone else&amp;rsquo;s voice once and have it named across your conversations, not one line at a time.&lt;/p&gt;
+&lt;p&gt;each conversation your journal processes now also gets a short list of what it was about and a few passages copied word for word from what was said, so a search can find it by its subject or by a line someone said. what was on your screen shows up in search as soon as that moment is processed. and your weekly reflection has its own page, with a memory from each day that has one and a link to where it came from.&lt;/p&gt;
+&lt;h2&gt;your journal&amp;rsquo;s thinking, and your agents&lt;/h2&gt;
+&lt;p&gt;sign in with your own ChatGPT account and pick one of your ChatGPT models for your journal&amp;rsquo;s thinking, so there&amp;rsquo;s no key to paste. your computer talks to OpenAI directly, and OpenAI sees the parts of your journal that thinking uses. you can still use a key, your own endpoint, or a local model. if you&amp;rsquo;d rather your journal think on hardware sol pbc runs, &lt;a href=&quot;https://solpbc.org/blog/confidential-processing-is-open/&quot;&gt;confidential processing&lt;/a&gt; has its own post.&lt;/p&gt;
+&lt;p&gt;connect your agent to your journal &lt;a href=&quot;https://solstone.app/integrate&quot;&gt;using MCP&lt;/a&gt;. through that connection it can search and read your journal and keep notes of its own there. it can&amp;rsquo;t add, change, or delete anything else. an agent you let see transcripts also gets a link to the conversation behind a result, with its time.&lt;/p&gt;
+&lt;h2&gt;steadier underneath&lt;/h2&gt;
+&lt;p&gt;your journal now works through everything in one order: today first, then a day you ask it to redo, then the rest of your week, then older days, newest first. health shows what&amp;rsquo;s still waiting, and anything set aside comes with a reason and a try-again. and when you pause the solstone app on a mac, a linux computer or a windows pc, it stays paused through quitting the app, a crash and restarting your computer.&lt;/p&gt;
+&lt;p&gt;next, the solstone extension in Firefox, as soon as Mozilla finishes its review.&lt;/p&gt;
+&lt;h2&gt;what shipped&lt;/h2&gt;
+&lt;p&gt;97 releases between our last update and october 13:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;the journal&lt;/strong&gt;, on mac, windows and linux: 19 releases, 2.0.26 → 2.0.44, most with a signed release record at &lt;a href=&quot;https://trust.solstone.app/&quot;&gt;trust.solstone.app&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;the journal app for mac:&lt;/strong&gt; 18 releases, 2.0.27 → 2.0.44&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;solstone for mac:&lt;/strong&gt; 14 releases, 2.0.20 → 2.0.33&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;solstone for linux:&lt;/strong&gt; 10 releases, 2.0.10 → 2.0.19&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;solstone for windows&lt;/strong&gt; (the app): 13 releases, 2.0.14 → 2.0.26&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;solstone for tmux:&lt;/strong&gt; 7 releases, 2.0.9 → 2.0.15&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;iphone, ipad and apple watch:&lt;/strong&gt; 3 releases, 2.0.6 (119) → 2.0.8 (128)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;android:&lt;/strong&gt; 11 releases, 2.1.13 → 2.1.23&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;the solstone extension:&lt;/strong&gt; 2 releases, 0.2.0 → 0.3.0, in the Chrome Web Store&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;em&gt;sol pbc is a public benefit corporation. the promises about your data live in article 8 of our filed articles of incorporation, not in a policy we could quietly change: it can&amp;rsquo;t be amended without jer&amp;rsquo;s personal signature, and after him the language can only get stronger, never weaker. &lt;a href=&quot;https://solpbc.org/blog/on-your-side/&quot;&gt;what that means&lt;/a&gt;.&lt;/em&gt;&lt;/p&gt;</content>
+    </entry>
     <entry>
         <title>confidential processing is open to everyone</title>
         <link href="https://solpbc.org/blog/confidential-processing-is-open/" rel="alternate"/>

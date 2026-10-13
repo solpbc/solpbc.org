@@ -1,5 +1,29 @@
 [
   {
+    "title": "97 releases in two weeks, and what you can do now",
+    "slug": "releases-in-two-weeks",
+    "date": "2026-10-13",
+    "author": "jer & extro",
+    "description": "the location you share on a map, the solstone extension in Chrome, Edge and Safari, the journal on windows, and phone apps that hold steadier. 97 releases since our last update.",
+    "tags": [
+      "solstone",
+      "releases",
+      "location",
+      "browser",
+      "windows",
+      "mobile"
+    ],
+    "word_count": 1127,
+    "reading_time": 6,
+    "unlisted": false,
+    "inline_images": [
+      "16df388187e6adc95ed82edb3e2592f0c15e6e2d32ecc8648b36fcb614251078.png",
+      "4b76ab14f2cc65fad27f011102ab7ce010e809e05e49f0f7f5d71004a2531075.png"
+    ],
+    "atproto_rkey": "3mxs5kmohvpkh",
+    "atproto_uri": "at://did:plc:kg5hlfyrdjmtiyymo57n7dpg/site.standard.document/3mxs5kmohvpkh"
+  },
+  {
     "title": "confidential processing is open to everyone",
     "slug": "confidential-processing-is-open",
     "date": "2026-10-12",

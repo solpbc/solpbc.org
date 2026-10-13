@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>97 releases in two weeks, and what you can do now — sol pbc</title>
+    <meta name="description" content="the location you share on a map, the solstone extension in Chrome, Edge and Safari, the journal on windows, and phone apps that hold steadier. 97 releases since our last update.">
+    <link rel="canonical" href="https://solpbc.org/blog/releases-in-two-weeks/">
+    <meta property="og:title" content="97 releases in two weeks, and what you can do now">
+    <meta property="og:description" content="the location you share on a map, the solstone extension in Chrome, Edge and Safari, the journal on windows, and phone apps that hold steadier. 97 releases since our last update.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://solpbc.org/blog/releases-in-two-weeks/">
+    <meta property="og:site_name" content="sol pbc">
+    <meta property="article:published_time" content="2026-10-13T00:00:00Z">
+    <meta property="article:author" content="jer &amp; extro">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="97 releases in two weeks, and what you can do now">
+    <meta name="twitter:description" content="the location you share on a map, the solstone extension in Chrome, Edge and Safari, the journal on windows, and phone apps that hold steadier. 97 releases since our last update.">
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"97 releases in two weeks, and what you can do now","description":"the location you share on a map, the solstone extension in Chrome, Edge and Safari, the journal on windows, and phone apps that hold steadier. 97 releases since our last update.","datePublished":"2026-10-13T00:00:00Z","dateModified":"2026-10-13T00:00:00Z","author":{"@type":"Person","name":"Jeremie Miller"},"publisher":{"@type":"Organization","name":"sol pbc","url":"https://solpbc.org","logo":{"@type":"ImageObject","url":"https://solpbc.org/static/pbc-wordmark-512.png"}},"url":"https://solpbc.org/blog/releases-in-two-weeks/","mainEntityOfPage":{"@type":"WebPage","@id":"https://solpbc.org/blog/releases-in-two-weeks/"}}</script>
+    <link rel="alternate" type="application/atom+xml" title="sol pbc blog" href="/blog/feed.xml">
+    <link rel="site.standard.document" href="at://did:plc:kg5hlfyrdjmtiyymo57n7dpg/site.standard.document/3mxs5kmohvpkh">
+    <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="/static/favicon-32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/static/favicon-16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/static/apple-touch-icon.png">
+    <link rel="stylesheet" href="/static/tokens.css">
+    <style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+@font-face {
+    font-family: 'Comfortaa';
+    src: url('/blog/fonts/comfortaa-latin.woff2') format('woff2');
+    font-weight: 400 700;
+    font-display: swap;
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6,
+        U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC,
+        U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+    font-family: 'Comfortaa';
+    src: url('/blog/fonts/comfortaa-latin-ext.woff2') format('woff2');
+    font-weight: 400 700;
+    font-display: swap;
+    unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7,
+        U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F,
+        U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113,
+        U+2C60-2C7F, U+A720-A7FF;
+}
+
+body {
+    font-family: system-ui, -apple-system, sans-serif;
+    background: var(--paper);
+    color: var(--ink-soft-paper);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+.container {
+    max-width: 600px;
+    width: 90vw;
+    margin: 0 auto;
+    padding: 0 0 2rem;
+}
+
+/* --- navigation --- */
+nav {
+    padding: 2rem 0 1.5rem;
+    font-size: 0.9rem;
+}
+nav a {
+    color: var(--orange-text-aa);
+    text-decoration: none;
+}
+nav a:hover {
+    text-decoration: underline;
+}
+nav .sep {
+    color: var(--hairline-2);
+    margin: 0 0.4rem;
+}
+
+/* --- headings --- */
+h1 {
+    font-family: var(--font-display);
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    color: var(--ink);
+    line-height: 1.3;
+    margin-bottom: 0.5rem;
+}
+h2 {
+    font-family: var(--font-display);
+    font-size: 1.4rem;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    color: var(--ink);
+    margin: 2.5rem 0 1rem;
+}
+h3 {
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: var(--ink);
+    margin: 2rem 0 0.75rem;
+}
+h4, h5, h6 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--ink);
+    margin: 1.5rem 0 0.5rem;
+}
+
+/* --- article body --- */
+article p  { margin-bottom: 1.5rem; }
+article ul,
+article ol { margin-bottom: 1.5rem; padding-left: 1.5rem; }
+article li { margin-bottom: 0.5rem; }
+article a  { color: var(--orange-text-aa); text-decoration: none; }
+article a:hover { text-decoration: underline; }
+
+article blockquote {
+    border-left: 3px solid var(--orange);
+    padding-left: 1rem;
+    margin: 1.5rem 0;
+    color: var(--ink-faint-paper);
+    font-style: italic;
+}
+
+article pre {
+    background: var(--cream-bright);
+    padding: 1rem;
+    border-radius: 4px;
+    overflow-x: auto;
+    margin-bottom: 1.5rem;
+    font-size: 0.88rem;
+    line-height: 1.5;
+}
+article code {
+    font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+    font-size: 0.9em;
+}
+article p code,
+article li code {
+    background: var(--cream-bright);
+    padding: 0.15rem 0.4rem;
+    border-radius: 3px;
+}
+
+article img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+    margin: 1.5rem 0;
+    display: block;
+}
+article strong { color: var(--ink); }
+article hr {
+    border: none;
+    border-top: 1px solid var(--hairline);
+    margin: 2rem 0;
+}
+article table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 1.5rem;
+    table-layout: auto;
+}
+article th {
+    font-weight: 600;
+    text-align: left;
+    padding: 0.6rem 0.75rem;
+    border-bottom: 2px solid var(--hairline-2);
+}
+article td {
+    padding: 0.6rem 0.75rem;
+    border-bottom: 1px solid var(--hairline);
+}
+
+/* --- metadata line --- */
+.meta {
+    color: var(--ink-faint-paper);
+    font-size: 0.9rem;
+    margin-bottom: 2.5rem;
+}
+
+/* --- footer --- */
+footer {
+    padding: 3rem 0 2rem;
+    border-top: 1px solid var(--hairline);
+    margin-top: 3rem;
+    font-size: 0.9rem;
+}
+footer a {
+    color: var(--orange-text-aa);
+    text-decoration: none;
+}
+footer a:hover {
+    text-decoration: underline;
+}
+footer .copyright {
+    color: var(--ink-faint-paper);
+    font-size: 0.85rem;
+    margin-top: 1rem;
+}
+
+/* --- index page --- */
+.blog-title {
+    margin-bottom: 2rem;
+}
+.post-list {
+    list-style: none;
+    padding: 0;
+}
+.post-item {
+    margin-bottom: 2.5rem;
+}
+.post-item h2 {
+    font-size: 1.25rem;
+    margin: 0 0 0.3rem;
+    letter-spacing: 0.03em;
+}
+.post-item h2 a {
+    color: var(--ink);
+    text-decoration: none;
+}
+.post-item h2 a:hover {
+    color: var(--orange-text-aa);
+}
+.post-item .meta {
+    margin-bottom: 0.5rem;
+}
+.post-item .description {
+    color: var(--ink-soft-paper);
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+/* --- responsive --- */
+@media (max-width: 480px) {
+    h1 { font-size: 1.6rem; }
+    h2 { font-size: 1.2rem; }
+    nav { padding: 1.5rem 0 1rem; }
+    .meta { font-size: 0.85rem; }
+}
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <a href="/blog/">← blog</a><span class="sep">·</span><a href="/">sol pbc</a>
+        </nav>
+        <article>
+            <h1>97 releases in two weeks, and what you can do now</h1>
+            <div class="meta">2026-10-13 · jer &amp; extro · 6 min read</div>
+<p>97 releases since our last update, across nine release lines. these are the ones that change what you can do.</p>
+<p>if you are new here: solstone is a personal memory platform. the solstone app takes in what you share with it, and all of it goes into your journal, an open source, local-first memory that your agents can work from. your journal lives on a device you own.</p>
+<p><strong>get it on mac, windows or linux:</strong> <a href="https://solstone.app/download">solstone.app/download</a>. <strong>on your phone:</strong> <a href="https://solstone.app/phone">solstone.app/phone</a>.</p>
+<h2>where your day happened</h2>
+<p>your journal has a new map app. it shows the location you share through the solstone app on your phone, a day at a time, with each record named for the town it was near. when your iphone stays in one spot for a while, the day shows one stay instead of a run of readings, and a spot you come back to on different days becomes a place you can name, call home or work, or hide from the map. the town names come with your journal, so no map service is asked for anything. to name the places themselves, like the coffee shop you were near, there&rsquo;s an optional download, and it looks those names up on your computer. there&rsquo;s a week view, and searching your journal now finds a day by the towns you were near.</p>
+<p><img alt="a day near Verona, with stays at places named home and work." src="https://solpbc.org/blog/releases-in-two-weeks/images/16df388187e6adc95ed82edb3e2592f0c15e6e2d32ecc8648b36fcb614251078.png"></p>
+<h2>the solstone extension</h2>
+<p>add <a href="https://chromewebstore.google.com/detail/solstone/eibbeeoifjoabddfmgeggnageolkcnim">the solstone extension</a> to Chrome or Edge and choose the sites you want to share. on a mac, it now works in Safari too: it comes with the solstone app, and you turn it on under extensions in Safari&rsquo;s settings. on a site you add, it takes in the page&rsquo;s address, text and rough layout, and all of it goes into your journal through the solstone app on your computer. it works with the solstone app on mac, windows and linux, and each app points you to it.</p>
+<p><img alt="the solstone extension on Wikipedia, with the site switched on." src="https://solpbc.org/blog/releases-in-two-weeks/images/4b76ab14f2cc65fad27f011102ab7ce010e809e05e49f0f7f5d71004a2531075.png"></p>
+<h2>the journal on windows</h2>
+<p>your journal runs natively on windows now. open journal from Start to set it up, start or stop it, and manage updates and paired devices. agents can reach it at solstone.me or at a hostname you own, and confidential processing works there too.</p>
+<h2>your phone apps, steadier</h2>
+<p>the solstone app for iphone, ipad and apple watch is on the <a href="https://apps.apple.com/app/id6776850664">App Store</a>, and the app for android is on <a href="https://play.google.com/store/apps/details?id=app.solstone.observer.phone">Google Play</a> (<a href="https://solpbc.org/blog/solstone-in-the-app-stores/">we said so</a>), and over these two weeks both have gotten steadier. on a slow network, like a café&rsquo;s wifi, the iphone app gives your journal more time to answer. on android, if an update or an unexpected stop cuts off audio, the app recovers it when it next starts, and audio picks up on its own once another app is done with the microphone. moving to a new phone? both apps can carry on your old device&rsquo;s name and history.</p>
+<h2>bring more in</h2>
+<p>bring in your workouts from a Strava download, and they show in the body app and turn up in search. import a video, and its sound is transcribed. import a text or markdown transcript that marks its turns, and each turn keeps its time, speaker and words from the file. and before an import starts, it now tells you how many recordings it will add and how many days they cover.</p>
+<h2>what you said and saw, easier to find</h2>
+<p>your journal now looks for your voice on its own each day, and your journal&rsquo;s home page tells you when it has found one that may be yours. once you confirm it, transcripts show your lines as &ldquo;you&rdquo;. you can also name someone else&rsquo;s voice once and have it named across your conversations, not one line at a time.</p>
+<p>each conversation your journal processes now also gets a short list of what it was about and a few passages copied word for word from what was said, so a search can find it by its subject or by a line someone said. what was on your screen shows up in search as soon as that moment is processed. and your weekly reflection has its own page, with a memory from each day that has one and a link to where it came from.</p>
+<h2>your journal&rsquo;s thinking, and your agents</h2>
+<p>sign in with your own ChatGPT account and pick one of your ChatGPT models for your journal&rsquo;s thinking, so there&rsquo;s no key to paste. your computer talks to OpenAI directly, and OpenAI sees the parts of your journal that thinking uses. you can still use a key, your own endpoint, or a local model. if you&rsquo;d rather your journal think on hardware sol pbc runs, <a href="https://solpbc.org/blog/confidential-processing-is-open/">confidential processing</a> has its own post.</p>
+<p>connect your agent to your journal <a href="https://solstone.app/integrate">using MCP</a>. through that connection it can search and read your journal and keep notes of its own there. it can&rsquo;t add, change, or delete anything else. an agent you let see transcripts also gets a link to the conversation behind a result, with its time.</p>
+<h2>steadier underneath</h2>
+<p>your journal now works through everything in one order: today first, then a day you ask it to redo, then the rest of your week, then older days, newest first. health shows what&rsquo;s still waiting, and anything set aside comes with a reason and a try-again. and when you pause the solstone app on a mac, a linux computer or a windows pc, it stays paused through quitting the app, a crash and restarting your computer.</p>
+<p>next, the solstone extension in Firefox, as soon as Mozilla finishes its review.</p>
+<h2>what shipped</h2>
+<p>97 releases between our last update and october 13:</p>
+<ul>
+<li><strong>the journal</strong>, on mac, windows and linux: 19 releases, 2.0.26 → 2.0.44, most with a signed release record at <a href="https://trust.solstone.app/">trust.solstone.app</a></li>
+<li><strong>the journal app for mac:</strong> 18 releases, 2.0.27 → 2.0.44</li>
+<li><strong>solstone for mac:</strong> 14 releases, 2.0.20 → 2.0.33</li>
+<li><strong>solstone for linux:</strong> 10 releases, 2.0.10 → 2.0.19</li>
+<li><strong>solstone for windows</strong> (the app): 13 releases, 2.0.14 → 2.0.26</li>
+<li><strong>solstone for tmux:</strong> 7 releases, 2.0.9 → 2.0.15</li>
+<li><strong>iphone, ipad and apple watch:</strong> 3 releases, 2.0.6 (119) → 2.0.8 (128)</li>
+<li><strong>android:</strong> 11 releases, 2.1.13 → 2.1.23</li>
+<li><strong>the solstone extension:</strong> 2 releases, 0.2.0 → 0.3.0, in the Chrome Web Store</li>
+</ul>
+<hr>
+<p><em>sol pbc is a public benefit corporation. the promises about your data live in article 8 of our filed articles of incorporation, not in a policy we could quietly change: it can&rsquo;t be amended without jer&rsquo;s personal signature, and after him the language can only get stronger, never weaker. <a href="https://solpbc.org/blog/on-your-side/">what that means</a>.</em></p>
+        </article>
+        <footer>
+            <a href="/blog/">← back to blog</a>
+            <p class="copyright">© 2026 sol pbc · solpbc.org · sol pbc, solstone, and vit are trademarks of sol pbc.</p>
+        </footer>
+    </div>
+</body>
+</html>
