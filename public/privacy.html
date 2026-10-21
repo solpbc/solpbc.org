@@ -104,8 +104,8 @@ h3 {
 .content ul,
 .content ol { margin-bottom: 1.5rem; padding-left: 1.5rem; }
 .content li { margin-bottom: 0.5rem; }
-.content a { color: var(--orange-text-aa); text-decoration: none; }
-.content a:hover { text-decoration: underline; }
+.content a { color: var(--orange-text-aa); text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 0.18em; }
+.content a:hover { text-decoration-thickness: 2px; }
 .content strong { color: var(--ink); }
 .content hr {
     border: none;
@@ -156,10 +156,12 @@ footer {
 }
 footer a {
     color: var(--orange-text-aa);
-    text-decoration: none;
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 0.18em;
 }
 footer a:hover {
-    text-decoration: underline;
+    text-decoration-thickness: 2px;
 }
 footer .copyright {
     color: var(--ink-faint-paper);

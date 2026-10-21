@@ -115,8 +115,8 @@ article p  { margin-bottom: 1.5rem; }
 article ul,
 article ol { margin-bottom: 1.5rem; padding-left: 1.5rem; }
 article li { margin-bottom: 0.5rem; }
-article a  { color: var(--orange-text-aa); text-decoration: none; }
-article a:hover { text-decoration: underline; }
+article a  { color: var(--orange-text-aa); text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 0.18em; }
+article a:hover { text-decoration-thickness: 2px; }
 
 article blockquote {
     border-left: 3px solid var(--orange);
@@ -192,10 +192,12 @@ footer {
 }
 footer a {
     color: var(--orange-text-aa);
-    text-decoration: none;
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 0.18em;
 }
 footer a:hover {
-    text-decoration: underline;
+    text-decoration-thickness: 2px;
 }
 footer .copyright {
     color: var(--ink-faint-paper);
