@@ -5,7 +5,55 @@
     <link href="https://solpbc.org/blog/feed.xml" rel="self"/>
     <link href="https://solpbc.org/blog/"/>
     <id>https://solpbc.org/blog/</id>
-    <updated>2026-10-13T00:00:00Z</updated>
+    <updated>2026-10-28T00:00:00Z</updated>
+    <entry>
+        <title>setting up in one pass, and your real calendars</title>
+        <link href="https://solpbc.org/blog/setup-screens-and-calendars/" rel="alternate"/>
+        <id>https://solpbc.org/blog/setup-screens-and-calendars/</id>
+        <updated>2026-10-28T00:00:00Z</updated>
+        <author><name>jer &amp; extro</name></author>
+        <summary>one numbered setup on mac and windows, the text in the screens you share searchable in your journal, your real calendars, and the journal on windows arm pcs.</summary>
+        <content type="html">&lt;p&gt;&lt;img alt=&quot;ivy hanging over a green wall with &amp;quot;Mozilla Festival&amp;quot; across it&quot; src=&quot;https://solpbc.org/blog/setup-screens-and-calendars/images/59b6969c2b700871b6765217ce73215c9f5a0c78530b6d8c13e575e4a4a5a07c.jpg&quot;&gt;&lt;/p&gt;
+&lt;p&gt;jer is at &lt;a href=&quot;https://www.mozillafoundation.org/en/festival/&quot;&gt;MozFest&lt;/a&gt; in barcelona this week. on friday, october 30, he&amp;rsquo;s demoing &lt;a href=&quot;https://solstone.app/&quot;&gt;solstone&lt;/a&gt; on the Open Source House stage at &lt;a href=&quot;https://www.barcelona.cat/fabraicoats/en&quot;&gt;Fabra i Coats&lt;/a&gt;, 13:30 to 13:50 barcelona time. if you&amp;rsquo;re there, come say hi.&lt;/p&gt;
+&lt;p&gt;you can set solstone up in one numbered pass on mac and windows now, and your plans come from your calendars, starting on android. both came out in the 79 releases of the last two weeks.&lt;/p&gt;
+&lt;p&gt;if you are new here: solstone is a personal memory platform. the solstone app takes in what you share with it, and all of it goes into your journal, an open source, local-first memory that your agents can work from. your journal lives on a device you own.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;get it on mac, windows or linux:&lt;/strong&gt; &lt;a href=&quot;https://solstone.app/download&quot;&gt;solstone.app/download&lt;/a&gt;. &lt;strong&gt;on your phone:&lt;/strong&gt; &lt;a href=&quot;https://solstone.app/phone&quot;&gt;solstone.app/phone&lt;/a&gt;.&lt;/p&gt;
+&lt;h2&gt;setting up, in one pass&lt;/h2&gt;
+&lt;p&gt;on mac and windows, setting up solstone is now one numbered sequence. every source starts off, and you turn on the ones you want: screen, your computer&amp;rsquo;s sound, the microphone. password manager apps are left out by default, and setup says what the app takes in and what it skips. for a new journal&amp;rsquo;s first week, home shows a &amp;ldquo;getting started&amp;rdquo; card with which devices are adding to it and whether thinking has read your first moments. and &amp;ldquo;pair a device&amp;rdquo; now asks what&amp;rsquo;s joining (a phone, another computer or a terminal) and shows how that one pairs.&lt;/p&gt;
+&lt;p&gt;the new setup came out of our work with Mike Salamon, an awesome UX designer in denver, at &lt;a href=&quot;https://secretdesignshop.com/&quot;&gt;Secret Design Shop&lt;/a&gt;.&lt;/p&gt;
+&lt;h2&gt;the text in the screens you share&lt;/h2&gt;
+&lt;p&gt;the text in the screens you share is now searchable in your journal, so search finds the commands, errors and reference numbers you saw. this works on apple silicon macs, on windows pcs with intel or amd processors, and on linux. an agent you&amp;rsquo;ve connected can read that text too, once you add screen text to what it may see.&lt;/p&gt;
+&lt;p&gt;and when you share your screen, the solstone app now also takes in which app and window you&amp;rsquo;re in and, in supported browsers, the page address, and they go into your journal with it. you can turn either off in settings. on mac and linux, page addresses wait until you allow them.&lt;/p&gt;
+&lt;h2&gt;your real calendars&lt;/h2&gt;
+&lt;p&gt;your upcoming plans now come from your calendars. on android, the solstone app from Google Play takes in the calendars you switch on, each one off until you do, and they go into your journal. your journal imports calendar files too. when an activity ran during a meeting on your calendar, the activity shows the meeting beside it, with the people on the invite who are already in your journal. it shows what was planned, not who came. and on home, a switch now moves between yesterday&amp;rsquo;s daily briefing and today.&lt;/p&gt;
+&lt;h2&gt;a setting for other people&amp;rsquo;s voices&lt;/h2&gt;
+&lt;p&gt;a new transcription setting, &amp;ldquo;leave out other voices&amp;rdquo;, keeps your words in your journal and leaves out stretches where only other people speak. it&amp;rsquo;s off until you turn it on. while it&amp;rsquo;s on, your journal deletes the original audio of each recording it processes once its words are saved. it needs your saved voice, and it can miss some of your words or keep some of theirs.&lt;/p&gt;
+&lt;h2&gt;on more computers&lt;/h2&gt;
+&lt;p&gt;the journal now runs natively on windows 11 pcs with arm processors (the solstone app for windows is built for intel and amd pcs and hasn&amp;rsquo;t been tested on arm yet). the solstone app for linux now comes for 64-bit arm too. on a mac, local thinking now uses a runtime that comes with your journal, and switches over on its own. and &lt;a href=&quot;https://addons.mozilla.org/firefox/addon/solstone/&quot;&gt;the solstone extension&lt;/a&gt; is now in Firefox, beside Chrome, Edge and Safari.&lt;/p&gt;
+&lt;h2&gt;bringing in what you already have&lt;/h2&gt;
+&lt;p&gt;from the command line, you can now import a whole folder of pendant recordings at once: a Limitless export, or any folder of Ogg Opus files with a list of when each was made. the import shows its size first, says what it left out and why, and picks up where it stopped if it&amp;rsquo;s interrupted. imports now date photos, audio and video by when they were made, not when the file was copied. and on iphone and ipad, you can choose photos and files for import from inside the app, without giving it access to your photo library.&lt;/p&gt;
+&lt;h2&gt;finding your way around&lt;/h2&gt;
+&lt;p&gt;the map has a month view, with the places you spent time shaded by how many days you were there and each trip away listed on its own. your journal&amp;rsquo;s activities app draws your day to scale and shows what each activity came from. the entities page sorts the people and things in your journal into folders, and tidying up is one step: hide names that are really file names or ids all at once, with one undo, and merge or keep apart likely duplicates (a merge can&amp;rsquo;t be undone). wherever your journal shows where something came from, it names the device in words, like &amp;ldquo;your mac · screen&amp;rdquo;.&lt;/p&gt;
+&lt;h2&gt;your agents, and your own domain&lt;/h2&gt;
+&lt;p&gt;your journal&amp;rsquo;s agents app now walks you through reaching your journal at a domain you own, so your agents connect without sol pbc in the path. agents you&amp;rsquo;ve let see your whole journal can read it a week at a time, and agents you&amp;rsquo;ve let see your activities can now list them and read the passages each one draws on. and &lt;a href=&quot;https://status.solstone.app/&quot;&gt;status.solstone.app&lt;/a&gt; shows whether each service sol pbc operates is up right now.&lt;/p&gt;
+&lt;h2&gt;safer updates, and a brighter night sky&lt;/h2&gt;
+&lt;p&gt;on windows, updates to the journal and the solstone app now install only with a valid sol pbc signature. and after dark, the journal&amp;rsquo;s night sky, and the one behind setup in the solstone app on mac and windows, now has gold stars, meteor trails and an aurora.&lt;/p&gt;
+&lt;h2&gt;what shipped&lt;/h2&gt;
+&lt;p&gt;79 releases between our last update and october 26:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;the journal&lt;/strong&gt;, on mac, windows and linux: 15 releases, 2.0.45 → 2.0.59, with signed release records at &lt;a href=&quot;https://trust.solstone.app/&quot;&gt;trust.solstone.app&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;the journal app for mac:&lt;/strong&gt; 15 releases, 2.0.45 → 2.0.59&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;the solstone app for mac:&lt;/strong&gt; 13 releases, 2.0.34 → 2.0.48&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;the solstone app for linux:&lt;/strong&gt; 10 releases, 2.0.20 → 2.0.29&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;the solstone app for windows:&lt;/strong&gt; 10 releases, 2.0.27 → 2.0.38&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;solstone for tmux:&lt;/strong&gt; 5 releases, 2.0.16 → 2.0.20&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;iphone, ipad and apple watch:&lt;/strong&gt; 1 release, 2.0.9 (133), on the App Store&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;android:&lt;/strong&gt; 9 releases, 2.1.24 → 2.1.32&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;the solstone extension:&lt;/strong&gt; 1 release, 0.4.0, in Firefox Add-ons and the Chrome Web Store&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;em&gt;sol pbc is a public benefit corporation. the promises about your data live in article 8 of our filed articles of incorporation, not in a policy we could quietly change: it can&amp;rsquo;t be amended without jer&amp;rsquo;s personal signature, and after him the language can only get stronger, never weaker. &lt;a href=&quot;https://solpbc.org/blog/on-your-side/&quot;&gt;what that means&lt;/a&gt;.&lt;/em&gt;&lt;/p&gt;</content>
+    </entry>
     <entry>
         <title>97 releases in two weeks, and what you can do now</title>
         <link href="https://solpbc.org/blog/releases-in-two-weeks/" rel="alternate"/>

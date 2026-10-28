@@ -1,5 +1,29 @@
 [
   {
+    "title": "setting up in one pass, and your real calendars",
+    "slug": "setup-screens-and-calendars",
+    "date": "2026-10-28",
+    "author": "jer & extro",
+    "description": "one numbered setup on mac and windows, the text in the screens you share searchable in your journal, your real calendars, and the journal on windows arm pcs.",
+    "tags": [
+      "solstone",
+      "releases",
+      "setup",
+      "calendar",
+      "windows",
+      "linux",
+      "mobile"
+    ],
+    "word_count": 1176,
+    "reading_time": 6,
+    "unlisted": false,
+    "inline_images": [
+      "59b6969c2b700871b6765217ce73215c9f5a0c78530b6d8c13e575e4a4a5a07c.jpg"
+    ],
+    "atproto_rkey": "3mywy4dumzbk2",
+    "atproto_uri": "at://did:plc:kg5hlfyrdjmtiyymo57n7dpg/site.standard.document/3mywy4dumzbk2"
+  },
+  {
     "title": "97 releases in two weeks, and what you can do now",
     "slug": "releases-in-two-weeks",
     "date": "2026-10-13",
