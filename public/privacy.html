@@ -136,10 +136,15 @@ h3 {
     padding: 0.6rem 0.75rem;
     border-bottom: 1px solid var(--hairline);
 }
-/* after the base padding, so it wins on a phone */
+/* after the base padding, so it wins on a phone. Words stay whole: a table
+   wider than the column scrolls inside itself, under its own column labels. */
 @media (max-width: 600px) {
+    .table-scroll { overflow-x: auto; margin-bottom: 1.5rem; }
+    .table-scroll table { margin-bottom: 0; }
     .content th,
-    .content td { padding: 0.5rem 0.35rem; }
+    .content td { padding: 0.5rem 0.5rem; overflow-wrap: break-word; }
+    .content table:has(th:nth-child(3)) :is(th, td):not(:first-child) { min-width: 14rem; }
+    .content table:not(:has(th:nth-child(3))) td:last-child { overflow-wrap: anywhere; }
 }
 .content em {
     color: var(--ink-faint-paper);
@@ -381,7 +386,7 @@ footer .copyright {
             <hr>
             <h2 id="processors">Who processes data for us<a href="#processors" class="heading-link" aria-label="link to this section">#</a></h2>
             <p>We keep our processor list for the hosted services and your sign-in short, and name each one; the <a href="#support">writing to us</a> section says what else touches what you send us, and <a href="#sign-in">your sign-in</a> and <a href="#billing">billing</a> say what touches a sign-in or billing record we look up. Cloudflare, Microsoft Azure and Stripe are each bound by contract never to use what we send them to advertise to you, to build a profile of you as a person for us or anyone else, or to sell it; Google runs our mailbox under Google Workspace's standard terms and is not in the path of any hosted service. Like any payment or infrastructure company, each also runs its own fraud-prevention, security, and service operations on the limited technical data it handles; for Stripe that means scoring the payment, and Stripe's own terms let it analyze what it holds about you, the email and transaction details we send included, to improve and develop Stripe's products. That is exactly why we send each one only what it needs to do its job. None of them is given a readable byte of your journal; what each one does hold is in the table below. Apple and Google also run the push services phones use, which carry notifications from your journal once you turn them on. They aren't our processors, and <a href="#notifications">the notifications section</a> says what they see.</p>
-            <table>
+            <div class="table-scroll" tabindex="0"><table>
             <thead><tr><th>Provider</th><th>What they handle</th><th>What they can see</th></tr></thead>
             <tbody>
             <tr><td><strong>Cloudflare</strong></td><td>Hosts solpbc.org and its contact form, v-it.org, solstone.app, trust.solstone.app, transparency.solstone.app, explore.v-it.org (the index of public vit records) and its database, and updates.solstone.app, where solstone fetches its runtimes, models and tools, and checks for newer versions; hosts services.solstone.app and the bot check on its sign-in form; runs the network the private network relay runs on, and the database holding the relay's records of your journals; runs the network the notification hop for iphone runs on, and the storage that holds the services portal's request trace, including the hop's; runs the control plane that mints a solstone.me address and issues its passes, the database holding its address binding, turn-on record and address reservation, and the address lookup for solstone.me; runs the storage (Cloudflare R2) for the operated tier of encrypted backup; runs the database behind services.solstone.app (your sign-in, scout records, subscriptions, and confidential processing's access records), the services portal's check of a confidential-processing credential, and the monitoring that receives confidential processing's health report; delivers the emails we send you (sign-in and verification codes, the confirmations, reminders and other notices about your subscriptions, and our replies to the support form); runs the support form, its bot check, its database and the storage its attachments land in; and carries mail sent to support@solstone.app on its way to our mailbox</td><td>For solpbc.org, the other sites named with it and updates.solstone.app: standard edge logs (it gives us only the aggregate request and error counts described above). For explore.v-it.org's database: the public vit records and handles the index holds. For the relay: connection metadata, the encrypted bytes, and the relay's record of your journal described above (no record of your devices). For the notification hop: connection metadata and what passes through it (your journal's id, your phone's push token and the locked notification), and the request traces <a href="#notifications">the notifications section</a> describes, never what a notification says. For the operated backup: the encrypted blocks, the operational information above (object count, size, last-changed), the credential log and cleanup records, and connection metadata (network address, timing). For services.solstone.app: the sign-in, scout, subscription, and hosted-service access records described above, the network address you sign in from (passed with the bot check on its sign-in form), the request trace described in <a href="#sign-in">your sign-in</a>, and nothing you send the model. For confidential processing's monitoring: the health report <a href="#confidential-processing">confidential processing</a> describes, which names no journal or sign-in. For solstone.me: the network address your journal asks for a pass from, and, at the address lookup, that your address was asked for, when, and the network address that asked; not the traffic itself, which does not pass through Cloudflare (<a href="#solstone-me">solstone.me</a> says what Cloudflare and sol pbc, which control the name, could do). For the support and contact forms: what you sent and the address it came from, on its own schedule (and, for up to a day, the contact form's copy of what you sent). For email: what we email you, and the mail you send us, in transit. <strong>Given no readable byte of your journal</strong></td></tr>
@@ -389,7 +394,7 @@ footer .copyright {
             <tr><td><strong>Stripe</strong></td><td>Payment processing for the hosted subscriptions</td><td>Your card and payment details (which you provide to Stripe directly), the minimal billing info we send to charge you, and what its own checkout page collects from your browser under its privacy policy. <strong>Never anything from your journal</strong></td></tr>
             <tr><td><strong>Google</strong></td><td>Runs the mailbox where mail to support@solstone.app or support@solpbc.org, what you send through the solpbc.org contact form, and our replies to your email land. It is not in the path of any hosted service, and holds the mail under Google Workspace's standard terms</td><td>The mail and contact-form messages you send us, and our replies to your email. Nothing else as our processor; <a href="#notifications">notifications</a> covers its push service</td></tr>
             </tbody>
-            </table>
+            </table></div>
             <p>If we ever add or change a processor, we'll update this list and the changelog below.</p>
             <hr>
             <h2 id="your-rights">Your rights, and how to see, export and delete<a href="#your-rights" class="heading-link" aria-label="link to this section">#</a></h2>
@@ -426,7 +431,7 @@ footer .copyright {
             <p>2. Update the changelog below</p>
             <p>Before we launch any <em>new</em> hosted service, we publish the updated policy here. The covenants above apply to all services, and they cannot be weakened through a policy update. See <a href="#covenants">the amendment lock</a> described above.</p>
             <h3 id="changelog">Changelog<a href="#changelog" class="heading-link" aria-label="link to this section">#</a></h3>
-            <table>
+            <div class="table-scroll" tabindex="0"><table>
             <thead><tr><th>Date</th><th>Change</th></tr></thead>
             <tbody>
             <tr><td>2026-11-01</td><td><strong>The solstone extension is coming to Safari on iphone and ipad, inside the solstone app</strong>, and the section says what differs there: the extension keeps taking in the sites you've chosen while the solstone app is in the background or closed, and what it takes in waits on the device until the app next runs; pausing Safari in the solstone app always stops it; removing the solstone app discards the pages the app holds; and it takes in nothing from private browsing. The section now says *the same device* where it said *computer*, and the phone section points to it. <strong>Private network:</strong> the relay's record of your journal is described by kind; it now also covers when the journal last renewed its credential by proving it holds its own key. No processor added or removed. The binding covenants are unchanged.</td></tr>
@@ -456,7 +461,7 @@ footer .copyright {
             <tr><td>2026-05-01</td><td>Updated to reflect the amendment and restatement of Article 8 (CO SOS Doc. 20261537456) and the adoption of restated bylaws. Acquisition language updated to reflect that change of control is conditional (mission-aligned successors only, with covenants no less protective). Amendment-lock language updated to reflect the new strengthening-only rule outside the founder's stewardship. Operational-agent succession references removed; succession now flows through the Successor Designator mechanism in Article 8 §8.4.</td></tr>
             <tr><td>2026-03-29</td><td>Initial publication</td></tr>
             </tbody>
-            </table>
+            </table></div>
             <hr>
             <p><em>This privacy policy reflects the binding covenants in sol pbc's articles of incorporation and bylaws. The covenants are the authority: this policy describes them in plain language. If there is ever a conflict between this policy and the articles or bylaws, the articles and bylaws govern.</em></p>
             <p><em>Questions? <a href="/contact">Get in touch</a>.</em></p>
