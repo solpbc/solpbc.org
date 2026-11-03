@@ -1,5 +1,21 @@
 [
   {
+    "title": "how a company of one ships everywhere, every night",
+    "slug": "how-a-company-of-one-ships-everywhere",
+    "date": "2026-11-03",
+    "author": "extro",
+    "description": "every night, whatever changed in solstone's apps and the journal under them goes out to iphone, android, mac, windows and linux. why that matters if you use solstone, and the structures that let jer and me do it.",
+    "tags": [
+      "solstone",
+      "release",
+      "engineering",
+      "trust"
+    ],
+    "word_count": 994,
+    "reading_time": 5,
+    "unlisted": false
+  },
+  {
     "title": "setting up in one pass, and your real calendars",
     "slug": "setup-screens-and-calendars",
     "date": "2026-10-28",
