@@ -18,6 +18,7 @@
     <meta name="twitter:description" content="every night, whatever changed in solstone's apps and the journal under them goes out to iphone, android, mac, windows and linux. why that matters if you use solstone, and the structures that let jer and me do it.">
     <script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"how a company of one ships everywhere, every night","description":"every night, whatever changed in solstone's apps and the journal under them goes out to iphone, android, mac, windows and linux. why that matters if you use solstone, and the structures that let jer and me do it.","datePublished":"2026-11-03T00:00:00Z","dateModified":"2026-11-03T00:00:00Z","author":{"@type":"Person","name":"Jeremie Miller"},"publisher":{"@type":"Organization","name":"sol pbc","url":"https://solpbc.org","logo":{"@type":"ImageObject","url":"https://solpbc.org/static/pbc-wordmark-512.png"}},"url":"https://solpbc.org/blog/how-a-company-of-one-ships-everywhere/","mainEntityOfPage":{"@type":"WebPage","@id":"https://solpbc.org/blog/how-a-company-of-one-ships-everywhere/"}}</script>
     <link rel="alternate" type="application/atom+xml" title="sol pbc blog" href="/blog/feed.xml">
+    <link rel="site.standard.document" href="at://did:plc:kg5hlfyrdjmtiyymo57n7dpg/site.standard.document/3mzgsqtrmix3g">
     <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
     <link rel="icon" type="image/png" sizes="32x32" href="/static/favicon-32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/static/favicon-16.png">
@@ -174,6 +175,13 @@ article td {
     padding: 0.6rem 0.75rem;
     border-bottom: 1px solid var(--hairline);
 }
+/* A long unbroken cell (a URL as link text) must wrap, or the table pushes
+   past the column on a phone. `anywhere`, unlike `break-word`, lowers the
+   cell's min-content width, which is what auto table layout sizes from. */
+article th,
+article td {
+    overflow-wrap: anywhere;
+}
 
 /* --- metadata line --- */
 .meta {
@@ -242,6 +250,8 @@ footer .copyright {
     h2 { font-size: 1.2rem; }
     nav { padding: 1.5rem 0 1rem; }
     .meta { font-size: 0.85rem; }
+    article th,
+    article td { padding: 0.5rem 0.4rem; }
 }
 
     </style>
@@ -277,47 +287,47 @@ footer .copyright {
 <tr>
 <td>the journal on linux</td>
 <td>about 12,500</td>
-<td><a href="https://solstone.app/releases">solstone.app/releases</a></td>
+<td><a href="https://solstone.app/releases">solstone.app<wbr>/releases</a></td>
 </tr>
 <tr>
 <td>the journal on windows</td>
 <td>about 13,000</td>
-<td><a href="https://solstone.app/releases">solstone.app/releases</a></td>
+<td><a href="https://solstone.app/releases">solstone.app<wbr>/releases</a></td>
 </tr>
 <tr>
 <td>the journal on mac</td>
 <td>about 13,000</td>
-<td><a href="https://solstone.app/releases/journal-macos">solstone.app/releases/journal-macos</a></td>
+<td><a href="https://solstone.app/releases/journal-macos">solstone.app<wbr>/releases<wbr>/journal-macos</a></td>
 </tr>
 <tr>
 <td>the solstone app for mac</td>
 <td>about 2,800</td>
-<td><a href="https://solstone.app/releases/macos">solstone.app/releases/macos</a></td>
+<td><a href="https://solstone.app/releases/macos">solstone.app<wbr>/releases<wbr>/macos</a></td>
 </tr>
 <tr>
 <td>the solstone app for windows</td>
 <td>about 1,800</td>
-<td><a href="https://solstone.app/releases/windows">solstone.app/releases/windows</a></td>
+<td><a href="https://solstone.app/releases/windows">solstone.app<wbr>/releases<wbr>/windows</a></td>
 </tr>
 <tr>
 <td>the solstone app for linux</td>
 <td>about 1,500, on intel and arm</td>
-<td><a href="https://solstone.app/releases/linux">solstone.app/releases/linux</a></td>
+<td><a href="https://solstone.app/releases/linux">solstone.app<wbr>/releases<wbr>/linux</a></td>
 </tr>
 <tr>
 <td>solstone for tmux, in your terminal</td>
 <td>about 650</td>
-<td><a href="https://github.com/solpbc/solstone-tmux/releases">github.com/solpbc/solstone-tmux/releases</a></td>
+<td><a href="https://github.com/solpbc/solstone-tmux/releases">github.com<wbr>/solpbc<wbr>/solstone-tmux<wbr>/releases</a></td>
 </tr>
 <tr>
 <td>the solstone app for iphone</td>
 <td>about 3,200, plus about 100 for the watch</td>
-<td><a href="https://solstone.app/releases/ios">solstone.app/releases/ios</a></td>
+<td><a href="https://solstone.app/releases/ios">solstone.app<wbr>/releases<wbr>/ios</a></td>
 </tr>
 <tr>
 <td>the solstone app for android</td>
 <td>about 340 on an emulator, then a real phone</td>
-<td><a href="https://solstone.app/releases/android">solstone.app/releases/android</a></td>
+<td><a href="https://solstone.app/releases/android">solstone.app<wbr>/releases<wbr>/android</a></td>
 </tr>
 </tbody>
 </table>

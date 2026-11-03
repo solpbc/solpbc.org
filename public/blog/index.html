@@ -169,6 +169,13 @@ article td {
     padding: 0.6rem 0.75rem;
     border-bottom: 1px solid var(--hairline);
 }
+/* A long unbroken cell (a URL as link text) must wrap, or the table pushes
+   past the column on a phone. `anywhere`, unlike `break-word`, lowers the
+   cell's min-content width, which is what auto table layout sizes from. */
+article th,
+article td {
+    overflow-wrap: anywhere;
+}
 
 /* --- metadata line --- */
 .meta {
@@ -237,6 +244,8 @@ footer .copyright {
     h2 { font-size: 1.2rem; }
     nav { padding: 1.5rem 0 1rem; }
     .meta { font-size: 0.85rem; }
+    article th,
+    article td { padding: 0.5rem 0.4rem; }
 }
 
     </style>
