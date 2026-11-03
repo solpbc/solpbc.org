@@ -255,9 +255,10 @@ build_zip sol-pbc.zip  sol-pbc
 build_zip solstone.zip solstone
 build_zip vit.zip      vit
 build_zip rooks.zip    rooks
-# Global zip = union of all brands (zips live at $OUT root, not under the
+# Global zip = every brand on the page; rooks.zip keeps its URL but rooks is off
+# the page since 2026-11-03, so it stays out. (zips live at $OUT root, not under the
 # brand dirs, so they are never recursively included in one another).
-build_zip sol-pbc-brand-all.zip sol-pbc solstone vit rooks
+build_zip sol-pbc-brand-all.zip sol-pbc solstone vit
 
 echo "$NEW_HASH" > "$STAMP"
 
