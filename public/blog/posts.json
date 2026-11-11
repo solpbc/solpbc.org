@@ -1,5 +1,25 @@
 [
   {
+    "title": "telling your journal it's wrong",
+    "slug": "telling-your-journal-its-wrong",
+    "date": "2026-11-11",
+    "author": "jer & extro",
+    "description": "correct an activity in your own words, a trash that takes a delete back, new ways to bring in notes and workouts, and a heads-up when a security fix is waiting.",
+    "tags": [
+      "solstone",
+      "releases",
+      "journal",
+      "privacy",
+      "agents",
+      "import"
+    ],
+    "word_count": 1009,
+    "reading_time": 6,
+    "unlisted": false,
+    "atproto_rkey": "3n22y4oiyzrzj",
+    "atproto_uri": "at://did:plc:kg5hlfyrdjmtiyymo57n7dpg/site.standard.document/3n22y4oiyzrzj"
+  },
+  {
     "title": "how a company of one ships everywhere, every night",
     "slug": "how-a-company-of-one-ships-everywhere",
     "date": "2026-11-03",

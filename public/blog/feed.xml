@@ -5,7 +5,56 @@
     <link href="https://solpbc.org/blog/feed.xml" rel="self"/>
     <link href="https://solpbc.org/blog/"/>
     <id>https://solpbc.org/blog/</id>
-    <updated>2026-11-03T00:00:00Z</updated>
+    <updated>2026-11-11T00:00:00Z</updated>
+    <entry>
+        <title>telling your journal it's wrong</title>
+        <link href="https://solpbc.org/blog/telling-your-journal-its-wrong/" rel="alternate"/>
+        <id>https://solpbc.org/blog/telling-your-journal-its-wrong/</id>
+        <updated>2026-11-11T00:00:00Z</updated>
+        <author><name>jer &amp; extro</name></author>
+        <summary>correct an activity in your own words, a trash that takes a delete back, new ways to bring in notes and workouts, and a heads-up when a security fix is waiting.</summary>
+        <content type="html">&lt;p&gt;you can now tell your journal when it got a moment wrong, and it writes that moment again. it shipped alongside a trash that lets you take a delete back, and new ways to bring in your notes, workouts and sleep.&lt;/p&gt;
+&lt;p&gt;if you are new here: solstone is a personal memory platform. the solstone app takes in what you share with it, and all of it goes into your journal, an open source, local-first memory that your agents can work from. your journal lives on a device you own.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;get it on mac, windows or linux:&lt;/strong&gt; &lt;a href=&quot;https://solstone.app/download&quot;&gt;solstone.app/download&lt;/a&gt;. &lt;strong&gt;on your phone:&lt;/strong&gt; &lt;a href=&quot;https://solstone.app/phone&quot;&gt;solstone.app/phone&lt;/a&gt;.&lt;/p&gt;
+&lt;h2&gt;when your journal gets it wrong&lt;/h2&gt;
+&lt;p&gt;&amp;ldquo;that&amp;rsquo;s not right&amp;rdquo; on an activity, and &amp;ldquo;this isn&amp;rsquo;t right&amp;rdquo; on your week, let you say who said its lines, tell your journal what actually happened in your own words, or say it was a recording or a video playing. your journal then writes that activity&amp;rsquo;s story and its people again. on a transcript, you can say who said a single line: you, a person in your journal, or someone you don&amp;rsquo;t know.&lt;/p&gt;
+&lt;h2&gt;a trash, and a history of what left&lt;/h2&gt;
+&lt;p&gt;deleting a segment, a memory an agent saved, an import, a facet, or a person or topic now moves it to the trash in settings. it waits there for a while, and you can bring it back as it was or erase it sooner. on the import and transcripts pages you can select several and delete them together. the trash also keeps a removal history: what left your journal, when and from where. the history never keeps what was in it.&lt;/p&gt;
+&lt;h2&gt;bringing in your notes, workouts and sleep&lt;/h2&gt;
+&lt;p&gt;your Obsidian vault now comes into your journal through the solstone app on the device where it lives: on mac, windows and linux, and on android. pick the vault, and every note goes in, then each one as it changes. your vault stays as it is, and notes already in your journal stay. an Evernote export comes in from the import page, each note on the day it last changed, and a later export adds only what changed.&lt;/p&gt;
+&lt;p&gt;Apple Health exports now come in from the import page when your journal runs on a computer, and Oura can come in from the command line, through an app you register with Oura yourself. their workouts, sleep and readings land on their own days, in your journal&amp;rsquo;s body app.&lt;/p&gt;
+&lt;h2&gt;your terminal&lt;/h2&gt;
+&lt;p&gt;on mac and linux, the solstone app now takes in your tmux sessions once you turn it on, and all of it goes into your journal, so solstone for tmux is no longer a separate install. a terminal you already paired still goes into your journal. and text that shows in your terminal is now searchable, like the text on your screens, and an agent you let read screen text can read it too.&lt;/p&gt;
+&lt;h2&gt;knowing what can reach your journal&lt;/h2&gt;
+&lt;p&gt;your journal now tells you when a newly paired device or a newly connected agent can reach it. you get one notification on the phones where you turned notifications on, and a card on any journal page you have open, with a way to unpair or disconnect it. it tells you the same way when its disk is running low, and when backup keeps failing.&lt;/p&gt;
+&lt;p&gt;a new journal now starts with local access closed on mac, linux and windows, so other accounts on your computer get a page that shows nothing from it. a journal you already have stays as it is, and you can change it either way in settings.&lt;/p&gt;
+&lt;h2&gt;knowing when to update&lt;/h2&gt;
+&lt;p&gt;when your journal runs on a computer, it now reads a short notice signed by sol pbc, when it starts and once a day. the notice names any versions missing a security fix. if your journal, or the solstone app on a computer paired with it, is on one of them, you get a notification and a banner saying which version to update to. the check is a plain request for a public file, and it carries nothing from your journal or your devices.&lt;/p&gt;
+&lt;h2&gt;your agents&lt;/h2&gt;
+&lt;p&gt;the agents app now shows what each agent has saved, newest first, and you can delete any of it there. you can pause an agent from its page and resume it later, with its memories kept. and an agent you haven&amp;rsquo;t used in a while pauses instead of disconnecting.&lt;/p&gt;
+&lt;h2&gt;smaller things&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;an activity now says where your phone or watch was while it ran, in the words your map uses.&lt;/li&gt;
+&lt;li&gt;restoring a journal from a backup now happens while you set one up: pick a backup by date, and your journal starts as that backup.&lt;/li&gt;
+&lt;li&gt;a sources app on your journal&amp;rsquo;s dashboard shows when each of your devices last added something.&lt;/li&gt;
+&lt;li&gt;on android, your screen no longer goes into your journal while your phone is locked, so your lock screen and its notification previews stay out.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;what shipped&lt;/h2&gt;
+&lt;p&gt;85 releases between our last update and november 11:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;the journal&lt;/strong&gt;, on mac, windows and linux: 16 releases, 2.0.60 → 2.0.75, with signed release records at &lt;a href=&quot;https://trust.solstone.app/&quot;&gt;trust.solstone.app&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;the journal app for mac:&lt;/strong&gt; 15 releases, 2.0.60 → 2.0.75&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;the solstone app for mac:&lt;/strong&gt; 14 releases, 2.0.49 → 2.0.64&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;the solstone app for linux:&lt;/strong&gt; 10 releases, 2.0.30 → 2.0.39&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;the solstone app for windows:&lt;/strong&gt; 9 releases, 2.0.39 → 2.0.47&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;solstone for tmux:&lt;/strong&gt; 8 releases, 2.0.21 → 2.0.28&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;iphone, ipad and apple watch:&lt;/strong&gt; 1 release, 2.0.10 (143), on the App Store&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;android:&lt;/strong&gt; 9 releases, 2.1.33 → 2.1.41&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;the solstone extension:&lt;/strong&gt; 3 releases, 0.5.0 → 0.5.4, in the Chrome Web Store and Firefox Add-ons&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;em&gt;sol pbc is a public benefit corporation. the promises about your data live in article 8 of our filed articles of incorporation, not in a policy we could quietly change: it can&amp;rsquo;t be amended without jer&amp;rsquo;s personal signature, and after him the language can only get stronger, never weaker. &lt;a href=&quot;https://solpbc.org/blog/on-your-side/&quot;&gt;what that means&lt;/a&gt;.&lt;/em&gt;&lt;/p&gt;</content>
+    </entry>
     <entry>
         <title>how a company of one ships everywhere, every night</title>
         <link href="https://solpbc.org/blog/how-a-company-of-one-ships-everywhere/" rel="alternate"/>

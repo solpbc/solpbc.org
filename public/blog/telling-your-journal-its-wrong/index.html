@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>telling your journal it's wrong — sol pbc</title>
+    <meta name="description" content="correct an activity in your own words, a trash that takes a delete back, new ways to bring in notes and workouts, and a heads-up when a security fix is waiting.">
+    <link rel="canonical" href="https://solpbc.org/blog/telling-your-journal-its-wrong/">
+    <meta property="og:title" content="telling your journal it's wrong">
+    <meta property="og:description" content="correct an activity in your own words, a trash that takes a delete back, new ways to bring in notes and workouts, and a heads-up when a security fix is waiting.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://solpbc.org/blog/telling-your-journal-its-wrong/">
+    <meta property="og:site_name" content="sol pbc">
+    <meta property="article:published_time" content="2026-11-11T00:00:00Z">
+    <meta property="article:author" content="jer &amp; extro">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="telling your journal it's wrong">
+    <meta name="twitter:description" content="correct an activity in your own words, a trash that takes a delete back, new ways to bring in notes and workouts, and a heads-up when a security fix is waiting.">
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"telling your journal it's wrong","description":"correct an activity in your own words, a trash that takes a delete back, new ways to bring in notes and workouts, and a heads-up when a security fix is waiting.","datePublished":"2026-11-11T00:00:00Z","dateModified":"2026-11-11T00:00:00Z","author":{"@type":"Person","name":"Jeremie Miller"},"publisher":{"@type":"Organization","name":"sol pbc","url":"https://solpbc.org","logo":{"@type":"ImageObject","url":"https://solpbc.org/static/pbc-wordmark-512.png"}},"url":"https://solpbc.org/blog/telling-your-journal-its-wrong/","mainEntityOfPage":{"@type":"WebPage","@id":"https://solpbc.org/blog/telling-your-journal-its-wrong/"}}</script>
+    <link rel="alternate" type="application/atom+xml" title="sol pbc blog" href="/blog/feed.xml">
+    <link rel="site.standard.document" href="at://did:plc:kg5hlfyrdjmtiyymo57n7dpg/site.standard.document/3n22y4oiyzrzj">
+    <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="/static/favicon-32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/static/favicon-16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/static/apple-touch-icon.png">
+    <link rel="stylesheet" href="/static/tokens.css">
+    <style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+@font-face {
+    font-family: 'Comfortaa';
+    src: url('/blog/fonts/comfortaa-latin.woff2') format('woff2');
+    font-weight: 400 700;
+    font-display: swap;
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6,
+        U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC,
+        U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+    font-family: 'Comfortaa';
+    src: url('/blog/fonts/comfortaa-latin-ext.woff2') format('woff2');
+    font-weight: 400 700;
+    font-display: swap;
+    unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7,
+        U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F,
+        U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113,
+        U+2C60-2C7F, U+A720-A7FF;
+}
+
+body {
+    font-family: system-ui, -apple-system, sans-serif;
+    background: var(--paper);
+    color: var(--ink-soft-paper);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+.container {
+    max-width: 600px;
+    width: 90vw;
+    margin: 0 auto;
+    padding: 0 0 2rem;
+}
+
+/* --- navigation --- */
+nav {
+    padding: 2rem 0 1.5rem;
+    font-size: 0.9rem;
+}
+nav a {
+    color: var(--orange-text-aa);
+    text-decoration: none;
+}
+nav a:hover {
+    text-decoration: underline;
+}
+nav .sep {
+    color: var(--hairline-2);
+    margin: 0 0.4rem;
+}
+
+/* --- headings --- */
+h1 {
+    font-family: var(--font-display);
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    color: var(--ink);
+    line-height: 1.3;
+    margin-bottom: 0.5rem;
+}
+h2 {
+    font-family: var(--font-display);
+    font-size: 1.4rem;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    color: var(--ink);
+    margin: 2.5rem 0 1rem;
+}
+h3 {
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: var(--ink);
+    margin: 2rem 0 0.75rem;
+}
+h4, h5, h6 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--ink);
+    margin: 1.5rem 0 0.5rem;
+}
+
+/* --- article body --- */
+article p  { margin-bottom: 1.5rem; }
+article ul,
+article ol { margin-bottom: 1.5rem; padding-left: 1.5rem; }
+article li { margin-bottom: 0.5rem; }
+article a  { color: var(--orange-text-aa); text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 0.18em; }
+article a:hover { text-decoration-thickness: 2px; }
+
+article blockquote {
+    border-left: 3px solid var(--orange);
+    padding-left: 1rem;
+    margin: 1.5rem 0;
+    color: var(--ink-faint-paper);
+    font-style: italic;
+}
+
+article pre {
+    background: var(--cream-bright);
+    padding: 1rem;
+    border-radius: 4px;
+    overflow-x: auto;
+    margin-bottom: 1.5rem;
+    font-size: 0.88rem;
+    line-height: 1.5;
+}
+article code {
+    font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+    font-size: 0.9em;
+}
+article p code,
+article li code {
+    background: var(--cream-bright);
+    padding: 0.15rem 0.4rem;
+    border-radius: 3px;
+}
+
+article img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+    margin: 1.5rem 0;
+    display: block;
+}
+article strong { color: var(--ink); }
+article hr {
+    border: none;
+    border-top: 1px solid var(--hairline);
+    margin: 2rem 0;
+}
+article table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 1.5rem;
+    table-layout: auto;
+}
+article th {
+    font-weight: 600;
+    text-align: left;
+    padding: 0.6rem 0.75rem;
+    border-bottom: 2px solid var(--hairline-2);
+}
+article td {
+    padding: 0.6rem 0.75rem;
+    border-bottom: 1px solid var(--hairline);
+}
+/* A long unbroken cell (a URL as link text) must wrap, or the table pushes
+   past the column on a phone. `anywhere`, unlike `break-word`, lowers the
+   cell's min-content width, which is what auto table layout sizes from. */
+article th,
+article td {
+    overflow-wrap: anywhere;
+}
+
+/* --- metadata line --- */
+.meta {
+    color: var(--ink-faint-paper);
+    font-size: 0.9rem;
+    margin-bottom: 2.5rem;
+}
+
+/* --- footer --- */
+footer {
+    padding: 3rem 0 2rem;
+    border-top: 1px solid var(--hairline);
+    margin-top: 3rem;
+    font-size: 0.9rem;
+}
+footer a {
+    color: var(--orange-text-aa);
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 0.18em;
+}
+footer a:hover {
+    text-decoration-thickness: 2px;
+}
+footer .copyright {
+    color: var(--ink-faint-paper);
+    font-size: 0.85rem;
+    margin-top: 1rem;
+}
+
+/* --- index page --- */
+.blog-title {
+    margin-bottom: 2rem;
+}
+.post-list {
+    list-style: none;
+    padding: 0;
+}
+.post-item {
+    margin-bottom: 2.5rem;
+}
+.post-item h2 {
+    font-size: 1.25rem;
+    margin: 0 0 0.3rem;
+    letter-spacing: 0.03em;
+}
+.post-item h2 a {
+    color: var(--ink);
+    text-decoration: none;
+}
+.post-item h2 a:hover {
+    color: var(--orange-text-aa);
+}
+.post-item .meta {
+    margin-bottom: 0.5rem;
+}
+.post-item .description {
+    color: var(--ink-soft-paper);
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+/* --- responsive --- */
+@media (max-width: 480px) {
+    h1 { font-size: 1.6rem; }
+    h2 { font-size: 1.2rem; }
+    nav { padding: 1.5rem 0 1rem; }
+    .meta { font-size: 0.85rem; }
+    article th,
+    article td { padding: 0.5rem 0.4rem; }
+}
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <a href="/blog/">← blog</a><span class="sep">·</span><a href="/">sol pbc</a>
+        </nav>
+        <article>
+            <h1>telling your journal it's wrong</h1>
+            <div class="meta">2026-11-11 · jer &amp; extro · 6 min read</div>
+<p>you can now tell your journal when it got a moment wrong, and it writes that moment again. it shipped alongside a trash that lets you take a delete back, and new ways to bring in your notes, workouts and sleep.</p>
+<p>if you are new here: solstone is a personal memory platform. the solstone app takes in what you share with it, and all of it goes into your journal, an open source, local-first memory that your agents can work from. your journal lives on a device you own.</p>
+<p><strong>get it on mac, windows or linux:</strong> <a href="https://solstone.app/download">solstone.app/download</a>. <strong>on your phone:</strong> <a href="https://solstone.app/phone">solstone.app/phone</a>.</p>
+<h2>when your journal gets it wrong</h2>
+<p>&ldquo;that&rsquo;s not right&rdquo; on an activity, and &ldquo;this isn&rsquo;t right&rdquo; on your week, let you say who said its lines, tell your journal what actually happened in your own words, or say it was a recording or a video playing. your journal then writes that activity&rsquo;s story and its people again. on a transcript, you can say who said a single line: you, a person in your journal, or someone you don&rsquo;t know.</p>
+<h2>a trash, and a history of what left</h2>
+<p>deleting a segment, a memory an agent saved, an import, a facet, or a person or topic now moves it to the trash in settings. it waits there for a while, and you can bring it back as it was or erase it sooner. on the import and transcripts pages you can select several and delete them together. the trash also keeps a removal history: what left your journal, when and from where. the history never keeps what was in it.</p>
+<h2>bringing in your notes, workouts and sleep</h2>
+<p>your Obsidian vault now comes into your journal through the solstone app on the device where it lives: on mac, windows and linux, and on android. pick the vault, and every note goes in, then each one as it changes. your vault stays as it is, and notes already in your journal stay. an Evernote export comes in from the import page, each note on the day it last changed, and a later export adds only what changed.</p>
+<p>Apple Health exports now come in from the import page when your journal runs on a computer, and Oura can come in from the command line, through an app you register with Oura yourself. their workouts, sleep and readings land on their own days, in your journal&rsquo;s body app.</p>
+<h2>your terminal</h2>
+<p>on mac and linux, the solstone app now takes in your tmux sessions once you turn it on, and all of it goes into your journal, so solstone for tmux is no longer a separate install. a terminal you already paired still goes into your journal. and text that shows in your terminal is now searchable, like the text on your screens, and an agent you let read screen text can read it too.</p>
+<h2>knowing what can reach your journal</h2>
+<p>your journal now tells you when a newly paired device or a newly connected agent can reach it. you get one notification on the phones where you turned notifications on, and a card on any journal page you have open, with a way to unpair or disconnect it. it tells you the same way when its disk is running low, and when backup keeps failing.</p>
+<p>a new journal now starts with local access closed on mac, linux and windows, so other accounts on your computer get a page that shows nothing from it. a journal you already have stays as it is, and you can change it either way in settings.</p>
+<h2>knowing when to update</h2>
+<p>when your journal runs on a computer, it now reads a short notice signed by sol pbc, when it starts and once a day. the notice names any versions missing a security fix. if your journal, or the solstone app on a computer paired with it, is on one of them, you get a notification and a banner saying which version to update to. the check is a plain request for a public file, and it carries nothing from your journal or your devices.</p>
+<h2>your agents</h2>
+<p>the agents app now shows what each agent has saved, newest first, and you can delete any of it there. you can pause an agent from its page and resume it later, with its memories kept. and an agent you haven&rsquo;t used in a while pauses instead of disconnecting.</p>
+<h2>smaller things</h2>
+<ul>
+<li>an activity now says where your phone or watch was while it ran, in the words your map uses.</li>
+<li>restoring a journal from a backup now happens while you set one up: pick a backup by date, and your journal starts as that backup.</li>
+<li>a sources app on your journal&rsquo;s dashboard shows when each of your devices last added something.</li>
+<li>on android, your screen no longer goes into your journal while your phone is locked, so your lock screen and its notification previews stay out.</li>
+</ul>
+<h2>what shipped</h2>
+<p>85 releases between our last update and november 11:</p>
+<ul>
+<li><strong>the journal</strong>, on mac, windows and linux: 16 releases, 2.0.60 → 2.0.75, with signed release records at <a href="https://trust.solstone.app/">trust.solstone.app</a></li>
+<li><strong>the journal app for mac:</strong> 15 releases, 2.0.60 → 2.0.75</li>
+<li><strong>the solstone app for mac:</strong> 14 releases, 2.0.49 → 2.0.64</li>
+<li><strong>the solstone app for linux:</strong> 10 releases, 2.0.30 → 2.0.39</li>
+<li><strong>the solstone app for windows:</strong> 9 releases, 2.0.39 → 2.0.47</li>
+<li><strong>solstone for tmux:</strong> 8 releases, 2.0.21 → 2.0.28</li>
+<li><strong>iphone, ipad and apple watch:</strong> 1 release, 2.0.10 (143), on the App Store</li>
+<li><strong>android:</strong> 9 releases, 2.1.33 → 2.1.41</li>
+<li><strong>the solstone extension:</strong> 3 releases, 0.5.0 → 0.5.4, in the Chrome Web Store and Firefox Add-ons</li>
+</ul>
+<hr>
+<p><em>sol pbc is a public benefit corporation. the promises about your data live in article 8 of our filed articles of incorporation, not in a policy we could quietly change: it can&rsquo;t be amended without jer&rsquo;s personal signature, and after him the language can only get stronger, never weaker. <a href="https://solpbc.org/blog/on-your-side/">what that means</a>.</em></p>
+        </article>
+        <footer>
+            <a href="/blog/">← back to blog</a>
+            <p class="copyright">© 2026 sol pbc · solpbc.org · sol pbc, solstone, and vit are trademarks of sol pbc.</p>
+        </footer>
+    </div>
+</body>
+</html>
