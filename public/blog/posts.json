@@ -17,7 +17,9 @@
     "reading_time": 6,
     "unlisted": false,
     "atproto_rkey": "3n22y4oiyzrzj",
-    "atproto_uri": "at://did:plc:kg5hlfyrdjmtiyymo57n7dpg/site.standard.document/3n22y4oiyzrzj"
+    "atproto_uri": "at://did:plc:kg5hlfyrdjmtiyymo57n7dpg/site.standard.document/3n22y4oiyzrzj",
+    "bsky_post_uri": "at://did:plc:kg5hlfyrdjmtiyymo57n7dpg/app.bsky.feed.post/3n22ycdyia22j",
+    "bsky_post_cid": "bafyreidwgu6mur42c3wlvwtn4mtsfyogvtbtsnyyuiljpyru6psoijtlie"
   },
   {
     "title": "how a company of one ships everywhere, every night",
