@@ -345,9 +345,10 @@ export default {
     // these paths are a public contract (READMEs hotlink them). File names under
     // the new asset path are unchanged, and the query string is kept.
     // /brand/mark was the 2026-08-17 misfile of /brands/mark; it goes straight
-    // to the new home rather than through a second hop.
+    // to the new home rather than through a second hop. On solstone.app the
+    // design story is /brand/logo.
     if (SOLSTONE_MARK_PATHS.has(url.pathname)) {
-      return redirect(SOLSTONE_BRAND_ORIGIN + '/brand/mark' + url.search, 301);
+      return redirect(SOLSTONE_BRAND_ORIGIN + '/brand/logo' + url.search, 301);
     }
     if (url.pathname === '/brands/assets/solstone.zip' || url.pathname.startsWith('/brands/assets/solstone/')) {
       return redirect(SOLSTONE_BRAND_ORIGIN + url.pathname.replace(/^\/brands\//, '/brand/') + url.search, 301);
