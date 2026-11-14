@@ -61,6 +61,16 @@ const TALKS_CSP =
   "frame-src 'self' https://customer-eyrmf7nulbdv9pd7.cloudflarestream.com https://embed.cloudflarestream.com; " +
   "base-uri 'self'; form-action 'self'; frame-ancestors 'self'";
 
+const SOLSTONE_BRAND_ORIGIN = 'https://solstone.app';
+const SOLSTONE_MARK_PATHS = new Set([
+  '/brands/mark',
+  '/brands/mark/',
+  '/brands/mark.html',
+  '/brand/mark',
+  '/brand/mark/',
+  '/brand/mark.html',
+]);
+
 // --- helpers ---
 
 function jsonResponse(data, status = 200) {
@@ -330,9 +340,17 @@ export default {
       return redirect('/talks/2026-05-05-demo-day', 302);
     }
 
-    // /brand/mark → moved to /brands/mark (misfiled 2026-08-17, corrected 2026-08-18).
-    if (url.pathname === '/brand/mark') {
-      return redirect('/brands/mark', 301);
+    // solstone's brand moved to solstone.app/brand on 2026-11-14. Every old
+    // solstone URL answers with a permanent redirect to its new home, for good:
+    // these paths are a public contract (READMEs hotlink them). File names under
+    // the new asset path are unchanged, and the query string is kept.
+    // /brand/mark was the 2026-08-17 misfile of /brands/mark; it goes straight
+    // to the new home rather than through a second hop.
+    if (SOLSTONE_MARK_PATHS.has(url.pathname)) {
+      return redirect(SOLSTONE_BRAND_ORIGIN + '/brand/mark' + url.search, 301);
+    }
+    if (url.pathname === '/brands/assets/solstone.zip' || url.pathname.startsWith('/brands/assets/solstone/')) {
+      return redirect(SOLSTONE_BRAND_ORIGIN + url.pathname.replace(/^\/brands\//, '/brand/') + url.search, 301);
     }
 
     // /brands and /brands.html → canonical /brands/ (the clean-URL handler

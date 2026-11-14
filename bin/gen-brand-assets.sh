@@ -31,8 +31,7 @@
 # PNGs natively at the target size (never downsample — founder rule,
 # cmo/brand/identity/index.md § rendering rule) and both emit true-vector PDFs
 # (zero raster image rows under `pdfimages -list` — acceptance gate §7.6).
-# The portal's sol pbc + solstone assets (pbc-wordmark, mark + white/black
-# variants) have no per-size hand-tuned source, so a uniform native render
+# The portal's assets have no per-size hand-tuned source, so a uniform native render
 # satisfies the rule for every brand identically.
 set -eu
 
@@ -61,21 +60,14 @@ fi
 
 # --- asset manifest ---------------------------------------------------------
 # One line per asset: "<brand> <asset-name> <source-svg-path-relative-to-BRAND_SRC>"
-# <brand> in sol-pbc | solstone | vit ; names match the portal's download set.
+# <brand> in sol-pbc | vit | rooks ; names match the portal's download set.
+# solstone is not here: its downloads moved to solstone.app/brand on 2026-11-14
+# and are generated in that repo. The old /brands/assets/solstone/** URLs answer
+# with a permanent redirect from worker.js.
 MANIFEST="
 sol-pbc   pbc-wordmark        sol-pbc/pbc-wordmark.svg
 sol-pbc   pbc-wordmark-white  sol-pbc/pbc-wordmark-white.svg
 sol-pbc   pbc-wordmark-black  sol-pbc/pbc-wordmark-black.svg
-solstone  mark                solstone/mark.svg
-solstone  mark-white          solstone/mark-white.svg
-solstone  mark-black          solstone/mark-black.svg
-solstone  app-icon-cream-squircle   solstone/app-icon/app-icon-cream-squircle.svg
-solstone  app-icon-cream            solstone/app-icon/app-icon-cream.svg
-solstone  app-icon-transparent      solstone/app-icon/app-icon-transparent.svg
-solstone  lockup-solstone-app                 solstone/lockup-solstone-app.svg
-solstone  lockup-solstone-app-white           solstone/lockup-solstone-app-white.svg
-solstone  lockup-solstone-horizontal              solstone/lockup-solstone-horizontal.svg
-solstone  lockup-solstone-horizontal-white        solstone/lockup-solstone-horizontal-white.svg
 vit       vit-mark            vit/vit-mark.svg
 vit       vit-mark-dark       vit/vit-mark-dark.svg
 vit       vit-mark-white      vit/vit-mark-white.svg
@@ -213,27 +205,6 @@ echo "$MANIFEST" | while read -r brand name relsrc; do
   echo "  $brand/$name  (svg + pdf + png x$(echo $LADDER | wc -w))"
 done
 
-# --- QR code (special asset — NOT laddered) ---------------------------------
-# The sol QR is a raster-backed styled logo-QR: a 16px render is unscannable
-# and the .svg is a raster-wrapper that won't vectorize, so it bypasses the
-# svg+png-ladder+pdf pipeline above. Copy the canonical (cream) + secondary
-# (white) masters straight into solstone/qr/ at their authored sizes; they
-# ride solstone.zip + the global zip via the directory include below, and the
-# mtime-pin (find ... touch, further down) keeps the zips deterministic.
-QR_SRC="$BRAND_SRC/solstone/qr"
-QR_OUT="$OUT/solstone/qr"
-mkdir -p "$QR_OUT"
-for f in "qr-solstone-app.svg" \
-         "png/qr-cream-512.png"  "png/qr-cream-1024.png"  "png/qr-cream-2048.png" \
-         "png/qr-white-512.png"  "png/qr-white-1024.png"  "png/qr-white-2048.png"; do
-  if [ ! -f "$QR_SRC/$f" ]; then
-    echo "gen-brand-assets: missing QR source $QR_SRC/$f" >&2
-    exit 1
-  fi
-  cp "$QR_SRC/$f" "$QR_OUT/"
-done
-echo "  solstone/qr  (svg + cream/white png 512/1024/2048, not laddered)"
-
 # --- deterministic zips -----------------------------------------------------
 # Pin every generated file's mode and mtime, then zip from a sorted file list
 # with -X (no extra attrs). zip stores Unix permissions in its central
@@ -250,15 +221,14 @@ build_zip() {
 }
 
 # Per-brand zip = that brand's full svg + png-ladder + pdf set.
-( cd "$OUT" && rm -f sol-pbc.zip solstone.zip vit.zip rooks.zip sol-pbc-brand-all.zip )
+( cd "$OUT" && rm -f sol-pbc.zip vit.zip rooks.zip sol-pbc-brand-all.zip )
 build_zip sol-pbc.zip  sol-pbc
-build_zip solstone.zip solstone
 build_zip vit.zip      vit
 build_zip rooks.zip    rooks
 # Global zip = every brand on the page; rooks.zip keeps its URL but rooks is off
 # the page since 2026-11-03, so it stays out. (zips live at $OUT root, not under the
 # brand dirs, so they are never recursively included in one another).
-build_zip sol-pbc-brand-all.zip sol-pbc solstone vit
+build_zip sol-pbc-brand-all.zip sol-pbc vit
 
 echo "$NEW_HASH" > "$STAMP"
 
