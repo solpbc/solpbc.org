@@ -1,0 +1,16 @@
+{
+  "description": "clearspace 8%",
+  "context": "found as figure.",
+  "surfaces": [
+    "solpbc.org"
+  ],
+  "bundles": [
+    "solpbc-org"
+  ],
+  "arguments": [],
+  "format_intent": "text",
+  "max_length": 13,
+  "source_revision": "dc3b3b5d952709d854ea741e691653e9b8a11d53f381cd75901f90774711e4fa",
+  "risk": "routine",
+  "auto_merge": true
+}

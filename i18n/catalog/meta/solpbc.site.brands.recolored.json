@@ -1,0 +1,16 @@
+{
+  "description": "recolored",
+  "context": "found as div.",
+  "surfaces": [
+    "solpbc.org"
+  ],
+  "bundles": [
+    "solpbc-org"
+  ],
+  "arguments": [],
+  "format_intent": "text",
+  "max_length": 9,
+  "source_revision": "8fd34c48e60cea3565f9af80647c33fb91fdc014357df59c11cafc22a7e8c961",
+  "risk": "routine",
+  "auto_merge": true
+}

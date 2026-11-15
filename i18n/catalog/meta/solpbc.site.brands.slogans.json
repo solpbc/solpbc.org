@@ -1,0 +1,16 @@
+{
+  "description": "slogans",
+  "context": "found as h3.",
+  "surfaces": [
+    "solpbc.org"
+  ],
+  "bundles": [
+    "solpbc-org"
+  ],
+  "arguments": [],
+  "format_intent": "text",
+  "max_length": 7,
+  "source_revision": "6bc02ef429be13d848085c690c094ef209c8ccf58d775d9b939424e9ff22175e",
+  "risk": "routine",
+  "auto_merge": true
+}

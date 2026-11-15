@@ -1,0 +1,16 @@
+{
+  "description": "call to action",
+  "context": "found as span.",
+  "surfaces": [
+    "solpbc.org"
+  ],
+  "bundles": [
+    "solpbc-org"
+  ],
+  "arguments": [],
+  "format_intent": "text",
+  "max_length": 14,
+  "source_revision": "565d7f1eec795652925deef39ffe1b1c75db07f2ed453c3de1cf848c2b794cfa",
+  "risk": "routine",
+  "auto_merge": true
+}

@@ -1,0 +1,16 @@
+{
+  "description": "mission-aligned successors only",
+  "context": "found as h3.",
+  "surfaces": [
+    "solpbc.org"
+  ],
+  "bundles": [
+    "solpbc-org"
+  ],
+  "arguments": [],
+  "format_intent": "text",
+  "max_length": 31,
+  "source_revision": "a8c8137b732366609cff7d07495d9bca358abf9f0744d46fa6cbea7adeb75b2e",
+  "risk": "routine",
+  "auto_merge": true
+}

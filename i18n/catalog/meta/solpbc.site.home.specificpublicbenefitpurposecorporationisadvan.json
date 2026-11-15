@@ -1,0 +1,16 @@
+{
+  "description": "the specific public benefit purpose of the corporation is to advance digital self-determination by providing open-source, privacy-respecting tools and servic...",
+  "context": "covenant, charter, or trademark wording. not rewritten. found as p.",
+  "surfaces": [
+    "solpbc.org"
+  ],
+  "bundles": [
+    "solpbc-org"
+  ],
+  "arguments": [],
+  "format_intent": "text",
+  "max_length": 246,
+  "source_revision": "2ad944898df8e3b18b742dbb219aa9da66f404215290f6bf7a0109a2112d3152",
+  "risk": "legal",
+  "auto_merge": false
+}

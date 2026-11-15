@@ -1,0 +1,16 @@
+{
+  "description": "Contact form result",
+  "context": "Returned when the contact form's email is missing or not an email. The page matches these words exactly.",
+  "surfaces": [
+    "solpbc.org"
+  ],
+  "bundles": [
+    "solpbc-org"
+  ],
+  "arguments": [],
+  "format_intent": "text",
+  "max_length": 23,
+  "source_revision": "0cff2450720d9e4ada336bead2d4550bbb52092631d91e7f7f80af62904f6960",
+  "risk": "protocol",
+  "auto_merge": false
+}

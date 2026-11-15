@@ -1,0 +1,16 @@
+{
+  "description": "clearspace & minimum size",
+  "context": "found as h3.",
+  "surfaces": [
+    "solpbc.org"
+  ],
+  "bundles": [
+    "solpbc-org"
+  ],
+  "arguments": [],
+  "format_intent": "text",
+  "max_length": 25,
+  "source_revision": "fb5aae9f32e55d0939c43b227bc02d20a2d7066dfd738f0099ffc6049f6f2169",
+  "risk": "routine",
+  "auto_merge": true
+}

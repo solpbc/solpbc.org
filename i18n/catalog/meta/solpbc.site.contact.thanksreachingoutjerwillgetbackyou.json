@@ -1,0 +1,16 @@
+{
+  "description": "thanks for reaching out. jer will get back to you.",
+  "context": "found as p.",
+  "surfaces": [
+    "solpbc.org"
+  ],
+  "bundles": [
+    "solpbc-org"
+  ],
+  "arguments": [],
+  "format_intent": "text",
+  "max_length": 50,
+  "source_revision": "cc01154c22d6b7594156bf487d299b278b35a9fca69b3a0d603c5c21e492065d",
+  "risk": "routine",
+  "auto_merge": true
+}

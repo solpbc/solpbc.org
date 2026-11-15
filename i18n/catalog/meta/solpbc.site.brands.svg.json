@@ -1,0 +1,16 @@
+{
+  "description": "svg",
+  "context": "found as a.",
+  "surfaces": [
+    "solpbc.org"
+  ],
+  "bundles": [
+    "solpbc-org"
+  ],
+  "arguments": [],
+  "format_intent": "text",
+  "max_length": 3,
+  "source_revision": "14c1ab60112bbe5be2c82afad7d93212198afc4361e7d4e418f0ddd2f8f586a6",
+  "risk": "routine",
+  "auto_merge": true
+}

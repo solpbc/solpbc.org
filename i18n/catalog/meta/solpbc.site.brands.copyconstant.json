@@ -1,0 +1,31 @@
+{
+  "description": "copy constant",
+  "context": "the script swaps this label. the rewrite is one enum with an explicit default, which the portable profile can say. found as button.",
+  "surfaces": [
+    "solpbc.org"
+  ],
+  "bundles": [
+    "solpbc-org"
+  ],
+  "arguments": [
+    {
+      "name": "state",
+      "type": "string"
+    }
+  ],
+  "format_intent": "enum",
+  "max_length": 15,
+  "source_revision": "ec0fdf4e8ea1ce64b8c950e6e210bc7208ed9e279be8af6dc75502e7e9bd695e",
+  "risk": "routine",
+  "auto_merge": true,
+  "selector": {
+    "name": "state",
+    "type": "string",
+    "enum_values": [
+      "idle",
+      "done",
+      "manual"
+    ],
+    "enum_default": "idle"
+  }
+}

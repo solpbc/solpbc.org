@@ -1,0 +1,16 @@
+{
+  "description": "badge-social-open-source",
+  "context": "found as div.",
+  "surfaces": [
+    "solpbc.org"
+  ],
+  "bundles": [
+    "solpbc-org"
+  ],
+  "arguments": [],
+  "format_intent": "text",
+  "max_length": 24,
+  "source_revision": "a612e5638174f521093636975a09ec084d2300dc40e278bbfdca166d96140201",
+  "risk": "routine",
+  "auto_merge": true
+}

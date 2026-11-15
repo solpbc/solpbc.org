@@ -1,0 +1,16 @@
+{
+  "description": "die-cut sticker — “open source is social”, on white",
+  "context": "found as div.",
+  "surfaces": [
+    "solpbc.org"
+  ],
+  "bundles": [
+    "solpbc-org"
+  ],
+  "arguments": [],
+  "format_intent": "text",
+  "max_length": 51,
+  "source_revision": "8ad93507f351779caf4fb3f4d4721b413c57a4b0b8357bf41a8348cb665eed21",
+  "risk": "routine",
+  "auto_merge": true
+}

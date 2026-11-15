@@ -1,0 +1,16 @@
+{
+  "description": "high-contrast / text on white",
+  "context": "found as td.",
+  "surfaces": [
+    "solpbc.org"
+  ],
+  "bundles": [
+    "solpbc-org"
+  ],
+  "arguments": [],
+  "format_intent": "text",
+  "max_length": 29,
+  "source_revision": "7024bb87c9f27c0c50c99ff19c754beb276135ba5eb609fb7d8572cdbffe6345",
+  "risk": "routine",
+  "auto_merge": true
+}

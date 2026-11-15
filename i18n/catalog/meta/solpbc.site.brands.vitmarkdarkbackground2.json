@@ -1,0 +1,16 @@
+{
+  "description": "vit-mark, dark-background",
+  "context": "found as div.",
+  "surfaces": [
+    "solpbc.org"
+  ],
+  "bundles": [
+    "solpbc-org"
+  ],
+  "arguments": [],
+  "format_intent": "text",
+  "max_length": 25,
+  "source_revision": "909696a089b23a948628f34d5e0347ef1158beb624595beffe50bb92d56957b9",
+  "risk": "routine",
+  "auto_merge": true
+}

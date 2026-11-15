@@ -1,0 +1,16 @@
+{
+  "description": "dark-mode / hover",
+  "context": "found as td.",
+  "surfaces": [
+    "solpbc.org"
+  ],
+  "bundles": [
+    "solpbc-org"
+  ],
+  "arguments": [],
+  "format_intent": "text",
+  "max_length": 17,
+  "source_revision": "4ab73f46522371b4b350caa7dd63210c29af2effabc1563da147f060a141d193",
+  "risk": "routine",
+  "auto_merge": true
+}

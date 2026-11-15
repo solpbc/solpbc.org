@@ -1,0 +1,23 @@
+{
+  "description": "copy v̇ copies the literal two-codepoint string v̇ (U+0076 U+0307). copy constant copies the literal text: const VIT_MARK = 'v̇';",
+  "context": "protected bytes (hex, formula, domain, url, or the vit mark). not a defect. not rewritten. found as p.",
+  "surfaces": [
+    "solpbc.org"
+  ],
+  "bundles": [
+    "solpbc-org"
+  ],
+  "arguments": [],
+  "format_intent": "text",
+  "max_length": 129,
+  "source_revision": "5d1ec36a54f9098bcfb9b19b92b6117d607b894e91e2dbf7588f495008200278",
+  "risk": "routine",
+  "auto_merge": true,
+  "protected_slots": [
+    {
+      "name": "mark1",
+      "kind": "mark-word",
+      "value": "v̇"
+    }
+  ]
+}

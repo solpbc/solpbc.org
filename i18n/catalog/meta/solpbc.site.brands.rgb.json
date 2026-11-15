@@ -1,0 +1,16 @@
+{
+  "description": "rgb",
+  "context": "found as th.",
+  "surfaces": [
+    "solpbc.org"
+  ],
+  "bundles": [
+    "solpbc-org"
+  ],
+  "arguments": [],
+  "format_intent": "text",
+  "max_length": 3,
+  "source_revision": "66573c585411918d6d09f912447b1b324fa1652f38166865557b91a9dd610430",
+  "risk": "routine",
+  "auto_merge": true
+}

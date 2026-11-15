@@ -1,0 +1,16 @@
+{
+  "description": "effected",
+  "context": "found as div.",
+  "surfaces": [
+    "solpbc.org"
+  ],
+  "bundles": [
+    "solpbc-org"
+  ],
+  "arguments": [],
+  "format_intent": "text",
+  "max_length": 8,
+  "source_revision": "c4411cc58aa95ebda0b39aa5e9f122cb8b59c99406ebd7939e04257f3207694d",
+  "risk": "routine",
+  "auto_merge": true
+}

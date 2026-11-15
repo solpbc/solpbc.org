@@ -1,4 +1,4 @@
-.PHONY: install deploy dev sitemap brands
+.PHONY: install deploy dev sitemap brands check
 
 install:
 	@command -v wrangler >/dev/null || { echo "wrangler required (npm i -g wrangler)"; exit 1; }
@@ -15,3 +15,6 @@ deploy: brands sitemap
 
 dev:
 	wrangler dev
+
+check:
+	node bin/check-pages.mjs

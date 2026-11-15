@@ -1,0 +1,16 @@
+{
+  "description": "minimum 32 px. clearspace: at least 8% of the displayed size on all sides.",
+  "context": "found as figcaption.",
+  "surfaces": [
+    "solpbc.org"
+  ],
+  "bundles": [
+    "solpbc-org"
+  ],
+  "arguments": [],
+  "format_intent": "text",
+  "max_length": 74,
+  "source_revision": "7c4b346d068179cf32d6d0245ba47242e47de968c0d8604e0bd403329992226e",
+  "risk": "routine",
+  "auto_merge": true
+}

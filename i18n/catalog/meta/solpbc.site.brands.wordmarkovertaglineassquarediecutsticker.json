@@ -1,0 +1,16 @@
+{
+  "description": "the wordmark over the tagline as a square die-cut sticker — rounded corners, transparent outside the cut, for swag and laptops. two colorways, shown on a che...",
+  "context": "found as p.",
+  "surfaces": [
+    "solpbc.org"
+  ],
+  "bundles": [
+    "solpbc-org"
+  ],
+  "arguments": [],
+  "format_intent": "text",
+  "max_length": 187,
+  "source_revision": "1770a127741aa951113d4cdb1260ec1bfd21dc9a78093e27f616d4aaa42219f7",
+  "risk": "routine",
+  "auto_merge": true
+}

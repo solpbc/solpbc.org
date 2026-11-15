@@ -1,0 +1,16 @@
+{
+  "description": "read the articles of incorporation · read the bylaws · amended and restated articles (PDF, 2026-05-01) · original incorporation filing (PDF, 2026-01-01)",
+  "context": "found as p.",
+  "surfaces": [
+    "solpbc.org"
+  ],
+  "bundles": [
+    "solpbc-org"
+  ],
+  "arguments": [],
+  "format_intent": "text",
+  "max_length": 152,
+  "source_revision": "72d7f8576e304e8e92caadc00920653bc213d5c6073adb530a7475c7ba01045a",
+  "risk": "routine",
+  "auto_merge": true
+}

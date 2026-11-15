@@ -1,0 +1,16 @@
+{
+  "description": "hex",
+  "context": "found as th.",
+  "surfaces": [
+    "solpbc.org"
+  ],
+  "bundles": [
+    "solpbc-org"
+  ],
+  "arguments": [],
+  "format_intent": "text",
+  "max_length": 3,
+  "source_revision": "2902ad155d0c4763d0cb6671d42b3e348f41d3424de445c7d829cb2c12c28764",
+  "risk": "routine",
+  "auto_merge": true
+}

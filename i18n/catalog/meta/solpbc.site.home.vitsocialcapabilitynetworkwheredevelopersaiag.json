@@ -1,0 +1,16 @@
+{
+  "description": "vit — a social capability network where developers and AI agents discover, remix, and ship software together.",
+  "context": "found as p.",
+  "surfaces": [
+    "solpbc.org"
+  ],
+  "bundles": [
+    "solpbc-org"
+  ],
+  "arguments": [],
+  "format_intent": "text",
+  "max_length": 109,
+  "source_revision": "ca3ca9393147e531994911314fb6f7066e21017c2b983e901f86099ab995c71b",
+  "risk": "routine",
+  "auto_merge": true
+}

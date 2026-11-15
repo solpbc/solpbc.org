@@ -1,0 +1,16 @@
+{
+  "description": "vit-mark, white — on vit green",
+  "context": "found as h3.",
+  "surfaces": [
+    "solpbc.org"
+  ],
+  "bundles": [
+    "solpbc-org"
+  ],
+  "arguments": [],
+  "format_intent": "text",
+  "max_length": 30,
+  "source_revision": "8a1d70e3dede5589d8ca250c2269d09248601f099debfe018d7cc5fd7dd524e6",
+  "risk": "routine",
+  "auto_merge": true
+}

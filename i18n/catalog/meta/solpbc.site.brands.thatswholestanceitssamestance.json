@@ -1,0 +1,16 @@
+{
+  "description": "that's the whole stance, and it's the same stance as the product: a brand page you can open developer tools on and find nothing. no account, no tracking, no ...",
+  "context": "names the browser's developer tools. the words around it can be translated later; this census does not rewrite an annotation-only string. found as p.",
+  "surfaces": [
+    "solpbc.org"
+  ],
+  "bundles": [
+    "solpbc-org"
+  ],
+  "arguments": [],
+  "format_intent": "text",
+  "max_length": 241,
+  "source_revision": "4059f276683726a041c88cf806f4812c226d9bf234dfdabe53ba585b36a9a1fe",
+  "risk": "routine",
+  "auto_merge": true
+}

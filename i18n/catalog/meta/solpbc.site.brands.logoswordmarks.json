@@ -1,0 +1,16 @@
+{
+  "description": "logos & wordmarks",
+  "context": "found as h3.",
+  "surfaces": [
+    "solpbc.org"
+  ],
+  "bundles": [
+    "solpbc-org"
+  ],
+  "arguments": [],
+  "format_intent": "text",
+  "max_length": 17,
+  "source_revision": "83df4864df51a1b805e384fc16ad1dbd5e818c85c18d4d3d01d5f56b076bacf6",
+  "risk": "routine",
+  "auto_merge": true
+}

@@ -1,0 +1,16 @@
+{
+  "description": "pbc-wordmark",
+  "context": "found as div.",
+  "surfaces": [
+    "solpbc.org"
+  ],
+  "bundles": [
+    "solpbc-org"
+  ],
+  "arguments": [],
+  "format_intent": "text",
+  "max_length": 12,
+  "source_revision": "18d36634cd186f927d79d47d33a0813432ae6c94db1431e501e76ab4a24ed95b",
+  "risk": "routine",
+  "auto_merge": true
+}

@@ -1,0 +1,16 @@
+{
+  "description": "vit green light",
+  "context": "found as b, td.",
+  "surfaces": [
+    "solpbc.org"
+  ],
+  "bundles": [
+    "solpbc-org"
+  ],
+  "arguments": [],
+  "format_intent": "text",
+  "max_length": 15,
+  "source_revision": "e995cd6f7de54d4b13e81b49cb0e4a3a46fa7b58eb929434b12dd8e048b01408",
+  "risk": "routine",
+  "auto_merge": true
+}

@@ -1,0 +1,23 @@
+{
+  "description": "not sure? just ask — there's a contact form at solpbc.org/contact.",
+  "context": "protected bytes (hex, formula, domain, url, or the vit mark). not a defect. not rewritten. found as p.",
+  "surfaces": [
+    "solpbc.org"
+  ],
+  "bundles": [
+    "solpbc-org"
+  ],
+  "arguments": [],
+  "format_intent": "text",
+  "max_length": 66,
+  "source_revision": "7459ed43fd89e8e5c04c41d247388bb0905d9ba02b281b4b4658d65166e7b0c9",
+  "risk": "routine",
+  "auto_merge": true,
+  "protected_slots": [
+    {
+      "name": "dom1",
+      "kind": "mark-word",
+      "value": "solpbc.org"
+    }
+  ]
+}

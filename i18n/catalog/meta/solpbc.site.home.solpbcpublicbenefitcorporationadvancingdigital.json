@@ -1,0 +1,16 @@
+{
+  "description": "sol pbc — a public benefit corporation advancing digital self-determination. binding charter covenants protect your data. open source, privacy-first AI tools...",
+  "context": "covenant, charter, or trademark wording. not rewritten. found as description.",
+  "surfaces": [
+    "solpbc.org"
+  ],
+  "bundles": [
+    "solpbc-org"
+  ],
+  "arguments": [],
+  "format_intent": "text",
+  "max_length": 202,
+  "source_revision": "02daaf1bfb8550b0298969895d09db317afa67301fcd805963f231881700e368",
+  "risk": "legal",
+  "auto_merge": false
+}

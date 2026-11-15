@@ -1,0 +1,16 @@
+{
+  "description": "your data is never sold",
+  "context": "covenant, charter, or trademark wording. not rewritten. found as h3.",
+  "surfaces": [
+    "solpbc.org"
+  ],
+  "bundles": [
+    "solpbc-org"
+  ],
+  "arguments": [],
+  "format_intent": "text",
+  "max_length": 23,
+  "source_revision": "cb3428a75ac5a5d4ee495112caf18d31f2bf9288035a282ed9ae91de9fa1fab7",
+  "risk": "legal",
+  "auto_merge": false
+}

@@ -1,0 +1,16 @@
+{
+  "description": "vit",
+  "context": "found as li, h2, text.",
+  "surfaces": [
+    "solpbc.org"
+  ],
+  "bundles": [
+    "solpbc-org"
+  ],
+  "arguments": [],
+  "format_intent": "text",
+  "max_length": 3,
+  "source_revision": "090c3942ffc4c38cd5dba22d40641bc0f0dccfcaf2e889e7abbcac2c2d8d4900",
+  "risk": "routine",
+  "auto_merge": true
+}

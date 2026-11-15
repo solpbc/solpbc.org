@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>%%solpbc.site.contact.contactsolpbc%%</title>
+    <meta name="description" content="%%solpbc.site.contact.gettouchsolpbcyourmessagegoesjer%%">
+    <link rel="canonical" href="https://solpbc.org/contact">
+    <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="/static/favicon-32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/static/favicon-16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/static/apple-touch-icon.png">
+    <link rel="stylesheet" href="/static/tokens.css">
+    <style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+@font-face {
+    font-family: 'Comfortaa';
+    src: url('/blog/fonts/comfortaa-latin.woff2') format('woff2');
+    font-weight: 400 700;
+    font-display: swap;
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6,
+        U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC,
+        U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+    font-family: 'Comfortaa';
+    src: url('/blog/fonts/comfortaa-latin-ext.woff2') format('woff2');
+    font-weight: 400 700;
+    font-display: swap;
+    unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7,
+        U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F,
+        U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113,
+        U+2C60-2C7F, U+A720-A7FF;
+}
+
+body {
+    font-family: system-ui, -apple-system, sans-serif;
+    background: var(--paper);
+    color: var(--ink-soft-paper);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+.container {
+    max-width: 600px;
+    width: 90vw;
+    margin: 0 auto;
+    padding: 0 0 2rem;
+}
+
+nav {
+    padding: 1.5rem 0 1.5rem;
+    font-family: var(--font-display);
+    font-size: 0.8rem;
+    text-transform: lowercase;
+}
+nav a {
+    color: var(--ink-faint-paper);
+    text-decoration: none;
+    margin-right: 1.2rem;
+}
+nav a:hover {
+    text-decoration: underline;
+}
+
+h1 {
+    font-family: var(--font-display);
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-transform: lowercase;
+    color: var(--ink);
+    line-height: 1.3;
+    margin-bottom: 0.5rem;
+}
+
+.intro {
+    color: var(--ink-soft-paper);
+    margin-bottom: 2rem;
+    line-height: 1.6;
+}
+
+.form-group {
+    margin-bottom: 16px;
+}
+.form-group label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 600;
+    color: var(--ink);
+    font-size: 0.95rem;
+}
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 11px 12px;
+    border: 1px solid var(--hairline-2);
+    border-radius: 8px;
+    font: inherit;
+    color: var(--ink);
+    background: var(--paper);
+}
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: var(--orange-ink);
+    box-shadow: 0 0 0 3px color-mix(in srgb, var(--orange-ink) 20%, transparent);
+    outline: none;
+}
+.form-group textarea {
+    min-height: 130px;
+    resize: vertical;
+}
+
+.honeypot {
+    position: absolute;
+    left: -9999px;
+    opacity: 0;
+}
+
+.submit-btn {
+    background: var(--orange);
+    color: var(--ink);
+    border: 0;
+    border-radius: 999px;
+    padding: 12px 24px;
+    font-weight: 600;
+    font-size: 1rem;
+    min-height: 44px;
+    cursor: pointer;
+    font-family: inherit;
+}
+.submit-btn:hover {
+    background: var(--orange-text-aa);
+    color: var(--paper);
+}
+.submit-btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.trust-strip {
+    font-size: 0.8125rem;
+    color: var(--ink-soft-paper);
+    text-align: center;
+    margin-top: 1rem;
+    line-height: 1.5;
+}
+.trust-strip a {
+    color: var(--orange-text-aa);
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 0.18em;
+}
+.trust-strip a:hover {
+    text-decoration-thickness: 2px;
+}
+
+.error-message {
+    color: var(--danger);
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+}
+
+.success {
+    text-align: center;
+    padding: 2rem 0;
+}
+.success h2 {
+    font-family: var(--font-display);
+    font-size: 1.4rem;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    text-transform: lowercase;
+    color: var(--ink);
+    margin-bottom: 1rem;
+}
+.success p {
+    margin-bottom: 1.5rem;
+}
+.success a {
+    color: var(--orange-text-aa);
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 0.18em;
+}
+.success a:hover {
+    text-decoration-thickness: 2px;
+}
+
+footer {
+    padding: 3rem 0 2rem;
+    border-top: 1px solid var(--hairline);
+    margin-top: 3rem;
+    font-size: 0.9rem;
+}
+footer a {
+    color: var(--orange-text-aa);
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 0.18em;
+}
+footer a:hover {
+    text-decoration-thickness: 2px;
+}
+footer .copyright {
+    color: var(--ink-faint-paper);
+    font-size: 0.85rem;
+    margin-top: 1rem;
+}
+
+@media (max-width: 480px) {
+    h1 { font-size: 1.6rem; }
+    nav { padding: 1.5rem 0 1rem; }
+    .submit-btn { width: 100%; }
+}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <a href="/">%%solpbc.site.chrome.solpbc%%</a>
+            <a href="/blog/">%%solpbc.site.chrome.blog%%</a>
+            <a href="/articles">%%solpbc.site.chrome.articles%%</a>
+            <a href="/bylaws">%%solpbc.site.chrome.bylaws%%</a>
+            <a href="/privacy">%%solpbc.site.chrome.privacy%%</a>
+            <a href="/contact">%%solpbc.site.chrome.contact%%</a>
+        </nav>
+
+        <h1>%%solpbc.site.contact.gettouch%%</h1>
+        <p class="intro">%%solpbc.site.contact.yourmessagegoesjernoticketingsystemno%%<br>%%solpbc.site.contact.aiisusedscreenyourmessage%%</p>
+
+        <form id="contact-form" action="/api/contact" method="POST">
+            <div class="form-group">
+                <label for="name">%%solpbc.site.contact.yourname%%</label>
+                <input type="text" id="name" name="name" maxlength="200" autocomplete="name">
+            </div>
+            <div class="form-group">
+                <label for="email">%%solpbc.site.contact.youremail|0:4%% %%solpbc.site.contact.youremail|5:10%% <span style="color: var(--danger);">%%solpbc.site.contact.youremail|11:12%%</span></label>
+                <input type="email" id="email" name="email" required maxlength="200" autocomplete="email">
+            </div>
+            <div class="form-group">
+                <label for="message">%%solpbc.site.contact.whatsyourmind|0:6%% %%solpbc.site.contact.whatsyourmind|7:9%% %%solpbc.site.contact.whatsyourmind|10:14%% %%solpbc.site.contact.whatsyourmind|15:20%% <span style="color: var(--danger);">%%solpbc.site.contact.whatsyourmind|21:22%%</span></label>
+                <textarea id="message" name="message" required maxlength="5000"></textarea>
+            </div>
+
+            <div class="honeypot">
+                <label for="company">company</label>
+                <input type="text" id="company" name="company" tabindex="-1" aria-hidden="true" autocomplete="off">
+            </div>
+
+            <div class="cf-turnstile" data-sitekey="0x4AAAAAAC2zlC_SPxsY7aVU"></div>
+
+            <div style="margin-top: 1rem;">
+                <button type="submit" class="submit-btn">%%solpbc.site.contact.send%%</button>
+            </div>
+
+            <div class="error-message" id="error-message" role="alert" hidden></div>
+
+            <p class="trust-strip">%%solpbc.site.contact.solpbcdoesnttrackyoudoesnt|0:3%% %%solpbc.site.contact.solpbcdoesnttrackyoudoesnt|4:7%% %%solpbc.site.contact.solpbcdoesnttrackyoudoesnt|8:15%% %%solpbc.site.contact.solpbcdoesnttrackyoudoesnt|16:21%% %%solpbc.site.contact.solpbcdoesnttrackyoudoesnt|22:26%% %%solpbc.site.contact.solpbcdoesnttrackyoudoesnt|27:34%% %%solpbc.site.contact.solpbcdoesnttrackyoudoesnt|35:38%% %%solpbc.site.contact.solpbcdoesnttrackyoudoesnt|39:49%% %%solpbc.site.contact.solpbcdoesnttrackyoudoesnt|50:53%% %%solpbc.site.contact.solpbcdoesnttrackyoudoesnt|54:59%% %%solpbc.site.contact.solpbcdoesnttrackyoudoesnt|60:63%% %%solpbc.site.contact.solpbcdoesnttrackyoudoesnt|64:71%% %%solpbc.site.contact.solpbcdoesnttrackyoudoesnt|72:81%% %%solpbc.site.contact.solpbcdoesnttrackyoudoesnt|82:86%% %%solpbc.site.contact.solpbcdoesnttrackyoudoesnt|87:90%% %%solpbc.site.contact.solpbcdoesnttrackyoudoesnt|91:97%% %%solpbc.site.contact.solpbcdoesnttrackyoudoesnt|98:102%% %%solpbc.site.contact.solpbcdoesnttrackyoudoesnt|103:108%% %%solpbc.site.contact.solpbcdoesnttrackyoudoesnt|109:116%% %%solpbc.site.contact.solpbcdoesnttrackyoudoesnt|117:119%% %%solpbc.site.contact.solpbcdoesnttrackyoudoesnt|120:122%% %%solpbc.site.contact.solpbcdoesnttrackyoudoesnt|123:125%% %%solpbc.site.contact.solpbcdoesnttrackyoudoesnt|126:129%% %%solpbc.site.contact.solpbcdoesnttrackyoudoesnt|130:136%% %%solpbc.site.contact.solpbcdoesnttrackyoudoesnt|137:141%% <a href="/privacy">%%solpbc.site.contact.solpbcdoesnttrackyoudoesnt|142:146%% %%solpbc.site.contact.solpbcdoesnttrackyoudoesnt|147:150%% %%solpbc.site.contact.solpbcdoesnttrackyoudoesnt|151:158%% %%solpbc.site.contact.solpbcdoesnttrackyoudoesnt|159:165%%</a>%%solpbc.site.contact.solpbcdoesnttrackyoudoesnt|165:166%%</p>
+        </form>
+
+        <div id="success-state" class="success" hidden>
+            <h2>%%solpbc.site.contact.messagesent%%</h2>
+            <p>%%solpbc.site.contact.thanksreachingoutjerwillgetbackyou%%</p>
+            <a href="/">%%solpbc.site.contact.backsolpbcorg%%</a>
+        </div>
+
+        <footer>
+            <a href="/">%%solpbc.site.chrome.solpbcorg%%</a>
+            <p class="copyright">%%solpbc.site.chrome.n2026solpbcsolpbcorgprivacybylawsarticles|0:1%% %%solpbc.site.chrome.n2026solpbcsolpbcorgprivacybylawsarticles|2:6%% %%solpbc.site.chrome.n2026solpbcsolpbcorgprivacybylawsarticles|7:10%% %%solpbc.site.chrome.n2026solpbcsolpbcorgprivacybylawsarticles|11:14%% %%solpbc.site.chrome.n2026solpbcsolpbcorgprivacybylawsarticles|15:16%% <a href="/">%%solpbc.site.chrome.n2026solpbcsolpbcorgprivacybylawsarticles|17:27%%</a> %%solpbc.site.chrome.n2026solpbcsolpbcorgprivacybylawsarticles|28:29%% <a href="/privacy">%%solpbc.site.chrome.n2026solpbcsolpbcorgprivacybylawsarticles|30:37%%</a> %%solpbc.site.chrome.n2026solpbcsolpbcorgprivacybylawsarticles|38:39%% <a href="/bylaws">%%solpbc.site.chrome.n2026solpbcsolpbcorgprivacybylawsarticles|40:46%%</a> %%solpbc.site.chrome.n2026solpbcsolpbcorgprivacybylawsarticles|47:48%% <a href="/articles">%%solpbc.site.chrome.n2026solpbcsolpbcorgprivacybylawsarticles|49:57%%</a> %%solpbc.site.chrome.n2026solpbcsolpbcorgprivacybylawsarticles|58:59%% <a href="/blog/">%%solpbc.site.chrome.n2026solpbcsolpbcorgprivacybylawsarticles|60:64%%</a> %%solpbc.site.chrome.n2026solpbcsolpbcorgprivacybylawsarticles|65:66%% <a href="/contact">%%solpbc.site.chrome.n2026solpbcsolpbcorgprivacybylawsarticles|67:74%%</a></p>
+        </footer>
+    </div>
+
+    <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+    <script src="/contact/contact.js" defer></script>
+</body>
+</html>

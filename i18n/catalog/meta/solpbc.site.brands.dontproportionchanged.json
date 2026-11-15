@@ -1,0 +1,16 @@
+{
+  "description": "don't: proportion changed",
+  "context": "found as aria-label.",
+  "surfaces": [
+    "solpbc.org"
+  ],
+  "bundles": [
+    "solpbc-org"
+  ],
+  "arguments": [],
+  "format_intent": "text",
+  "max_length": 25,
+  "source_revision": "6f51bccaf46fbab354b1c02692f81794852e8a1b94cf8c25419738962a7da743",
+  "risk": "routine",
+  "auto_merge": true
+}

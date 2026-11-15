@@ -1,0 +1,16 @@
+{
+  "description": "get in touch with sol pbc. your message goes to jer.",
+  "context": "found as description.",
+  "surfaces": [
+    "solpbc.org"
+  ],
+  "bundles": [
+    "solpbc-org"
+  ],
+  "arguments": [],
+  "format_intent": "text",
+  "max_length": 52,
+  "source_revision": "1470fd76948bf94276abe5e29376a2863626cb27d2f22bbee064359b2457ac85",
+  "risk": "routine",
+  "auto_merge": true
+}

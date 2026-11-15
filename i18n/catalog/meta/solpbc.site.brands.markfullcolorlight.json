@@ -1,0 +1,16 @@
+{
+  "description": "the mark, full color — on light",
+  "context": "found as div.",
+  "surfaces": [
+    "solpbc.org"
+  ],
+  "bundles": [
+    "solpbc-org"
+  ],
+  "arguments": [],
+  "format_intent": "text",
+  "max_length": 31,
+  "source_revision": "1e21347f845bb3501b44179fd8ffc1a49cff78b7357e8d810fc332efa917265d",
+  "risk": "routine",
+  "auto_merge": true
+}

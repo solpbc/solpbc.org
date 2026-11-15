@@ -1,0 +1,16 @@
+{
+  "description": "don't use them as your own product, app, or social identity, or in any way a reasonable person would read as \"this is sol pbc\"",
+  "context": "found as li.",
+  "surfaces": [
+    "solpbc.org"
+  ],
+  "bundles": [
+    "solpbc-org"
+  ],
+  "arguments": [],
+  "format_intent": "text",
+  "max_length": 126,
+  "source_revision": "58b10d5895715fa77f54d8dc35d037fdf11d1d55fe858cae05c63cdc494d21ab",
+  "risk": "routine",
+  "auto_merge": true
+}

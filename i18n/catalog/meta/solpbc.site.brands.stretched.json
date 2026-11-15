@@ -1,0 +1,16 @@
+{
+  "description": "stretched",
+  "context": "found as div.",
+  "surfaces": [
+    "solpbc.org"
+  ],
+  "bundles": [
+    "solpbc-org"
+  ],
+  "arguments": [],
+  "format_intent": "text",
+  "max_length": 9,
+  "source_revision": "1cc01b45ea97741320aa3cb39ea06aeaceeb99e697cf9f1a74ad7e82c78e3e2e",
+  "risk": "routine",
+  "auto_merge": true
+}

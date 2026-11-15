@@ -1,0 +1,16 @@
+{
+  "description": "any merger, acquisition, or transfer of control is conditional: the successor must be legally bound to preserve a substantially equivalent benefit purpose an...",
+  "context": "covenant, charter, or trademark wording. not rewritten. found as p.",
+  "surfaces": [
+    "solpbc.org"
+  ],
+  "bundles": [
+    "solpbc-org"
+  ],
+  "arguments": [],
+  "format_intent": "text",
+  "max_length": 305,
+  "source_revision": "f4f20b48ddefa795edbcdb65475bc8ea9795603d5cee9383c306e0c5164a7745",
+  "risk": "legal",
+  "auto_merge": false
+}

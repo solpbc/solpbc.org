@@ -1,0 +1,23 @@
+{
+  "description": "© 2026 sol pbc · solpbc.org · privacy · contact",
+  "context": "protected bytes (hex, formula, domain, url, or the vit mark). not a defect. not rewritten. found as footer.",
+  "surfaces": [
+    "solpbc.org"
+  ],
+  "bundles": [
+    "solpbc-org"
+  ],
+  "arguments": [],
+  "format_intent": "text",
+  "max_length": 47,
+  "source_revision": "846244f308f90a3d159420613c8d857b77c32ca323fb6586c56c055f10931ae4",
+  "risk": "routine",
+  "auto_merge": true,
+  "protected_slots": [
+    {
+      "name": "dom1",
+      "kind": "mark-word",
+      "value": "solpbc.org"
+    }
+  ]
+}

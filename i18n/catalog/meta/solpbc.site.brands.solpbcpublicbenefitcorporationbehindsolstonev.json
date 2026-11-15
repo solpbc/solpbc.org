@@ -1,0 +1,16 @@
+{
+  "description": "sol pbc — the public benefit corporation behind solstone and vit.",
+  "context": "found as p.",
+  "surfaces": [
+    "solpbc.org"
+  ],
+  "bundles": [
+    "solpbc-org"
+  ],
+  "arguments": [],
+  "format_intent": "text",
+  "max_length": 65,
+  "source_revision": "718c576eb81aaa18d8429279d4272b37e0d1d195d539071f9f60b4102467a008",
+  "risk": "routine",
+  "auto_merge": true
+}

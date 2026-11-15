@@ -1,0 +1,16 @@
+{
+  "description": "join the bazaar",
+  "context": "found as div.",
+  "surfaces": [
+    "solpbc.org"
+  ],
+  "bundles": [
+    "solpbc-org"
+  ],
+  "arguments": [],
+  "format_intent": "text",
+  "max_length": 15,
+  "source_revision": "750502809a8b9d6146fa523e8b8416738feadd3f1f0b44d0d13d777e23d4627d",
+  "risk": "routine",
+  "auto_merge": true
+}

@@ -1,0 +1,16 @@
+{
+  "description": "minimum 16 px (mark only). clearspace: at least the width of the dot on all sides.",
+  "context": "found as figcaption.",
+  "surfaces": [
+    "solpbc.org"
+  ],
+  "bundles": [
+    "solpbc-org"
+  ],
+  "arguments": [],
+  "format_intent": "text",
+  "max_length": 82,
+  "source_revision": "4919287a71b804df2ff036e92ce5959f6eb3322b88031742299e133e5fe3bf36",
+  "risk": "routine",
+  "auto_merge": true
+}

@@ -1,0 +1,31 @@
+{
+  "description": "copy svg",
+  "context": "the script swaps this label. the rewrite is one enum with an explicit default, which the portable profile can say. found as button.",
+  "surfaces": [
+    "solpbc.org"
+  ],
+  "bundles": [
+    "solpbc-org"
+  ],
+  "arguments": [
+    {
+      "name": "state",
+      "type": "string"
+    }
+  ],
+  "format_intent": "enum",
+  "max_length": 15,
+  "source_revision": "c44918aed0724082f61a8fb2ba285d2d3470c21b76cd3951565b3e923f47e988",
+  "risk": "routine",
+  "auto_merge": true,
+  "selector": {
+    "name": "state",
+    "type": "string",
+    "enum_values": [
+      "idle",
+      "done",
+      "manual"
+    ],
+    "enum_default": "idle"
+  }
+}

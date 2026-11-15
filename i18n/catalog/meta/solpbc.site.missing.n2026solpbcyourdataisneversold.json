@@ -1,0 +1,16 @@
+{
+  "description": "© 2026 sol pbc · your data is never sold — binding charter covenants protect it. sol pbc, solstone, and vit are trademarks of sol pbc.",
+  "context": "covenant, charter, or trademark wording. not rewritten. found as footer.",
+  "surfaces": [
+    "solpbc.org"
+  ],
+  "bundles": [
+    "solpbc-org"
+  ],
+  "arguments": [],
+  "format_intent": "text",
+  "max_length": 134,
+  "source_revision": "b554729ac3753eb3861c33718fcab7bfa15e7c4445e1f050ef6443c4448c964c",
+  "risk": "legal",
+  "auto_merge": false
+}

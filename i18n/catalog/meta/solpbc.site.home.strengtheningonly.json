@@ -1,0 +1,16 @@
+{
+  "description": "strengthening only",
+  "context": "found as h3.",
+  "surfaces": [
+    "solpbc.org"
+  ],
+  "bundles": [
+    "solpbc-org"
+  ],
+  "arguments": [],
+  "format_intent": "text",
+  "max_length": 18,
+  "source_revision": "f505949eb9a57027022a7facc593e1a7d61bf4d585b2a9e1f2664ec58c3a334b",
+  "risk": "routine",
+  "auto_merge": true
+}

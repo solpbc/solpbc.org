@@ -1,0 +1,16 @@
+{
+  "description": "Contact form result",
+  "context": "Returned when the contact form's request cannot be read. The page matches these words exactly.",
+  "surfaces": [
+    "solpbc.org"
+  ],
+  "bundles": [
+    "solpbc-org"
+  ],
+  "arguments": [],
+  "format_intent": "text",
+  "max_length": 20,
+  "source_revision": "a496cffc963559632bc305dc5ac5e7e4825c492f37d6648045d8f62718f725ee",
+  "risk": "protocol",
+  "auto_merge": false
+}

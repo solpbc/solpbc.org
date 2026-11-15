@@ -1,0 +1,16 @@
+{
+  "description": "pdf",
+  "context": "found as a.",
+  "surfaces": [
+    "solpbc.org"
+  ],
+  "bundles": [
+    "solpbc-org"
+  ],
+  "arguments": [],
+  "format_intent": "text",
+  "max_length": 3,
+  "source_revision": "278346894b1ee09a61006b4743ce3cddb2a0bec5bced7213a33edbc86cfae6a9",
+  "risk": "routine",
+  "auto_merge": true
+}

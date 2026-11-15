@@ -1,0 +1,16 @@
+{
+  "description": "what's on your mind? *",
+  "context": "found as label. the asterisk is the required marker, a separate span joined to the label.",
+  "surfaces": [
+    "solpbc.org"
+  ],
+  "bundles": [
+    "solpbc-org"
+  ],
+  "arguments": [],
+  "format_intent": "text",
+  "max_length": 22,
+  "source_revision": "5ac6590f5e7e41e9ed82012e4f527b5b5e8a09d23b57678f35c6c1e2d098660c",
+  "risk": "routine",
+  "auto_merge": true
+}

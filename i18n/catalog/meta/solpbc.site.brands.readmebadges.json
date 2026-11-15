@@ -1,0 +1,16 @@
+{
+  "description": "readme badges",
+  "context": "found as h3.",
+  "surfaces": [
+    "solpbc.org"
+  ],
+  "bundles": [
+    "solpbc-org"
+  ],
+  "arguments": [],
+  "format_intent": "text",
+  "max_length": 13,
+  "source_revision": "72a50aae564c15427b5047692fc67375faeacb40e731fdd58229d8a4897b6ecc",
+  "risk": "routine",
+  "auto_merge": true
+}

@@ -1,0 +1,16 @@
+{
+  "description": "sol pbc doesn't track you, doesn't use analytics, and files its privacy covenants with the state. your email reaches us so we can answer you. read our privac...",
+  "context": "covenant, charter, or trademark wording. not rewritten. found as p.",
+  "surfaces": [
+    "solpbc.org"
+  ],
+  "bundles": [
+    "solpbc-org"
+  ],
+  "arguments": [],
+  "format_intent": "text",
+  "max_length": 166,
+  "source_revision": "40d6be39371f03077b8e821494ce7d9c919efe4cf47dca5213a60b9a685e3279",
+  "risk": "legal",
+  "auto_merge": false
+}

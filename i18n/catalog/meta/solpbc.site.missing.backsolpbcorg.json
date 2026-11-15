@@ -1,0 +1,23 @@
+{
+  "description": "back to solpbc.org →",
+  "context": "protected bytes (hex, formula, domain, url, or the vit mark). not a defect. not rewritten. found as a.",
+  "surfaces": [
+    "solpbc.org"
+  ],
+  "bundles": [
+    "solpbc-org"
+  ],
+  "arguments": [],
+  "format_intent": "text",
+  "max_length": 20,
+  "source_revision": "bb48c21048d2b1cdff064a1b75041a571eaf6b45fc28f533ce2104ae9740b0fc",
+  "risk": "routine",
+  "auto_merge": true,
+  "protected_slots": [
+    {
+      "name": "dom1",
+      "kind": "mark-word",
+      "value": "solpbc.org"
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "description": "solstone mark",
+  "context": "found as aria-label.",
+  "surfaces": [
+    "solpbc.org"
+  ],
+  "bundles": [
+    "solpbc-org"
+  ],
+  "arguments": [],
+  "format_intent": "text",
+  "max_length": 13,
+  "source_revision": "d0714ec97eed3cfdb6d35d4a70ecd8cb60f920b46dd07c6023fee25676b25bc6",
+  "risk": "routine",
+  "auto_merge": true
+}

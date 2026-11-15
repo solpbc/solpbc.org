@@ -1,0 +1,16 @@
+{
+  "description": "vit icon-only badge",
+  "context": "found as aria-label.",
+  "surfaces": [
+    "solpbc.org"
+  ],
+  "bundles": [
+    "solpbc-org"
+  ],
+  "arguments": [],
+  "format_intent": "text",
+  "max_length": 19,
+  "source_revision": "1bef57d6c562ae42608d5436b8b7a11f498283afac09dacdad8fe55feb00df29",
+  "risk": "routine",
+  "auto_merge": true
+}

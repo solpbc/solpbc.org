@@ -1,0 +1,16 @@
+{
+  "description": "sol pbc — digital self-determination",
+  "context": "found as og:title.",
+  "surfaces": [
+    "solpbc.org"
+  ],
+  "bundles": [
+    "solpbc-org"
+  ],
+  "arguments": [],
+  "format_intent": "text",
+  "max_length": 36,
+  "source_revision": "1aecf5e6fa1d41ce9f0c351067f61d969b6574efd0df0835921f6fe7c743ea1b",
+  "risk": "routine",
+  "auto_merge": true
+}

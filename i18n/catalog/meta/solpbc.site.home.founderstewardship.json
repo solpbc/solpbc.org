@@ -1,0 +1,16 @@
+{
+  "description": "founder stewardship",
+  "context": "found as h3.",
+  "surfaces": [
+    "solpbc.org"
+  ],
+  "bundles": [
+    "solpbc-org"
+  ],
+  "arguments": [],
+  "format_intent": "text",
+  "max_length": 19,
+  "source_revision": "db45ee96bea0337d861025c1fc267d2d17fcf325ad16520afb988ac31cd3cf1d",
+  "risk": "routine",
+  "auto_merge": true
+}

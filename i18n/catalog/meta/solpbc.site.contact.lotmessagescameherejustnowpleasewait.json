@@ -1,0 +1,16 @@
+{
+  "description": "a lot of messages came from here just now. please wait a minute, then send again.",
+  "context": "found as js.",
+  "surfaces": [
+    "solpbc.org"
+  ],
+  "bundles": [
+    "solpbc-org"
+  ],
+  "arguments": [],
+  "format_intent": "text",
+  "max_length": 81,
+  "source_revision": "2fb77a5eb613e4d937f834d7973fd908a87943ba23b7536a7225dc9cda863cd6",
+  "risk": "routine",
+  "auto_merge": true
+}

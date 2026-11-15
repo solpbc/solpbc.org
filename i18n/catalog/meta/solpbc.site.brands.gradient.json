@@ -1,0 +1,16 @@
+{
+  "description": "gradient",
+  "context": "found as div.",
+  "surfaces": [
+    "solpbc.org"
+  ],
+  "bundles": [
+    "solpbc-org"
+  ],
+  "arguments": [],
+  "format_intent": "text",
+  "max_length": 8,
+  "source_revision": "f6a7e30757b2f7c3c5bedcaf88f7bc8bf1330ac9d49669e2801c62df5c8d97c8",
+  "risk": "routine",
+  "auto_merge": true
+}

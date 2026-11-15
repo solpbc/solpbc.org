@@ -1,0 +1,16 @@
+{
+  "description": "open source is social badge",
+  "context": "found as aria-label.",
+  "surfaces": [
+    "solpbc.org"
+  ],
+  "bundles": [
+    "solpbc-org"
+  ],
+  "arguments": [],
+  "format_intent": "text",
+  "max_length": 27,
+  "source_revision": "7e6b574705259f94a79bbf729246dc3bad6853e47a240c94148a8e4ef4ec1096",
+  "risk": "routine",
+  "auto_merge": true
+}

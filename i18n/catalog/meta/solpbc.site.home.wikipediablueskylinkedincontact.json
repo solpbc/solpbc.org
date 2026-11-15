@@ -1,0 +1,16 @@
+{
+  "description": "wikipedia · bluesky · linkedin · contact",
+  "context": "found as p.",
+  "surfaces": [
+    "solpbc.org"
+  ],
+  "bundles": [
+    "solpbc-org"
+  ],
+  "arguments": [],
+  "format_intent": "text",
+  "max_length": 40,
+  "source_revision": "8a82eb3067408127bcd7caa4cb157d0c5a302015096b3dea3ce4344a004d8208",
+  "risk": "routine",
+  "auto_merge": true
+}

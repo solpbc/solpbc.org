@@ -1,0 +1,30 @@
+{
+  "description": "send message",
+  "context": "the script swaps this label. the rewrite is one enum with an explicit default, which the portable profile can say. found as button, js.",
+  "surfaces": [
+    "solpbc.org"
+  ],
+  "bundles": [
+    "solpbc-org"
+  ],
+  "arguments": [
+    {
+      "name": "state",
+      "type": "string"
+    }
+  ],
+  "format_intent": "enum",
+  "max_length": 12,
+  "source_revision": "16cc528d2cb07f165b97d76701cd1bc20619d92b579a157b71587b72255bc54b",
+  "risk": "routine",
+  "auto_merge": true,
+  "selector": {
+    "name": "state",
+    "type": "string",
+    "enum_values": [
+      "idle",
+      "sending"
+    ],
+    "enum_default": "idle"
+  }
+}

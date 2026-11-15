@@ -1,0 +1,16 @@
+{
+  "description": "that didn't send. please try again, or email jer at solpbc dot org.",
+  "context": "found as js.",
+  "surfaces": [
+    "solpbc.org"
+  ],
+  "bundles": [
+    "solpbc-org"
+  ],
+  "arguments": [],
+  "format_intent": "text",
+  "max_length": 67,
+  "source_revision": "ff33524c77c92aec8571de0c5f8adbe9c0a3d17b09a34c11222bbddf5e6a4d63",
+  "risk": "routine",
+  "auto_merge": true
+}

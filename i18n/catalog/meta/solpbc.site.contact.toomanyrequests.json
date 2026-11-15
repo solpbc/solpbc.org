@@ -1,0 +1,16 @@
+{
+  "description": "Contact form result",
+  "context": "Returned when the contact form is asked to slow down. The page matches these words exactly.",
+  "surfaces": [
+    "solpbc.org"
+  ],
+  "bundles": [
+    "solpbc-org"
+  ],
+  "arguments": [],
+  "format_intent": "text",
+  "max_length": 17,
+  "source_revision": "42af76267601c069fb4e0771ba8e2731cf383eb2958d62eb771f05560d6dffe5",
+  "risk": "protocol",
+  "auto_merge": false
+}

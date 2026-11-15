@@ -1,0 +1,16 @@
+{
+  "description": "continuity beyond the founder",
+  "context": "found as h3.",
+  "surfaces": [
+    "solpbc.org"
+  ],
+  "bundles": [
+    "solpbc-org"
+  ],
+  "arguments": [],
+  "format_intent": "text",
+  "max_length": 29,
+  "source_revision": "6814aed570f6e178c5e5a3d0c8ec148684911e521cb01133509267d11bc53b35",
+  "risk": "routine",
+  "auto_merge": true
+}

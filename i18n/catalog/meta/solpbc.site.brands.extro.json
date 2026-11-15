@@ -1,0 +1,16 @@
+{
+  "description": "extro",
+  "context": "found as li, h2.",
+  "surfaces": [
+    "solpbc.org"
+  ],
+  "bundles": [
+    "solpbc-org"
+  ],
+  "arguments": [],
+  "format_intent": "text",
+  "max_length": 5,
+  "source_revision": "205fdccaaa478b95aa96ea2fc691c9f12b018d7bbffb560473298c404990159c",
+  "risk": "routine",
+  "auto_merge": true
+}

@@ -1,0 +1,16 @@
+{
+  "description": "don't: recolored",
+  "context": "found as aria-label.",
+  "surfaces": [
+    "solpbc.org"
+  ],
+  "bundles": [
+    "solpbc-org"
+  ],
+  "arguments": [],
+  "format_intent": "text",
+  "max_length": 16,
+  "source_revision": "7594c7d83b40768cce83cb59063d022e4bfbd741421ebeb34f51ee21ef81872b",
+  "risk": "routine",
+  "auto_merge": true
+}

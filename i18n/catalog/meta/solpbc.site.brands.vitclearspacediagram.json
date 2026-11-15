@@ -1,0 +1,16 @@
+{
+  "description": "vit clearspace diagram",
+  "context": "found as aria-label.",
+  "surfaces": [
+    "solpbc.org"
+  ],
+  "bundles": [
+    "solpbc-org"
+  ],
+  "arguments": [],
+  "format_intent": "text",
+  "max_length": 22,
+  "source_revision": "50e051a0576017b840418b63874386255f8f9a87ac0b42ee200927d5e53d7654",
+  "risk": "routine",
+  "auto_merge": true
+}

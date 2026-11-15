@@ -1,0 +1,16 @@
+{
+  "description": "download all vit — marks, wordmark, badges, full size ladder, svg + png + pdf.",
+  "context": "found as p.",
+  "surfaces": [
+    "solpbc.org"
+  ],
+  "bundles": [
+    "solpbc-org"
+  ],
+  "arguments": [],
+  "format_intent": "text",
+  "max_length": 78,
+  "source_revision": "4b0415df7b7acd91417d97a0ce0565c6d65caf5ba85cf7a137490f140cb611a5",
+  "risk": "routine",
+  "auto_merge": true
+}

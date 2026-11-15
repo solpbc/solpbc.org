@@ -1,0 +1,16 @@
+{
+  "description": "proportion-changed",
+  "context": "found as div.",
+  "surfaces": [
+    "solpbc.org"
+  ],
+  "bundles": [
+    "solpbc-org"
+  ],
+  "arguments": [],
+  "format_intent": "text",
+  "max_length": 18,
+  "source_revision": "3f24e95a694adbb44dcbbcc5f461fec5a44d041fbf16ffff858455daa8649827",
+  "risk": "routine",
+  "auto_merge": true
+}

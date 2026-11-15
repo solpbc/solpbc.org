@@ -1,0 +1,16 @@
+{
+  "description": "sol pbc wordmark",
+  "context": "found as aria-label.",
+  "surfaces": [
+    "solpbc.org"
+  ],
+  "bundles": [
+    "solpbc-org"
+  ],
+  "arguments": [],
+  "format_intent": "text",
+  "max_length": 16,
+  "source_revision": "fb27d2fce815db39464c913c56528a65eee9ef8053b450694afd0d38298d3cb1",
+  "risk": "routine",
+  "auto_merge": true
+}

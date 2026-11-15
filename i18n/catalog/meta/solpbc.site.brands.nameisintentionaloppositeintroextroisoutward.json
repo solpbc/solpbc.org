@@ -1,0 +1,16 @@
+{
+  "description": "the name is short for extraordinary. they're bound by the same covenants as jer, written into sol pbc's articles of incorporation.",
+  "context": "covenant, charter, or trademark wording. not rewritten. found as p. risk-uncertain: HEAD now says the name is short for extraordinary and states the covenant. legal is the stricter class",
+  "surfaces": [
+    "solpbc.org"
+  ],
+  "bundles": [
+    "solpbc-org"
+  ],
+  "arguments": [],
+  "format_intent": "text",
+  "max_length": 130,
+  "source_revision": "42c14881131c6b541ba4209b3eb0b75edc80d0fc82d8656a30724532d96f0819",
+  "risk": "legal",
+  "auto_merge": false
+}

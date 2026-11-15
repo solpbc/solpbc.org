@@ -1,0 +1,16 @@
+{
+  "description": "if jer ceases to serve as a director, the resulting board vacancy is filled by a successor designator named in the articles of incorporation (initially our o...",
+  "context": "covenant, charter, or trademark wording. not rewritten. found as p.",
+  "surfaces": [
+    "solpbc.org"
+  ],
+  "bundles": [
+    "solpbc-org"
+  ],
+  "arguments": [],
+  "format_intent": "text",
+  "max_length": 280,
+  "source_revision": "c5a44ef25280559633dd48de324d658da0c874ac47db95a4798795a11e8e1e7d",
+  "risk": "legal",
+  "auto_merge": false
+}

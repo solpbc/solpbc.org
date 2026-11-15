@@ -1,0 +1,16 @@
+{
+  "description": "open source is social",
+  "context": "found as div.",
+  "surfaces": [
+    "solpbc.org"
+  ],
+  "bundles": [
+    "solpbc-org"
+  ],
+  "arguments": [],
+  "format_intent": "text",
+  "max_length": 21,
+  "source_revision": "4b44ed447452cf352168aee7ca40b07f076fe1b0255e572c62406edb62e1b119",
+  "risk": "routine",
+  "auto_merge": true
+}

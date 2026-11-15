@@ -1,0 +1,16 @@
+{
+  "description": "badge labels, body text",
+  "context": "found as td.",
+  "surfaces": [
+    "solpbc.org"
+  ],
+  "bundles": [
+    "solpbc-org"
+  ],
+  "arguments": [],
+  "format_intent": "text",
+  "max_length": 23,
+  "source_revision": "3c2c5e2b6f69d4fe26852a0aecd94c505a16e5de6cd53740e741c1bc69e6ef3f",
+  "risk": "routine",
+  "auto_merge": true
+}

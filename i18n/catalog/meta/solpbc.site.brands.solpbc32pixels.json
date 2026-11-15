@@ -1,0 +1,16 @@
+{
+  "description": "sol pbc at 32 pixels",
+  "context": "found as aria-label.",
+  "surfaces": [
+    "solpbc.org"
+  ],
+  "bundles": [
+    "solpbc-org"
+  ],
+  "arguments": [],
+  "format_intent": "text",
+  "max_length": 20,
+  "source_revision": "659b4d29ad6243b1fedac3b93f8a215ec68c2ab9ff2f77cd888f7b9a000eb6f9",
+  "risk": "routine",
+  "auto_merge": true
+}

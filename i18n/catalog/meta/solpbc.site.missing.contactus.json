@@ -1,0 +1,16 @@
+{
+  "description": "contact us →",
+  "context": "found as a.",
+  "surfaces": [
+    "solpbc.org"
+  ],
+  "bundles": [
+    "solpbc-org"
+  ],
+  "arguments": [],
+  "format_intent": "text",
+  "max_length": 12,
+  "source_revision": "27ab49b0692e6fd925f14068e684ee65dd5ae0bc8b4a93523125742bf5842a04",
+  "risk": "routine",
+  "auto_merge": true
+}

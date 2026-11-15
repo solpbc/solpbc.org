@@ -1,0 +1,16 @@
+{
+  "description": "bylaws",
+  "context": "found as a.",
+  "surfaces": [
+    "solpbc.org"
+  ],
+  "bundles": [
+    "solpbc-org"
+  ],
+  "arguments": [],
+  "format_intent": "text",
+  "max_length": 6,
+  "source_revision": "5743038e6d707b5b3e9eb1359a6423efe2bd2b408c20b1aae0a1381742d77007",
+  "risk": "routine",
+  "auto_merge": true
+}

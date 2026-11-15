@@ -1,0 +1,16 @@
+{
+  "description": "vit wordmark",
+  "context": "found as aria-label.",
+  "surfaces": [
+    "solpbc.org"
+  ],
+  "bundles": [
+    "solpbc-org"
+  ],
+  "arguments": [],
+  "format_intent": "text",
+  "max_length": 12,
+  "source_revision": "72331c5267ebfa2d0244ac9be4e9cb71ad4de4a7358c826dcc7f5b61aac93330",
+  "risk": "routine",
+  "auto_merge": true
+}

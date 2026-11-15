@@ -1,0 +1,16 @@
+{
+  "description": "brands",
+  "context": "found as aria-label.",
+  "surfaces": [
+    "solpbc.org"
+  ],
+  "bundles": [
+    "solpbc-org"
+  ],
+  "arguments": [],
+  "format_intent": "text",
+  "max_length": 6,
+  "source_revision": "ea738b2445775e821c6d495c01fe8fe76e966479eede87ad41661f91c6f66923",
+  "risk": "routine",
+  "auto_merge": true
+}

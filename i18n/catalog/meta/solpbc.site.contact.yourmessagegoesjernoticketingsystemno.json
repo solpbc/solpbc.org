@@ -1,0 +1,16 @@
+{
+  "description": "your message goes to jer. no ticketing system, no auto-replies.",
+  "context": "found as p.",
+  "surfaces": [
+    "solpbc.org"
+  ],
+  "bundles": [
+    "solpbc-org"
+  ],
+  "arguments": [],
+  "format_intent": "text",
+  "max_length": 63,
+  "source_revision": "be869425331f62f84e1d9bad5b2317f5153997623ffe48b388a8ca0c051f7a8a",
+  "risk": "routine",
+  "auto_merge": true
+}

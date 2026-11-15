@@ -1,0 +1,16 @@
+{
+  "description": "the mark IS the v — reads as one word",
+  "context": "found as div.",
+  "surfaces": [
+    "solpbc.org"
+  ],
+  "bundles": [
+    "solpbc-org"
+  ],
+  "arguments": [],
+  "format_intent": "text",
+  "max_length": 37,
+  "source_revision": "bdf3e2ab0dfdd3abd02cefad8b58cd6c6f6d024ae6da50248f5d4383b9bfa065",
+  "risk": "routine",
+  "auto_merge": true
+}

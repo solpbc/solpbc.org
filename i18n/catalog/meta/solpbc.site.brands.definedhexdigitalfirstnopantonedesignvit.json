@@ -1,0 +1,16 @@
+{
+  "description": "defined in hex, digital-first — no Pantone, by design (vit lives in terminals and readmes).",
+  "context": "found as p.",
+  "surfaces": [
+    "solpbc.org"
+  ],
+  "bundles": [
+    "solpbc-org"
+  ],
+  "arguments": [],
+  "format_intent": "text",
+  "max_length": 91,
+  "source_revision": "cb5719de94be11d6a0d102333471df414405efaa030c1e7ecde32dadd8532789",
+  "risk": "routine",
+  "auto_merge": true
+}

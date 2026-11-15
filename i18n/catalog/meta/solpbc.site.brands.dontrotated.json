@@ -1,0 +1,16 @@
+{
+  "description": "don't: rotated",
+  "context": "found as aria-label.",
+  "surfaces": [
+    "solpbc.org"
+  ],
+  "bundles": [
+    "solpbc-org"
+  ],
+  "arguments": [],
+  "format_intent": "text",
+  "max_length": 14,
+  "source_revision": "466a5da335668f5539503114f59fe40eb673b4293352b5a222e1e1fbc2604ad6",
+  "risk": "routine",
+  "auto_merge": true
+}

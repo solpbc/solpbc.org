@@ -1,0 +1,16 @@
+{
+  "description": "brand",
+  "context": "found as h1.",
+  "surfaces": [
+    "solpbc.org"
+  ],
+  "bundles": [
+    "solpbc-org"
+  ],
+  "arguments": [],
+  "format_intent": "text",
+  "max_length": 5,
+  "source_revision": "ddb763bdc27054736741a549de587fddb6e2020abfde2b48dc38b1392103cad8",
+  "risk": "routine",
+  "auto_merge": true
+}

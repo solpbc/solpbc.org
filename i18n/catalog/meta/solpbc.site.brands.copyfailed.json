@@ -1,0 +1,16 @@
+{
+  "description": "copy failed. select and copy.",
+  "context": "brand.js concatenates a prefix with FALLBACK. say the whole thing, and stop gluing it to the button label. found as js.",
+  "surfaces": [
+    "solpbc.org"
+  ],
+  "bundles": [
+    "solpbc-org"
+  ],
+  "arguments": [],
+  "format_intent": "text",
+  "max_length": 29,
+  "source_revision": "6e62f8dae85465df833f20ea57a8fde2f55f2cabe6037b1c24fa5e8d9d7e7fc5",
+  "risk": "routine",
+  "auto_merge": true
+}

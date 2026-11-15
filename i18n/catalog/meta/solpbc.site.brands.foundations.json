@@ -1,0 +1,16 @@
+{
+  "description": "foundations",
+  "context": "found as li, h2.",
+  "surfaces": [
+    "solpbc.org"
+  ],
+  "bundles": [
+    "solpbc-org"
+  ],
+  "arguments": [],
+  "format_intent": "text",
+  "max_length": 11,
+  "source_revision": "1a7cf714c998667f3871294800d31a41b6aa55b10f500fbc0da8f5c743a6cfee",
+  "risk": "routine",
+  "auto_merge": true
+}

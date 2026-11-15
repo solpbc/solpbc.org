@@ -1,0 +1,16 @@
+{
+  "description": "don't use our marks or names to imply sol pbc built, endorsed, or is affiliated with something we didn't build or aren't part of",
+  "context": "found as li.",
+  "surfaces": [
+    "solpbc.org"
+  ],
+  "bundles": [
+    "solpbc-org"
+  ],
+  "arguments": [],
+  "format_intent": "text",
+  "max_length": 128,
+  "source_revision": "27cb719c82e8e8c7140f98c609351e20ab872876dddacc0f8b10d48914b742b9",
+  "risk": "routine",
+  "auto_merge": true
+}

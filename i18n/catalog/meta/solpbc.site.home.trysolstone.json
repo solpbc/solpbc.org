@@ -1,0 +1,16 @@
+{
+  "description": "try solstone →",
+  "context": "found as p.",
+  "surfaces": [
+    "solpbc.org"
+  ],
+  "bundles": [
+    "solpbc-org"
+  ],
+  "arguments": [],
+  "format_intent": "text",
+  "max_length": 14,
+  "source_revision": "f445a274f86b05c7dd22311234b95e68135ef2dddac11937b4e8800dc2013e4e",
+  "risk": "routine",
+  "auto_merge": true
+}

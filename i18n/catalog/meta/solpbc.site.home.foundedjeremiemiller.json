@@ -1,0 +1,16 @@
+{
+  "description": "founded by jeremie miller",
+  "context": "found as h2.",
+  "surfaces": [
+    "solpbc.org"
+  ],
+  "bundles": [
+    "solpbc-org"
+  ],
+  "arguments": [],
+  "format_intent": "text",
+  "max_length": 25,
+  "source_revision": "3b91332478089ce5eccc2efb09827eab06ef4d123600b7d44ba0109f9d6c44a4",
+  "risk": "routine",
+  "auto_merge": true
+}

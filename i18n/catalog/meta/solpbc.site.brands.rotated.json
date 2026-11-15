@@ -1,0 +1,16 @@
+{
+  "description": "rotated",
+  "context": "found as div.",
+  "surfaces": [
+    "solpbc.org"
+  ],
+  "bundles": [
+    "solpbc-org"
+  ],
+  "arguments": [],
+  "format_intent": "text",
+  "max_length": 7,
+  "source_revision": "90318b8932ae55a256a9fa0e27762561b564371cd7eba923f4a5447fd19cbd60",
+  "risk": "routine",
+  "auto_merge": true
+}

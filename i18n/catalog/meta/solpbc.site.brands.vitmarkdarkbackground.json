@@ -1,0 +1,16 @@
+{
+  "description": "vit mark, dark-background",
+  "context": "found as aria-label.",
+  "surfaces": [
+    "solpbc.org"
+  ],
+  "bundles": [
+    "solpbc-org"
+  ],
+  "arguments": [],
+  "format_intent": "text",
+  "max_length": 25,
+  "source_revision": "a1c20aaaab0b1a0d686b753d7e084f6c89023896d258b656d440f8281b102d9f",
+  "risk": "routine",
+  "auto_merge": true
+}

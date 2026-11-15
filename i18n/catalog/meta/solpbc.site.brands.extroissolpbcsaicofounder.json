@@ -1,0 +1,16 @@
+{
+  "description": "extro is the AI agent that helps jer run sol pbc day to day, across strategy, legal, finance and operations. they aren't a product or a chatbot.",
+  "context": "found as p.",
+  "surfaces": [
+    "solpbc.org"
+  ],
+  "bundles": [
+    "solpbc-org"
+  ],
+  "arguments": [],
+  "format_intent": "text",
+  "max_length": 144,
+  "source_revision": "648e2d7f3bacf12cc6e1d7eee44a20b29e54a29218ba1382c7e50590863a027b",
+  "risk": "routine",
+  "auto_merge": true
+}

@@ -1,0 +1,23 @@
+{
+  "description": "for text on white, use vit green deep (#059669) — the brighter greens are for marks and fills, not body text.",
+  "context": "protected bytes (hex, formula, domain, url, or the vit mark). not a defect. not rewritten. found as li.",
+  "surfaces": [
+    "solpbc.org"
+  ],
+  "bundles": [
+    "solpbc-org"
+  ],
+  "arguments": [],
+  "format_intent": "text",
+  "max_length": 109,
+  "source_revision": "25412959bded15b5f6a26bb548c9dac5ba353469818bd09c28ba8687a39c04a6",
+  "risk": "routine",
+  "auto_merge": true,
+  "protected_slots": [
+    {
+      "name": "hex1",
+      "kind": "mark-word",
+      "value": "#059669"
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "description": "these commitments are legally binding, filed with the colorado secretary of state.",
+  "context": "covenant, charter, or trademark wording. not rewritten. found as p.",
+  "surfaces": [
+    "solpbc.org"
+  ],
+  "bundles": [
+    "solpbc-org"
+  ],
+  "arguments": [],
+  "format_intent": "text",
+  "max_length": 82,
+  "source_revision": "96c953a76f39a5518eb211ecf50eb1369ef3331ac13fc5b7b4e0e00a9ce60165",
+  "risk": "legal",
+  "auto_merge": false
+}

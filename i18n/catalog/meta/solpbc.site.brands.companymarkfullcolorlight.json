@@ -1,0 +1,16 @@
+{
+  "description": "company mark, full color — on light",
+  "context": "found as div.",
+  "surfaces": [
+    "solpbc.org"
+  ],
+  "bundles": [
+    "solpbc-org"
+  ],
+  "arguments": [],
+  "format_intent": "text",
+  "max_length": 35,
+  "source_revision": "dd8b4fef8419e8aae3a1d00572fe372149ac63b6ea293237d59552864e7882e8",
+  "risk": "routine",
+  "auto_merge": true
+}

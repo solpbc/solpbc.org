@@ -1,0 +1,16 @@
+{
+  "description": "for colored / dark backgrounds — shown on vit green",
+  "context": "found as div.",
+  "surfaces": [
+    "solpbc.org"
+  ],
+  "bundles": [
+    "solpbc-org"
+  ],
+  "arguments": [],
+  "format_intent": "text",
+  "max_length": 51,
+  "source_revision": "0d866e37ac55040affb265f527dafe4f15f7969fdc6d934dee00aaded473e6a0",
+  "risk": "routine",
+  "auto_merge": true
+}

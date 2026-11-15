@@ -1,0 +1,16 @@
+{
+  "description": "during jer's stewardship as a director, the company's covenants can't be amended without his personal, written consent — a right that cannot be delegated.",
+  "context": "covenant, charter, or trademark wording. not rewritten. found as p.",
+  "surfaces": [
+    "solpbc.org"
+  ],
+  "bundles": [
+    "solpbc-org"
+  ],
+  "arguments": [],
+  "format_intent": "text",
+  "max_length": 154,
+  "source_revision": "e9dc03897bc169c56a628de941fa4439d7ab9f2d5bb3b0dab68b24edfe339c30",
+  "risk": "legal",
+  "auto_merge": false
+}

@@ -1,0 +1,16 @@
+{
+  "description": "read our blog →",
+  "context": "found as p.",
+  "surfaces": [
+    "solpbc.org"
+  ],
+  "bundles": [
+    "solpbc-org"
+  ],
+  "arguments": [],
+  "format_intent": "text",
+  "max_length": 15,
+  "source_revision": "974f868a51978895addfcd79250649a77ada7851178a619fc4e7ebc60ecf3455",
+  "risk": "routine",
+  "auto_merge": true
+}

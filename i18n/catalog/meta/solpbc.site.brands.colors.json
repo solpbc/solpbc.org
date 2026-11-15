@@ -1,0 +1,16 @@
+{
+  "description": "colors",
+  "context": "found as li, h2, h3.",
+  "surfaces": [
+    "solpbc.org"
+  ],
+  "bundles": [
+    "solpbc-org"
+  ],
+  "arguments": [],
+  "format_intent": "text",
+  "max_length": 6,
+  "source_revision": "1c4e54552d666923922b427c08481baefea5d53268fab23a65b40d7eac931066",
+  "risk": "routine",
+  "auto_merge": true
+}

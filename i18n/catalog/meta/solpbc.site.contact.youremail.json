@@ -1,0 +1,16 @@
+{
+  "description": "your email *",
+  "context": "found as label. the asterisk is the required marker, a separate span joined to the label.",
+  "surfaces": [
+    "solpbc.org"
+  ],
+  "bundles": [
+    "solpbc-org"
+  ],
+  "arguments": [],
+  "format_intent": "text",
+  "max_length": 12,
+  "source_revision": "8672c6dd323c0f5062756739f2f2fe8f0afeb0bf84d8a8cbebadaac8f8dec742",
+  "risk": "routine",
+  "auto_merge": true
+}

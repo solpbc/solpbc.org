@@ -1,0 +1,16 @@
+{
+  "description": "in writing: extro is always lowercase, in headings and at the start of a sentence too; never Extro or EXTRO.",
+  "context": "found as p.",
+  "surfaces": [
+    "solpbc.org"
+  ],
+  "bundles": [
+    "solpbc-org"
+  ],
+  "arguments": [],
+  "format_intent": "text",
+  "max_length": 108,
+  "source_revision": "752642bcdfd38f47b0276880a642b3a1e7685513105b49998a94475ce176dc73",
+  "risk": "routine",
+  "auto_merge": true
+}

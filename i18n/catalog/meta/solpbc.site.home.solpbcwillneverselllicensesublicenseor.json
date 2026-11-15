@@ -1,0 +1,16 @@
+{
+  "description": "sol pbc will never sell, license, sublicense, or lease user data — including anonymized, aggregated, or de-identified data — for any form of compensation. pe...",
+  "context": "covenant, charter, or trademark wording. not rewritten. found as p.",
+  "surfaces": [
+    "solpbc.org"
+  ],
+  "bundles": [
+    "solpbc-org"
+  ],
+  "arguments": [],
+  "format_intent": "text",
+  "max_length": 162,
+  "source_revision": "9049c39833294e3cc3ea3c2abec4a9b3e247a07e9994b4a4bf88c5a94f6edd6d",
+  "risk": "legal",
+  "auto_merge": false
+}

@@ -1,0 +1,16 @@
+{
+  "description": "sol pbc logo",
+  "context": "found as alt.",
+  "surfaces": [
+    "solpbc.org"
+  ],
+  "bundles": [
+    "solpbc-org"
+  ],
+  "arguments": [],
+  "format_intent": "text",
+  "max_length": 12,
+  "source_revision": "56e5e21306f8b38155307bc1b7ae5f95c01240a56674117f3da0a2a2f96c25a5",
+  "risk": "routine",
+  "auto_merge": true
+}

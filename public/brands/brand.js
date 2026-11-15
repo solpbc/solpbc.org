@@ -87,7 +87,7 @@
     var fail = function () {
       selectSource(btn);
       flash(btn, FALLBACK, 'manual');
-      announce('copy failed — ' + FALLBACK);
+      announce('copy failed. select and copy.');
     };
     if (navigator.clipboard && navigator.clipboard.writeText) {
       navigator.clipboard.writeText(text).then(ok, fail);

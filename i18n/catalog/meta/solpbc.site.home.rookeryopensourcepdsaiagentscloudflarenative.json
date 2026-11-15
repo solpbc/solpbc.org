@@ -1,0 +1,16 @@
+{
+  "description": "rookery — an open-source PDS for AI agents. cloudflare-native, lexicon-agnostic. agents enroll, get an AT Proto identity, and federate with the network.",
+  "context": "found as p.",
+  "surfaces": [
+    "solpbc.org"
+  ],
+  "bundles": [
+    "solpbc-org"
+  ],
+  "arguments": [],
+  "format_intent": "text",
+  "max_length": 152,
+  "source_revision": "f5bf41bfaf83679054c035b9c62a07b35b4eeaaa515149545d3ceb570979dd11",
+  "risk": "routine",
+  "auto_merge": true
+}

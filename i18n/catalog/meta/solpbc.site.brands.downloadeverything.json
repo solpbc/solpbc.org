@@ -1,0 +1,16 @@
+{
+  "description": "download everything",
+  "context": "found as h3.",
+  "surfaces": [
+    "solpbc.org"
+  ],
+  "bundles": [
+    "solpbc-org"
+  ],
+  "arguments": [],
+  "format_intent": "text",
+  "max_length": 19,
+  "source_revision": "c98a4ed04caa70eab56a4f6371b324de2b0e84f41fdf19251ce44347a7bdfea1",
+  "risk": "routine",
+  "auto_merge": true
+}

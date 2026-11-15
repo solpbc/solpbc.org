@@ -1,0 +1,16 @@
+{
+  "description": "these assets are free to use — for press, for writing about us, for integrations, and for showing that a project works with solstone or vit. no account, no f...",
+  "context": "found as p.",
+  "surfaces": [
+    "solpbc.org"
+  ],
+  "bundles": [
+    "solpbc-org"
+  ],
+  "arguments": [],
+  "format_intent": "text",
+  "max_length": 202,
+  "source_revision": "08989014bf6f104a1bdeb7c6721d97e954a971e572778c3e6b7438cb63d19b6d",
+  "risk": "routine",
+  "auto_merge": true
+}

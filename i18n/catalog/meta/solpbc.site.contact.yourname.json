@@ -1,0 +1,16 @@
+{
+  "description": "your name",
+  "context": "found as label.",
+  "surfaces": [
+    "solpbc.org"
+  ],
+  "bundles": [
+    "solpbc-org"
+  ],
+  "arguments": [],
+  "format_intent": "text",
+  "max_length": 9,
+  "source_revision": "7acf5e1022b630d252071045d74f8ac8fdf8f7c5ef9acfea9ef616de2cb80aa8",
+  "risk": "routine",
+  "auto_merge": true
+}

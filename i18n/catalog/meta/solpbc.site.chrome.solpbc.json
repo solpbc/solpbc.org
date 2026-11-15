@@ -1,0 +1,17 @@
+{
+  "description": "sol pbc",
+  "context": "found as alt, a, og:site_name, json-ld, li, h2, title, h1.",
+  "surfaces": [
+    "solpbc.org",
+    "blog"
+  ],
+  "bundles": [
+    "solpbc-org"
+  ],
+  "arguments": [],
+  "format_intent": "text",
+  "max_length": 7,
+  "source_revision": "69b9c09b3d605af517edce36708a82685f42a6435f4d85cdb9b3f93a43f9cf16",
+  "risk": "routine",
+  "auto_merge": true
+}

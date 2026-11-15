@@ -1,0 +1,23 @@
+{
+  "description": "two typefaces: comfortaa for display, inter for text. both are open-source and self-hosted — this page serves them from solpbc.org, not from a font CDN. no l...",
+  "context": "protected bytes (hex, formula, domain, url, or the vit mark). not a defect. not rewritten. found as p.",
+  "surfaces": [
+    "solpbc.org"
+  ],
+  "bundles": [
+    "solpbc-org"
+  ],
+  "arguments": [],
+  "format_intent": "text",
+  "max_length": 246,
+  "source_revision": "cd4a5f4b0384304676ced7886ad89f89ccf0051b5accc7d738b5a4140271853c",
+  "risk": "routine",
+  "auto_merge": true,
+  "protected_slots": [
+    {
+      "name": "dom1",
+      "kind": "mark-word",
+      "value": "solpbc.org"
+    }
+  ]
+}

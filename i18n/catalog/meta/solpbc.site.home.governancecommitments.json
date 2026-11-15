@@ -1,0 +1,16 @@
+{
+  "description": "governance commitments",
+  "context": "found as h2.",
+  "surfaces": [
+    "solpbc.org"
+  ],
+  "bundles": [
+    "solpbc-org"
+  ],
+  "arguments": [],
+  "format_intent": "text",
+  "max_length": 22,
+  "source_revision": "94308d54a9523fa4a507371ab739f7c88e4da1457fbae04c93f7a219812123fc",
+  "risk": "routine",
+  "auto_merge": true
+}

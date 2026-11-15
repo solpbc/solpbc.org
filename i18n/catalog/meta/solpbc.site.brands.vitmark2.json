@@ -1,0 +1,16 @@
+{
+  "description": "vit-mark",
+  "context": "found as div.",
+  "surfaces": [
+    "solpbc.org"
+  ],
+  "bundles": [
+    "solpbc-org"
+  ],
+  "arguments": [],
+  "format_intent": "text",
+  "max_length": 8,
+  "source_revision": "eb861fdafd7d76a5932e156f8f19b9c7aaef3ae23bc72d3690820b22866cfdf8",
+  "risk": "routine",
+  "auto_merge": true
+}

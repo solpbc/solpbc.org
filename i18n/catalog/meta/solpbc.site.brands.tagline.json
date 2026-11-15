@@ -1,0 +1,16 @@
+{
+  "description": "tagline",
+  "context": "found as span.",
+  "surfaces": [
+    "solpbc.org"
+  ],
+  "bundles": [
+    "solpbc-org"
+  ],
+  "arguments": [],
+  "format_intent": "text",
+  "max_length": 7,
+  "source_revision": "e416f8cda7fe4c6629b460fb64218563f467d212e221ad2d2465f84631ed7f3f",
+  "risk": "routine",
+  "auto_merge": true
+}

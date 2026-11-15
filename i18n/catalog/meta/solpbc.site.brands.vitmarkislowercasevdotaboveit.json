@@ -1,0 +1,23 @@
+{
+  "description": "the vit mark is a lowercase v with a dot above it. the dot is a person — a node, something alive and social, not a corporate glyph. the letterforms are round...",
+  "context": "protected bytes (hex, formula, domain, url, or the vit mark). not a defect. not rewritten. found as p.",
+  "surfaces": [
+    "solpbc.org"
+  ],
+  "bundles": [
+    "solpbc-org"
+  ],
+  "arguments": [],
+  "format_intent": "text",
+  "max_length": 443,
+  "source_revision": "11bfb7d38d432005e57f2ef4ac3045dd3b09be1a3892218143e2e2dd310ea4a0",
+  "risk": "routine",
+  "auto_merge": true,
+  "protected_slots": [
+    {
+      "name": "mark1",
+      "kind": "mark-word",
+      "value": "v̇"
+    }
+  ]
+}

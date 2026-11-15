@@ -1,0 +1,16 @@
+{
+  "description": "AI is used to screen your message.",
+  "context": "found as p.",
+  "surfaces": [
+    "solpbc.org"
+  ],
+  "bundles": [
+    "solpbc-org"
+  ],
+  "arguments": [],
+  "format_intent": "text",
+  "max_length": 34,
+  "source_revision": "50277aa5e02933eb3f4ae22592895836aa0199d224dfa8badda21789cb945f53",
+  "risk": "routine",
+  "auto_merge": true
+}

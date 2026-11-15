@@ -1,0 +1,16 @@
+{
+  "description": "primary mark — on light",
+  "context": "found as div.",
+  "surfaces": [
+    "solpbc.org"
+  ],
+  "bundles": [
+    "solpbc-org"
+  ],
+  "arguments": [],
+  "format_intent": "text",
+  "max_length": 23,
+  "source_revision": "39bb330b16980d63d6ec5b6145b9cb0931b53d49e18e53f2e6f07c1aff1d1600",
+  "risk": "routine",
+  "auto_merge": true
+}

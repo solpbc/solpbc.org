@@ -1,0 +1,16 @@
+{
+  "description": "Contact form result",
+  "context": "Returned when the contact form is sent with no message. The page matches these words exactly.",
+  "surfaces": [
+    "solpbc.org"
+  ],
+  "bundles": [
+    "solpbc-org"
+  ],
+  "arguments": [],
+  "format_intent": "text",
+  "max_length": 19,
+  "source_revision": "2529bab5a24ba55805b1126d67ce23347c9aeeb7dda3ef066c8ee57ef47541ec",
+  "risk": "protocol",
+  "auto_merge": false
+}

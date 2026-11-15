@@ -1,0 +1,16 @@
+{
+  "description": "icon badge",
+  "context": "found as div.",
+  "surfaces": [
+    "solpbc.org"
+  ],
+  "bundles": [
+    "solpbc-org"
+  ],
+  "arguments": [],
+  "format_intent": "text",
+  "max_length": 10,
+  "source_revision": "639f7a925d3ec2f2f18d6b8e9d5bd2f5091dd0dc3344a972ff08b1047595ef70",
+  "risk": "routine",
+  "auto_merge": true
+}

@@ -1,0 +1,16 @@
+{
+  "description": "download all sol pbc — every variant, full size ladder, svg + png + pdf.",
+  "context": "found as p.",
+  "surfaces": [
+    "solpbc.org"
+  ],
+  "bundles": [
+    "solpbc-org"
+  ],
+  "arguments": [],
+  "format_intent": "text",
+  "max_length": 72,
+  "source_revision": "2ef68a16987cdda38cbec2632b88398626894b770de941bea10f9009bdd6faf8",
+  "risk": "routine",
+  "auto_merge": true
+}

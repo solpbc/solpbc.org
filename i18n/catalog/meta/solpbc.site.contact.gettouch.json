@@ -1,0 +1,16 @@
+{
+  "description": "get in touch",
+  "context": "found as h1.",
+  "surfaces": [
+    "solpbc.org"
+  ],
+  "bundles": [
+    "solpbc-org"
+  ],
+  "arguments": [],
+  "format_intent": "text",
+  "max_length": 12,
+  "source_revision": "76ab2d2e137f55a8940404649a7c685d918a95c1316321f0c7dddfe8ec0b7833",
+  "risk": "routine",
+  "auto_merge": true
+}

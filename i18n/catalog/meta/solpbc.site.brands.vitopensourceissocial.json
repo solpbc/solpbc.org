@@ -1,0 +1,16 @@
+{
+  "description": "vit — open source is social",
+  "context": "found as aria-label, title.",
+  "surfaces": [
+    "solpbc.org"
+  ],
+  "bundles": [
+    "solpbc-org"
+  ],
+  "arguments": [],
+  "format_intent": "text",
+  "max_length": 27,
+  "source_revision": "58018f8a0fb6d95a4692c044c0cfcabc2a378500a00f99d9115f1c377b9d26ce",
+  "risk": "routine",
+  "auto_merge": true
+}

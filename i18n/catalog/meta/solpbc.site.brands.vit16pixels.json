@@ -1,0 +1,16 @@
+{
+  "description": "vit at 16 pixels",
+  "context": "found as aria-label.",
+  "surfaces": [
+    "solpbc.org"
+  ],
+  "bundles": [
+    "solpbc-org"
+  ],
+  "arguments": [],
+  "format_intent": "text",
+  "max_length": 16,
+  "source_revision": "5add23e3ec4a3788983899ad0618aba5d86f93ea33423680dba9b81f878f4266",
+  "risk": "routine",
+  "auto_merge": true
+}

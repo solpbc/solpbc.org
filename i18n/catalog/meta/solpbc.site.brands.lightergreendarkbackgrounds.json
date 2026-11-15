@@ -1,0 +1,16 @@
+{
+  "description": "the lighter green — for dark backgrounds",
+  "context": "found as div.",
+  "surfaces": [
+    "solpbc.org"
+  ],
+  "bundles": [
+    "solpbc-org"
+  ],
+  "arguments": [],
+  "format_intent": "text",
+  "max_length": 40,
+  "source_revision": "0295be55c46bf030203aa916c4d47f3660ca3d0b9519ca52fd9a8d838dd72772",
+  "risk": "routine",
+  "auto_merge": true
+}

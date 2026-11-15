@@ -1,0 +1,16 @@
+{
+  "description": "sol pbc clearspace diagram",
+  "context": "found as aria-label.",
+  "surfaces": [
+    "solpbc.org"
+  ],
+  "bundles": [
+    "solpbc-org"
+  ],
+  "arguments": [],
+  "format_intent": "text",
+  "max_length": 26,
+  "source_revision": "fb7f79e407acf89893cda4a7f328826315178e6b5c19c38da48bf76a742ee79a",
+  "risk": "routine",
+  "auto_merge": true
+}

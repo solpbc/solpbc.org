@@ -1,0 +1,16 @@
+{
+  "description": "vit is how solstone gets better for everyone — the open protocol for sharing software capabilities over a social network where reputation and provenance matter.",
+  "context": "found as div.",
+  "surfaces": [
+    "solpbc.org"
+  ],
+  "bundles": [
+    "solpbc-org"
+  ],
+  "arguments": [],
+  "format_intent": "text",
+  "max_length": 160,
+  "source_revision": "dd084c5c036f349fe8d9263c8f653e289e8f372c57b637d8b800cb64802a61c5",
+  "risk": "routine",
+  "auto_merge": true
+}

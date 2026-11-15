@@ -1,0 +1,16 @@
+{
+  "description": "don't modify the marks — no recoloring (except the accessibility rule above), stretching, rotating, or adding effects",
+  "context": "found as li.",
+  "surfaces": [
+    "solpbc.org"
+  ],
+  "bundles": [
+    "solpbc-org"
+  ],
+  "arguments": [],
+  "format_intent": "text",
+  "max_length": 117,
+  "source_revision": "ee5fd722fe14479859dc4bd28f641ba6fbcda32b1620dc20d13b37417389bf55",
+  "risk": "routine",
+  "auto_merge": true
+}

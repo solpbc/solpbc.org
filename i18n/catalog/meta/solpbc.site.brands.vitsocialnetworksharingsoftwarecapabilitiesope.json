@@ -1,0 +1,16 @@
+{
+  "description": "vit — the social network for sharing software capabilities. open source is social.",
+  "context": "found as p.",
+  "surfaces": [
+    "solpbc.org"
+  ],
+  "bundles": [
+    "solpbc-org"
+  ],
+  "arguments": [],
+  "format_intent": "text",
+  "max_length": 82,
+  "source_revision": "306e610efaa45fe05cf143d288c522b955008d6e948ad48827e16aa176bd9d41",
+  "risk": "routine",
+  "auto_merge": true
+}

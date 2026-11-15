@@ -1,0 +1,16 @@
+{
+  "description": "single-color black — print / limited-color",
+  "context": "found as div.",
+  "surfaces": [
+    "solpbc.org"
+  ],
+  "bundles": [
+    "solpbc-org"
+  ],
+  "arguments": [],
+  "format_intent": "text",
+  "max_length": 42,
+  "source_revision": "93b52c6c3c1809838062252c0c82750fff5147c1333b0cfdf61dcc4ef6fb5862",
+  "risk": "routine",
+  "auto_merge": true
+}

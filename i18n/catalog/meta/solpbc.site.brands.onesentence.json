@@ -1,0 +1,16 @@
+{
+  "description": "one sentence",
+  "context": "found as span.",
+  "surfaces": [
+    "solpbc.org"
+  ],
+  "bundles": [
+    "solpbc-org"
+  ],
+  "arguments": [],
+  "format_intent": "text",
+  "max_length": 12,
+  "source_revision": "82890d723222a2e8840a0c768cb8e75d43238bc1ec49a14e9664a26fcbe5e6a6",
+  "risk": "routine",
+  "auto_merge": true
+}

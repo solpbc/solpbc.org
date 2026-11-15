@@ -1,0 +1,16 @@
+{
+  "description": "brand — sol pbc",
+  "context": "found as title, og:title.",
+  "surfaces": [
+    "solpbc.org"
+  ],
+  "bundles": [
+    "solpbc-org"
+  ],
+  "arguments": [],
+  "format_intent": "text",
+  "max_length": 15,
+  "source_revision": "a324324d2e0f195b86431ecd6f784d854811a88ee862d11e20f1d747ffd8302d",
+  "risk": "routine",
+  "auto_merge": true
+}

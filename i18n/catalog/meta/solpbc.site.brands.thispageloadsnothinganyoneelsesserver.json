@@ -1,0 +1,16 @@
+{
+  "description": "this page loads nothing from anyone else's server: no third-party fonts, no analytics, no tracking, no cookies. open developer tools and check. that's the wh...",
+  "context": "names the browser's developer tools. the words around it can be translated later; this census does not rewrite an annotation-only string. found as p.",
+  "surfaces": [
+    "solpbc.org"
+  ],
+  "bundles": [
+    "solpbc-org"
+  ],
+  "arguments": [],
+  "format_intent": "text",
+  "max_length": 167,
+  "source_revision": "4cbd9dbc8e6cbeadc51d0d19e8de482e8883a1273be7bd51fdfc31499caeb5b5",
+  "risk": "routine",
+  "auto_merge": true
+}

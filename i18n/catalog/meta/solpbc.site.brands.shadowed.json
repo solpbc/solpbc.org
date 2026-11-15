@@ -1,0 +1,16 @@
+{
+  "description": "shadowed",
+  "context": "found as div.",
+  "surfaces": [
+    "solpbc.org"
+  ],
+  "bundles": [
+    "solpbc-org"
+  ],
+  "arguments": [],
+  "format_intent": "text",
+  "max_length": 8,
+  "source_revision": "c02cc3775f126245d428230c7bb002142557da27365b3e36c5a5a7a15667ee03",
+  "risk": "routine",
+  "auto_merge": true
+}

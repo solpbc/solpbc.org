@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>%%solpbc.site.chrome.solpbc%%</title>
+    <meta name="description" content="%%solpbc.site.home.solpbcpublicbenefitcorporationadvancingdigital%%">
+    <link rel="canonical" href="https://solpbc.org/">
+    <meta property="og:title" content="%%solpbc.site.home.solpbcdigitalselfdetermination%%">
+    <meta property="og:description" content="%%solpbc.site.home.publicbenefitcorporationbindingchartercovenants%%">
+    <meta property="og:url" content="https://solpbc.org">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="%%solpbc.site.chrome.solpbc%%">
+    <meta name="twitter:card" content="summary">
+    <link rel="icon" type="image/svg+xml" href="static/mark.svg">
+    <link rel="icon" type="image/x-icon" href="static/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="static/favicon-32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="static/favicon-16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="static/apple-touch-icon.png">
+    <link rel="stylesheet" href="/static/tokens.css">
+    <style>
+@font-face {
+    font-family: 'Comfortaa';
+    src: url('/blog/fonts/comfortaa-latin.woff2') format('woff2');
+    font-weight: 400 700;
+    font-display: swap;
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6,
+        U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC,
+        U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+    font-family: 'Comfortaa';
+    src: url('/blog/fonts/comfortaa-latin-ext.woff2') format('woff2');
+    font-weight: 400 700;
+    font-display: swap;
+    unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7,
+        U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F,
+        U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113,
+        U+2C60-2C7F, U+A720-A7FF;
+}
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            font-family: system-ui, -apple-system, sans-serif;
+            background: var(--paper);
+        }
+        :focus-visible {
+            outline: 2px solid var(--focus);
+            outline-offset: 2px;
+        }
+        .site-nav {
+            width: 90vw;
+            max-width: 600px;
+            padding: 1.5rem 0 0;
+            font-family: var(--font-display);
+            font-size: 0.8rem;
+            text-transform: lowercase;
+            text-align: center;
+        }
+        .site-nav a {
+            color: var(--ink-faint-paper);
+            text-decoration: none;
+            margin: 0 0.6rem;
+        }
+        .site-nav a:hover {
+            text-decoration: underline;
+        }
+        h1 {
+            font-family: var(--font-display);
+            font-size: 2.5rem;
+            font-weight: 700;
+            letter-spacing: 0.1em;
+            text-transform: lowercase;
+            color: var(--ink);
+            margin-bottom: 2rem;
+        }
+        .logo {
+            max-width: 340px;
+            width: 80vw;
+        }
+        .purpose {
+            max-width: 600px;
+            width: 90vw;
+            margin-top: 2.5rem;
+            font-size: 1.1rem;
+            line-height: 1.6;
+            color: var(--ink-soft-paper);
+            text-align: center;
+        }
+        .purpose .highlight {
+            color: var(--ink);
+            font-weight: 600;
+        }
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem 0;
+            width: 100%;
+        }
+        .founder {
+            max-width: 600px;
+            width: 90vw;
+            margin-top: 1.5rem;
+            font-size: 0.95rem;
+            color: var(--ink-soft-paper);
+            text-align: center;
+        }
+        .founder a {
+            color: var(--orange-text-aa);
+            text-decoration: underline;
+            text-decoration-thickness: 1px;
+            text-underline-offset: 0.18em;
+        }
+        .founder a:hover {
+            text-decoration-thickness: 2px;
+        }
+        h2 {
+            font-family: var(--font-display);
+            font-size: 1.5rem;
+            font-weight: 600;
+            letter-spacing: 0.05em;
+            text-transform: lowercase;
+            color: var(--ink);
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+        .commitments {
+            max-width: 600px;
+            width: 90vw;
+            margin: 0 auto;
+            padding: 4rem 0;
+        }
+        .commitment {
+            margin-bottom: 2rem;
+        }
+        .commitment:last-child {
+            margin-bottom: 0;
+        }
+        .commitment h3 {
+            font-size: 1.05rem;
+            font-weight: 600;
+            color: var(--ink);
+            margin-bottom: 0.4rem;
+        }
+        .commitment p {
+            font-size: 1rem;
+            line-height: 1.6;
+            color: var(--ink-soft-paper);
+        }
+        .filing {
+            max-width: 600px;
+            width: 90vw;
+            margin: 0 auto;
+            padding: 0 0 3rem;
+            font-size: 1rem;
+            line-height: 1.6;
+            color: var(--ink-soft-paper);
+            text-align: center;
+        }
+        .filing a {
+            color: var(--orange-text-aa);
+            text-decoration: underline;
+            text-decoration-thickness: 1px;
+            text-underline-offset: 0.18em;
+            font-weight: 500;
+        }
+        .filing a:hover {
+            text-decoration-thickness: 2px;
+        }
+        .products {
+            max-width: 600px;
+            width: 90vw;
+            margin: 0 auto;
+            padding: 4rem 0;
+        }
+        .product {
+            margin-bottom: 2rem;
+        }
+        .product:last-child {
+            margin-bottom: 0;
+        }
+        .product p {
+            font-size: 1rem;
+            line-height: 1.6;
+            color: var(--ink-soft-paper);
+        }
+        .product a {
+            color: var(--orange-text-aa);
+            text-decoration: underline;
+            text-decoration-thickness: 1px;
+            text-underline-offset: 0.18em;
+            font-weight: 500;
+        }
+        .product a:hover {
+            text-decoration-thickness: 2px;
+        }
+        .product-primary p {
+            font-size: 1.1rem;
+        }
+        .secondary-heading {
+            font-family: var(--font-display);
+            font-size: 1rem;
+            font-weight: 600;
+            letter-spacing: 0.05em;
+            text-transform: lowercase;
+            color: var(--ink-faint-paper);
+            margin: 2.5rem 0 1.5rem;
+            text-align: center;
+        }
+        .product-secondary p {
+            font-size: 0.95rem;
+            color: var(--ink-faint-paper);
+        }
+        .cta {
+            max-width: 600px;
+            width: 90vw;
+            margin: 0 auto;
+            padding: 1rem 0 3rem;
+            text-align: center;
+        }
+        .cta-link {
+            color: var(--orange-text-aa);
+            text-decoration: underline;
+            text-decoration-thickness: 1px;
+            text-underline-offset: 0.18em;
+            font-size: 1.1rem;
+            font-weight: 500;
+        }
+        .cta-link:hover {
+            text-decoration-thickness: 2px;
+        }
+        .founder-contact {
+            max-width: 600px;
+            width: 90vw;
+            margin: 0 auto;
+            padding: 3rem 0;
+            text-align: center;
+        }
+        .founder-links {
+            font-size: 0.95rem;
+            color: var(--ink-faint-paper);
+            margin-top: 1rem;
+        }
+        .founder-links a {
+            color: var(--ink-faint-paper);
+            text-decoration: underline;
+            text-decoration-thickness: 1px;
+            text-underline-offset: 0.18em;
+        }
+        .founder-links a:hover {
+            text-decoration-thickness: 2px;
+            color: var(--orange-text-aa);
+        }
+        footer {
+            width: 100%;
+            padding: 2rem 0;
+            text-align: center;
+            font-size: 0.85rem;
+            color: var(--ink-faint-paper);
+        }
+        footer a {
+            color: var(--orange-text-aa);
+            text-decoration: underline;
+            text-decoration-thickness: 1px;
+            text-underline-offset: 0.18em;
+        }
+        footer a:hover {
+            text-decoration-thickness: 2px;
+        }
+    </style>
+</head>
+<body>
+    <nav class="site-nav">
+        <a href="/">%%solpbc.site.chrome.solpbc%%</a>
+        <a href="/blog/">%%solpbc.site.chrome.blog%%</a>
+        <a href="/articles">%%solpbc.site.chrome.articles%%</a>
+        <a href="/bylaws">%%solpbc.site.chrome.bylaws%%</a>
+        <a href="/privacy">%%solpbc.site.chrome.privacy%%</a>
+        <a href="/contact">%%solpbc.site.chrome.contact%%</a>
+    </nav>
+    <section class="hero" id="top">
+        <h1>%%solpbc.site.chrome.solpbc%%</h1>
+        <img src="static/pbc-wordmark.svg" alt="%%solpbc.site.home.solpbclogo%%" class="logo">
+        <p class="purpose">
+            %%solpbc.site.home.specificpublicbenefitpurposecorporationisadvan|0:3%% %%solpbc.site.home.specificpublicbenefitpurposecorporationisadvan|4:12%% %%solpbc.site.home.specificpublicbenefitpurposecorporationisadvan|13:19%% %%solpbc.site.home.specificpublicbenefitpurposecorporationisadvan|20:27%% %%solpbc.site.home.specificpublicbenefitpurposecorporationisadvan|28:35%% %%solpbc.site.home.specificpublicbenefitpurposecorporationisadvan|36:38%% %%solpbc.site.home.specificpublicbenefitpurposecorporationisadvan|39:42%% %%solpbc.site.home.specificpublicbenefitpurposecorporationisadvan|43:54%% %%solpbc.site.home.specificpublicbenefitpurposecorporationisadvan|55:57%% %%solpbc.site.home.specificpublicbenefitpurposecorporationisadvan|58:60%% %%solpbc.site.home.specificpublicbenefitpurposecorporationisadvan|61:68%%
+            <span class="highlight">%%solpbc.site.home.specificpublicbenefitpurposecorporationisadvan|69:76%% %%solpbc.site.home.specificpublicbenefitpurposecorporationisadvan|77:95%%</span> %%solpbc.site.home.specificpublicbenefitpurposecorporationisadvan|96:98%% %%solpbc.site.home.specificpublicbenefitpurposecorporationisadvan|99:108%%
+            <span class="highlight">%%solpbc.site.home.specificpublicbenefitpurposecorporationisadvan|109:120%%</span>%%solpbc.site.home.specificpublicbenefitpurposecorporationisadvan|120:121%% <span class="highlight">%%solpbc.site.home.specificpublicbenefitpurposecorporationisadvan|122:140%%</span>
+            %%solpbc.site.home.specificpublicbenefitpurposecorporationisadvan|141:146%% %%solpbc.site.home.specificpublicbenefitpurposecorporationisadvan|147:150%% %%solpbc.site.home.specificpublicbenefitpurposecorporationisadvan|151:159%% %%solpbc.site.home.specificpublicbenefitpurposecorporationisadvan|160:164%% %%solpbc.site.home.specificpublicbenefitpurposecorporationisadvan|165:171%% %%solpbc.site.home.specificpublicbenefitpurposecorporationisadvan|172:183%% %%solpbc.site.home.specificpublicbenefitpurposecorporationisadvan|184:186%% %%solpbc.site.home.specificpublicbenefitpurposecorporationisadvan|187:195%% %%solpbc.site.home.specificpublicbenefitpurposecorporationisadvan|196:203%% %%solpbc.site.home.specificpublicbenefitpurposecorporationisadvan|204:207%% %%solpbc.site.home.specificpublicbenefitpurposecorporationisadvan|208:212%% %%solpbc.site.home.specificpublicbenefitpurposecorporationisadvan|213:220%% %%solpbc.site.home.specificpublicbenefitpurposecorporationisadvan|221:225%% %%solpbc.site.home.specificpublicbenefitpurposecorporationisadvan|226:231%%
+            <span class="highlight">%%solpbc.site.home.specificpublicbenefitpurposecorporationisadvan|232:240%% %%solpbc.site.home.specificpublicbenefitpurposecorporationisadvan|241:245%%</span>%%solpbc.site.home.specificpublicbenefitpurposecorporationisadvan|245:246%%
+        </p>
+        <p class="founder">
+            %%solpbc.site.home.foundedsolelyoperatedjeremiemiller|0:7%% %%solpbc.site.home.foundedsolelyoperatedjeremiemiller|8:11%% %%solpbc.site.home.foundedsolelyoperatedjeremiemiller|12:18%% %%solpbc.site.home.foundedsolelyoperatedjeremiemiller|19:27%% %%solpbc.site.home.foundedsolelyoperatedjeremiemiller|28:30%% <a href="#founder">%%solpbc.site.home.foundedsolelyoperatedjeremiemiller|31:38%% %%solpbc.site.home.foundedsolelyoperatedjeremiemiller|39:45%%</a>
+        </p>
+    </section>
+
+    <section class="commitments" id="governance">
+        <h2>%%solpbc.site.home.governancecommitments%%</h2>
+        <div class="commitment">
+            <h3>%%solpbc.site.home.founderstewardship%%</h3>
+            <p>%%solpbc.site.home.duringjersstewardshipasdirectorcompanys%%</p>
+        </div>
+        <div class="commitment">
+            <h3>%%solpbc.site.home.continuitybeyondfounder%%</h3>
+            <p>%%solpbc.site.home.ifjerceasesserveasdirectorresultingboard%%</p>
+        </div>
+        <div class="commitment">
+            <h3>%%solpbc.site.home.missionalignedsuccessorsonly%%</h3>
+            <p>%%solpbc.site.home.anymergeracquisitionortransfercontroliscondit%%</p>
+        </div>
+        <div class="commitment">
+            <h3>%%solpbc.site.home.yourdataisneversold%%</h3>
+            <p>%%solpbc.site.home.solpbcwillneverselllicensesublicenseor%%</p>
+        </div>
+        <div class="commitment">
+            <h3>%%solpbc.site.home.strengtheningonly%%</h3>
+            <p>%%solpbc.site.home.afterjerceasesserveasdirectorcovenantscan%%</p>
+        </div>
+    </section>
+
+    <section class="filing" id="filing">
+        <p>%%solpbc.site.home.thesecommitmentsarelegallybindingfiledcolorado%%<br>
+        <a href="/articles">%%solpbc.site.home.readarticlesincorporationreadbylawsamendedrest|0:4%% %%solpbc.site.home.readarticlesincorporationreadbylawsamendedrest|5:8%% %%solpbc.site.home.readarticlesincorporationreadbylawsamendedrest|9:17%% %%solpbc.site.home.readarticlesincorporationreadbylawsamendedrest|18:20%% %%solpbc.site.home.readarticlesincorporationreadbylawsamendedrest|21:34%%</a> %%solpbc.site.home.readarticlesincorporationreadbylawsamendedrest|35:36%% <a href="/bylaws">%%solpbc.site.home.readarticlesincorporationreadbylawsamendedrest|37:41%% %%solpbc.site.home.readarticlesincorporationreadbylawsamendedrest|42:45%% %%solpbc.site.home.readarticlesincorporationreadbylawsamendedrest|46:52%%</a> %%solpbc.site.home.readarticlesincorporationreadbylawsamendedrest|53:54%% <a href="20261537456.pdf">%%solpbc.site.home.readarticlesincorporationreadbylawsamendedrest|55:62%% %%solpbc.site.home.readarticlesincorporationreadbylawsamendedrest|63:66%% %%solpbc.site.home.readarticlesincorporationreadbylawsamendedrest|67:75%% %%solpbc.site.home.readarticlesincorporationreadbylawsamendedrest|76:84%% %%solpbc.site.home.readarticlesincorporationreadbylawsamendedrest|85:90%% %%solpbc.site.home.readarticlesincorporationreadbylawsamendedrest|91:102%%</a> %%solpbc.site.home.readarticlesincorporationreadbylawsamendedrest|103:104%% <a href="20261003269.pdf">%%solpbc.site.home.readarticlesincorporationreadbylawsamendedrest|105:113%% %%solpbc.site.home.readarticlesincorporationreadbylawsamendedrest|114:127%% %%solpbc.site.home.readarticlesincorporationreadbylawsamendedrest|128:134%% %%solpbc.site.home.readarticlesincorporationreadbylawsamendedrest|135:140%% %%solpbc.site.home.readarticlesincorporationreadbylawsamendedrest|141:152%%</a></p>
+    </section>
+
+    <section class="filing" style="padding-bottom: 0;">
+        <p><a href="/blog/">%%solpbc.site.home.readourblog%%</a></p>
+    </section>
+
+    <section class="products" id="products">
+        <h2>%%solpbc.site.home.whatwemake%%</h2>
+        <div class="product product-primary">
+            <p><a href="https://solstone.app">%%solpbc.site.home.solstoneisapersonaljournalplatformthesol|0:8%%</a> %%solpbc.site.home.solstoneisapersonaljournalplatformthesol|9:11%% %%solpbc.site.home.solstoneisapersonaljournalplatformthesol|12:13%% %%solpbc.site.home.solstoneisapersonaljournalplatformthesol|14:22%% %%solpbc.site.home.solstoneisapersonaljournalplatformthesol|23:30%% %%solpbc.site.home.solstoneisapersonaljournalplatformthesol|31:40%% %%solpbc.site.home.solstoneisapersonaljournalplatformthesol|41:44%% %%solpbc.site.home.solstoneisapersonaljournalplatformthesol|45:53%% %%solpbc.site.home.solstoneisapersonaljournalplatformthesol|54:57%% %%solpbc.site.home.solstoneisapersonaljournalplatformthesol|58:63%% %%solpbc.site.home.solstoneisapersonaljournalplatformthesol|64:66%% %%solpbc.site.home.solstoneisapersonaljournalplatformthesol|67:71%% %%solpbc.site.home.solstoneisapersonaljournalplatformthesol|72:75%% %%solpbc.site.home.solstoneisapersonaljournalplatformthesol|76:81%% %%solpbc.site.home.solstoneisapersonaljournalplatformthesol|82:86%% %%solpbc.site.home.solstoneisapersonaljournalplatformthesol|87:90%% %%solpbc.site.home.solstoneisapersonaljournalplatformthesol|91:94%% %%solpbc.site.home.solstoneisapersonaljournalplatformthesol|95:98%% %%solpbc.site.home.solstoneisapersonaljournalplatformthesol|99:101%% %%solpbc.site.home.solstoneisapersonaljournalplatformthesol|102:104%% %%solpbc.site.home.solstoneisapersonaljournalplatformthesol|105:109%% %%solpbc.site.home.solstoneisapersonaljournalplatformthesol|110:114%% %%solpbc.site.home.solstoneisapersonaljournalplatformthesol|115:119%% %%solpbc.site.home.solstoneisapersonaljournalplatformthesol|120:128%% %%solpbc.site.home.solstoneisapersonaljournalplatformthesol|129:131%% %%solpbc.site.home.solstoneisapersonaljournalplatformthesol|132:136%% %%solpbc.site.home.solstoneisapersonaljournalplatformthesol|137:144%% %%solpbc.site.home.solstoneisapersonaljournalplatformthesol|145:156%% %%solpbc.site.home.solstoneisapersonaljournalplatformthesol|157:163%% %%solpbc.site.home.solstoneisapersonaljournalplatformthesol|164:167%% %%solpbc.site.home.solstoneisapersonaljournalplatformthesol|168:174%% %%solpbc.site.home.solstoneisapersonaljournalplatformthesol|175:178%% %%solpbc.site.home.solstoneisapersonaljournalplatformthesol|179:182%% %%solpbc.site.home.solstoneisapersonaljournalplatformthesol|183:186%% %%solpbc.site.home.solstoneisapersonaljournalplatformthesol|187:191%% %%solpbc.site.home.solstoneisapersonaljournalplatformthesol|192:197%% %%solpbc.site.home.solstoneisapersonaljournalplatformthesol|198:202%% %%solpbc.site.home.solstoneisapersonaljournalplatformthesol|203:210%% %%solpbc.site.home.solstoneisapersonaljournalplatformthesol|211:213%% %%solpbc.site.home.solstoneisapersonaljournalplatformthesol|214:220%% %%solpbc.site.home.solstoneisapersonaljournalplatformthesol|221:229%% %%solpbc.site.home.solstoneisapersonaljournalplatformthesol|230:234%% %%solpbc.site.home.solstoneisapersonaljournalplatformthesol|235:241%%</p>
+        </div>
+        <h3 class="secondary-heading">%%solpbc.site.home.wealsobuild%%</h3>
+        <div class="product product-secondary">
+            <p><a href="https://v-it.org">%%solpbc.site.home.vitsocialcapabilitynetworkwheredevelopersaiag|0:3%%</a> %%solpbc.site.home.vitsocialcapabilitynetworkwheredevelopersaiag|4:5%% %%solpbc.site.home.vitsocialcapabilitynetworkwheredevelopersaiag|6:7%% %%solpbc.site.home.vitsocialcapabilitynetworkwheredevelopersaiag|8:14%% %%solpbc.site.home.vitsocialcapabilitynetworkwheredevelopersaiag|15:25%% %%solpbc.site.home.vitsocialcapabilitynetworkwheredevelopersaiag|26:33%% %%solpbc.site.home.vitsocialcapabilitynetworkwheredevelopersaiag|34:39%% %%solpbc.site.home.vitsocialcapabilitynetworkwheredevelopersaiag|40:50%% %%solpbc.site.home.vitsocialcapabilitynetworkwheredevelopersaiag|51:54%% %%solpbc.site.home.vitsocialcapabilitynetworkwheredevelopersaiag|55:57%% %%solpbc.site.home.vitsocialcapabilitynetworkwheredevelopersaiag|58:64%% %%solpbc.site.home.vitsocialcapabilitynetworkwheredevelopersaiag|65:74%% %%solpbc.site.home.vitsocialcapabilitynetworkwheredevelopersaiag|75:81%% %%solpbc.site.home.vitsocialcapabilitynetworkwheredevelopersaiag|82:85%% %%solpbc.site.home.vitsocialcapabilitynetworkwheredevelopersaiag|86:90%% %%solpbc.site.home.vitsocialcapabilitynetworkwheredevelopersaiag|91:99%% %%solpbc.site.home.vitsocialcapabilitynetworkwheredevelopersaiag|100:109%%</p>
+        </div>
+        <div class="product product-secondary">
+            <p><a href="https://tangled.org/solpbc.org/rookery">%%solpbc.site.home.rookeryopensourcepdsaiagentscloudflarenative|0:7%%</a> %%solpbc.site.home.rookeryopensourcepdsaiagentscloudflarenative|8:9%% %%solpbc.site.home.rookeryopensourcepdsaiagentscloudflarenative|10:12%% %%solpbc.site.home.rookeryopensourcepdsaiagentscloudflarenative|13:24%% %%solpbc.site.home.rookeryopensourcepdsaiagentscloudflarenative|25:28%% %%solpbc.site.home.rookeryopensourcepdsaiagentscloudflarenative|29:32%% %%solpbc.site.home.rookeryopensourcepdsaiagentscloudflarenative|33:35%% %%solpbc.site.home.rookeryopensourcepdsaiagentscloudflarenative|36:43%% %%solpbc.site.home.rookeryopensourcepdsaiagentscloudflarenative|44:62%% %%solpbc.site.home.rookeryopensourcepdsaiagentscloudflarenative|63:80%% %%solpbc.site.home.rookeryopensourcepdsaiagentscloudflarenative|81:87%% %%solpbc.site.home.rookeryopensourcepdsaiagentscloudflarenative|88:95%% %%solpbc.site.home.rookeryopensourcepdsaiagentscloudflarenative|96:99%% %%solpbc.site.home.rookeryopensourcepdsaiagentscloudflarenative|100:102%% %%solpbc.site.home.rookeryopensourcepdsaiagentscloudflarenative|103:105%% %%solpbc.site.home.rookeryopensourcepdsaiagentscloudflarenative|106:111%% %%solpbc.site.home.rookeryopensourcepdsaiagentscloudflarenative|112:121%% %%solpbc.site.home.rookeryopensourcepdsaiagentscloudflarenative|122:125%% %%solpbc.site.home.rookeryopensourcepdsaiagentscloudflarenative|126:134%% %%solpbc.site.home.rookeryopensourcepdsaiagentscloudflarenative|135:139%% %%solpbc.site.home.rookeryopensourcepdsaiagentscloudflarenative|140:143%% %%solpbc.site.home.rookeryopensourcepdsaiagentscloudflarenative|144:152%%</p>
+        </div>
+    </section>
+
+    <section class="cta">
+        <p><a href="https://solstone.app/install" class="cta-link">%%solpbc.site.home.trysolstone%%</a></p>
+    </section>
+
+    <section class="founder-contact" id="founder">
+        <h2>%%solpbc.site.home.foundedjeremiemiller%%</h2>
+        <p class="founder-links"><a href="https://en.wikipedia.org/wiki/Jeremie_Miller">%%solpbc.site.home.wikipediablueskylinkedincontact|0:9%%</a> %%solpbc.site.home.wikipediablueskylinkedincontact|10:11%% <a href="https://bsky.app/profile/jeremie.com">%%solpbc.site.home.wikipediablueskylinkedincontact|12:19%%</a> %%solpbc.site.home.wikipediablueskylinkedincontact|20:21%% <a href="https://www.linkedin.com/in/jeremie-miller-b4824a3b6/">%%solpbc.site.home.wikipediablueskylinkedincontact|22:30%%</a> %%solpbc.site.home.wikipediablueskylinkedincontact|31:32%% <a href="/contact">%%solpbc.site.home.wikipediablueskylinkedincontact|33:40%%</a></p>
+    </section>
+
+    <footer>%%solpbc.site.home.n2026solpbcsolpbcorgprivacybylawsarticles|0:1%% %%solpbc.site.home.n2026solpbcsolpbcorgprivacybylawsarticles|2:6%% %%solpbc.site.home.n2026solpbcsolpbcorgprivacybylawsarticles|7:10%% %%solpbc.site.home.n2026solpbcsolpbcorgprivacybylawsarticles|11:14%% %%solpbc.site.home.n2026solpbcsolpbcorgprivacybylawsarticles|15:16%% %%solpbc.site.home.n2026solpbcsolpbcorgprivacybylawsarticles|17:27%% %%solpbc.site.home.n2026solpbcsolpbcorgprivacybylawsarticles|28:29%% <a href="/privacy">%%solpbc.site.home.n2026solpbcsolpbcorgprivacybylawsarticles|30:37%%</a> %%solpbc.site.home.n2026solpbcsolpbcorgprivacybylawsarticles|38:39%% <a href="/bylaws">%%solpbc.site.home.n2026solpbcsolpbcorgprivacybylawsarticles|40:46%%</a> %%solpbc.site.home.n2026solpbcsolpbcorgprivacybylawsarticles|47:48%% <a href="/articles">%%solpbc.site.home.n2026solpbcsolpbcorgprivacybylawsarticles|49:57%%</a> %%solpbc.site.home.n2026solpbcsolpbcorgprivacybylawsarticles|58:59%% <a href="/blog/">%%solpbc.site.home.n2026solpbcsolpbcorgprivacybylawsarticles|60:64%%</a> %%solpbc.site.home.n2026solpbcsolpbcorgprivacybylawsarticles|65:66%% <a href="/contact">%%solpbc.site.home.n2026solpbcsolpbcorgprivacybylawsarticles|67:74%%</a> %%solpbc.site.home.n2026solpbcsolpbcorgprivacybylawsarticles|75:76%% %%solpbc.site.home.n2026solpbcsolpbcorgprivacybylawsarticles|77:80%% %%solpbc.site.home.n2026solpbcsolpbcorgprivacybylawsarticles|81:85%% %%solpbc.site.home.n2026solpbcsolpbcorgprivacybylawsarticles|86:95%% %%solpbc.site.home.n2026solpbcsolpbcorgprivacybylawsarticles|96:99%% %%solpbc.site.home.n2026solpbcsolpbcorgprivacybylawsarticles|100:103%% %%solpbc.site.home.n2026solpbcsolpbcorgprivacybylawsarticles|104:107%% %%solpbc.site.home.n2026solpbcsolpbcorgprivacybylawsarticles|108:118%% %%solpbc.site.home.n2026solpbcsolpbcorgprivacybylawsarticles|119:121%% %%solpbc.site.home.n2026solpbcsolpbcorgprivacybylawsarticles|122:125%% %%solpbc.site.home.n2026solpbcsolpbcorgprivacybylawsarticles|126:130%%</footer>
+</body>
+</html>

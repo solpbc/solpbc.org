@@ -1,0 +1,16 @@
+{
+  "description": "primary — mark, badges, accents",
+  "context": "found as td.",
+  "surfaces": [
+    "solpbc.org"
+  ],
+  "bundles": [
+    "solpbc-org"
+  ],
+  "arguments": [],
+  "format_intent": "text",
+  "max_length": 31,
+  "source_revision": "8a6d4a2a13f56f0dc0022fb573689ca1a98625674e61082aec162c25c43702ef",
+  "risk": "routine",
+  "auto_merge": true
+}

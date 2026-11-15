@@ -1,0 +1,28 @@
+{
+  "description": "[![vit enabled](https://v-it.org/badge/vit-enabled.svg)](https://v-it.org)",
+  "context": "protected bytes (hex, formula, domain, url, or the vit mark). not a defect. not rewritten. found as div.",
+  "surfaces": [
+    "solpbc.org"
+  ],
+  "bundles": [
+    "solpbc-org"
+  ],
+  "arguments": [],
+  "format_intent": "text",
+  "max_length": 74,
+  "source_revision": "7d089bcdefde387849da05db3764d47de399c52badbb75afe9729a1eb3ebcc30",
+  "risk": "routine",
+  "auto_merge": true,
+  "protected_slots": [
+    {
+      "name": "url1",
+      "kind": "url",
+      "value": "https://v-it.org/badge/vit-enabled.svg"
+    },
+    {
+      "name": "url2",
+      "kind": "url",
+      "value": "https://v-it.org"
+    }
+  ]
+}

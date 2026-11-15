@@ -1,0 +1,23 @@
+{
+  "description": "51, 51, 51",
+  "context": "protected bytes (hex, formula, domain, url, or the vit mark). not a defect. not rewritten. found as td.",
+  "surfaces": [
+    "solpbc.org"
+  ],
+  "bundles": [
+    "solpbc-org"
+  ],
+  "arguments": [],
+  "format_intent": "text",
+  "max_length": 10,
+  "source_revision": "4cbb7e31b6b1e74eae02712eabdbfeb7619ac6b1594f0b8fb624dbc7f70dbde5",
+  "risk": "routine",
+  "auto_merge": true,
+  "protected_slots": [
+    {
+      "name": "tok",
+      "kind": "mark-word",
+      "value": "51, 51, 51"
+    }
+  ]
+}

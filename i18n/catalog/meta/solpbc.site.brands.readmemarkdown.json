@@ -1,0 +1,16 @@
+{
+  "description": "readme markdown",
+  "context": "found as span.",
+  "surfaces": [
+    "solpbc.org"
+  ],
+  "bundles": [
+    "solpbc-org"
+  ],
+  "arguments": [],
+  "format_intent": "text",
+  "max_length": 15,
+  "source_revision": "5238e6c0b5350e430640aaba6e5cff928fe304b5230c82c9e99fec98d4e3739a",
+  "risk": "routine",
+  "auto_merge": true
+}

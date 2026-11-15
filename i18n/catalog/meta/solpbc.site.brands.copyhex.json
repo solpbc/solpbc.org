@@ -1,0 +1,21 @@
+{
+  "description": "copy hex {hex}",
+  "context": "one message for every swatch. the hex is protected bytes. each aria-label is a full literal, not concatenated in script. not a defect. protected bytes (hex, formula, domain, url, or the vit mark). not a defect. not rewritten. found as aria-label. The hex is a runtime argument and must pass through unchanged.",
+  "surfaces": [
+    "solpbc.org"
+  ],
+  "bundles": [
+    "solpbc-org"
+  ],
+  "arguments": [
+    {
+      "name": "hex",
+      "type": "string"
+    }
+  ],
+  "format_intent": "text",
+  "max_length": 40,
+  "source_revision": "20fc535c0c006ee8a97775f316d4a16bad3a31fa8ba6e79212bff9a6e4aa550c",
+  "risk": "routine",
+  "auto_merge": true
+}

@@ -1,0 +1,16 @@
+{
+  "description": "Visitor-facing sentence",
+  "context": "Shown on solpbc.org. The words are the page.",
+  "surfaces": [
+    "solpbc.org"
+  ],
+  "bundles": [
+    "solpbc-org"
+  ],
+  "arguments": [],
+  "format_intent": "text",
+  "max_length": 242,
+  "source_revision": "5c55ce7761794e21204708d88af4ef0aa7e7124a8ae1457a1b19e1e6127ce388",
+  "risk": "routine",
+  "auto_merge": true
+}

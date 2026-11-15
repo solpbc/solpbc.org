@@ -1,0 +1,16 @@
+{
+  "description": "vit green",
+  "context": "found as b, td.",
+  "surfaces": [
+    "solpbc.org"
+  ],
+  "bundles": [
+    "solpbc-org"
+  ],
+  "arguments": [],
+  "format_intent": "text",
+  "max_length": 9,
+  "source_revision": "c3490ce8abcf944163f230805105f762377296fcbb54b131c5331305dd2cdc8c",
+  "risk": "routine",
+  "auto_merge": true
+}

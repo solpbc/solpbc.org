@@ -1,0 +1,16 @@
+{
+  "description": "vit mark, black",
+  "context": "found as aria-label.",
+  "surfaces": [
+    "solpbc.org"
+  ],
+  "bundles": [
+    "solpbc-org"
+  ],
+  "arguments": [],
+  "format_intent": "text",
+  "max_length": 15,
+  "source_revision": "d4f76c29d2a9da822e70bad2b489807ae1fe88f045ea4503f48df0f6a3dcbd25",
+  "risk": "routine",
+  "auto_merge": true
+}

@@ -1,0 +1,16 @@
+{
+  "description": "message sent — sol pbc",
+  "context": "found as title.",
+  "surfaces": [
+    "solpbc.org"
+  ],
+  "bundles": [
+    "solpbc-org"
+  ],
+  "arguments": [],
+  "format_intent": "text",
+  "max_length": 22,
+  "source_revision": "08fe29677bac3a26b7b85fcf6a826914a4b769f7ec12571832ecf08be0fb3a67",
+  "risk": "routine",
+  "auto_merge": true
+}

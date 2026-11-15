@@ -1,0 +1,16 @@
+{
+  "description": "die-cut sticker — on near-black",
+  "context": "found as div.",
+  "surfaces": [
+    "solpbc.org"
+  ],
+  "bundles": [
+    "solpbc-org"
+  ],
+  "arguments": [],
+  "format_intent": "text",
+  "max_length": 31,
+  "source_revision": "8225e321e71dcc036511abdce8528b0827b7f46a26c52cb7c2343d92ad01096d",
+  "risk": "routine",
+  "auto_merge": true
+}

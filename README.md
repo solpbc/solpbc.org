@@ -14,6 +14,10 @@ make deploy
 make dev
 ```
 
+## page text
+
+the home page, the contact pages, the 404 page, and the brands page are generated. English is in `i18n/catalog/`. markup is in `i18n/templates/`. `AGENTS.md` and `i18n/README.md` say how to change a string. the blog and the legal pages are not generated that way.
+
 ## Structure
 
 ```

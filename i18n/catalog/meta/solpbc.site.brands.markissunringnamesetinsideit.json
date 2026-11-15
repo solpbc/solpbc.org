@@ -1,0 +1,16 @@
+{
+  "description": "the mark is a sun ring with the name set inside it. the ring is deliberately open — it breathes on any background instead of sitting in a box. the orange has...",
+  "context": "found as p.",
+  "surfaces": [
+    "solpbc.org"
+  ],
+  "bundles": [
+    "solpbc-org"
+  ],
+  "arguments": [],
+  "format_intent": "text",
+  "max_length": 452,
+  "source_revision": "b2ddd2721d880c7485ab12de041857f8eb34d0356a382dfbfbe234de770c4df6",
+  "risk": "routine",
+  "auto_merge": true
+}

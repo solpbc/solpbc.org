@@ -1,0 +1,16 @@
+{
+  "description": "vit-lockup-sticker-black",
+  "context": "found as div.",
+  "surfaces": [
+    "solpbc.org"
+  ],
+  "bundles": [
+    "solpbc-org"
+  ],
+  "arguments": [],
+  "format_intent": "text",
+  "max_length": 24,
+  "source_revision": "6072be185e58063f7d713f45df149b05f5bf57df10b9c5a5706a77ecd8c1d1c0",
+  "risk": "routine",
+  "auto_merge": true
+}

@@ -1,0 +1,16 @@
+{
+  "description": "vit enabled badge, flat",
+  "context": "found as aria-label.",
+  "surfaces": [
+    "solpbc.org"
+  ],
+  "bundles": [
+    "solpbc-org"
+  ],
+  "arguments": [],
+  "format_intent": "text",
+  "max_length": 23,
+  "source_revision": "96441152d592130a05b56e57cc715efadd91accfe7886fcc49fd9a0ee2df4cce",
+  "risk": "routine",
+  "auto_merge": true
+}

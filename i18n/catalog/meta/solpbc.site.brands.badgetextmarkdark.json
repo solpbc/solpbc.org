@@ -1,0 +1,16 @@
+{
+  "description": "badge text, mark on dark",
+  "context": "found as td.",
+  "surfaces": [
+    "solpbc.org"
+  ],
+  "bundles": [
+    "solpbc-org"
+  ],
+  "arguments": [],
+  "format_intent": "text",
+  "max_length": 24,
+  "source_revision": "451b152b96f5c02ae9779eba8578d8dfda75ca7def9a01b5ba0d7e069525bc3c",
+  "risk": "routine",
+  "auto_merge": true
+}

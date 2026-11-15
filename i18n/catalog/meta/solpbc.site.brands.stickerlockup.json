@@ -1,0 +1,16 @@
+{
+  "description": "sticker lockup",
+  "context": "found as h3.",
+  "surfaces": [
+    "solpbc.org"
+  ],
+  "bundles": [
+    "solpbc-org"
+  ],
+  "arguments": [],
+  "format_intent": "text",
+  "max_length": 14,
+  "source_revision": "12914acf4f595ae124bf47d37725dc2e1f64e5d9b734d468439165987729b519",
+  "risk": "routine",
+  "auto_merge": true
+}

@@ -1,0 +1,38 @@
+{
+  "description": "copy v̇",
+  "context": "the script swaps this label. the rewrite is one enum with an explicit default, which the portable profile can say. found as button.",
+  "surfaces": [
+    "solpbc.org"
+  ],
+  "bundles": [
+    "solpbc-org"
+  ],
+  "arguments": [
+    {
+      "name": "state",
+      "type": "string"
+    }
+  ],
+  "format_intent": "enum",
+  "max_length": 15,
+  "source_revision": "2fe171ec43e05965ee03d7b10534c5bb8a1f4bad171bc1d4339fca4030bf5597",
+  "risk": "routine",
+  "auto_merge": true,
+  "protected_slots": [
+    {
+      "name": "mark",
+      "kind": "mark-word",
+      "value": "v̇"
+    }
+  ],
+  "selector": {
+    "name": "state",
+    "type": "string",
+    "enum_values": [
+      "idle",
+      "done",
+      "manual"
+    ],
+    "enum_default": "idle"
+  }
+}

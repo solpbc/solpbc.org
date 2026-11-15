@@ -1,0 +1,16 @@
+{
+  "description": "a few things, to protect the people who trust these names:",
+  "context": "found as p.",
+  "surfaces": [
+    "solpbc.org"
+  ],
+  "bundles": [
+    "solpbc-org"
+  ],
+  "arguments": [],
+  "format_intent": "text",
+  "max_length": 58,
+  "source_revision": "580419e9a25e171de83370c1d523750cc56621fa0b33347a57038cea7f6efde1",
+  "risk": "routine",
+  "auto_merge": true
+}

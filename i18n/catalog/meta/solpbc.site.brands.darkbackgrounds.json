@@ -1,0 +1,16 @@
+{
+  "description": "for dark backgrounds",
+  "context": "found as div.",
+  "surfaces": [
+    "solpbc.org"
+  ],
+  "bundles": [
+    "solpbc-org"
+  ],
+  "arguments": [],
+  "format_intent": "text",
+  "max_length": 20,
+  "source_revision": "59899d52cd13266f255107d13346708569d836882ece52013e2b2e25775e2084",
+  "risk": "routine",
+  "auto_merge": true
+}
