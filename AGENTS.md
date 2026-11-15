@@ -1,31 +1,19 @@
-# Contributor instructions
+# contributor instructions
 
-solpbc.org is a static site. A Cloudflare Worker serves `public/` and handles the contact form in `worker.js`.
+solpbc.org is a static site served by a Cloudflare Worker.
 
-## Page text
+## visitor text
 
-English for the visitor pages lives in `i18n/catalog/`. The page structure lives in `i18n/templates/`. These committed files are generated from that pair:
+English lives in `i18n/catalog/source/en-US.ftl`, with translator context in `i18n/catalog/meta/`. Change text there, never in generated HTML or JavaScript. Keep the message id when its meaning and argument contract stay the same. Follow `i18n/README.md` for history changes and regeneration.
 
-- `public/index.html`
-- `public/404.html`
-- `public/contact/index.html`, `public/contact/thanks/index.html`, `public/contact/contact.js`
-- `public/brands/index.html`, `public/brands/brand.js`
-- `worker.js` (the contact-handler sentences; the rest of the handler is in the template too)
+`i18n/templates/` owns page structure, inline elements, links and attributes. A linked sentence is one message: numbered markers let its words move around the link. Add or move markup in the templates, including `inline.json`. Do not split a sentence into word fragments.
 
-Edit the template and the catalog. Do not hand-edit the generated files. The inline drawings on the brands page are part of `i18n/templates/public/brands/index.html`. `i18n/README.md` says how to change a string and regenerate.
+Generated files are committed: `public/index.html`, `public/404.html`, `public/contact/index.html`, `public/contact/thanks/index.html`, `public/contact/contact.js`, `public/brands/index.html`, `public/brands/brand.js`, and `worker.js`. Edit their templates. The brands page's inline SVG is in its template.
 
-`make check` rebuilds those files from the committed catalog and fails if they disagree. `make deploy` does not rebuild them. It still refreshes the sitemap, refreshes downloadable brand files when their source has changed, and deploys.
+Run `make check` before committing. It checks catalog freshness, regenerates the page strings in memory, compares committed output, and tests escaping and inline markers. `make deploy` does not rebuild pages and needs no catalog compiler. It refreshes brand downloads and the sitemap, then deploys.
 
-## Left out on purpose
+## excluded files
 
-`public/blog/` is written by the blog publisher. Leave it out of the catalog and the templates.
+The blog publisher owns `public/blog/`. Legal pages (`articles.html`, `bylaws.html`, `privacy.html`, and `privacy/`) stay hand-maintained. Leave them outside this build, along with talks, PDFs, governance documents, the sitemap and downloadable brand assets.
 
-`articles.html`, `bylaws.html`, and `privacy.html` (and a `privacy/` directory, if one is added) are hand-maintained legal pages. Leave them out.
-
-`public/talks/`, PDFs, the sitemap, and `robots.txt` stay as they are.
-
-The hidden contact-form field labeled `company` stays a literal in the contact template. It is not a catalog message.
-
-## One shipped wording change
-
-`public/brands/brand.js` tells a screen reader `copy failed. select and copy.` when a copy does not land. That sentence is the catalog message `solpbc.site.brands.copyfailed`.
+The hidden contact field labeled `company` is a deliberate literal. Do not submit the production contact form to test a change; drive responses locally.

@@ -56,7 +56,7 @@ m736f6c7062632e736974652e6272616e64732e636f7079737667_v646f6e65 = copied
 
 m736f6c7062632e736974652e6272616e64732e636f7079737667_v6d616e75616c = select and copy
 
-m736f6c7062632e736974652e6272616e64732e636f707976636f706965736c69746572616c74776f636f6465706f696e74737472696e6776 = copy { "v̇" } copies the literal two-codepoint string { "v̇" } (U+0076 U+0307). copy constant copies the literal text: const VIT_MARK = '{ "v̇" }';
+m736f6c7062632e736974652e6272616e64732e636f707976636f706965736c69746572616c74776f636f6465706f696e74737472696e6776 = copy { "v̇" } copies the literal two-codepoint string { "v̇" } (U+0076 U+0307). copy constant copies the literal text: [1]const VIT_MARK = '{ "v̇" }';[/1]
 
 m736f6c7062632e736974652e6272616e64732e636f70797669746d61726b_v69646c65 = copy { "v̇" }
 
@@ -98,13 +98,13 @@ m736f6c7062632e736974652e6272616e64732e646f6e747573657468656d6173796f75726f776e7
 
 m736f6c7062632e736974652e6272616e64732e646f776e6c6f6164 = download
 
-m736f6c7062632e736974652e6272616e64732e646f776e6c6f6164616c6c736f6c706263657665727976617269616e7466756c6c73697a65 = download all sol pbc — every variant, full size ladder, svg + png + pdf.
+m736f6c7062632e736974652e6272616e64732e646f776e6c6f6164616c6c736f6c706263657665727976617269616e7466756c6c73697a65 = [1]download all sol pbc[/1] — every variant, full size ladder, svg + png + pdf.
 
-m736f6c7062632e736974652e6272616e64732e646f776e6c6f6164616c6c7669746d61726b73776f72646d61726b62616467657366756c6c73697a65 = download all vit — marks, wordmark, badges, full size ladder, svg + png + pdf.
+m736f6c7062632e736974652e6272616e64732e646f776e6c6f6164616c6c7669746d61726b73776f72646d61726b62616467657366756c6c73697a65 = [1]download all vit[/1] — marks, wordmark, badges, full size ladder, svg + png + pdf.
 
 m736f6c7062632e736974652e6272616e64732e646f776e6c6f616465766572797468696e67 = download everything
 
-m736f6c7062632e736974652e6272616e64732e646f776e6c6f616465766572797468696e676576657279736f6c706263616e647669746173736574 = download everything: every sol pbc and vit asset in one zip. solstone's are at solstone.app/brand.
+m736f6c7062632e736974652e6272616e64732e646f776e6c6f616465766572797468696e676576657279736f6c706263616e647669746173736574 = [1]download everything[/1]: every sol pbc and vit asset in one zip. solstone's are at [2]solstone.app/brand[/2].
 
 m736f6c7062632e736974652e6272616e64732e6566666563746564 = effected
 
@@ -138,7 +138,7 @@ m736f6c7062632e736974652e6272616e64732e6c6f676f73636f6c6f7273616e64776f726473666
 
 m736f6c7062632e736974652e6272616e64732e6c6f676f73636f6c6f7273616e64776f726473666f72736f6c706263616e647669746e6f = logos, colors, and words for sol pbc and vit. no account, no tracking, no third-party requests. open developer tools and check.
 
-m736f6c7062632e736974652e6272616e64732e6c6f676f73636f6c6f7273616e64776f726473666f72736f6c706263616e64766974736f = logos, colors, and words for sol pbc and vit. solstone has its own brand page at solstone.app/brand. take what you need: for press, for writing about us, for showing your project works with our tools. no account, no form, no permission email.
+m736f6c7062632e736974652e6272616e64732e6c6f676f73636f6c6f7273616e64776f726473666f72736f6c706263616e64766974736f = logos, colors, and words for sol pbc and vit. solstone has its own brand page at [1]solstone.app/brand[/1]. take what you need: for press, for writing about us, for showing your project works with our tools. no account, no form, no permission email.
 
 m736f6c7062632e736974652e6272616e64732e6c6f676f73776f72646d61726b73 = logos & wordmarks
 
@@ -156,7 +156,7 @@ m736f6c7062632e736974652e6272616e64732e6e303539363639 = { "#059669" }
 
 m736f6c7062632e736974652e6272616e64732e6e303664366130 = { "#06D6A0" }
 
-m736f6c7062632e736974652e6272616e64732e6e32303236736f6c706263736f6c7062636f726770726976616379636f6e74616374 = © 2026 sol pbc · { "solpbc.org" } · privacy · contact
+m736f6c7062632e736974652e6272616e64732e6e32303236736f6c706263736f6c7062636f726770726976616379636f6e74616374 = © 2026 sol pbc · [1]{ "solpbc.org" }[/1] · [2]privacy[/2] · [3]contact[/3]
 
 m736f6c7062632e736974652e6272616e64732e6e323535323535323535 = { "255, 255, 255" }
 
@@ -176,7 +176,7 @@ m736f6c7062632e736974652e6272616e64732e6e616d65 = name
 
 m736f6c7062632e736974652e6272616e64732e6e616d656973696e74656e74696f6e616c6f70706f73697465696e74726f657874726f69736f757477617264 = the name is short for extraordinary. they're bound by the same covenants as jer, written into sol pbc's articles of incorporation.
 
-m736f6c7062632e736974652e6272616e64732e6e6f74737572656a75737461736b746865726573636f6e74616374666f726d = not sure? just ask — there's a contact form at { "solpbc.org" }/contact.
+m736f6c7062632e736974652e6272616e64732e6e6f74737572656a75737461736b746865726573636f6e74616374666f726d = not sure? just ask — there's a contact form at [1]{ "solpbc.org" }/contact[/1].
 
 m736f6c7062632e736974652e6272616e64732e6f6e6573656e74656e6365 = one sentence
 
@@ -244,7 +244,11 @@ m736f6c7062632e736974652e6272616e64732e736f6c706263776f72646d61726b7768697465 = 
 
 m736f6c7062632e736974652e6272616e64732e736f6c73746f6e65 = solstone
 
-m736f6c7062632e736974652e6272616e64732e736f6c73746f6e656d61726b = solstone mark
+m736f6c7062632e736974652e6272616e64732e736f6c73746f6e656d61726b616c74 = solstone mark
+
+m736f6c7062632e736974652e6272616e64732e736f6c73746f6e656d61726b656c656d656e7431 = solstone
+
+m736f6c7062632e736974652e6272616e64732e736f6c73746f6e656d61726b656c656d656e7432 = mark
 
 m736f6c7062632e736974652e6272616e64732e737469636b65726c6f636b7570 = sticker lockup
 
@@ -258,15 +262,15 @@ m736f6c7062632e736974652e6272616e64732e746578747768697465757365766974677265656e6
 
 m736f6c7062632e736974652e6272616e64732e746861747377686f6c657374616e636569747373616d657374616e6365 = that's the whole stance, and it's the same stance as the product: a brand page you can open developer tools on and find nothing. no account, no tracking, no cookies, no analytics, no third-party anything. we'd rather earn it than measure it.
 
-m736f6c7062632e736974652e6272616e64732e746865636f6d70616e79776f72646d61726b736861726573736f6c73746f6e65736265616d737269 = the company wordmark shares solstone's beams, ring and palette (gold #FFCC33, orange #E8913A), with one difference: the ring is wider, to hold the three-letter glyph. the full palette is on solstone's brand page.
+m736f6c7062632e736974652e6272616e64732e746865636f6d70616e79776f72646d61726b736861726573736f6c73746f6e65736265616d737269 = the company wordmark shares solstone's beams, ring and palette (gold [1]#FFCC33[/1], orange [2]#E8913A[/2]), with one difference: the ring is wider, to hold the three-letter glyph. the full palette is on [3]solstone's brand page[/3].
 
 m736f6c7062632e736974652e6272616e64732e746865736561737365747361726566726565757365707265737377726974696e6761626f7574 = these assets are free to use — for press, for writing about us, for integrations, and for showing that a project works with solstone or vit. no account, no form, no permission email. take what you need.
 
-m736f6c7062632e736974652e6272616e64732e746865736f6c73746f6e656d61726b6c6f636b75707361707069636f6e636f6c6f7273616e64 = the solstone mark, lockups, app icon, colors and downloads are on solstone's own site: solstone.app/brand. the design story of the mark is there too: solstone.app/brand/logo.
+m736f6c7062632e736974652e6272616e64732e746865736f6c73746f6e656d61726b6c6f636b75707361707069636f6e636f6c6f7273616e64 = the solstone mark, lockups, app icon, colors and downloads are on solstone's own site: [1]solstone.app/brand[/1]. the design story of the mark is there too: [2]solstone.app/brand/logo[/2].
 
 m736f6c7062632e736974652e6272616e64732e74686973706167656c6f6164736e6f7468696e67616e796f6e65656c736573736572766572 = this page loads nothing from anyone else's server: no third-party fonts, no analytics, no tracking, no cookies. open developer tools and check. that's the whole point.
 
-m736f6c7062632e736974652e6272616e64732e74776f747970656661636573636f6d666f72746161646973706c6179696e74657274657874626f7468617265 = two typefaces: comfortaa for display, inter for text. both are open-source and self-hosted — this page serves them from { "solpbc.org" }, not from a font CDN. no licensing complexity, no third-party request, nothing phoning home when you load the page.
+m736f6c7062632e736974652e6272616e64732e74776f747970656661636573636f6d666f72746161646973706c6179696e74657274657874626f7468617265 = two typefaces: [1]comfortaa[/1] for display, [2]inter[/2] for text. both are open-source and self-hosted — this page serves them from { "solpbc.org" }, not from a font CDN. no licensing complexity, no third-party request, nothing phoning home when you load the page.
 
 m736f6c7062632e736974652e6272616e64732e757365 = use
 
@@ -334,9 +338,9 @@ m736f6c7062632e736974652e6272616e64732e766974776f72646d61726b626c61636b = vit wo
 
 m736f6c7062632e736974652e6272616e64732e766974776f72646d61726b626c61636b32 = vit-wordmark, black
 
-m736f6c7062632e736974652e6272616e64732e76746578746d61726b = { "the v̇ text mark" }
+m736f6c7062632e736974652e6272616e64732e76746578746d61726b6c6162656c = the { "v̇" } text mark
 
-m736f6c7062632e736974652e6272616e64732e767669746d61726b7465726d696e616c73636c6973726561646d6573756e69636f646575 = { "v̇" } — the vit mark for terminals, CLIs, and readmes. unicode U+0076 U+0307 (a plain v plus a combining dot). worst-case fallback is the letter v — no tofu.
+m736f6c7062632e736974652e6272616e64732e767669746d61726b7465726d696e616c73636c6973726561646d6573756e69636f646575 = [1]{ "v̇" }[/1] — the vit mark for terminals, CLIs, and readmes. unicode [2]U+0076 U+0307[/2] (a plain [3]v[/3] plus a combining dot). worst-case fallback is the letter [4]v[/4] — no tofu.
 
 m736f6c7062632e736974652e6272616e64732e7768697465 = white
 
@@ -344,7 +348,7 @@ m736f6c7062632e736974652e6272616e64732e776879 = the why
 
 m736f6c7062632e736974652e6272616e64732e776f72646d61726b6f7665727461676c696e656173737175617265646965637574737469636b6572 = the wordmark over the tagline as a square die-cut sticker — rounded corners, transparent outside the cut, for swag and laptops. two colorways, shown on a checkerboard so the cutout reads.
 
-m736f6c7062632e736974652e6272616e64732e77726974696e67657874726f6c6f7765726361736572756e6e696e6774657874746f6f6c6e616d657365787472 = in writing: extro is always lowercase, in headings and at the start of a sentence too; never Extro or EXTRO.
+m736f6c7062632e736974652e6272616e64732e77726974696e67657874726f6c6f7765726361736572756e6e696e6774657874746f6f6c6e616d657365787472 = in writing: [1]extro[/1] is always lowercase, in headings and at the start of a sentence too; never Extro or EXTRO.
 
 m736f6c7062632e736974652e6368726f6d652e61727469636c6573 = articles
 
@@ -354,7 +358,7 @@ m736f6c7062632e736974652e6368726f6d652e62796c617773 = bylaws
 
 m736f6c7062632e736974652e6368726f6d652e636f6e74616374 = contact
 
-m736f6c7062632e736974652e6368726f6d652e6e32303236736f6c706263736f6c7062636f72677072697661637962796c61777361727469636c6573 = © 2026 sol pbc · { "solpbc.org" } · privacy · bylaws · articles · blog · contact
+m736f6c7062632e736974652e6368726f6d652e6e32303236736f6c706263736f6c7062636f72677072697661637962796c61777361727469636c6573 = © 2026 sol pbc · [1]{ "solpbc.org" }[/1] · [2]privacy[/2] · [3]bylaws[/3] · [4]articles[/4] · [5]blog[/5] · [6]contact[/6]
 
 m736f6c7062632e736974652e6368726f6d652e70726976616379 = privacy
 
@@ -390,7 +394,7 @@ m736f6c7062632e736974652e636f6e746163742e73656e64_v69646c65 = send message
 
 m736f6c7062632e736974652e636f6e746163742e73656e64_v73656e64696e67 = sending…
 
-m736f6c7062632e736974652e636f6e746163742e736f6c706263646f65736e74747261636b796f75646f65736e74 = sol pbc doesn't track you, doesn't use analytics, and files its privacy covenants with the state. your email reaches us so we can answer you. read our privacy policy.
+m736f6c7062632e736974652e636f6e746163742e736f6c706263646f65736e74747261636b796f75646f65736e74 = sol pbc doesn't track you, doesn't use analytics, and files its privacy covenants with the state. your email reaches us so we can answer you. [1]read our privacy policy[/1].
 
 m736f6c7062632e736974652e636f6e746163742e7375626d697373696f6e72656a6563746564 = submission rejected
 
@@ -404,9 +408,9 @@ m736f6c7062632e736974652e636f6e746163742e76616c6964656d61696c6973726571756972656
 
 m736f6c7062632e736974652e636f6e746163742e766572696669636174696f6e6661696c6564 = verification failed
 
-m736f6c7062632e736974652e636f6e746163742e7768617473796f75726d696e64 = what's on your mind? *
+m736f6c7062632e736974652e636f6e746163742e7768617473796f75726d696e64 = what's on your mind? [1]*[/1]
 
-m736f6c7062632e736974652e636f6e746163742e796f7572656d61696c = your email *
+m736f6c7062632e736974652e636f6e746163742e796f7572656d61696c = your email [1]*[/1]
 
 m736f6c7062632e736974652e636f6e746163742e796f75726d657373616765676f65736a65726e6f7469636b6574696e6773797374656d6e6f = your message goes to jer. no ticketing system, no auto-replies.
 
@@ -424,7 +428,7 @@ m736f6c7062632e736974652e686f6d652e647572696e676a6572737374657761726473686970617
 
 m736f6c7062632e736974652e686f6d652e666f756e6465646a6572656d69656d696c6c6572 = founded by jeremie miller
 
-m736f6c7062632e736974652e686f6d652e666f756e646564736f6c656c796f706572617465646a6572656d69656d696c6c6572 = founded and solely operated by jeremie miller
+m736f6c7062632e736974652e686f6d652e666f756e646564736f6c656c796f706572617465646a6572656d69656d696c6c6572 = founded and solely operated by [1]jeremie miller[/1]
 
 m736f6c7062632e736974652e686f6d652e666f756e6465727374657761726473686970 = founder stewardship
 
@@ -434,15 +438,15 @@ m736f6c7062632e736974652e686f6d652e69666a657263656173657373657276656173646972656
 
 m736f6c7062632e736974652e686f6d652e6d697373696f6e616c69676e6564737563636573736f72736f6e6c79 = mission-aligned successors only
 
-m736f6c7062632e736974652e686f6d652e6e32303236736f6c706263736f6c7062636f72677072697661637962796c61777361727469636c6573 = © 2026 sol pbc · solpbc.org · privacy · bylaws · articles · blog · contact · sol pbc, solstone, and vit are trademarks of sol pbc.
+m736f6c7062632e736974652e686f6d652e6e32303236736f6c706263736f6c7062636f72677072697661637962796c61777361727469636c6573 = © 2026 sol pbc · solpbc.org · [1]privacy[/1] · [2]bylaws[/2] · [3]articles[/3] · [4]blog[/4] · [5]contact[/5] · sol pbc, solstone, and vit are trademarks of sol pbc.
 
 m736f6c7062632e736974652e686f6d652e7075626c696362656e65666974636f72706f726174696f6e62696e64696e6763686172746572636f76656e616e7473 = a public benefit corporation with binding charter covenants: your data is never sold; any acquisition is conditional on the successor preserving these protections. open source, privacy-first AI tools.
 
-m736f6c7062632e736974652e686f6d652e7265616461727469636c6573696e636f72706f726174696f6e7265616462796c617773616d656e64656472657374 = read the articles of incorporation · read the bylaws · amended and restated articles (PDF, 2026-05-01) · original incorporation filing (PDF, 2026-01-01)
+m736f6c7062632e736974652e686f6d652e7265616461727469636c6573696e636f72706f726174696f6e7265616462796c617773616d656e64656472657374 = [1]read the articles of incorporation[/1] · [2]read the bylaws[/2] · [3]amended and restated articles (PDF, 2026-05-01)[/3] · [4]original incorporation filing (PDF, 2026-01-01)[/4]
 
 m736f6c7062632e736974652e686f6d652e726561646f7572626c6f67 = read our blog →
 
-m736f6c7062632e736974652e686f6d652e726f6f6b6572796f70656e736f7572636570647361696167656e7473636c6f7564666c6172656e6174697665 = rookery — an open-source PDS for AI agents. cloudflare-native, lexicon-agnostic. agents enroll, get an AT Proto identity, and federate with the network.
+m736f6c7062632e736974652e686f6d652e726f6f6b6572796f70656e736f7572636570647361696167656e7473636c6f7564666c6172656e6174697665 = [1]rookery[/1] — an open-source PDS for AI agents. cloudflare-native, lexicon-agnostic. agents enroll, get an AT Proto identity, and federate with the network.
 
 m736f6c7062632e736974652e686f6d652e736f6c7062636469676974616c73656c6664657465726d696e6174696f6e = sol pbc — digital self-determination
 
@@ -452,9 +456,9 @@ m736f6c7062632e736974652e686f6d652e736f6c7062637075626c696362656e65666974636f727
 
 m736f6c7062632e736974652e686f6d652e736f6c70626377696c6c6e6576657273656c6c6c6963656e73657375626c6963656e73656f72 = sol pbc will never sell, license, sublicense, or lease user data — including anonymized, aggregated, or de-identified data — for any form of compensation. period.
 
-m736f6c7062632e736974652e686f6d652e736f6c73746f6e65697361706572736f6e616c6a6f75726e616c706c6174666f726d746865736f6c = solstone is a personal journal platform. the solstone app takes in what you share with it, and all of it goes into your journal, an open source, local-first memory the agents you use can work from. your journal is always private, only yours.
+m736f6c7062632e736974652e686f6d652e736f6c73746f6e65697361706572736f6e616c6a6f75726e616c706c6174666f726d746865736f6c = [1]solstone[/1] is a personal journal platform. the solstone app takes in what you share with it, and all of it goes into your journal, an open source, local-first memory the agents you use can work from. your journal is always private, only yours.
 
-m736f6c7062632e736974652e686f6d652e73706563696669637075626c696362656e65666974707572706f7365636f72706f726174696f6e6973616476616e = the specific public benefit purpose of the corporation is to advance digital self-determination by providing open-source, privacy-respecting tools and services that enable individuals to directly collect and gain insight from their personal data.
+m736f6c7062632e736974652e686f6d652e73706563696669637075626c696362656e65666974707572706f7365636f72706f726174696f6e6973616476616e = the specific public benefit purpose of the corporation is to advance [1]digital self-determination[/1] by providing [2]open-source[/2], [3]privacy-respecting[/3] tools and services that enable individuals to directly collect and gain insight from their [4]personal data[/4].
 
 m736f6c7062632e736974652e686f6d652e737472656e677468656e696e676f6e6c79 = strengthening only
 
@@ -462,13 +466,13 @@ m736f6c7062632e736974652e686f6d652e7468657365636f6d6d69746d656e74736172656c65676
 
 m736f6c7062632e736974652e686f6d652e747279736f6c73746f6e65 = try solstone →
 
-m736f6c7062632e736974652e686f6d652e766974736f6369616c6361706162696c6974796e6574776f726b7768657265646576656c6f7065727361696167 = vit — a social capability network where developers and AI agents discover, remix, and ship software together.
+m736f6c7062632e736974652e686f6d652e766974736f6369616c6361706162696c6974796e6574776f726b7768657265646576656c6f7065727361696167 = [1]vit[/1] — a social capability network where developers and AI agents discover, remix, and ship software together.
 
 m736f6c7062632e736974652e686f6d652e7765616c736f6275696c64 = we also build
 
 m736f6c7062632e736974652e686f6d652e7768617477656d616b65 = what we make
 
-m736f6c7062632e736974652e686f6d652e77696b697065646961626c7565736b796c696e6b6564696e636f6e74616374 = wikipedia · bluesky · linkedin · contact
+m736f6c7062632e736974652e686f6d652e77696b697065646961626c7565736b796c696e6b6564696e636f6e74616374 = [1]wikipedia[/1] · [2]bluesky[/2] · [3]linkedin[/3] · [4]contact[/4]
 
 m736f6c7062632e736974652e686f6d652e796f75726461746169736e65766572736f6c64 = your data is never sold
 
@@ -478,7 +482,7 @@ m736f6c7062632e736974652e6d697373696e672e6272616e64617373657473 = brand assets �
 
 m736f6c7062632e736974652e6d697373696e672e636f6e746163747573 = contact us →
 
-m736f6c7062632e736974652e6d697373696e672e6e32303236736f6c706263796f75726461746169736e65766572736f6c64 = © 2026 sol pbc · your data is never sold — binding charter covenants protect it. sol pbc, solstone, and vit are trademarks of sol pbc.
+m736f6c7062632e736974652e6d697373696e672e6e32303236736f6c706263796f75726461746169736e65766572736f6c64 = © 2026 [1]sol pbc[/1] · your data is never sold — binding charter covenants protect it. sol pbc, solstone, and vit are trademarks of sol pbc.
 
 m736f6c7062632e736974652e6d697373696e672e706167656e6f74666f756e64 = page not found.
 

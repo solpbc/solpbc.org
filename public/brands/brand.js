@@ -14,8 +14,8 @@
   document.documentElement.classList.add('js');
 
   var live = document.getElementById('copy-live');
-  var SUCCESS = 'copied';        // build spec §6.9
-  var FALLBACK = 'select and copy';
+  var SUCCESS = "copied";        // build spec §6.9
+  var FALLBACK = "select and copy";
   var HOLD_MS = 1500;            // "~1.5s" — build spec §6.9
 
   function announce(msg) { if (live) { live.textContent = ''; live.textContent = msg; } }
@@ -87,7 +87,7 @@
     var fail = function () {
       selectSource(btn);
       flash(btn, FALLBACK, 'manual');
-      announce('copy failed. select and copy.');
+      announce("copy failed. select and copy.");
     };
     if (navigator.clipboard && navigator.clipboard.writeText) {
       navigator.clipboard.writeText(text).then(ok, fail);

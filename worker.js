@@ -172,7 +172,7 @@ async function handleContact(request, env, ctx) {
     const ip = request.headers.get('CF-Connecting-IP') || 'unknown';
     try {
       const { success } = await env.CONTACT_LIMITER.limit({ key: ip });
-      if (!success) return respond({ ok: false, error: 'too many requests' }, 429);
+      if (!success) return respond({ ok: false, error: "too many requests" }, 429);
     } catch {
       // Rate limiter unavailable — proceed without limiting.
     }
@@ -187,11 +187,11 @@ async function handleContact(request, env, ctx) {
         body = await request.formData();
       }
     } catch {
-      return respond({ ok: false, error: 'invalid request body' }, 400);
+      return respond({ ok: false, error: "invalid request body" }, 400);
     }
 
     if (isJson && (body === null || Array.isArray(body) || typeof body !== 'object')) {
-      return respond({ ok: false, error: 'invalid request body' }, 400);
+      return respond({ ok: false, error: "invalid request body" }, 400);
     }
 
     const field = (key) => (body instanceof FormData ? body.get(key) : body[key]);
@@ -199,7 +199,7 @@ async function handleContact(request, env, ctx) {
     // Honeypot
     const honeypot = field('company');
     if (honeypot && String(honeypot).trim() !== '') {
-      return respond({ ok: false, error: 'submission rejected' }, 400);
+      return respond({ ok: false, error: "submission rejected" }, 400);
     }
 
     // Turnstile
@@ -207,7 +207,7 @@ async function handleContact(request, env, ctx) {
     const ip = request.headers.get('CF-Connecting-IP') || '';
     const turnstileOk = await validateTurnstile(env, turnstileToken, ip);
     if (!turnstileOk) {
-      return respond({ ok: false, error: 'verification failed' }, 400);
+      return respond({ ok: false, error: "verification failed" }, 400);
     }
 
     // Validate fields
@@ -216,10 +216,10 @@ async function handleContact(request, env, ctx) {
     const message = clampText(field('message'), 5000);
 
     if (!isValidEmail(email)) {
-      return respond({ ok: false, error: 'valid email is required' }, 400);
+      return respond({ ok: false, error: "valid email is required" }, 400);
     }
     if (!message) {
-      return respond({ ok: false, error: 'message is required' }, 400);
+      return respond({ ok: false, error: "message is required" }, 400);
     }
 
     // Build flat payload matching hub webhook contract
@@ -263,7 +263,7 @@ async function handleContact(request, env, ctx) {
     return respond({ ok: true }, 200);
   } catch (err) {
     console.error('contact submission error:', err);
-    return respond({ ok: false, error: 'internal error' }, 500);
+    return respond({ ok: false, error: "internal error" }, 500);
   }
 }
 

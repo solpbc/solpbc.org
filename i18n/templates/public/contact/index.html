@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>%%solpbc.site.contact.contactsolpbc%%</title>
-    <meta name="description" content="%%solpbc.site.contact.gettouchsolpbcyourmessagegoesjer%%">
+    <title>%%html:solpbc.site.contact.contactsolpbc%%</title>
+    <meta name="description" content="%%attr:solpbc.site.contact.gettouchsolpbcyourmessagegoesjer%%">
     <link rel="canonical" href="https://solpbc.org/contact">
     <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
     <link rel="icon" type="image/png" sizes="32x32" href="/static/favicon-32.png">
@@ -219,28 +219,28 @@ footer .copyright {
 <body>
     <div class="container">
         <nav>
-            <a href="/">%%solpbc.site.chrome.solpbc%%</a>
-            <a href="/blog/">%%solpbc.site.chrome.blog%%</a>
-            <a href="/articles">%%solpbc.site.chrome.articles%%</a>
-            <a href="/bylaws">%%solpbc.site.chrome.bylaws%%</a>
-            <a href="/privacy">%%solpbc.site.chrome.privacy%%</a>
-            <a href="/contact">%%solpbc.site.chrome.contact%%</a>
+            <a href="/">%%html:solpbc.site.chrome.solpbc%%</a>
+            <a href="/blog/">%%html:solpbc.site.chrome.blog%%</a>
+            <a href="/articles">%%html:solpbc.site.chrome.articles%%</a>
+            <a href="/bylaws">%%html:solpbc.site.chrome.bylaws%%</a>
+            <a href="/privacy">%%html:solpbc.site.chrome.privacy%%</a>
+            <a href="/contact">%%html:solpbc.site.chrome.contact%%</a>
         </nav>
 
-        <h1>%%solpbc.site.contact.gettouch%%</h1>
-        <p class="intro">%%solpbc.site.contact.yourmessagegoesjernoticketingsystemno%%<br>%%solpbc.site.contact.aiisusedscreenyourmessage%%</p>
+        <h1>%%html:solpbc.site.contact.gettouch%%</h1>
+        <p class="intro">%%html:solpbc.site.contact.yourmessagegoesjernoticketingsystemno%%<br>%%html:solpbc.site.contact.aiisusedscreenyourmessage%%</p>
 
         <form id="contact-form" action="/api/contact" method="POST">
             <div class="form-group">
-                <label for="name">%%solpbc.site.contact.yourname%%</label>
+                <label for="name">%%html:solpbc.site.contact.yourname%%</label>
                 <input type="text" id="name" name="name" maxlength="200" autocomplete="name">
             </div>
             <div class="form-group">
-                <label for="email">%%solpbc.site.contact.youremail|0:4%% %%solpbc.site.contact.youremail|5:10%% <span style="color: var(--danger);">%%solpbc.site.contact.youremail|11:12%%</span></label>
+                <label for="email">%%rich:solpbc.site.contact.youremail%%</label>
                 <input type="email" id="email" name="email" required maxlength="200" autocomplete="email">
             </div>
             <div class="form-group">
-                <label for="message">%%solpbc.site.contact.whatsyourmind|0:6%% %%solpbc.site.contact.whatsyourmind|7:9%% %%solpbc.site.contact.whatsyourmind|10:14%% %%solpbc.site.contact.whatsyourmind|15:20%% <span style="color: var(--danger);">%%solpbc.site.contact.whatsyourmind|21:22%%</span></label>
+                <label for="message">%%rich:solpbc.site.contact.whatsyourmind%%</label>
                 <textarea id="message" name="message" required maxlength="5000"></textarea>
             </div>
 
@@ -252,23 +252,23 @@ footer .copyright {
             <div class="cf-turnstile" data-sitekey="0x4AAAAAAC2zlC_SPxsY7aVU"></div>
 
             <div style="margin-top: 1rem;">
-                <button type="submit" class="submit-btn">%%solpbc.site.contact.send%%</button>
+                <button type="submit" class="submit-btn">%%html:solpbc.site.contact.send {"state":"idle"}%%</button>
             </div>
 
             <div class="error-message" id="error-message" role="alert" hidden></div>
 
-            <p class="trust-strip">%%solpbc.site.contact.solpbcdoesnttrackyoudoesnt|0:3%% %%solpbc.site.contact.solpbcdoesnttrackyoudoesnt|4:7%% %%solpbc.site.contact.solpbcdoesnttrackyoudoesnt|8:15%% %%solpbc.site.contact.solpbcdoesnttrackyoudoesnt|16:21%% %%solpbc.site.contact.solpbcdoesnttrackyoudoesnt|22:26%% %%solpbc.site.contact.solpbcdoesnttrackyoudoesnt|27:34%% %%solpbc.site.contact.solpbcdoesnttrackyoudoesnt|35:38%% %%solpbc.site.contact.solpbcdoesnttrackyoudoesnt|39:49%% %%solpbc.site.contact.solpbcdoesnttrackyoudoesnt|50:53%% %%solpbc.site.contact.solpbcdoesnttrackyoudoesnt|54:59%% %%solpbc.site.contact.solpbcdoesnttrackyoudoesnt|60:63%% %%solpbc.site.contact.solpbcdoesnttrackyoudoesnt|64:71%% %%solpbc.site.contact.solpbcdoesnttrackyoudoesnt|72:81%% %%solpbc.site.contact.solpbcdoesnttrackyoudoesnt|82:86%% %%solpbc.site.contact.solpbcdoesnttrackyoudoesnt|87:90%% %%solpbc.site.contact.solpbcdoesnttrackyoudoesnt|91:97%% %%solpbc.site.contact.solpbcdoesnttrackyoudoesnt|98:102%% %%solpbc.site.contact.solpbcdoesnttrackyoudoesnt|103:108%% %%solpbc.site.contact.solpbcdoesnttrackyoudoesnt|109:116%% %%solpbc.site.contact.solpbcdoesnttrackyoudoesnt|117:119%% %%solpbc.site.contact.solpbcdoesnttrackyoudoesnt|120:122%% %%solpbc.site.contact.solpbcdoesnttrackyoudoesnt|123:125%% %%solpbc.site.contact.solpbcdoesnttrackyoudoesnt|126:129%% %%solpbc.site.contact.solpbcdoesnttrackyoudoesnt|130:136%% %%solpbc.site.contact.solpbcdoesnttrackyoudoesnt|137:141%% <a href="/privacy">%%solpbc.site.contact.solpbcdoesnttrackyoudoesnt|142:146%% %%solpbc.site.contact.solpbcdoesnttrackyoudoesnt|147:150%% %%solpbc.site.contact.solpbcdoesnttrackyoudoesnt|151:158%% %%solpbc.site.contact.solpbcdoesnttrackyoudoesnt|159:165%%</a>%%solpbc.site.contact.solpbcdoesnttrackyoudoesnt|165:166%%</p>
+            <p class="trust-strip">%%rich:solpbc.site.contact.solpbcdoesnttrackyoudoesnt%%</p>
         </form>
 
         <div id="success-state" class="success" hidden>
-            <h2>%%solpbc.site.contact.messagesent%%</h2>
-            <p>%%solpbc.site.contact.thanksreachingoutjerwillgetbackyou%%</p>
-            <a href="/">%%solpbc.site.contact.backsolpbcorg%%</a>
+            <h2>%%html:solpbc.site.contact.messagesent%%</h2>
+            <p>%%html:solpbc.site.contact.thanksreachingoutjerwillgetbackyou%%</p>
+            <a href="/">%%html:solpbc.site.contact.backsolpbcorg%%</a>
         </div>
 
         <footer>
-            <a href="/">%%solpbc.site.chrome.solpbcorg%%</a>
-            <p class="copyright">%%solpbc.site.chrome.n2026solpbcsolpbcorgprivacybylawsarticles|0:1%% %%solpbc.site.chrome.n2026solpbcsolpbcorgprivacybylawsarticles|2:6%% %%solpbc.site.chrome.n2026solpbcsolpbcorgprivacybylawsarticles|7:10%% %%solpbc.site.chrome.n2026solpbcsolpbcorgprivacybylawsarticles|11:14%% %%solpbc.site.chrome.n2026solpbcsolpbcorgprivacybylawsarticles|15:16%% <a href="/">%%solpbc.site.chrome.n2026solpbcsolpbcorgprivacybylawsarticles|17:27%%</a> %%solpbc.site.chrome.n2026solpbcsolpbcorgprivacybylawsarticles|28:29%% <a href="/privacy">%%solpbc.site.chrome.n2026solpbcsolpbcorgprivacybylawsarticles|30:37%%</a> %%solpbc.site.chrome.n2026solpbcsolpbcorgprivacybylawsarticles|38:39%% <a href="/bylaws">%%solpbc.site.chrome.n2026solpbcsolpbcorgprivacybylawsarticles|40:46%%</a> %%solpbc.site.chrome.n2026solpbcsolpbcorgprivacybylawsarticles|47:48%% <a href="/articles">%%solpbc.site.chrome.n2026solpbcsolpbcorgprivacybylawsarticles|49:57%%</a> %%solpbc.site.chrome.n2026solpbcsolpbcorgprivacybylawsarticles|58:59%% <a href="/blog/">%%solpbc.site.chrome.n2026solpbcsolpbcorgprivacybylawsarticles|60:64%%</a> %%solpbc.site.chrome.n2026solpbcsolpbcorgprivacybylawsarticles|65:66%% <a href="/contact">%%solpbc.site.chrome.n2026solpbcsolpbcorgprivacybylawsarticles|67:74%%</a></p>
+            <a href="/">%%html:solpbc.site.chrome.solpbcorg%%</a>
+            <p class="copyright">%%rich:solpbc.site.chrome.n2026solpbcsolpbcorgprivacybylawsarticles%%</p>
         </footer>
     </div>
 

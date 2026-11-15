@@ -8,17 +8,17 @@
 // the CSP. Every string here is owner-visible; voice-check (owner-copy) any edit.
 (function () {
     var MESSAGES = {
-        generic: "%%solpbc.site.contact.thatdidntsendpleasetryagainor%%",
-        verification: "%%solpbc.site.contact.checkthatyourehumandidntgo%%",
-        rateLimited: '%%solpbc.site.contact.lotmessagescameherejustnowpleasewait%%',
-        sending: '%%solpbc.site.contact.send%%',
-        send: '%%solpbc.site.contact.send%%'
+        generic: %%js:solpbc.site.contact.thatdidntsendpleasetryagainor%%,
+        verification: %%js:solpbc.site.contact.checkthatyourehumandidntgo%%,
+        rateLimited: %%js:solpbc.site.contact.lotmessagescameherejustnowpleasewait%%,
+        sending: %%js:solpbc.site.contact.send {"state":"sending"}%%,
+        send: %%js:solpbc.site.contact.send {"state":"idle"}%%
     };
 
     // Raw worker error codes (worker.js handleContact) are never shown as-is.
     function messageFor(error) {
-        if (error === '%%solpbc.site.contact.verificationfailed%%') return MESSAGES.verification;
-        if (error === '%%solpbc.site.contact.toomanyrequests%%') return MESSAGES.rateLimited;
+        if (error === %%js:solpbc.site.contact.verificationfailed%%) return MESSAGES.verification;
+        if (error === %%js:solpbc.site.contact.toomanyrequests%%) return MESSAGES.rateLimited;
         return MESSAGES.generic;
     }
 

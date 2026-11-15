@@ -1,6 +1,6 @@
 {
   "description": "solstone mark",
-  "context": "found as aria-label.",
+  "context": "Accessible label for the complete solstone SVG mark; separate messages name its title and the visible caption.",
   "surfaces": [
     "solpbc.org"
   ],

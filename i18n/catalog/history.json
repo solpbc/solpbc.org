@@ -1552,6 +1552,42 @@
       "resource": "m736f6c7062632e736974652e6272616e64732e736f6c73746f6e656d61726b",
       "namespace": "solpbc.site.brands",
       "owner": "solpbc-org",
+      "tombstone": true,
+      "replacement": "solpbc.site.brands.solstonemarkalt",
+      "format_intent": "text",
+      "arguments": [],
+      "protected_slots": [],
+      "selector": null
+    },
+    {
+      "id": "solpbc.site.brands.solstonemarkalt",
+      "resource": "m736f6c7062632e736974652e6272616e64732e736f6c73746f6e656d61726b616c74",
+      "namespace": "solpbc.site.brands",
+      "owner": "solpbc-org",
+      "tombstone": false,
+      "replacement": null,
+      "format_intent": "text",
+      "arguments": [],
+      "protected_slots": [],
+      "selector": null
+    },
+    {
+      "id": "solpbc.site.brands.solstonemarkelement1",
+      "resource": "m736f6c7062632e736974652e6272616e64732e736f6c73746f6e656d61726b656c656d656e7431",
+      "namespace": "solpbc.site.brands",
+      "owner": "solpbc-org",
+      "tombstone": false,
+      "replacement": null,
+      "format_intent": "text",
+      "arguments": [],
+      "protected_slots": [],
+      "selector": null
+    },
+    {
+      "id": "solpbc.site.brands.solstonemarkelement2",
+      "resource": "m736f6c7062632e736974652e6272616e64732e736f6c73746f6e656d61726b656c656d656e7432",
+      "namespace": "solpbc.site.brands",
+      "owner": "solpbc-org",
       "tombstone": false,
       "replacement": null,
       "format_intent": "text",
@@ -2127,8 +2163,8 @@
       "resource": "m736f6c7062632e736974652e6272616e64732e76746578746d61726b",
       "namespace": "solpbc.site.brands",
       "owner": "solpbc-org",
-      "tombstone": false,
-      "replacement": null,
+      "tombstone": true,
+      "replacement": "solpbc.site.brands.vtextmarklabel",
       "format_intent": "text",
       "arguments": [],
       "protected_slots": [
@@ -2136,6 +2172,24 @@
           "name": "tok",
           "kind": "mark-word",
           "value": "the v̇ text mark"
+        }
+      ],
+      "selector": null
+    },
+    {
+      "id": "solpbc.site.brands.vtextmarklabel",
+      "resource": "m736f6c7062632e736974652e6272616e64732e76746578746d61726b6c6162656c",
+      "namespace": "solpbc.site.brands",
+      "owner": "solpbc-org",
+      "tombstone": false,
+      "replacement": null,
+      "format_intent": "text",
+      "arguments": [],
+      "protected_slots": [
+        {
+          "name": "mark",
+          "kind": "mark-word",
+          "value": "v̇"
         }
       ],
       "selector": null

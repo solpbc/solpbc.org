@@ -1,6 +1,6 @@
 {
   "description": "founded and solely operated by jeremie miller",
-  "context": "found as p.",
+  "context": "found as p. Render the entire message once. Numbered [1]text[/1] markers wrap template-owned inline elements; keep each pair once, balanced, and move the words and pairs together. [1] is a.",
   "surfaces": [
     "solpbc.org"
   ],
@@ -10,7 +10,7 @@
   "arguments": [],
   "format_intent": "text",
   "max_length": 45,
-  "source_revision": "66a17c0582239f067b77a0aa6801216a46583b4d9157501e88e16a497cc2869c",
+  "source_revision": "73d0ea542fc8385af401b37701e9b36dc871a729fdcded5f7ff65c3cc0473a1d",
   "risk": "routine",
   "auto_merge": true
 }

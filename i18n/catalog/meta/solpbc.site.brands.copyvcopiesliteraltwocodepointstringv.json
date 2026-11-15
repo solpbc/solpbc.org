@@ -1,6 +1,6 @@
 {
   "description": "copy v̇ copies the literal two-codepoint string v̇ (U+0076 U+0307). copy constant copies the literal text: const VIT_MARK = 'v̇';",
-  "context": "protected bytes (hex, formula, domain, url, or the vit mark). not a defect. not rewritten. found as p.",
+  "context": "protected bytes (hex, formula, domain, url, or the vit mark). not a defect. not rewritten. found as p. Render the entire message once. Numbered [1]text[/1] markers wrap template-owned inline elements; keep each pair once, balanced, and move the words and pairs together. [1] is span.",
   "surfaces": [
     "solpbc.org"
   ],
@@ -10,7 +10,7 @@
   "arguments": [],
   "format_intent": "text",
   "max_length": 129,
-  "source_revision": "5d1ec36a54f9098bcfb9b19b92b6117d607b894e91e2dbf7588f495008200278",
+  "source_revision": "8a7d0e134d2bb85648e2d350a096848e5abdd245d082c2e76ed9dac8ad1ef53f",
   "risk": "routine",
   "auto_merge": true,
   "protected_slots": [

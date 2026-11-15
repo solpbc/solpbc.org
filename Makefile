@@ -18,3 +18,4 @@ dev:
 
 check:
 	node bin/check-pages.mjs
+	node --test bin/render-pages.test.mjs

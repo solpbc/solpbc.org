@@ -1,6 +1,6 @@
 {
   "description": "two typefaces: comfortaa for display, inter for text. both are open-source and self-hosted — this page serves them from solpbc.org, not from a font CDN. no l...",
-  "context": "protected bytes (hex, formula, domain, url, or the vit mark). not a defect. not rewritten. found as p.",
+  "context": "protected bytes (hex, formula, domain, url, or the vit mark). not a defect. not rewritten. found as p. Render the entire message once. Numbered [1]text[/1] markers wrap template-owned inline elements; keep each pair once, balanced, and move the words and pairs together. [1] is strong. [2] is strong.",
   "surfaces": [
     "solpbc.org"
   ],
@@ -10,7 +10,7 @@
   "arguments": [],
   "format_intent": "text",
   "max_length": 246,
-  "source_revision": "cd4a5f4b0384304676ced7886ad89f89ccf0051b5accc7d738b5a4140271853c",
+  "source_revision": "43d8d5bb34a090683bf58e4033c309ce7842c795332ec144661214b2e63bd743",
   "risk": "routine",
   "auto_merge": true,
   "protected_slots": [

@@ -1,6 +1,6 @@
 {
   "description": "what's on your mind? *",
-  "context": "found as label. the asterisk is the required marker, a separate span joined to the label.",
+  "context": "found as label. the asterisk is the required marker, a separate span joined to the label. Render the entire message once. Numbered [1]text[/1] markers wrap template-owned inline elements; keep each pair once, balanced, and move the words and pairs together. [1] is span.",
   "surfaces": [
     "solpbc.org"
   ],
@@ -10,7 +10,7 @@
   "arguments": [],
   "format_intent": "text",
   "max_length": 22,
-  "source_revision": "5ac6590f5e7e41e9ed82012e4f527b5b5e8a09d23b57678f35c6c1e2d098660c",
+  "source_revision": "0c7e385d07caf59f144224cfbb82884d1c994a3b744d661c971d22056bf425b6",
   "risk": "routine",
   "auto_merge": true
 }

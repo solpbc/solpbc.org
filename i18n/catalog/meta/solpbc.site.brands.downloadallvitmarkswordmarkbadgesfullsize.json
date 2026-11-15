@@ -1,6 +1,6 @@
 {
   "description": "download all vit — marks, wordmark, badges, full size ladder, svg + png + pdf.",
-  "context": "found as p.",
+  "context": "found as p. Render the entire message once. Numbered [1]text[/1] markers wrap template-owned inline elements; keep each pair once, balanced, and move the words and pairs together. [1] is a.",
   "surfaces": [
     "solpbc.org"
   ],
@@ -10,7 +10,7 @@
   "arguments": [],
   "format_intent": "text",
   "max_length": 78,
-  "source_revision": "4b0415df7b7acd91417d97a0ce0565c6d65caf5ba85cf7a137490f140cb611a5",
+  "source_revision": "1e0396313b2a27ed48bf1fc77f46544832b0003f5d70340f466f2a04855b9f8f",
   "risk": "routine",
   "auto_merge": true
 }

@@ -1,57 +1,38 @@
 # solpbc.org string catalog
 
-Visitor-page English is the catalog in this directory. The site ships `en-US` only. There is no `translations/` directory.
+The site ships English only. `catalog/source/en-US.ftl` supplies visitor text. Each message has translator context in `catalog/meta/`. `compiler.json` pins the solstone-journal catalog compiler and its registry digest. Nothing under `i18n/` is served to visitors.
 
-`catalog/` is the source: `source/en-US.ftl`, one sidecar per message in `meta/`, plus `history.json` and `source-lock.json`. `compiler.json` names the catalog compiler revision in the solstone-journal repository.
+## editing and regenerating
 
-`templates/` holds the pages and scripts the catalog fills. `spans.json` records each replacement: the message id, the slice of the rendered sentence, the page bytes to write, and any arguments. `generated/esm/` is the compiler output, committed so a page check does not need a Rust toolchain. The Worker does not load it, and nothing under `i18n/` is served.
-
-## Check
-
-From the repository root:
+1. Edit the English message and its sidecar. Keep its id for a prose edit. A changed argument contract or protected-slot contract requires a new id; retire the old id with `retire --id OLD --replacement NEW`. Register new identities with `history`.
+2. Run the pinned compiler's `lock i18n/catalog`. Copy each changed message's `source` hash from `source-lock.json` into its sidecar's `source_revision`. The compiler supplies this hash; do not calculate it from FTL text.
+3. From the repository root, regenerate the committed ESM and pages together:
 
 ```sh
-node bin/check-pages.mjs
+I18N_CATALOG=/path/to/pinned/i18n-catalog node bin/check-pages.mjs --write
+make check
 ```
 
-`make check` runs that command. The check rebuilds each in-scope page from the templates, the span bytes, and `generated/esm/`, then diffs the result against the committed file. A missing message, a missing argument, or a render that does not match the recorded page text fails the check. `make deploy` does not run it.
+Build that binary from the revision in `compiler.json`, using `tools/i18n/README.md` in the compiler repository. `--write` requires the compiler. It validates the catalog, replaces `generated/esm/`, records hashes of all catalog inputs, then renders the pages. Commit the catalog, generated resources and rendered files together.
 
-A catalog line that is a single line and contains no `{` must match `render()` of the committed ESM. Editing `catalog/source/en-US.ftl` without regenerating `generated/esm/` fails that comparison.
+Without the compiler, `make check` verifies those input hashes and compares every generated page and script to the committed output. With `I18N_CATALOG` set it also recompiles and compares the complete ESM file set. Missing messages, missing arguments, stale inputs and changed committed pages fail. `make deploy` keeps using the committed files; it does not invoke this build or require Rust.
 
-Set `I18N_CATALOG` to an `i18n-catalog` binary built from the pinned revision and the check also regenerates the ESM and diffs it against `generated/esm/`.
+## templates and inline elements
 
-## Change a string
+A template token names its output context:
 
-1. Edit the message in `catalog/source/en-US.ftl` and its sidecar in `catalog/meta/`. Keep the id. A new sentence gets a new id.
-2. Regenerate the ESM with the compiler at the revision in `compiler.json`, and replace `generated/esm/`:
+- `%%html:MESSAGE%%`: escaped text, with any inline markers removed after validation.
+- `%%rich:MESSAGE%%`: escaped text with numbered markers expanded to template-owned inline elements.
+- `%%attr:MESSAGE%%`: escaped text inside a double-quoted attribute.
+- `%%css:MESSAGE%%`: a complete CSS string, with quotes, controls and style terminators escaped.
+- `%%js:MESSAGE%%`: a complete JSON-serialized JavaScript string literal. Do not put quotes around the token.
 
-```sh
-i18n-catalog targets i18n/catalog \
-  --channel production --locale en-US --target esm \
-  --out /tmp/solpbc-targets
-```
+Append a JSON argument object after the id, for example `%%html:solpbc.site.contact.send {"state":"idle"}%%`. Argument values are passed to the generated typed API.
 
-The output directory must be absent, or a directory this command wrote before. Copy `/tmp/solpbc-targets/esm/` over `i18n/generated/esm/`.
+A linked sentence stays one message, such as `words [1]link text[/1] more words`. `templates/inline.json` maps its numbered pairs to exact opening and closing tags. Only `a`, `span` and `strong` elements are admitted. Tags, URLs and attributes live there; the catalog supplies their translated text. Each pair must occur once, with balanced nesting. Translators may move pairs and words together. The plain `html` form renders the same whole message without decoration where another page needs it.
 
-3. Update the matching `spans.json` entry so `raw` and `decoded` are the new page text. `raw` is what the page file contains. Where the page keeps an HTML entity, `raw` keeps the entity and `decoded` is the character `render()` returns.
-4. If the markup around the string changed, edit the template and keep its token. A token is `%%id%%` when the whole message is one span, or `%%id|start:end%%` when one message is split across tags.
-5. Rewrite the committed pages, then check:
+Text is escaped before template elements are inserted. Attribute tokens escape ampersands, angle brackets and double quotes. Script tokens use JSON serialization and escape less-than signs and JavaScript line separators. Rendering uses `useIsolating: false` for the shipped English. No browser language selects an unshipped locale.
 
-```sh
-node bin/check-pages.mjs --write
-node bin/check-pages.mjs
-```
+## scope
 
-`--write` still fails when a render does not match its span. It does not fill a missing message with a blank.
-
-Calls that rebuild pages pass `{ useIsolating: false }`, so this English stays free of extra direction marks. The generated API defaults to isolation on. Adding a language means a registry change, a reviewed catalog, and an explicit decision to turn isolation on for that language. The visitor's browser language does not select an unshipped language.
-
-## Arguments
-
-Five messages take `state`: `solpbc.site.brands.copy`, `solpbc.site.brands.copyconstant`, `solpbc.site.brands.copysvg`, `solpbc.site.brands.copyvitmark`, and `solpbc.site.contact.send`. The idle spans pass `idle`. `solpbc.site.brands.copyhex` takes `hex`, the color as written on the page. Omitting either argument throws.
-
-## Left out
-
-`public/blog/` is written by the blog publisher. `articles.html`, `bylaws.html`, and `privacy.html` are hand-maintained. Talks, PDFs, the sitemap, and `robots.txt` are not catalog messages.
-
-The contact form's hidden field labeled `company` stays a literal in the template.
+Home, contact, thanks, 404, brands and the contact-handler sentences are generated. Blog, legal pages, talks, PDFs, governance documents, the sitemap and downloadable brand assets stay outside the build. The hidden contact-field label `company` remains a literal.

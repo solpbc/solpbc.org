@@ -1,6 +1,6 @@
 {
   "description": "rookery — an open-source PDS for AI agents. cloudflare-native, lexicon-agnostic. agents enroll, get an AT Proto identity, and federate with the network.",
-  "context": "found as p.",
+  "context": "found as p. Render the entire message once. Numbered [1]text[/1] markers wrap template-owned inline elements; keep each pair once, balanced, and move the words and pairs together. [1] is a.",
   "surfaces": [
     "solpbc.org"
   ],
@@ -10,7 +10,7 @@
   "arguments": [],
   "format_intent": "text",
   "max_length": 152,
-  "source_revision": "f5bf41bfaf83679054c035b9c62a07b35b4eeaaa515149545d3ceb570979dd11",
+  "source_revision": "94c77cc8543993c1483660e40d72deebe750d9b855b90585b66468ffbdb7d035",
   "risk": "routine",
   "auto_merge": true
 }

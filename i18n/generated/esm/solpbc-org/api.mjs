@@ -747,8 +747,20 @@ const MESSAGES = {
     arguments: [
     ],
   },
-  "solpbc.site.brands.solstonemark": {
-    resourceKey: "m736f6c7062632e736974652e6272616e64732e736f6c73746f6e656d61726b",
+  "solpbc.site.brands.solstonemarkalt": {
+    resourceKey: "m736f6c7062632e736974652e6272616e64732e736f6c73746f6e656d61726b616c74",
+    formatIntent: "text",
+    arguments: [
+    ],
+  },
+  "solpbc.site.brands.solstonemarkelement1": {
+    resourceKey: "m736f6c7062632e736974652e6272616e64732e736f6c73746f6e656d61726b656c656d656e7431",
+    formatIntent: "text",
+    arguments: [
+    ],
+  },
+  "solpbc.site.brands.solstonemarkelement2": {
+    resourceKey: "m736f6c7062632e736974652e6272616e64732e736f6c73746f6e656d61726b656c656d656e7432",
     formatIntent: "text",
     arguments: [
     ],
@@ -1017,8 +1029,8 @@ const MESSAGES = {
     arguments: [
     ],
   },
-  "solpbc.site.brands.vtextmark": {
-    resourceKey: "m736f6c7062632e736974652e6272616e64732e76746578746d61726b",
+  "solpbc.site.brands.vtextmarklabel": {
+    resourceKey: "m736f6c7062632e736974652e6272616e64732e76746578746d61726b6c6162656c",
     formatIntent: "text",
     arguments: [
     ],

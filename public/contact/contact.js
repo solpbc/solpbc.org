@@ -10,15 +10,15 @@
     var MESSAGES = {
         generic: "that didn't send. please try again, or email jer at solpbc dot org.",
         verification: "the check that you're human didn't go through. please finish it above, then send again.",
-        rateLimited: 'a lot of messages came from here just now. please wait a minute, then send again.',
-        sending: 'sending…',
-        send: 'send message'
+        rateLimited: "a lot of messages came from here just now. please wait a minute, then send again.",
+        sending: "sending…",
+        send: "send message"
     };
 
     // Raw worker error codes (worker.js handleContact) are never shown as-is.
     function messageFor(error) {
-        if (error === 'verification failed') return MESSAGES.verification;
-        if (error === 'too many requests') return MESSAGES.rateLimited;
+        if (error === "verification failed") return MESSAGES.verification;
+        if (error === "too many requests") return MESSAGES.rateLimited;
         return MESSAGES.generic;
     }
 

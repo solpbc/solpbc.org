@@ -14,8 +14,8 @@
   document.documentElement.classList.add('js');
 
   var live = document.getElementById('copy-live');
-  var SUCCESS = '%%solpbc.site.brands.copysvg%%';        // build spec §6.9
-  var FALLBACK = '%%solpbc.site.brands.copysvg%%';
+  var SUCCESS = %%js:solpbc.site.brands.copysvg {"state":"done"}%%;        // build spec §6.9
+  var FALLBACK = %%js:solpbc.site.brands.copysvg {"state":"manual"}%%;
   var HOLD_MS = 1500;            // "~1.5s" — build spec §6.9
 
   function announce(msg) { if (live) { live.textContent = ''; live.textContent = msg; } }
@@ -87,7 +87,7 @@
     var fail = function () {
       selectSource(btn);
       flash(btn, FALLBACK, 'manual');
-      announce('%%solpbc.site.brands.copyfailed%%');
+      announce(%%js:solpbc.site.brands.copyfailed%%);
     };
     if (navigator.clipboard && navigator.clipboard.writeText) {
       navigator.clipboard.writeText(text).then(ok, fail);

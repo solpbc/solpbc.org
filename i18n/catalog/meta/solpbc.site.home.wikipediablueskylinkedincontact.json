@@ -1,6 +1,6 @@
 {
   "description": "wikipedia · bluesky · linkedin · contact",
-  "context": "found as p.",
+  "context": "found as p. Render the entire message once. Numbered [1]text[/1] markers wrap template-owned inline elements; keep each pair once, balanced, and move the words and pairs together. [1] is a. [2] is a. [3] is a. [4] is a.",
   "surfaces": [
     "solpbc.org"
   ],
@@ -10,7 +10,7 @@
   "arguments": [],
   "format_intent": "text",
   "max_length": 40,
-  "source_revision": "8a82eb3067408127bcd7caa4cb157d0c5a302015096b3dea3ce4344a004d8208",
+  "source_revision": "1ad95379f3063fa02de1ce75ea785832b4f9e0f4b2c6a1ce3da9bad2c0e30147",
   "risk": "routine",
   "auto_merge": true
 }

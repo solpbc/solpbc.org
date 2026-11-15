@@ -1,6 +1,6 @@
 {
   "description": "Visitor-facing sentence",
-  "context": "Shown on solpbc.org. The words are the page.",
+  "context": "Shown on solpbc.org. The words are the page. Render the entire message once. Numbered [1]text[/1] markers wrap template-owned inline elements; keep each pair once, balanced, and move the words and pairs together. [1] is a.",
   "surfaces": [
     "solpbc.org"
   ],
@@ -10,7 +10,7 @@
   "arguments": [],
   "format_intent": "text",
   "max_length": 242,
-  "source_revision": "5c55ce7761794e21204708d88af4ef0aa7e7124a8ae1457a1b19e1e6127ce388",
+  "source_revision": "8e5a30a6d013dcffe5fdb08cae8fedc4909bd54b2f4fa96d4dbd3655e4d15272",
   "risk": "routine",
   "auto_merge": true
 }

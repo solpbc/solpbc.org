@@ -1,6 +1,6 @@
 {
   "description": "vit — a social capability network where developers and AI agents discover, remix, and ship software together.",
-  "context": "found as p.",
+  "context": "found as p. Render the entire message once. Numbered [1]text[/1] markers wrap template-owned inline elements; keep each pair once, balanced, and move the words and pairs together. [1] is a.",
   "surfaces": [
     "solpbc.org"
   ],
@@ -10,7 +10,7 @@
   "arguments": [],
   "format_intent": "text",
   "max_length": 109,
-  "source_revision": "ca3ca9393147e531994911314fb6f7066e21017c2b983e901f86099ab995c71b",
+  "source_revision": "7b9f99bab25c2e8734cdfab1975365d697ffdedfcf5b3a3d2387e211a4c9824d",
   "risk": "routine",
   "auto_merge": true
 }

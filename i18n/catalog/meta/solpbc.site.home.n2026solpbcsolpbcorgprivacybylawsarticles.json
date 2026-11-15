@@ -1,6 +1,6 @@
 {
   "description": "© 2026 sol pbc · solpbc.org · privacy · bylaws · articles · blog · contact · sol pbc, solstone, and vit are trademarks of sol pbc.",
-  "context": "covenant, charter, or trademark wording. not rewritten. found as footer.",
+  "context": "covenant, charter, or trademark wording. not rewritten. found as footer. Render the entire message once. Numbered [1]text[/1] markers wrap template-owned inline elements; keep each pair once, balanced, and move the words and pairs together. [1] is a. [2] is a. [3] is a. [4] is a. [5] is a.",
   "surfaces": [
     "solpbc.org"
   ],
@@ -10,7 +10,7 @@
   "arguments": [],
   "format_intent": "text",
   "max_length": 130,
-  "source_revision": "51d4da28e2d5d4aacb288774e8e4a51388d232e0954519f61222d4fccf6e9069",
+  "source_revision": "c9eb587333c160c990dbf08948bf6fe2e7123696db92f5e53d607c038659ac3d",
   "risk": "legal",
   "auto_merge": false
 }

@@ -1,0 +1,17 @@
+{
+  "description": "mark",
+  "context": "Independent div label on the brands page; translated separately from the adjacent element. Render the entire message once. Numbered [1]text[/1] markers wrap template-owned inline elements; keep each pair once, balanced, and move the words and pairs together. ",
+  "surfaces": [
+    "solpbc.org"
+  ],
+  "bundles": [
+    "solpbc-org"
+  ],
+  "arguments": [],
+  "format_intent": "text",
+  "max_length": 4,
+  "source_revision": "95c257cdb7f88deadb2ec5ff7a1724bd97a142e9c0deb76f66cd4246aa714a2b",
+  "risk": "routine",
+  "auto_merge": true,
+  "protected_slots": []
+}

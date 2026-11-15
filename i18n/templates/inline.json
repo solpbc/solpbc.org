@@ -1,0 +1,264 @@
+{
+  "solpbc.site.home.specificpublicbenefitpurposecorporationisadvan": [
+    {
+      "open": "<span class=\"highlight\">",
+      "close": "</span>"
+    },
+    {
+      "open": "<span class=\"highlight\">",
+      "close": "</span>"
+    },
+    {
+      "open": "<span class=\"highlight\">",
+      "close": "</span>"
+    },
+    {
+      "open": "<span class=\"highlight\">",
+      "close": "</span>"
+    }
+  ],
+  "solpbc.site.home.foundedsolelyoperatedjeremiemiller": [
+    {
+      "open": "<a href=\"#founder\">",
+      "close": "</a>"
+    }
+  ],
+  "solpbc.site.home.readarticlesincorporationreadbylawsamendedrest": [
+    {
+      "open": "<a href=\"/articles\">",
+      "close": "</a>"
+    },
+    {
+      "open": "<a href=\"/bylaws\">",
+      "close": "</a>"
+    },
+    {
+      "open": "<a href=\"20261537456.pdf\">",
+      "close": "</a>"
+    },
+    {
+      "open": "<a href=\"20261003269.pdf\">",
+      "close": "</a>"
+    }
+  ],
+  "solpbc.site.home.solstoneisapersonaljournalplatformthesol": [
+    {
+      "open": "<a href=\"https://solstone.app\">",
+      "close": "</a>"
+    }
+  ],
+  "solpbc.site.home.vitsocialcapabilitynetworkwheredevelopersaiag": [
+    {
+      "open": "<a href=\"https://v-it.org\">",
+      "close": "</a>"
+    }
+  ],
+  "solpbc.site.home.rookeryopensourcepdsaiagentscloudflarenative": [
+    {
+      "open": "<a href=\"https://tangled.org/solpbc.org/rookery\">",
+      "close": "</a>"
+    }
+  ],
+  "solpbc.site.home.wikipediablueskylinkedincontact": [
+    {
+      "open": "<a href=\"https://en.wikipedia.org/wiki/Jeremie_Miller\">",
+      "close": "</a>"
+    },
+    {
+      "open": "<a href=\"https://bsky.app/profile/jeremie.com\">",
+      "close": "</a>"
+    },
+    {
+      "open": "<a href=\"https://www.linkedin.com/in/jeremie-miller-b4824a3b6/\">",
+      "close": "</a>"
+    },
+    {
+      "open": "<a href=\"/contact\">",
+      "close": "</a>"
+    }
+  ],
+  "solpbc.site.home.n2026solpbcsolpbcorgprivacybylawsarticles": [
+    {
+      "open": "<a href=\"/privacy\">",
+      "close": "</a>"
+    },
+    {
+      "open": "<a href=\"/bylaws\">",
+      "close": "</a>"
+    },
+    {
+      "open": "<a href=\"/articles\">",
+      "close": "</a>"
+    },
+    {
+      "open": "<a href=\"/blog/\">",
+      "close": "</a>"
+    },
+    {
+      "open": "<a href=\"/contact\">",
+      "close": "</a>"
+    }
+  ],
+  "solpbc.site.missing.n2026solpbcyourdataisneversold": [
+    {
+      "open": "<a href=\"https://solpbc.org\">",
+      "close": "</a>"
+    }
+  ],
+  "solpbc.site.contact.youremail": [
+    {
+      "open": "<span style=\"color: var(--danger);\">",
+      "close": "</span>"
+    }
+  ],
+  "solpbc.site.contact.whatsyourmind": [
+    {
+      "open": "<span style=\"color: var(--danger);\">",
+      "close": "</span>"
+    }
+  ],
+  "solpbc.site.contact.solpbcdoesnttrackyoudoesnt": [
+    {
+      "open": "<a href=\"/privacy\">",
+      "close": "</a>"
+    }
+  ],
+  "solpbc.site.chrome.n2026solpbcsolpbcorgprivacybylawsarticles": [
+    {
+      "open": "<a href=\"/\">",
+      "close": "</a>"
+    },
+    {
+      "open": "<a href=\"/privacy\">",
+      "close": "</a>"
+    },
+    {
+      "open": "<a href=\"/bylaws\">",
+      "close": "</a>"
+    },
+    {
+      "open": "<a href=\"/articles\">",
+      "close": "</a>"
+    },
+    {
+      "open": "<a href=\"/blog/\">",
+      "close": "</a>"
+    },
+    {
+      "open": "<a href=\"/contact\">",
+      "close": "</a>"
+    }
+  ],
+  "solpbc.site.brands.logoscolorsandwordsforsolpbcandvitso": [
+    {
+      "open": "<a href=\"https://solstone.app/brand\">",
+      "close": "</a>"
+    }
+  ],
+  "solpbc.site.brands.thesolstonemarklockupsappiconcolorsand": [
+    {
+      "open": "<a href=\"https://solstone.app/brand\">",
+      "close": "</a>"
+    },
+    {
+      "open": "<a href=\"https://solstone.app/brand/logo\">",
+      "close": "</a>"
+    }
+  ],
+  "solpbc.site.brands.vvitmarkterminalsclisreadmesunicodeu": [
+    {
+      "open": "<strong>",
+      "close": "</strong>"
+    },
+    {
+      "open": "<span class=\"mono\">",
+      "close": "</span>"
+    },
+    {
+      "open": "<span class=\"mono\">",
+      "close": "</span>"
+    },
+    {
+      "open": "<span class=\"mono\">",
+      "close": "</span>"
+    }
+  ],
+  "solpbc.site.brands.copyvcopiesliteraltwocodepointstringv": [
+    {
+      "open": "<span class=\"mono\" style=\"user-select:all\">",
+      "close": "</span>"
+    }
+  ],
+  "solpbc.site.brands.downloadallvitmarkswordmarkbadgesfullsize": [
+    {
+      "open": "<a href=\"/brands/assets/vit.zip\" download>",
+      "close": "</a>"
+    }
+  ],
+  "solpbc.site.brands.writingextrolowercaserunningtexttoolnamesextr": [
+    {
+      "open": "<strong>",
+      "close": "</strong>"
+    }
+  ],
+  "solpbc.site.brands.thecompanywordmarksharessolstonesbeamsri": [
+    {
+      "open": "<span class=\"hex\">",
+      "close": "</span>"
+    },
+    {
+      "open": "<span class=\"hex\">",
+      "close": "</span>"
+    },
+    {
+      "open": "<a href=\"https://solstone.app/brand#colors\">",
+      "close": "</a>"
+    }
+  ],
+  "solpbc.site.brands.downloadallsolpbceveryvariantfullsize": [
+    {
+      "open": "<a href=\"/brands/assets/sol-pbc.zip\" download>",
+      "close": "</a>"
+    }
+  ],
+  "solpbc.site.brands.twotypefacescomfortaadisplayintertextbothare": [
+    {
+      "open": "<strong>",
+      "close": "</strong>"
+    },
+    {
+      "open": "<strong>",
+      "close": "</strong>"
+    }
+  ],
+  "solpbc.site.brands.notsurejustasktherescontactform": [
+    {
+      "open": "<a href=\"https://solpbc.org/contact\">",
+      "close": "</a>"
+    }
+  ],
+  "solpbc.site.brands.downloadeverythingeverysolpbcandvitasset": [
+    {
+      "open": "<a href=\"/brands/assets/sol-pbc-brand-all.zip\" download>",
+      "close": "</a>"
+    },
+    {
+      "open": "<a href=\"https://solstone.app/brand\">",
+      "close": "</a>"
+    }
+  ],
+  "solpbc.site.brands.n2026solpbcsolpbcorgprivacycontact": [
+    {
+      "open": "<a href=\"/\">",
+      "close": "</a>"
+    },
+    {
+      "open": "<a href=\"/privacy\">",
+      "close": "</a>"
+    },
+    {
+      "open": "<a href=\"/contact\">",
+      "close": "</a>"
+    }
+  ]
+}

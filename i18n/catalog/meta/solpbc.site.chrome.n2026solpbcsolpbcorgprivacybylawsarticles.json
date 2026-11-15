@@ -1,6 +1,6 @@
 {
   "description": "© 2026 sol pbc · solpbc.org · privacy · bylaws · articles · blog · contact",
-  "context": "protected bytes (hex, formula, domain, url, or the vit mark). not a defect. not rewritten. found as p.",
+  "context": "protected bytes (hex, formula, domain, url, or the vit mark). not a defect. not rewritten. found as p. Render the entire message once. Numbered [1]text[/1] markers wrap template-owned inline elements; keep each pair once, balanced, and move the words and pairs together. [1] is a. [2] is a. [3] is a. [4] is a. [5] is a. [6] is a.",
   "surfaces": [
     "solpbc.org"
   ],
@@ -10,7 +10,7 @@
   "arguments": [],
   "format_intent": "text",
   "max_length": 74,
-  "source_revision": "2f9161f2b7ec293f4af63df8e914427e39ec23ab956e81c8de0c07dd35fb7a32",
+  "source_revision": "4ac58ec688de424b52460c544ada639531d50f07d1290e7c295f8cae41a76356",
   "risk": "routine",
   "auto_merge": true,
   "protected_slots": [

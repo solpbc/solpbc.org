@@ -1,6 +1,6 @@
 {
   "description": "in writing: extro is always lowercase, in headings and at the start of a sentence too; never Extro or EXTRO.",
-  "context": "found as p.",
+  "context": "found as p. Render the entire message once. Numbered [1]text[/1] markers wrap template-owned inline elements; keep each pair once, balanced, and move the words and pairs together. [1] is strong.",
   "surfaces": [
     "solpbc.org"
   ],
@@ -10,7 +10,7 @@
   "arguments": [],
   "format_intent": "text",
   "max_length": 108,
-  "source_revision": "752642bcdfd38f47b0276880a642b3a1e7685513105b49998a94475ce176dc73",
+  "source_revision": "b5cf879de408a0464dbe533a42bdb281302b4108d9806c8024bc018cb5b4d55f",
   "risk": "routine",
   "auto_merge": true
 }

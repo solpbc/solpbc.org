@@ -164,7 +164,7 @@
     },
     {
       "id": "solpbc.site.brands.copyvcopiesliteraltwocodepointstringv",
-      "source": "5d1ec36a54f9098bcfb9b19b92b6117d607b894e91e2dbf7588f495008200278",
+      "source": "8a7d0e134d2bb85648e2d350a096848e5abdd245d082c2e76ed9dac8ad1ef53f",
       "contract": "8a5ccf516e1ddd1e6845a51578bf3090e7732eef71f84117434e952b20202586",
       "protected": "b2f97a1abd9d477d51ba5479fc003718ef10f6ebe034ac1652745ba824429598",
       "locales": []
@@ -297,14 +297,14 @@
     },
     {
       "id": "solpbc.site.brands.downloadallsolpbceveryvariantfullsize",
-      "source": "2ef68a16987cdda38cbec2632b88398626894b770de941bea10f9009bdd6faf8",
+      "source": "d311e2452830080b0d7bd3b0897ee9ae74ec9814408ed8d4b59fd0d617075265",
       "contract": "8a5ccf516e1ddd1e6845a51578bf3090e7732eef71f84117434e952b20202586",
       "protected": "af5570f5a1810b7af78caf4bc70a660f0df51e42baf91d4de5b2328de0e83dfc",
       "locales": []
     },
     {
       "id": "solpbc.site.brands.downloadallvitmarkswordmarkbadgesfullsize",
-      "source": "4b0415df7b7acd91417d97a0ce0565c6d65caf5ba85cf7a137490f140cb611a5",
+      "source": "1e0396313b2a27ed48bf1fc77f46544832b0003f5d70340f466f2a04855b9f8f",
       "contract": "8a5ccf516e1ddd1e6845a51578bf3090e7732eef71f84117434e952b20202586",
       "protected": "af5570f5a1810b7af78caf4bc70a660f0df51e42baf91d4de5b2328de0e83dfc",
       "locales": []
@@ -318,7 +318,7 @@
     },
     {
       "id": "solpbc.site.brands.downloadeverythingeverysolpbcandvitasset",
-      "source": "d3fdd7b651471503d624f79df197fc71e44bc62eaee4b282eaac2f63e782b879",
+      "source": "317889c802241a6170e7278971338a79dc0cc6903ca5b4c14be28944acaafd6c",
       "contract": "8a5ccf516e1ddd1e6845a51578bf3090e7732eef71f84117434e952b20202586",
       "protected": "af5570f5a1810b7af78caf4bc70a660f0df51e42baf91d4de5b2328de0e83dfc",
       "locales": []
@@ -437,7 +437,7 @@
     },
     {
       "id": "solpbc.site.brands.logoscolorsandwordsforsolpbcandvitso",
-      "source": "5c55ce7761794e21204708d88af4ef0aa7e7124a8ae1457a1b19e1e6127ce388",
+      "source": "8e5a30a6d013dcffe5fdb08cae8fedc4909bd54b2f4fa96d4dbd3655e4d15272",
       "contract": "8a5ccf516e1ddd1e6845a51578bf3090e7732eef71f84117434e952b20202586",
       "protected": "af5570f5a1810b7af78caf4bc70a660f0df51e42baf91d4de5b2328de0e83dfc",
       "locales": []
@@ -500,7 +500,7 @@
     },
     {
       "id": "solpbc.site.brands.n2026solpbcsolpbcorgprivacycontact",
-      "source": "846244f308f90a3d159420613c8d857b77c32ca323fb6586c56c055f10931ae4",
+      "source": "08516f7f2265d198da0deb9310f610318a79f20171b64acd3e5fd56c6161519a",
       "contract": "8a5ccf516e1ddd1e6845a51578bf3090e7732eef71f84117434e952b20202586",
       "protected": "95b0ef6f73906bf9f17fd786f44f64be354d74959bc040bf4a58513d005738d9",
       "locales": []
@@ -570,7 +570,7 @@
     },
     {
       "id": "solpbc.site.brands.notsurejustasktherescontactform",
-      "source": "7459ed43fd89e8e5c04c41d247388bb0905d9ba02b281b4b4658d65166e7b0c9",
+      "source": "ee68aa6eed6b1a324522580f1628fde00159b2a6a9b70611d292b29208e38db7",
       "contract": "8a5ccf516e1ddd1e6845a51578bf3090e7732eef71f84117434e952b20202586",
       "protected": "95b0ef6f73906bf9f17fd786f44f64be354d74959bc040bf4a58513d005738d9",
       "locales": []
@@ -807,8 +807,22 @@
       "locales": []
     },
     {
-      "id": "solpbc.site.brands.solstonemark",
+      "id": "solpbc.site.brands.solstonemarkalt",
       "source": "d0714ec97eed3cfdb6d35d4a70ecd8cb60f920b46dd07c6023fee25676b25bc6",
+      "contract": "8a5ccf516e1ddd1e6845a51578bf3090e7732eef71f84117434e952b20202586",
+      "protected": "af5570f5a1810b7af78caf4bc70a660f0df51e42baf91d4de5b2328de0e83dfc",
+      "locales": []
+    },
+    {
+      "id": "solpbc.site.brands.solstonemarkelement1",
+      "source": "bf38593db11de7fe3f5a21bc5fad9ba9de265ad0f9c30825d125df8f075566a3",
+      "contract": "8a5ccf516e1ddd1e6845a51578bf3090e7732eef71f84117434e952b20202586",
+      "protected": "af5570f5a1810b7af78caf4bc70a660f0df51e42baf91d4de5b2328de0e83dfc",
+      "locales": []
+    },
+    {
+      "id": "solpbc.site.brands.solstonemarkelement2",
+      "source": "95c257cdb7f88deadb2ec5ff7a1724bd97a142e9c0deb76f66cd4246aa714a2b",
       "contract": "8a5ccf516e1ddd1e6845a51578bf3090e7732eef71f84117434e952b20202586",
       "protected": "af5570f5a1810b7af78caf4bc70a660f0df51e42baf91d4de5b2328de0e83dfc",
       "locales": []
@@ -857,7 +871,7 @@
     },
     {
       "id": "solpbc.site.brands.thecompanywordmarksharessolstonesbeamsri",
-      "source": "be43aff80ebbff96de11a235e991c87a4d1050fe025f32ce741c274b46b1bb21",
+      "source": "aab6fb59d9d0b56a76e7f3fc6e3bb59642e4cff15b9f38bd6c266c75662cfb03",
       "contract": "8a5ccf516e1ddd1e6845a51578bf3090e7732eef71f84117434e952b20202586",
       "protected": "af5570f5a1810b7af78caf4bc70a660f0df51e42baf91d4de5b2328de0e83dfc",
       "locales": []
@@ -871,7 +885,7 @@
     },
     {
       "id": "solpbc.site.brands.thesolstonemarklockupsappiconcolorsand",
-      "source": "a5b39a1d38167e82acadd179b18d9c2ef785a873cbc40843ab1fcaa55d42cc65",
+      "source": "329e2c702990cb85b97dca5bf03dbb08704d4343f2874cde789afb01a8f59bfd",
       "contract": "8a5ccf516e1ddd1e6845a51578bf3090e7732eef71f84117434e952b20202586",
       "protected": "af5570f5a1810b7af78caf4bc70a660f0df51e42baf91d4de5b2328de0e83dfc",
       "locales": []
@@ -885,7 +899,7 @@
     },
     {
       "id": "solpbc.site.brands.twotypefacescomfortaadisplayintertextbothare",
-      "source": "cd4a5f4b0384304676ced7886ad89f89ccf0051b5accc7d738b5a4140271853c",
+      "source": "43d8d5bb34a090683bf58e4033c309ce7842c795332ec144661214b2e63bd743",
       "contract": "8a5ccf516e1ddd1e6845a51578bf3090e7732eef71f84117434e952b20202586",
       "protected": "95b0ef6f73906bf9f17fd786f44f64be354d74959bc040bf4a58513d005738d9",
       "locales": []
@@ -1122,15 +1136,15 @@
       "locales": []
     },
     {
-      "id": "solpbc.site.brands.vtextmark",
-      "source": "4cbb7e31b6b1e74eae02712eabdbfeb7619ac6b1594f0b8fb624dbc7f70dbde5",
+      "id": "solpbc.site.brands.vtextmarklabel",
+      "source": "ea04542aa2639a2a703640aab9cc1ca4ff62923818711fe195d7bc576826480a",
       "contract": "8a5ccf516e1ddd1e6845a51578bf3090e7732eef71f84117434e952b20202586",
-      "protected": "0f36b5cfb50e0379a4ffc6fa0982e976215f51d97ff35ffc845febd232fe0248",
+      "protected": "9d354fba699490cbb6a0a285e76fce9b24a836df21ded05767a072b209633f67",
       "locales": []
     },
     {
       "id": "solpbc.site.brands.vvitmarkterminalsclisreadmesunicodeu",
-      "source": "24b33a2bf759fbcb5acad0f07737fece6cec23dbe35c7f1fcc145cfc2bb93adc",
+      "source": "c55edc63f0e936926e699474c778ea257bfa1cd233ed6c7e58fb431f9e50626c",
       "contract": "8a5ccf516e1ddd1e6845a51578bf3090e7732eef71f84117434e952b20202586",
       "protected": "b2f97a1abd9d477d51ba5479fc003718ef10f6ebe034ac1652745ba824429598",
       "locales": []
@@ -1158,7 +1172,7 @@
     },
     {
       "id": "solpbc.site.brands.writingextrolowercaserunningtexttoolnamesextr",
-      "source": "752642bcdfd38f47b0276880a642b3a1e7685513105b49998a94475ce176dc73",
+      "source": "b5cf879de408a0464dbe533a42bdb281302b4108d9806c8024bc018cb5b4d55f",
       "contract": "8a5ccf516e1ddd1e6845a51578bf3090e7732eef71f84117434e952b20202586",
       "protected": "af5570f5a1810b7af78caf4bc70a660f0df51e42baf91d4de5b2328de0e83dfc",
       "locales": []
@@ -1193,7 +1207,7 @@
     },
     {
       "id": "solpbc.site.chrome.n2026solpbcsolpbcorgprivacybylawsarticles",
-      "source": "2f9161f2b7ec293f4af63df8e914427e39ec23ab956e81c8de0c07dd35fb7a32",
+      "source": "4ac58ec688de424b52460c544ada639531d50f07d1290e7c295f8cae41a76356",
       "contract": "8a5ccf516e1ddd1e6845a51578bf3090e7732eef71f84117434e952b20202586",
       "protected": "95b0ef6f73906bf9f17fd786f44f64be354d74959bc040bf4a58513d005738d9",
       "locales": []
@@ -1312,7 +1326,7 @@
     },
     {
       "id": "solpbc.site.contact.solpbcdoesnttrackyoudoesnt",
-      "source": "40d6be39371f03077b8e821494ce7d9c919efe4cf47dca5213a60b9a685e3279",
+      "source": "72deb179e41337e40bd882b39558fa02d7c07b359bafaad0215a39e51b6079fd",
       "contract": "8a5ccf516e1ddd1e6845a51578bf3090e7732eef71f84117434e952b20202586",
       "protected": "af5570f5a1810b7af78caf4bc70a660f0df51e42baf91d4de5b2328de0e83dfc",
       "locales": []
@@ -1361,14 +1375,14 @@
     },
     {
       "id": "solpbc.site.contact.whatsyourmind",
-      "source": "5ac6590f5e7e41e9ed82012e4f527b5b5e8a09d23b57678f35c6c1e2d098660c",
+      "source": "0c7e385d07caf59f144224cfbb82884d1c994a3b744d661c971d22056bf425b6",
       "contract": "8a5ccf516e1ddd1e6845a51578bf3090e7732eef71f84117434e952b20202586",
       "protected": "af5570f5a1810b7af78caf4bc70a660f0df51e42baf91d4de5b2328de0e83dfc",
       "locales": []
     },
     {
       "id": "solpbc.site.contact.youremail",
-      "source": "8672c6dd323c0f5062756739f2f2fe8f0afeb0bf84d8a8cbebadaac8f8dec742",
+      "source": "5655c89357b80823d5fefa84945ead3468b24b397376e765cc00b8c0615b231c",
       "contract": "8a5ccf516e1ddd1e6845a51578bf3090e7732eef71f84117434e952b20202586",
       "protected": "af5570f5a1810b7af78caf4bc70a660f0df51e42baf91d4de5b2328de0e83dfc",
       "locales": []
@@ -1431,7 +1445,7 @@
     },
     {
       "id": "solpbc.site.home.foundedsolelyoperatedjeremiemiller",
-      "source": "66a17c0582239f067b77a0aa6801216a46583b4d9157501e88e16a497cc2869c",
+      "source": "73d0ea542fc8385af401b37701e9b36dc871a729fdcded5f7ff65c3cc0473a1d",
       "contract": "8a5ccf516e1ddd1e6845a51578bf3090e7732eef71f84117434e952b20202586",
       "protected": "af5570f5a1810b7af78caf4bc70a660f0df51e42baf91d4de5b2328de0e83dfc",
       "locales": []
@@ -1466,7 +1480,7 @@
     },
     {
       "id": "solpbc.site.home.n2026solpbcsolpbcorgprivacybylawsarticles",
-      "source": "51d4da28e2d5d4aacb288774e8e4a51388d232e0954519f61222d4fccf6e9069",
+      "source": "c9eb587333c160c990dbf08948bf6fe2e7123696db92f5e53d607c038659ac3d",
       "contract": "8a5ccf516e1ddd1e6845a51578bf3090e7732eef71f84117434e952b20202586",
       "protected": "af5570f5a1810b7af78caf4bc70a660f0df51e42baf91d4de5b2328de0e83dfc",
       "locales": []
@@ -1480,7 +1494,7 @@
     },
     {
       "id": "solpbc.site.home.readarticlesincorporationreadbylawsamendedrest",
-      "source": "72d7f8576e304e8e92caadc00920653bc213d5c6073adb530a7475c7ba01045a",
+      "source": "3b7c527a7d47bc58f53c0f798165117350f5ac0367e5701fbea30200f03987bb",
       "contract": "8a5ccf516e1ddd1e6845a51578bf3090e7732eef71f84117434e952b20202586",
       "protected": "af5570f5a1810b7af78caf4bc70a660f0df51e42baf91d4de5b2328de0e83dfc",
       "locales": []
@@ -1494,7 +1508,7 @@
     },
     {
       "id": "solpbc.site.home.rookeryopensourcepdsaiagentscloudflarenative",
-      "source": "f5bf41bfaf83679054c035b9c62a07b35b4eeaaa515149545d3ceb570979dd11",
+      "source": "94c77cc8543993c1483660e40d72deebe750d9b855b90585b66468ffbdb7d035",
       "contract": "8a5ccf516e1ddd1e6845a51578bf3090e7732eef71f84117434e952b20202586",
       "protected": "af5570f5a1810b7af78caf4bc70a660f0df51e42baf91d4de5b2328de0e83dfc",
       "locales": []
@@ -1529,14 +1543,14 @@
     },
     {
       "id": "solpbc.site.home.solstoneisapersonaljournalplatformthesol",
-      "source": "9fc547474088fe3ab049ec9853e3b1b7c54981376c2a4d956c957225dd8f1db6",
+      "source": "7e5de54c6f56ac92bd029bfd4c090f915bf1314a1c7d89ce01165568f55a0c8f",
       "contract": "8a5ccf516e1ddd1e6845a51578bf3090e7732eef71f84117434e952b20202586",
       "protected": "af5570f5a1810b7af78caf4bc70a660f0df51e42baf91d4de5b2328de0e83dfc",
       "locales": []
     },
     {
       "id": "solpbc.site.home.specificpublicbenefitpurposecorporationisadvan",
-      "source": "2ad944898df8e3b18b742dbb219aa9da66f404215290f6bf7a0109a2112d3152",
+      "source": "f8edfbe61355ba03faaf89c07c779c0127d883c6f31b5a357bcdfe307c025824",
       "contract": "8a5ccf516e1ddd1e6845a51578bf3090e7732eef71f84117434e952b20202586",
       "protected": "af5570f5a1810b7af78caf4bc70a660f0df51e42baf91d4de5b2328de0e83dfc",
       "locales": []
@@ -1564,7 +1578,7 @@
     },
     {
       "id": "solpbc.site.home.vitsocialcapabilitynetworkwheredevelopersaiag",
-      "source": "ca3ca9393147e531994911314fb6f7066e21017c2b983e901f86099ab995c71b",
+      "source": "7b9f99bab25c2e8734cdfab1975365d697ffdedfcf5b3a3d2387e211a4c9824d",
       "contract": "8a5ccf516e1ddd1e6845a51578bf3090e7732eef71f84117434e952b20202586",
       "protected": "af5570f5a1810b7af78caf4bc70a660f0df51e42baf91d4de5b2328de0e83dfc",
       "locales": []
@@ -1585,7 +1599,7 @@
     },
     {
       "id": "solpbc.site.home.wikipediablueskylinkedincontact",
-      "source": "8a82eb3067408127bcd7caa4cb157d0c5a302015096b3dea3ce4344a004d8208",
+      "source": "1ad95379f3063fa02de1ce75ea785832b4f9e0f4b2c6a1ce3da9bad2c0e30147",
       "contract": "8a5ccf516e1ddd1e6845a51578bf3090e7732eef71f84117434e952b20202586",
       "protected": "af5570f5a1810b7af78caf4bc70a660f0df51e42baf91d4de5b2328de0e83dfc",
       "locales": []
@@ -1620,7 +1634,7 @@
     },
     {
       "id": "solpbc.site.missing.n2026solpbcyourdataisneversold",
-      "source": "b554729ac3753eb3861c33718fcab7bfa15e7c4445e1f050ef6443c4448c964c",
+      "source": "411624c37abe01f200c5192ca3a4b4cacf0f4abf7fdf22ce1127208835259541",
       "contract": "8a5ccf516e1ddd1e6845a51578bf3090e7732eef71f84117434e952b20202586",
       "protected": "af5570f5a1810b7af78caf4bc70a660f0df51e42baf91d4de5b2328de0e83dfc",
       "locales": []

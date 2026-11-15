@@ -1,6 +1,6 @@
 {
   "description": "v̇ — the vit mark for terminals, CLIs, and readmes. unicode U+0076 U+0307 (a plain v plus a combining dot). worst-case fallback is the letter v — no tofu.",
-  "context": "protected bytes (hex, formula, domain, url, or the vit mark). not a defect. not rewritten. found as p.",
+  "context": "protected bytes (hex, formula, domain, url, or the vit mark). not a defect. not rewritten. found as p. Render the entire message once. Numbered [1]text[/1] markers wrap template-owned inline elements; keep each pair once, balanced, and move the words and pairs together. [1] is strong. [2] is span. [3] is span. [4] is span.",
   "surfaces": [
     "solpbc.org"
   ],
@@ -10,7 +10,7 @@
   "arguments": [],
   "format_intent": "text",
   "max_length": 154,
-  "source_revision": "24b33a2bf759fbcb5acad0f07737fece6cec23dbe35c7f1fcc145cfc2bb93adc",
+  "source_revision": "c55edc63f0e936926e699474c778ea257bfa1cd233ed6c7e58fb431f9e50626c",
   "risk": "routine",
   "auto_merge": true,
   "protected_slots": [
