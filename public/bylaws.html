@@ -96,6 +96,10 @@ h2 {
 .content p { margin-bottom: 1.5rem; }
 .content a { color: var(--orange-text-aa); text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 0.18em; }
 .content a:hover { text-decoration-thickness: 2px; }
+/* the adoption note sits above .content: same link treatment, and room before the contents box */
+.container > p:not([class]) { margin-bottom: 2rem; }
+.container > p:not([class]) a { color: var(--orange-text-aa); text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 0.18em; }
+.container > p:not([class]) a:hover { text-decoration-thickness: 2px; }
 .content strong { color: var(--ink); }
 .content hr {
     border: none;

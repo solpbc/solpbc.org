@@ -147,6 +147,8 @@ h3 {
     .content table:has(th:nth-child(3)) :is(th, td):not(:first-child) { min-width: 14rem; }
     .content table:not(:has(th:nth-child(3))) td:last-child { overflow-wrap: anywhere; }
 }
+/* a date stays on one line */
+.content table.dated td:first-child { white-space: nowrap; }
 .content em {
     color: var(--ink-faint-paper);
     font-style: italic;
@@ -218,7 +220,7 @@ footer .copyright {
         <div class="content">
             <hr>
             <p>Changes to <a href="/privacy">our privacy policy</a>, newest first. The policy itself shows the most recent ones. In each row, <em>this page</em> means the policy.</p>
-            <div class="table-scroll" tabindex="0"><table>
+            <div class="table-scroll" tabindex="0"><table class="dated">
             <thead><tr><th>Date</th><th>Change</th></tr></thead>
             <tbody>
             <tr><td>2026-11-17</td><td><strong>One rewrite of the whole page, to make it shorter and easier to read.</strong> Each section now says what its service keeps by kind, and a new table, <a href="/privacy#retention">how long we keep each record</a>, puts the retention periods in one place. What the phone and watch apps reach for is described by kind. The page no longer describes how other companies' services work where that isn't ours to state, such as the push services phones use, or the hardware detail behind confidential processing. The confidential processing section no longer says the build your journal checks can't be changed without a release anyone can see; it says your journal trusts only the build pinned in solstone's open source code. Otherwise, who sees each record, how long it is kept, how it is deleted, and everything we will never do are unchanged. No processor added or removed. The binding covenants are unchanged.</td></tr>
