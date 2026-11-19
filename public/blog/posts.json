@@ -1,5 +1,26 @@
 [
   {
+    "title": "confidential processing: what your journal verifies, and what we're still working on",
+    "slug": "how-your-journal-checks-our-machine",
+    "date": "2026-11-18",
+    "author": "jer & extro",
+    "description": "we published a security whitepaper for confidential processing: what we've built so far, the gaps we know about and are working to close, and how it compares with other services.",
+    "tags": [
+      "trust",
+      "security",
+      "confidential processing"
+    ],
+    "word_count": 1991,
+    "reading_time": 10,
+    "unlisted": false,
+    "inline_images": [
+      "1b167d74f8a0615a7cfebccada00cea46b6ddeaa27a3e0a4a1064daa083b4153.webp",
+      "ba87544fb65707791bce751ba021f1dd4f20927908159f94eef808ad5d12fa8e.webp"
+    ],
+    "atproto_rkey": "3n2n5l23ugzjd",
+    "atproto_uri": "at://did:plc:kg5hlfyrdjmtiyymo57n7dpg/site.standard.document/3n2n5l23ugzjd"
+  },
+  {
     "title": "telling your journal it's wrong",
     "slug": "telling-your-journal-its-wrong",
     "date": "2026-11-11",

@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>confidential processing: what your journal verifies, and what we're still working on — sol pbc</title>
+    <meta name="description" content="we published a security whitepaper for confidential processing: what we've built so far, the gaps we know about and are working to close, and how it compares with other services.">
+    <link rel="canonical" href="https://solpbc.org/blog/how-your-journal-checks-our-machine/">
+    <meta property="og:title" content="confidential processing: what your journal verifies, and what we're still working on">
+    <meta property="og:description" content="we published a security whitepaper for confidential processing: what we've built so far, the gaps we know about and are working to close, and how it compares with other services.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://solpbc.org/blog/how-your-journal-checks-our-machine/">
+    <meta property="og:site_name" content="sol pbc">
+    <meta property="article:published_time" content="2026-11-18T00:00:00Z">
+    <meta property="article:author" content="jer &amp; extro">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="confidential processing: what your journal verifies, and what we're still working on">
+    <meta name="twitter:description" content="we published a security whitepaper for confidential processing: what we've built so far, the gaps we know about and are working to close, and how it compares with other services.">
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"confidential processing: what your journal verifies, and what we're still working on","description":"we published a security whitepaper for confidential processing: what we've built so far, the gaps we know about and are working to close, and how it compares with other services.","datePublished":"2026-11-18T00:00:00Z","dateModified":"2026-11-18T00:00:00Z","author":{"@type":"Person","name":"Jeremie Miller"},"publisher":{"@type":"Organization","name":"sol pbc","url":"https://solpbc.org","logo":{"@type":"ImageObject","url":"https://solpbc.org/static/pbc-wordmark-512.png"}},"url":"https://solpbc.org/blog/how-your-journal-checks-our-machine/","mainEntityOfPage":{"@type":"WebPage","@id":"https://solpbc.org/blog/how-your-journal-checks-our-machine/"}}</script>
+    <link rel="alternate" type="application/atom+xml" title="sol pbc blog" href="/blog/feed.xml">
+    <link rel="site.standard.document" href="at://did:plc:kg5hlfyrdjmtiyymo57n7dpg/site.standard.document/3n2n5l23ugzjd">
+    <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="/static/favicon-32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/static/favicon-16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/static/apple-touch-icon.png">
+    <link rel="stylesheet" href="/static/tokens.css">
+    <style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+@font-face {
+    font-family: 'Comfortaa';
+    src: url('/blog/fonts/comfortaa-latin.woff2') format('woff2');
+    font-weight: 400 700;
+    font-display: swap;
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6,
+        U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC,
+        U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+    font-family: 'Comfortaa';
+    src: url('/blog/fonts/comfortaa-latin-ext.woff2') format('woff2');
+    font-weight: 400 700;
+    font-display: swap;
+    unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7,
+        U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F,
+        U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113,
+        U+2C60-2C7F, U+A720-A7FF;
+}
+
+body {
+    font-family: system-ui, -apple-system, sans-serif;
+    background: var(--paper);
+    color: var(--ink-soft-paper);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+.container {
+    max-width: 600px;
+    width: 90vw;
+    margin: 0 auto;
+    padding: 0 0 2rem;
+}
+
+/* --- navigation --- */
+nav {
+    padding: 2rem 0 1.5rem;
+    font-size: 0.9rem;
+}
+nav a {
+    color: var(--orange-text-aa);
+    text-decoration: none;
+}
+nav a:hover {
+    text-decoration: underline;
+}
+nav .sep {
+    color: var(--hairline-2);
+    margin: 0 0.4rem;
+}
+
+/* --- headings --- */
+h1 {
+    font-family: var(--font-display);
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    color: var(--ink);
+    line-height: 1.3;
+    margin-bottom: 0.5rem;
+}
+h2 {
+    font-family: var(--font-display);
+    font-size: 1.4rem;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    color: var(--ink);
+    margin: 2.5rem 0 1rem;
+}
+h3 {
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: var(--ink);
+    margin: 2rem 0 0.75rem;
+}
+h4, h5, h6 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--ink);
+    margin: 1.5rem 0 0.5rem;
+}
+
+/* --- article body --- */
+article p  { margin-bottom: 1.5rem; }
+article ul,
+article ol { margin-bottom: 1.5rem; padding-left: 1.5rem; }
+article li { margin-bottom: 0.5rem; }
+article a  { color: var(--orange-text-aa); text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 0.18em; }
+article a:hover { text-decoration-thickness: 2px; }
+
+article blockquote {
+    border-left: 3px solid var(--orange);
+    padding-left: 1rem;
+    margin: 1.5rem 0;
+    color: var(--ink-faint-paper);
+    font-style: italic;
+}
+
+article pre {
+    background: var(--cream-bright);
+    padding: 1rem;
+    border-radius: 4px;
+    overflow-x: auto;
+    margin-bottom: 1.5rem;
+    font-size: 0.88rem;
+    line-height: 1.5;
+}
+article code {
+    font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+    font-size: 0.9em;
+}
+article p code,
+article li code {
+    background: var(--cream-bright);
+    padding: 0.15rem 0.4rem;
+    border-radius: 3px;
+}
+
+article img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+    margin: 1.5rem 0;
+    display: block;
+}
+article strong { color: var(--ink); }
+article hr {
+    border: none;
+    border-top: 1px solid var(--hairline);
+    margin: 2rem 0;
+}
+article table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 1.5rem;
+    table-layout: auto;
+}
+article th {
+    font-weight: 600;
+    text-align: left;
+    padding: 0.6rem 0.75rem;
+    border-bottom: 2px solid var(--hairline-2);
+}
+article td {
+    padding: 0.6rem 0.75rem;
+    border-bottom: 1px solid var(--hairline);
+}
+/* A long unbroken cell (a URL as link text) must wrap, or the table pushes
+   past the column on a phone. `anywhere`, unlike `break-word`, lowers the
+   cell's min-content width, which is what auto table layout sizes from. */
+article th,
+article td {
+    overflow-wrap: anywhere;
+}
+
+/* --- metadata line --- */
+.meta {
+    color: var(--ink-faint-paper);
+    font-size: 0.9rem;
+    margin-bottom: 2.5rem;
+}
+
+/* --- footer --- */
+footer {
+    padding: 3rem 0 2rem;
+    border-top: 1px solid var(--hairline);
+    margin-top: 3rem;
+    font-size: 0.9rem;
+}
+footer a {
+    color: var(--orange-text-aa);
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 0.18em;
+}
+footer a:hover {
+    text-decoration-thickness: 2px;
+}
+footer .copyright {
+    color: var(--ink-faint-paper);
+    font-size: 0.85rem;
+    margin-top: 1rem;
+}
+
+/* --- index page --- */
+.blog-title {
+    margin-bottom: 2rem;
+}
+.post-list {
+    list-style: none;
+    padding: 0;
+}
+.post-item {
+    margin-bottom: 2.5rem;
+}
+.post-item h2 {
+    font-size: 1.25rem;
+    margin: 0 0 0.3rem;
+    letter-spacing: 0.03em;
+}
+.post-item h2 a {
+    color: var(--ink);
+    text-decoration: none;
+}
+.post-item h2 a:hover {
+    color: var(--orange-text-aa);
+}
+.post-item .meta {
+    margin-bottom: 0.5rem;
+}
+.post-item .description {
+    color: var(--ink-soft-paper);
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+/* --- responsive --- */
+@media (max-width: 480px) {
+    h1 { font-size: 1.6rem; }
+    h2 { font-size: 1.2rem; }
+    nav { padding: 1.5rem 0 1rem; }
+    .meta { font-size: 0.85rem; }
+    article th,
+    article td { padding: 0.5rem 0.4rem; }
+}
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <a href="/blog/">← blog</a><span class="sep">·</span><a href="/">sol pbc</a>
+        </nav>
+        <article>
+            <h1>confidential processing: what your journal verifies, and what we're still working on</h1>
+            <div class="meta">2026-11-18 · jer &amp; extro · 10 min read</div>
+<p>first, our primary goal is for you to be able to run everything locally, including the model that reads your words so it can organize your journal for you. while this is possible with most mainstream computers today, not everyone has a new enough computer to be able to run our small embedded model locally. so we also offer the same model in the cloud, through a service we call confidential processing.</p>
+<p>we take the privacy of this confidential processing very seriously.</p>
+<p>the goal is world-class confidential processing: protection for your privacy that is fully verifiable, so you can check it yourself and take nobody&rsquo;s word for it, ours included. and it still has to do its job, which is taking heavy work off your machine efficiently.</p>
+<p>today we&rsquo;re publishing a security whitepaper that shows how far along we are: <a href="https://trust.solstone.app/static/confidential-processing-whitepaper.pdf">confidential processing in solstone: how your journal checks the service before it sends</a>.</p>
+<p style="text-align: center;"><a href="https://trust.solstone.app/static/confidential-processing-whitepaper.pdf"><img src="https://solpbc.org/blog/how-your-journal-checks-our-machine/images/ba87544fb65707791bce751ba021f1dd4f20927908159f94eef808ad5d12fa8e.webp" alt="the cover page of the whitepaper: confidential processing in solstone, how your journal checks the service before it sends. version 2.0, state as of 18 november 2026." style="display: block; margin: 0 auto; width: 260px; max-width: 70%; border: 1px solid #d8cdb8; box-shadow: 0 2px 10px rgba(0,0,0,0.12);"></a></p>
+
+<p>confidential processing is the optional, paid service for work your own machine is too small for. your journal sends one piece of work (the text, images or audio a model has to read) to the same model you would run locally, but we run it for you on confidential hardware in Microsoft Azure. the rest of your journal stays on your device.</p>
+<h2>what we&rsquo;ve built so far</h2>
+<p>your journal does the whole check itself, on your device. before it sends a credential or any content, it asks our machine for signed hardware evidence and verifies it: AMD&rsquo;s signature on the processor&rsquo;s report, a fresh signed statement from the machine&rsquo;s virtual TPM of what it booted, and the GPU&rsquo;s own evidence against NVIDIA&rsquo;s roots. it reads the processor&rsquo;s firmware level from the chip&rsquo;s own certificate and refuses anything below a minimum.</p>
+<p>the values your journal compares against are compiled into the open source release you installed, so we can&rsquo;t change what your journal accepts without visibly shipping everyone a new release. if any check fails, your journal sends nothing and doesn&rsquo;t fall back to anything else.</p>
+<p>the encrypted session is tied to the machine too, and we&rsquo;re proud of how: the machine signs a second statement over a value both ends derive from the live TLS session, so your journal knows the session it holds ends inside the machine it just verified.</p>
+<p>the machine boots one disk image, and we removed the ways to run commands on it: no SSH, no login and no agent the cloud can send commands to. there&rsquo;s no way for us to log in. the image is built from a <a href="https://github.com/solpbc/conf-proc">public recipe</a> with every input pinned by its hash, and anyone can recompute the measurements our image determines from the boot file we publish. the model runs inside this image, with no third-party AI provider in the path.</p>
+<p>and you can check our work. each statement in the paper that the design depends on points at a line of code at a fixed commit or a published record. where one rests only on our own testing, the paper says so, and section 11 sets out the limits.</p>
+<h2>the gaps we know about</h2>
+<p>we&rsquo;re not there yet. these are the gaps we know about, and we&rsquo;ll keep working until we&rsquo;ve closed them all.</p>
+<p><strong>planned for the next image, and the journal release that goes with it:</strong></p>
+<ul>
+<li>the model server keeps a prompt cache for each journal (saved state from recent prompts, which makes repeated work faster), and nothing clears it until it is pushed out or the machine restarts. we plan to tie it to one connection and release it when that connection closes.</li>
+<li>the model server also has a second cache, for pictures, that isn&rsquo;t separated by journal (we read this in its source). it gets the same treatment, or gets turned off.</li>
+<li>your journal accepts three processor families where our machines use one. it will accept the one, and check more of the configuration the processor signs. the image will also turn on the kernel&rsquo;s lockdown mode explicitly.</li>
+<li>the firmware minimum is the level our machines reported when the image was qualified, which may not be AMD&rsquo;s newest. we plan to raise it when the next image&rsquo;s machines report a higher level.</li>
+</ul>
+<p><strong>later, with no date yet:</strong></p>
+<ul>
+<li>a public append-only log (it can be added to and never rewritten), held outside our control, that your journal checks before it sends. today every key that signs our public records sits inside one boundary we control.</li>
+<li>evidence that ties a machine to us. today nothing in the evidence says a machine is ours, or where it is.</li>
+<li>anonymity from us. today no outside relay hides your network address, and our services portal sees your credential on each connection.</li>
+<li>AMD&rsquo;s list of revoked certificates. your journal doesn&rsquo;t check it today. we plan to have the service keep a current copy of AMD&rsquo;s signed list, which your journal verifies each time it connects.</li>
+<li>padding for streamed answers. today their sizes and timing show on the network.</li>
+<li>post-quantum key agreement, so traffic recorded today can&rsquo;t be read later by someone with a large enough quantum computer.</li>
+</ul>
+<p><strong>needs people who aren&rsquo;t us:</strong> an independent rebuild of the image, and an outside security audit of the design. neither has happened yet. we plan on both after we close the known gaps.</p>
+<p>no single piece of this kind of design proves the whole. hardware evidence shows what a machine booted. the public recipe shows what that image is built to do, which is to write nothing you send to storage and to send it nowhere else. the values compiled into your journal, and the records we sign and publish, tie the two together. together they are evidence that the machine is running the build we published. none of them watches what that software does afterwards, so &ldquo;nothing you send is kept&rdquo; rests on the build.</p>
+<p>an image is also fixed at build time. this week we put a new image into service. the one before it has two security flaws, one in the kernel and one in how the model server loads media. the new image fixes both (<a href="https://transparency.solstone.app/software/spp/1630bf4/RELEASE-NOTES.md">release notes</a>). the old one keeps serving, with both, while journals update, and a current journal may be served by either.</p>
+<h2>how it compares</h2>
+<p>several large model providers offer &ldquo;zero data retention&rdquo; as an agreement: a promise not to keep your prompts, with nothing for your software to check. a smaller group runs the model on confidential hardware and lets the software on your side check evidence before it sends. we&rsquo;re in that group: ahead on two rows, level on five, and not there yet on the rest.</p>
+<p><img alt="a colour-coded grid comparing solstone with Apple Private Cloud Compute, Meta Private Processing, Tinfoil, Privatemode and a contract-only promise. rows where solstone says yes: client checks hardware evidence, session tied to the checked machine, second proof over the live session, client checks the GPU's evidence itself, nothing fetched during the check, client enforces a firmware minimum, no remote login in the image. open reproducible build: partial. prompt cache bounded or client-keyed: next. rows where solstone says planned: client enforces a public log, evidence tied to operator's machines, hides who is asking, independent audit published. the notes below give the specifics." src="https://solpbc.org/blog/how-your-journal-checks-our-machine/images/1b167d74f8a0615a7cfebccada00cea46b6ddeaa27a3e0a4a1064daa083b4153.webp"></p>
+<p>in our column, <em>next</em> and <em>planned</em> both mean not built yet: <em>next</em> is planned for the next image, <em>planned</em> has no date. we can only speak to our own plans, so the other columns show what each service has published today. <em>not found</em> means we did not find it in what the service has published. it does not mean no. <em>n/a</em> means there is no check for the row to apply to.</p>
+<ol>
+<li>each of the five ties the session to a key named in the evidence.</li>
+<li>ours signs a second statement over a value both ends derive from the live TLS session. Meta makes one report per connection, which includes a random value from the TLS handshake. Apple, Tinfoil and Privatemode name a key in the evidence and stop there.</li>
+<li>your journal verifies the GPU&rsquo;s evidence against NVIDIA&rsquo;s roots on your device. Meta, Tinfoil and Privatemode verify the GPU inside the machine, and their clients rely on the processor&rsquo;s evidence for that. Apple&rsquo;s own-silicon nodes have no separate GPU evidence. for its Google Cloud nodes, which use NVIDIA GPUs, the device or an Apple node acting for it checks the GPU&rsquo;s evidence.</li>
+<li>Apple&rsquo;s device checks proofs that arrive with the evidence against a log state it downloads daily. Meta&rsquo;s client carries what it needs. Tinfoil&rsquo;s client fetches the measurements to accept on each connection, and Privatemode&rsquo;s fetches a manifest.</li>
+<li>Meta&rsquo;s client also carries AMD&rsquo;s revocation lists.</li>
+<li>each of the other four has stated exceptions. Apple keeps a fixed diagnostics service reachable only from the node&rsquo;s own management controller. Meta has an attested diagnostics service. Tinfoil has a debug mode that fails attestation. for Privatemode we found the platform&rsquo;s rule against starting extra processes in a container, and no statement about the machine image itself.</li>
+<li>ours: the recipe, the hash of every input and the measurements are public, and our own two builds matched. nobody outside sol pbc has rebuilt it. Apple publishes binaries and source for a subset of components. Meta says it will release its artifacts to eligible researchers.</li>
+<li>ours is kept apart per journal by a label our services portal supplies. Apple: no state shared across requests, and per-owner caches are encrypted under keys the device supplies. Meta: persistent cache off. Tinfoil and Privatemode: keyed with a secret the client holds.</li>
+<li>Apple&rsquo;s device sends only to software that appears in a public append-only log. Meta&rsquo;s client checks against a signed log kept by an outside party, which Meta calls a simple log, not a Merkle-tree ledger. Tinfoil&rsquo;s client verifies a Sigstore signature; we did not find that it checks the log entry. our records are signed, with no such log.</li>
+<li>Apple&rsquo;s log records each machine&rsquo;s identity and the device checks it. Privatemode&rsquo;s client enforces a list of machines. Meta publishes its host identities, and we did not find a step where its client checks them.</li>
+<li>Apple and Meta use an outside relay, with unlinkable tokens (Apple) or anonymous credentials (Meta). Meta says some requests can go direct, which can show a network address.</li>
+<li>Meta has a public review by Trail of Bits, and one by NCC Group of a service built on it. Privatemode&rsquo;s reports are available on request. Apple publishes an auditor&rsquo;s report on its hardware certificate ceremonies only. Tinfoil has a SOC 2 report.</li>
+</ol>
+<p>this is our reading of each service&rsquo;s own documentation and the public audit reports, read on 18 november 2026. most are listed in the paper&rsquo;s appendix e. we did not test any of them. the last column is a &ldquo;zero data retention&rdquo; agreement, granted on request and with stated exceptions.</p>
+<h2>tell us where it&rsquo;s weak</h2>
+<p>if you work on confidential computing and think something in it is wrong or missing, write to security@solpbc.org. as each gap closes, the paper&rsquo;s changelog will record it, with the image or journal release that carries the fix.</p>
+<hr>
+<p><em>sol pbc is a public benefit corporation. the promises about your data live in article 8 of our filed articles of incorporation, not in a policy we could quietly change: it can&rsquo;t be amended without jer&rsquo;s personal signature, and after him the language can only get stronger, never weaker. <a href="https://solpbc.org/blog/on-your-side/">what that means</a>.</em></p>
+        </article>
+        <footer>
+            <a href="/blog/">← back to blog</a>
+            <p class="copyright">© 2026 sol pbc · solpbc.org · sol pbc, solstone, and vit are trademarks of sol pbc.</p>
+        </footer>
+    </div>
+</body>
+</html>
