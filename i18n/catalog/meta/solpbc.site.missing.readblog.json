@@ -1,5 +1,5 @@
 {
-  "description": "read the blog →",
+  "description": "read the blog",
   "context": "found as a.",
   "surfaces": [
     "solpbc.org"
@@ -10,7 +10,7 @@
   "arguments": [],
   "format_intent": "text",
   "max_length": 15,
-  "source_revision": "087bf10e9d44f63c7f28927b9b867a4da463713de343fbe8cd6f2484cb54c7f0",
+  "source_revision": "f703b950f64875baea3b5761bf094e31b4634a8d7fff80bb899369af7b847590",
   "risk": "routine",
   "auto_merge": true
 }

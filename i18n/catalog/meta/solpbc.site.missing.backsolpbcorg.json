@@ -1,5 +1,5 @@
 {
-  "description": "back to solpbc.org →",
+  "description": "back to solpbc.org",
   "context": "protected bytes (hex, formula, domain, url, or the vit mark). not a defect. not rewritten. found as a.",
   "surfaces": [
     "solpbc.org"
@@ -10,7 +10,7 @@
   "arguments": [],
   "format_intent": "text",
   "max_length": 20,
-  "source_revision": "bb48c21048d2b1cdff064a1b75041a571eaf6b45fc28f533ce2104ae9740b0fc",
+  "source_revision": "85b1aa245f76837b57114ea26c30210ba83b138a123538d771bc12715b2ea8ee",
   "risk": "routine",
   "auto_merge": true,
   "protected_slots": [

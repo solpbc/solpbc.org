@@ -472,11 +472,11 @@ solpbc.site.home.wikipediablueskylinkedincontact = [1]wikipedia[/1] · [2]bluesk
 
 solpbc.site.home.yourdataisneversold = your data is never sold
 
-solpbc.site.missing.backsolpbcorg = back to { $dom1 } →
+solpbc.site.missing.backsolpbcorg = back to { $dom1 }
 
-solpbc.site.missing.brandassets = brand assets →
+solpbc.site.missing.brandassets = brand assets
 
-solpbc.site.missing.contactus = contact us →
+solpbc.site.missing.contactus = contact us
 
 solpbc.site.missing.n2026solpbcyourdataisneversold = © 2026 [1]sol pbc[/1] · your data is never sold — binding charter covenants protect it. sol pbc, solstone, and vit are trademarks of sol pbc.
 
@@ -484,7 +484,7 @@ solpbc.site.missing.pagenotfound = page not found.
 
 solpbc.site.missing.pagenotfoundsolpbc = page not found — sol pbc
 
-solpbc.site.missing.readblog = read the blog →
+solpbc.site.missing.readblog = read the blog
 
 solpbc.site.missing.thispagedoesntexistbuteverythingsol = this page doesn't exist — but everything sol pbc stands for still does. here's the way back:
 

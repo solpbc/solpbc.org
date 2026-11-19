@@ -1613,21 +1613,21 @@
     },
     {
       "id": "solpbc.site.missing.backsolpbcorg",
-      "source": "bb48c21048d2b1cdff064a1b75041a571eaf6b45fc28f533ce2104ae9740b0fc",
+      "source": "85b1aa245f76837b57114ea26c30210ba83b138a123538d771bc12715b2ea8ee",
       "contract": "8a5ccf516e1ddd1e6845a51578bf3090e7732eef71f84117434e952b20202586",
       "protected": "95b0ef6f73906bf9f17fd786f44f64be354d74959bc040bf4a58513d005738d9",
       "locales": []
     },
     {
       "id": "solpbc.site.missing.brandassets",
-      "source": "0057c74755a7f22799f4d9393f91030563683dc6f66ff2b440aad99d3203f710",
+      "source": "521ff0c7d58b2a1995de8eb758213212c05a81b1a28efaacbd11ca9c296cbb25",
       "contract": "8a5ccf516e1ddd1e6845a51578bf3090e7732eef71f84117434e952b20202586",
       "protected": "af5570f5a1810b7af78caf4bc70a660f0df51e42baf91d4de5b2328de0e83dfc",
       "locales": []
     },
     {
       "id": "solpbc.site.missing.contactus",
-      "source": "27ab49b0692e6fd925f14068e684ee65dd5ae0bc8b4a93523125742bf5842a04",
+      "source": "fb253574b6819351f23be38cf8d8d1ca76754033214f87ba59dddd8131d4cc79",
       "contract": "8a5ccf516e1ddd1e6845a51578bf3090e7732eef71f84117434e952b20202586",
       "protected": "af5570f5a1810b7af78caf4bc70a660f0df51e42baf91d4de5b2328de0e83dfc",
       "locales": []
@@ -1655,7 +1655,7 @@
     },
     {
       "id": "solpbc.site.missing.readblog",
-      "source": "087bf10e9d44f63c7f28927b9b867a4da463713de343fbe8cd6f2484cb54c7f0",
+      "source": "f703b950f64875baea3b5761bf094e31b4634a8d7fff80bb899369af7b847590",
       "contract": "8a5ccf516e1ddd1e6845a51578bf3090e7732eef71f84117434e952b20202586",
       "protected": "af5570f5a1810b7af78caf4bc70a660f0df51e42baf91d4de5b2328de0e83dfc",
       "locales": []

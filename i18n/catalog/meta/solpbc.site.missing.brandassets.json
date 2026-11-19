@@ -1,5 +1,5 @@
 {
-  "description": "brand assets →",
+  "description": "brand assets",
   "context": "found as a.",
   "surfaces": [
     "solpbc.org"
@@ -10,7 +10,7 @@
   "arguments": [],
   "format_intent": "text",
   "max_length": 14,
-  "source_revision": "0057c74755a7f22799f4d9393f91030563683dc6f66ff2b440aad99d3203f710",
+  "source_revision": "521ff0c7d58b2a1995de8eb758213212c05a81b1a28efaacbd11ca9c296cbb25",
   "risk": "routine",
   "auto_merge": true
 }

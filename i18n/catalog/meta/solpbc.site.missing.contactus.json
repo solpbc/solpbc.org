@@ -1,5 +1,5 @@
 {
-  "description": "contact us →",
+  "description": "contact us",
   "context": "found as a.",
   "surfaces": [
     "solpbc.org"
@@ -10,7 +10,7 @@
   "arguments": [],
   "format_intent": "text",
   "max_length": 12,
-  "source_revision": "27ab49b0692e6fd925f14068e684ee65dd5ae0bc8b4a93523125742bf5842a04",
+  "source_revision": "fb253574b6819351f23be38cf8d8d1ca76754033214f87ba59dddd8131d4cc79",
   "risk": "routine",
   "auto_merge": true
 }
