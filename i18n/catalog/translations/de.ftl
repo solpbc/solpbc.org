@@ -248,7 +248,7 @@ solpbc.site.brands.solstonemarkalt = solstone-Signet
 
 solpbc.site.brands.solstonemarkelement1 = solstone
 
-solpbc.site.brands.solstonemarkelement2 = Signet
+solpbc.site.brands.solstonemarkelement2 = mark
 
 solpbc.site.brands.stickerlockup = Aufkleber-Komposition
 
