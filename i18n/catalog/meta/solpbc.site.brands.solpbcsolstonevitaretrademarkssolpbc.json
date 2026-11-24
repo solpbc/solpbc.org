@@ -11,6 +11,6 @@
   "format_intent": "text",
   "max_length": 53,
   "source_revision": "92247dcc20ef532f315e16f76238f58f0f9d8fb2b4a64cbac22d0731a0ce47da",
-  "risk": "legal",
+  "risk": "consent",
   "auto_merge": false
 }

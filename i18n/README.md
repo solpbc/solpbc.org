@@ -36,3 +36,7 @@ Text is escaped before template elements are inserted. Attribute tokens escape a
 ## scope
 
 Home, contact, thanks, 404, brands and the contact-handler sentences are generated. Blog, legal pages, talks, PDFs, governance documents, the sitemap and downloadable brand assets stay outside the build. The hidden contact-field label `company` remains a literal.
+
+## Draft locales
+
+`es-419` is registered in the pinned locale registry as a draft locale (`development` released, `production` withheld). Draft translations live in `catalog/translations/es-419.ftl` (or sharded files under `catalog/translations/es-419/`), and production builds exclude them. Unapproved legal and statutory messages stay absent from draft translation files and fall back to English in development builds. When editing English prose, run `i18n-catalog lock` to refresh `source-lock.json`, copy each changed `source` hash into its sidecar `source_revision`, and do not pass `--acknowledge es-419`: leaving the prior acknowledgment untouched marks edited draft entries stale until a translator updates them.
