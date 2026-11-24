@@ -1,17 +1,51 @@
 #!/usr/bin/env node
 import { spawnSync } from 'node:child_process';
 import { createHash } from 'node:crypto';
-import { readFileSync, readdirSync, writeFileSync, mkdtempSync, rmSync, cpSync } from 'node:fs';
+import { readFileSync, readdirSync, writeFileSync, mkdtempSync, rmSync, cpSync, mkdirSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { dirname, join, resolve } from 'node:path';
 import { fileURLToPath, pathToFileURL } from 'node:url';
 import { buildPages } from './render-pages.mjs';
 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), '..');
-const write = process.argv.includes('--write');
-const compiler = process.env.I18N_CATALOG;
-if (write && !compiler) throw new Error('--write requires I18N_CATALOG pointing to the pinned compiler');
+const args = process.argv.slice(2);
+const write = args.includes('--write');
+const dev = args.includes('--dev');
+function flagValue(name, fallback = null) {
+  const idx = args.indexOf(name);
+  return idx >= 0 && idx + 1 < args.length ? args[idx + 1] : fallback;
+}
+const compiler = process.env.I18N_CATALOG || process.env.I18N_COMPILER;
+if ((write || dev) && !compiler) throw new Error('--write / --dev requires I18N_CATALOG pointing to the pinned compiler');
 const generated = join(root, 'i18n/generated');
+if (dev) {
+  const locale = flagValue('--locale', 'es-419');
+  const outDir = resolve(root, flagValue('--out', '.dev-pages'));
+  const temp = mkdtempSync(join(tmpdir(), 'solpbc-i18n-dev-'));
+  try {
+    const targetsOut = join(temp, 'targets');
+    const result = spawnSync(
+      compiler,
+      ['targets', join(root, 'i18n/catalog'), '--channel', 'development', '--fallback-stale', '--locale', locale, '--target', 'esm', '--out', targetsOut],
+      { encoding: 'utf8' },
+    );
+    if (result.status !== 0) throw new Error(`Catalog compiler failed: ${result.error || result.stderr || result.stdout}`);
+    const { render } = await import(pathToFileURL(join(targetsOut, 'esm/solpbc-org/api.mjs')).href);
+    const pages = buildPages(root, render, locale);
+    rmSync(outDir, { recursive: true, force: true });
+    mkdirSync(outDir, { recursive: true });
+    cpSync(join(root, 'public'), join(outDir, 'public'), { recursive: true });
+    for (const [name, built] of pages) {
+      const dest = join(outDir, name);
+      mkdirSync(dirname(dest), { recursive: true });
+      writeFileSync(dest, built);
+    }
+    console.log(`ok dev ${pages.size} rendered pages (${locale}) -> ${outDir}`);
+  } finally {
+    rmSync(temp, { recursive: true, force: true });
+  }
+  process.exit(0);
+}
 function files(base, rel = '') {
   return readdirSync(join(base, rel), {withFileTypes:true}).flatMap(e => e.isDirectory() ? files(base, join(rel,e.name)) : [join(rel,e.name)]).sort();
 }

@@ -373,13 +373,7 @@ solpbc.site.contact.gettouch = get in touch
 
 solpbc.site.contact.gettouchsolpbcyourmessagegoesjer = get in touch with sol pbc. your message goes to jer.
 
-solpbc.site.contact.internalerror = internal error
-
-solpbc.site.contact.invalidrequestbody = invalid request body
-
 solpbc.site.contact.lotmessagescameherejustnowpleasewait = a lot of messages came from here just now. please wait a minute, then send again.
-
-solpbc.site.contact.messageisrequired = message is required
 
 solpbc.site.contact.messagesent = message sent
 
@@ -392,17 +386,9 @@ solpbc.site.contact.send = { $state ->
 
 solpbc.site.contact.solpbcdoesnttrackyoudoesnt = sol pbc doesn't track you, doesn't use analytics, and files its privacy covenants with the state. your email reaches us so we can answer you. [1]read our privacy policy[/1].
 
-solpbc.site.contact.submissionrejected = submission rejected
-
 solpbc.site.contact.thanksreachingoutjerwillgetbackyou = thanks for reaching out. jer will get back to you.
 
 solpbc.site.contact.thatdidntsendpleasetryagainor = that didn't send. please try again, or email jer at solpbc dot org.
-
-solpbc.site.contact.toomanyrequests = too many requests
-
-solpbc.site.contact.validemailisrequired = valid email is required
-
-solpbc.site.contact.verificationfailed = verification failed
 
 solpbc.site.contact.whatsyourmind = what's on your mind? [1]*[/1]
 

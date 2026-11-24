@@ -17,8 +17,8 @@
 
     // Raw worker error codes (worker.js handleContact) are never shown as-is.
     function messageFor(error) {
-        if (error === %%js:solpbc.site.contact.verificationfailed%%) return MESSAGES.verification;
-        if (error === %%js:solpbc.site.contact.toomanyrequests%%) return MESSAGES.rateLimited;
+        if (error === "verification failed") return MESSAGES.verification;
+        if (error === "too many requests") return MESSAGES.rateLimited;
         return MESSAGES.generic;
     }
 

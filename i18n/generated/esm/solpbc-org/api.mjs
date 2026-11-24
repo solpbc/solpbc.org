@@ -1149,26 +1149,8 @@ const MESSAGES = {
     arguments: [
     ],
   },
-  "solpbc.site.contact.internalerror": {
-    resourceKey: "m736f6c7062632e736974652e636f6e746163742e696e7465726e616c6572726f72",
-    formatIntent: "text",
-    arguments: [
-    ],
-  },
-  "solpbc.site.contact.invalidrequestbody": {
-    resourceKey: "m736f6c7062632e736974652e636f6e746163742e696e76616c696472657175657374626f6479",
-    formatIntent: "text",
-    arguments: [
-    ],
-  },
   "solpbc.site.contact.lotmessagescameherejustnowpleasewait": {
     resourceKey: "m736f6c7062632e736974652e636f6e746163742e6c6f746d6573736167657363616d65686572656a7573746e6f77706c6561736577616974",
-    formatIntent: "text",
-    arguments: [
-    ],
-  },
-  "solpbc.site.contact.messageisrequired": {
-    resourceKey: "m736f6c7062632e736974652e636f6e746163742e6d65737361676569737265717569726564",
     formatIntent: "text",
     arguments: [
     ],
@@ -1206,12 +1188,6 @@ const MESSAGES = {
     arguments: [
     ],
   },
-  "solpbc.site.contact.submissionrejected": {
-    resourceKey: "m736f6c7062632e736974652e636f6e746163742e7375626d697373696f6e72656a6563746564",
-    formatIntent: "text",
-    arguments: [
-    ],
-  },
   "solpbc.site.contact.thanksreachingoutjerwillgetbackyou": {
     resourceKey: "m736f6c7062632e736974652e636f6e746163742e7468616e6b737265616368696e676f75746a657277696c6c6765746261636b796f75",
     formatIntent: "text",
@@ -1220,24 +1196,6 @@ const MESSAGES = {
   },
   "solpbc.site.contact.thatdidntsendpleasetryagainor": {
     resourceKey: "m736f6c7062632e736974652e636f6e746163742e746861746469646e7473656e64706c65617365747279616761696e6f72",
-    formatIntent: "text",
-    arguments: [
-    ],
-  },
-  "solpbc.site.contact.toomanyrequests": {
-    resourceKey: "m736f6c7062632e736974652e636f6e746163742e746f6f6d616e797265717565737473",
-    formatIntent: "text",
-    arguments: [
-    ],
-  },
-  "solpbc.site.contact.validemailisrequired": {
-    resourceKey: "m736f6c7062632e736974652e636f6e746163742e76616c6964656d61696c69737265717569726564",
-    formatIntent: "text",
-    arguments: [
-    ],
-  },
-  "solpbc.site.contact.verificationfailed": {
-    resourceKey: "m736f6c7062632e736974652e636f6e746163742e766572696669636174696f6e6661696c6564",
     formatIntent: "text",
     arguments: [
     ],

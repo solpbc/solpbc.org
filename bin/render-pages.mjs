@@ -60,6 +60,9 @@ export function buildPages(root, render, locale = 'en-US') {
         return inlineHTML(value, inline[id], mode === 'rich');
       });
       if (source.includes('%%')) throw new Error(`${name}: unresolved token`);
+      if (locale !== 'en-US' && name.endsWith('.html')) {
+        source = source.replace(/<html lang="en"/, `<html lang="${escapeHTML(locale)}"`);
+      }
       pages.set(name, source);
     }
   }
