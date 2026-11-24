@@ -242,7 +242,7 @@
   "i18n/catalog/meta/solpbc.site.missing.thispagedoesntexistbuteverythingsol.json": "9337301c1f11432a29b3b85ca804420e991e9524b723b0719199f477a1bc6d12",
   "i18n/catalog/source-lock.json": "6c4cb6d4310cfd8ccf55386c78b3d7c5755dc02b2c4ab7d18063d569de58a32d",
   "i18n/catalog/source/en-US.ftl": "01bb62dcd938afff3d7f748e52007881339950679bc1c50f60b63e3491937a33",
-  "i18n/catalog/translations/es-419.ftl": "181b8e469f0ccfbc9264324fc2fe75011ae7adb9bff0ee35d2b16d94c47a7c1d",
+  "i18n/catalog/translations/es-419.ftl": "5cfbe5dc5b50946c9c5da23a1ddbe39ee7f4f7d0057ef329162c370674cc2d5c",
   "i18n/generated/esm/solpbc-org/api.mjs": "988b9400b799621799a8026681819ffa07beb324149c31c5f8af5b760f82a840",
   "i18n/generated/esm/solpbc-org/catalogs.mjs": "af369a40456e2cf124c6ec30bfd1f2328c767b9ed55a832adcac04e28ff40516",
   "i18n/generated/esm/solpbc-org/en-US.ftl": "a247c38bb8b9eb837c3fedfb0d1872724adad14a937460c7bd44bb92266954c3",

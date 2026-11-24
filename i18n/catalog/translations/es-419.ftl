@@ -10,7 +10,7 @@ solpbc.site.brands.badgevitenabledflat = badge-vit-enabled-flat
 
 solpbc.site.brands.badgeviticononly = badge-vit-icon-only
 
-solpbc.site.brands.boxed = en un recuadro
+solpbc.site.brands.boxed = en recuadro
 
 solpbc.site.brands.brand = marca
 
@@ -208,13 +208,13 @@ solpbc.site.brands.readmebadges = insignias de readme
 
 solpbc.site.brands.readmemarkdown = markdown de readme
 
-solpbc.site.brands.recolored = con otro color
+solpbc.site.brands.recolored = recoloreado
 
 solpbc.site.brands.rgb = rgb
 
 solpbc.site.brands.rotated = con giro
 
-solpbc.site.brands.shadowed = con sombra
+solpbc.site.brands.shadowed = sombreado
 
 solpbc.site.brands.singlecolorblackprintlimitedcolor = negro de un solo color — impresión / color limitado
 
