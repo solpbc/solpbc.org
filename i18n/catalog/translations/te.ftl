@@ -224,7 +224,7 @@ solpbc.site.brands.slate = స్లేట్
 
 solpbc.site.brands.slogans = స్లోగన్‌లు
 
-solpbc.site.brands.social = సామాజికం
+solpbc.site.brands.social = సోషల్
 
 solpbc.site.brands.solpbc32pixels = 32 పిక్సెల్‌ల వద్ద sol pbc
 
