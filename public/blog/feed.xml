@@ -5,7 +5,72 @@
     <link href="https://solpbc.org/blog/feed.xml" rel="self"/>
     <link href="https://solpbc.org/blog/"/>
     <id>https://solpbc.org/blog/</id>
-    <updated>2026-11-18T00:00:00Z</updated>
+    <updated>2026-11-25T00:00:00Z</updated>
+    <entry>
+        <title>features galore</title>
+        <link href="https://solpbc.org/blog/features-galore/" rel="alternate"/>
+        <id>https://solpbc.org/blog/features-galore/</id>
+        <updated>2026-11-25T00:00:00Z</updated>
+        <author><name>jer &amp; extro</name></author>
+        <summary>everything solstone does, on one new page, shown on William Shakespeare's journal. plus agents that read only what you pick, a whole year at a glance, and more ways to bring your life in.</summary>
+        <content type="html">&lt;p&gt;there&amp;rsquo;s so much in solstone now that we built a page to hold it all: &lt;strong&gt;&lt;a href=&quot;https://solstone.app/features&quot;&gt;solstone.app/features&lt;/a&gt;&lt;/strong&gt;. the top ten come first, with screens, then the full list, which you can search or filter by the device you have.&lt;/p&gt;
+&lt;p&gt;every screen on it comes from a demo journal we wrote: a year in the life of William Shakespeare, 1595, kept on 2025 dates. &lt;a href=&quot;https://github.com/solpbc/william_journal&quot;&gt;the whole journal is public&lt;/a&gt;, so you can read the day behind any screen. the pictures in this post come from William&amp;rsquo;s year too.&lt;/p&gt;
+&lt;p&gt;and the list keeps growing. here&amp;rsquo;s what&amp;rsquo;s new in the 89 releases since our last update.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;new here?&lt;/strong&gt; solstone is a personal journal platform. the solstone app takes in what you share with it, and all of it goes into your journal, an open source, local-first memory that &lt;a href=&quot;https://solpbc.org/blog/your-agents-can-work-from-your-journal/&quot;&gt;your agents can work from&lt;/a&gt;. your journal lives on a device you own. &lt;strong&gt;get it on mac, windows or linux:&lt;/strong&gt; &lt;a href=&quot;https://solstone.app/download&quot;&gt;solstone.app/download&lt;/a&gt;. &lt;strong&gt;on your phone or tablet:&lt;/strong&gt; &lt;a href=&quot;https://solstone.app/mobile&quot;&gt;solstone.app/mobile&lt;/a&gt;.&lt;/p&gt;
+&lt;h2&gt;your agents read only what you pick&lt;/h2&gt;
+&lt;p&gt;the agent that helps with your meetings doesn&amp;rsquo;t need your photos. so each kind of material is now its own switch, per agent: body data, notes, documents, calendar, places, photos, and written messages, including a meeting&amp;rsquo;s chat. an agent you connected before these updates can&amp;rsquo;t read any of them until you turn them on for it on the agents page. a new connection starts with body ticked and the rest off. and with the newest journal, 2.0.91, cycle and pregnancy logs get a switch of their own under body, off for every agent, including the ones you already connected.&lt;/p&gt;
+&lt;p&gt;&lt;img alt=&quot;a connected agent's permissions in the journal: notes, documents, places and photos turned on, with three levels of location detail to choose from for places: exact locations, areas of about 1 km, or names only&quot; src=&quot;https://solpbc.org/blog/features-galore/images/aa1608cfd521752c26996d8df179a31f64b73ba8fbf2f2e153c9defcdfcce752.png&quot;&gt;&lt;/p&gt;
+&lt;p&gt;places gets one more choice: exact locations, areas about a kilometer across, or names only. exact is the default when you turn places on, and an agent that already had places stays at names only until you change it. at names only, William&amp;rsquo;s agent knows he spent the night &amp;ldquo;at High Wycombe&amp;rdquo;, and nothing about where in town. places you hid stay out at every level.&lt;/p&gt;
+&lt;p&gt;&lt;img alt=&quot;William's 27 march on his journal's map page: a night at High Wycombe, with Oxford on the way&quot; src=&quot;https://solpbc.org/blog/features-galore/images/17548352d7143e551d3d5edcb4aa35371ce545901d4faf80fcb6f88e6edf11ad.webp&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;William&amp;rsquo;s 27 march, as he sees it.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;an agent you let see photos now gets the picture itself, a smaller copy without location or camera details. &lt;a href=&quot;https://support.solstone.app/kb/connect-solstone-to-claude&quot;&gt;connecting your journal to Claude&lt;/a&gt; walks through the setup.&lt;/p&gt;
+&lt;h2&gt;your agent can suggest, you decide&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&quot;https://solpbc.org/blog/telling-your-journal-its-wrong/&quot;&gt;in our last update&lt;/a&gt;, you got a way to tell your journal it&amp;rsquo;s wrong. now a connected agent can point things out too, by suggesting a fix to who said a line, what happened, or a person&amp;rsquo;s name. it can also suggest that two people in your journal are really one. each suggestion waits on the suggestions page with the agent named, and nothing changes until you accept it.&lt;/p&gt;
+&lt;h2&gt;a whole year at a glance&lt;/h2&gt;
+&lt;p&gt;&lt;img alt=&quot;William's 2025 on the year page, each day colored by how many activities it holds&quot; src=&quot;https://solpbc.org/blog/features-galore/images/f62b0f882ef4f4a582fd1a53a5f152d7075a51fcd9b15d0e6b6782a440e07094.webp&quot;&gt;&lt;/p&gt;
+&lt;p&gt;here&amp;rsquo;s William&amp;rsquo;s year on the new year page, which shows a whole year of your journal at once: one view colors each day by how many activities or location records your journal holds for it, and the other lays out each place and each name as a row across the year&amp;rsquo;s weeks. find it under &amp;ldquo;more&amp;rdquo;.&lt;/p&gt;
+&lt;h2&gt;take back a stretch of time&lt;/h2&gt;
+&lt;p&gt;had an afternoon you&amp;rsquo;d rather not keep? on a day&amp;rsquo;s transcripts page, choose &amp;ldquo;delete a stretch of time&amp;rdquo; and pick a &amp;ldquo;from&amp;rdquo; and a &amp;ldquo;to&amp;rdquo;, on one day or across several. each device&amp;rsquo;s audio, screen and location from then, what you imported and your body data go to the trash together. recovering it puts all of it back.&lt;/p&gt;
+&lt;p&gt;&lt;img alt=&quot;the &amp;quot;delete a stretch of time?&amp;quot; dialog on William's 10 august 2025, set from 14:15 to 14:45. it says it will move everything from 14:10 to 14:48 to the trash, where it can be recovered until it's erased, with buttons to erase now, cancel, or move to trash&quot; src=&quot;https://solpbc.org/blog/features-galore/images/c1e882e0f47d65af544c49158882296a643bbc22433e845d978e048bfa029d00.png&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;William, about to take back half an hour of a sunday in Stratford. the journal shows exactly what it will move, 14:10 to 14:48, before anything goes.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;your journal also rewrites what it made from what you deleted: activities drop it at once, and the summaries of those days and weeks are written again from what&amp;rsquo;s left. and when you erase something from the trash on mac or linux, you can now also remove it from your backups, while the rest of each backup stays as it is.&lt;/p&gt;
+&lt;h2&gt;your screen, and your screenshots&lt;/h2&gt;
+&lt;p&gt;&lt;img alt=&quot;William's screen in his journal at 06:45 on 27 september, labelled &amp;quot;screenshot · your device · screen&amp;quot;: his writing app, Foul Papers, open on a page of his Romeo and Juliet draft, with the description his journal wrote beneath it&quot; src=&quot;https://solpbc.org/blog/features-galore/images/820b250b92838acf862477d4241dbcf3e53cff62a3997ce4db024cf5487539d7.png&quot;&gt;&lt;/p&gt;
+&lt;p&gt;that&amp;rsquo;s William&amp;rsquo;s screen at a quarter to seven on 27 september, Romeo and Juliet open in his writing app, and what his journal wrote about it underneath. your journal already keeps your screen like this. now the screenshots you take go in too, on every platform: the solstone app on linux, windows, iphone and ipad joins mac and android. on iphone and ipad, your Obsidian notes can come along too.&lt;/p&gt;
+&lt;h2&gt;more ways to bring your life in&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;chats and transcripts:&lt;/strong&gt; your journal now brings in exports from Telegram, Slack, Fireflies, MacWhisper, Whisper and Podcasting 2.0 directly (&lt;a href=&quot;https://github.com/solpbc/solstone-journal/releases/tag/v2.0.89&quot;&gt;the exact formats&lt;/a&gt;).&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Garmin and Plaud:&lt;/strong&gt; your journal can now sync Garmin Connect with your own Personal API key, for workouts, sleep, heart rate, steps and more. Plaud recordings now sync through Plaud&amp;rsquo;s own sign-in; if you used a web token before, sign in to keep syncing.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;any file, and it tells you how it&amp;rsquo;s going:&lt;/strong&gt; the solstone app on mac, windows and linux takes any file you import, and your journal decides what it can bring in. you can watch each one go from sending to done, and one your journal wants you to look over first, like an Apple Health export, opens its own review page.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;what your journal keeps:&lt;/strong&gt; from a new audio, PDF, chat or Evernote import, your journal keeps what it reads, not its own copy of the file. turn on &lt;strong&gt;keep originals&lt;/strong&gt; on the import screen if you want that copy.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;linux keeps itself up to date&lt;/h2&gt;
+&lt;p&gt;on linux, a journal installed the default way now updates itself once a day, from a signed release catalogue, and never restarts your journal to do it: the new version starts the next time your journal does. a journal you already have asks you first. you can also &lt;a href=&quot;https://solstone.app/install#linux-packages&quot;&gt;install and update it with apt, dnf or zypper&lt;/a&gt;.&lt;/p&gt;
+&lt;h2&gt;confidential processing&lt;/h2&gt;
+&lt;p&gt;the journal&amp;rsquo;s 2.0.85 update is a security fix for confidential processing: your journal now sends only to machines that booted the service&amp;rsquo;s current published build, and refuses one that booted the previous build. &lt;a href=&quot;https://github.com/solpbc/solstone-journal/releases/tag/v2.0.85&quot;&gt;its release note&lt;/a&gt; says what the previous build&amp;rsquo;s two flaws allowed. if you use confidential processing, update. how your journal checks our machine before it sends anything is in &lt;strong&gt;&lt;a href=&quot;https://solpbc.org/blog/how-your-journal-checks-our-machine/&quot;&gt;this post&lt;/a&gt;&lt;/strong&gt;.&lt;/p&gt;
+&lt;h2&gt;smaller things&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;your journal no longer describes a screen again when it looks the same as a few minutes earlier, so a quiet desk uses much less of the thinking you chose.&lt;/li&gt;
+&lt;li&gt;your journal can suggest profile pics for the people in your meetings, and you choose one or none. it&amp;rsquo;s on by default, and agents you connect get them too. you can turn off either one.&lt;/li&gt;
+&lt;li&gt;a link from your agent now opens your journal at that place, in the solstone app on mac, windows, linux, android, iphone and ipad.&lt;/li&gt;
+&lt;li&gt;on the body page you can hide a day of body data: search and activities leave it out, and connected agents can&amp;rsquo;t reach it.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;go see what else William&amp;rsquo;s journal can do: &lt;strong&gt;&lt;a href=&quot;https://solstone.app/features&quot;&gt;solstone.app/features&lt;/a&gt;&lt;/strong&gt;.&lt;/p&gt;
+&lt;h2&gt;what shipped&lt;/h2&gt;
+&lt;p&gt;89 releases between our last update and november 25:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;the journal&lt;/strong&gt;, on mac, windows and linux: 15 releases, 2.0.76 → 2.0.91 (there was no 2.0.77, and windows skipped 2.0.83), with signed release records at &lt;a href=&quot;https://trust.solstone.app/&quot;&gt;trust.solstone.app&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;the journal app for mac:&lt;/strong&gt; 15 releases, 2.0.76 → 2.0.91&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;the solstone app for mac:&lt;/strong&gt; 14 releases, 2.0.65 → 2.0.78&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;the solstone app for linux:&lt;/strong&gt; 14 releases, 2.0.40 → 2.0.53&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;the solstone app for windows:&lt;/strong&gt; 12 releases, 2.0.48 → 2.0.59&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;iphone, ipad and apple watch:&lt;/strong&gt; 2 releases, 2.0.12 and 2.0.13, on the App Store&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;android:&lt;/strong&gt; 14 releases, 2.1.42 → 2.1.55&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;android watches:&lt;/strong&gt; 3 releases, 1.0.0 → 1.0.2&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;em&gt;sol pbc is a public benefit corporation. the promises about your data live in article 8 of our filed articles of incorporation, not in a policy we could quietly change: it can&amp;rsquo;t be amended without jer&amp;rsquo;s personal signature, and after him the language can only get stronger, never weaker. &lt;a href=&quot;https://solpbc.org/blog/on-your-side/&quot;&gt;what that means&lt;/a&gt;.&lt;/em&gt;&lt;/p&gt;</content>
+    </entry>
     <entry>
         <title>confidential processing: what your journal verifies, and what we're still working on</title>
         <link href="https://solpbc.org/blog/how-your-journal-checks-our-machine/" rel="alternate"/>

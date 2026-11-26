@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>features galore — sol pbc</title>
+    <meta name="description" content="everything solstone does, on one new page, shown on William Shakespeare's journal. plus agents that read only what you pick, a whole year at a glance, and more ways to bring your life in.">
+    <link rel="canonical" href="https://solpbc.org/blog/features-galore/">
+    <meta property="og:title" content="features galore">
+    <meta property="og:description" content="everything solstone does, on one new page, shown on William Shakespeare's journal. plus agents that read only what you pick, a whole year at a glance, and more ways to bring your life in.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://solpbc.org/blog/features-galore/">
+    <meta property="og:site_name" content="sol pbc">
+    <meta property="article:published_time" content="2026-11-25T00:00:00Z">
+    <meta property="article:author" content="jer &amp; extro">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="features galore">
+    <meta name="twitter:description" content="everything solstone does, on one new page, shown on William Shakespeare's journal. plus agents that read only what you pick, a whole year at a glance, and more ways to bring your life in.">
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"features galore","description":"everything solstone does, on one new page, shown on William Shakespeare's journal. plus agents that read only what you pick, a whole year at a glance, and more ways to bring your life in.","datePublished":"2026-11-25T00:00:00Z","dateModified":"2026-11-25T00:00:00Z","author":{"@type":"Person","name":"Jeremie Miller"},"publisher":{"@type":"Organization","name":"sol pbc","url":"https://solpbc.org","logo":{"@type":"ImageObject","url":"https://solpbc.org/static/pbc-wordmark-512.png"}},"url":"https://solpbc.org/blog/features-galore/","mainEntityOfPage":{"@type":"WebPage","@id":"https://solpbc.org/blog/features-galore/"}}</script>
+    <link rel="alternate" type="application/atom+xml" title="sol pbc blog" href="/blog/feed.xml">
+    <link rel="site.standard.document" href="at://did:plc:kg5hlfyrdjmtiyymo57n7dpg/site.standard.document/3n36zno5qcwho">
+    <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="/static/favicon-32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/static/favicon-16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/static/apple-touch-icon.png">
+    <link rel="stylesheet" href="/static/tokens.css">
+    <style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+@font-face {
+    font-family: 'Comfortaa';
+    src: url('/blog/fonts/comfortaa-latin.woff2') format('woff2');
+    font-weight: 400 700;
+    font-display: swap;
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6,
+        U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC,
+        U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+    font-family: 'Comfortaa';
+    src: url('/blog/fonts/comfortaa-latin-ext.woff2') format('woff2');
+    font-weight: 400 700;
+    font-display: swap;
+    unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7,
+        U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F,
+        U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113,
+        U+2C60-2C7F, U+A720-A7FF;
+}
+
+body {
+    font-family: system-ui, -apple-system, sans-serif;
+    background: var(--paper);
+    color: var(--ink-soft-paper);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+.container {
+    max-width: 600px;
+    width: 90vw;
+    margin: 0 auto;
+    padding: 0 0 2rem;
+}
+
+/* --- navigation --- */
+nav {
+    padding: 2rem 0 1.5rem;
+    font-size: 0.9rem;
+}
+nav a {
+    color: var(--orange-text-aa);
+    text-decoration: none;
+}
+nav a:hover {
+    text-decoration: underline;
+}
+nav .sep {
+    color: var(--hairline-2);
+    margin: 0 0.4rem;
+}
+
+/* --- headings --- */
+h1 {
+    font-family: var(--font-display);
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    color: var(--ink);
+    line-height: 1.3;
+    margin-bottom: 0.5rem;
+}
+h2 {
+    font-family: var(--font-display);
+    font-size: 1.4rem;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    color: var(--ink);
+    margin: 2.5rem 0 1rem;
+}
+h3 {
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: var(--ink);
+    margin: 2rem 0 0.75rem;
+}
+h4, h5, h6 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--ink);
+    margin: 1.5rem 0 0.5rem;
+}
+
+/* --- article body --- */
+article p  { margin-bottom: 1.5rem; }
+article ul,
+article ol { margin-bottom: 1.5rem; padding-left: 1.5rem; }
+article li { margin-bottom: 0.5rem; }
+article a  { color: var(--orange-text-aa); text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 0.18em; }
+article a:hover { text-decoration-thickness: 2px; }
+
+article blockquote {
+    border-left: 3px solid var(--orange);
+    padding-left: 1rem;
+    margin: 1.5rem 0;
+    color: var(--ink-faint-paper);
+    font-style: italic;
+}
+
+article pre {
+    background: var(--cream-bright);
+    padding: 1rem;
+    border-radius: 4px;
+    overflow-x: auto;
+    margin-bottom: 1.5rem;
+    font-size: 0.88rem;
+    line-height: 1.5;
+}
+article code {
+    font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+    font-size: 0.9em;
+}
+article p code,
+article li code {
+    background: var(--cream-bright);
+    padding: 0.15rem 0.4rem;
+    border-radius: 3px;
+}
+
+article img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+    margin: 1.5rem 0;
+    display: block;
+}
+article strong { color: var(--ink); }
+article hr {
+    border: none;
+    border-top: 1px solid var(--hairline);
+    margin: 2rem 0;
+}
+article table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 1.5rem;
+    table-layout: auto;
+}
+article th {
+    font-weight: 600;
+    text-align: left;
+    padding: 0.6rem 0.75rem;
+    border-bottom: 2px solid var(--hairline-2);
+}
+article td {
+    padding: 0.6rem 0.75rem;
+    border-bottom: 1px solid var(--hairline);
+}
+/* A long unbroken cell (a URL as link text) must wrap, or the table pushes
+   past the column on a phone. `anywhere`, unlike `break-word`, lowers the
+   cell's min-content width, which is what auto table layout sizes from. */
+article th,
+article td {
+    overflow-wrap: anywhere;
+}
+
+/* --- metadata line --- */
+.meta {
+    color: var(--ink-faint-paper);
+    font-size: 0.9rem;
+    margin-bottom: 2.5rem;
+}
+
+/* --- footer --- */
+footer {
+    padding: 3rem 0 2rem;
+    border-top: 1px solid var(--hairline);
+    margin-top: 3rem;
+    font-size: 0.9rem;
+}
+footer a {
+    color: var(--orange-text-aa);
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 0.18em;
+}
+footer a:hover {
+    text-decoration-thickness: 2px;
+}
+footer .copyright {
+    color: var(--ink-faint-paper);
+    font-size: 0.85rem;
+    margin-top: 1rem;
+}
+
+/* --- index page --- */
+.blog-title {
+    margin-bottom: 2rem;
+}
+.post-list {
+    list-style: none;
+    padding: 0;
+}
+.post-item {
+    margin-bottom: 2.5rem;
+}
+.post-item h2 {
+    font-size: 1.25rem;
+    margin: 0 0 0.3rem;
+    letter-spacing: 0.03em;
+}
+.post-item h2 a {
+    color: var(--ink);
+    text-decoration: none;
+}
+.post-item h2 a:hover {
+    color: var(--orange-text-aa);
+}
+.post-item .meta {
+    margin-bottom: 0.5rem;
+}
+.post-item .description {
+    color: var(--ink-soft-paper);
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+/* --- responsive --- */
+@media (max-width: 480px) {
+    h1 { font-size: 1.6rem; }
+    h2 { font-size: 1.2rem; }
+    nav { padding: 1.5rem 0 1rem; }
+    .meta { font-size: 0.85rem; }
+    article th,
+    article td { padding: 0.5rem 0.4rem; }
+}
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <a href="/blog/">← blog</a><span class="sep">·</span><a href="/">sol pbc</a>
+        </nav>
+        <article>
+            <h1>features galore</h1>
+            <div class="meta">2026-11-25 · jer &amp; extro · 8 min read</div>
+<p>there&rsquo;s so much in solstone now that we built a page to hold it all: <strong><a href="https://solstone.app/features">solstone.app/features</a></strong>. the top ten come first, with screens, then the full list, which you can search or filter by the device you have.</p>
+<p>every screen on it comes from a demo journal we wrote: a year in the life of William Shakespeare, 1595, kept on 2025 dates. <a href="https://github.com/solpbc/william_journal">the whole journal is public</a>, so you can read the day behind any screen. the pictures in this post come from William&rsquo;s year too.</p>
+<p>and the list keeps growing. here&rsquo;s what&rsquo;s new in the 89 releases since our last update.</p>
+<p><strong>new here?</strong> solstone is a personal journal platform. the solstone app takes in what you share with it, and all of it goes into your journal, an open source, local-first memory that <a href="https://solpbc.org/blog/your-agents-can-work-from-your-journal/">your agents can work from</a>. your journal lives on a device you own. <strong>get it on mac, windows or linux:</strong> <a href="https://solstone.app/download">solstone.app/download</a>. <strong>on your phone or tablet:</strong> <a href="https://solstone.app/mobile">solstone.app/mobile</a>.</p>
+<h2>your agents read only what you pick</h2>
+<p>the agent that helps with your meetings doesn&rsquo;t need your photos. so each kind of material is now its own switch, per agent: body data, notes, documents, calendar, places, photos, and written messages, including a meeting&rsquo;s chat. an agent you connected before these updates can&rsquo;t read any of them until you turn them on for it on the agents page. a new connection starts with body ticked and the rest off. and with the newest journal, 2.0.91, cycle and pregnancy logs get a switch of their own under body, off for every agent, including the ones you already connected.</p>
+<p><img alt="a connected agent's permissions in the journal: notes, documents, places and photos turned on, with three levels of location detail to choose from for places: exact locations, areas of about 1 km, or names only" src="https://solpbc.org/blog/features-galore/images/aa1608cfd521752c26996d8df179a31f64b73ba8fbf2f2e153c9defcdfcce752.png"></p>
+<p>places gets one more choice: exact locations, areas about a kilometer across, or names only. exact is the default when you turn places on, and an agent that already had places stays at names only until you change it. at names only, William&rsquo;s agent knows he spent the night &ldquo;at High Wycombe&rdquo;, and nothing about where in town. places you hid stay out at every level.</p>
+<p><img alt="William's 27 march on his journal's map page: a night at High Wycombe, with Oxford on the way" src="https://solpbc.org/blog/features-galore/images/17548352d7143e551d3d5edcb4aa35371ce545901d4faf80fcb6f88e6edf11ad.webp"></p>
+<p><em>William&rsquo;s 27 march, as he sees it.</em></p>
+<p>an agent you let see photos now gets the picture itself, a smaller copy without location or camera details. <a href="https://support.solstone.app/kb/connect-solstone-to-claude">connecting your journal to Claude</a> walks through the setup.</p>
+<h2>your agent can suggest, you decide</h2>
+<p><a href="https://solpbc.org/blog/telling-your-journal-its-wrong/">in our last update</a>, you got a way to tell your journal it&rsquo;s wrong. now a connected agent can point things out too, by suggesting a fix to who said a line, what happened, or a person&rsquo;s name. it can also suggest that two people in your journal are really one. each suggestion waits on the suggestions page with the agent named, and nothing changes until you accept it.</p>
+<h2>a whole year at a glance</h2>
+<p><img alt="William's 2025 on the year page, each day colored by how many activities it holds" src="https://solpbc.org/blog/features-galore/images/f62b0f882ef4f4a582fd1a53a5f152d7075a51fcd9b15d0e6b6782a440e07094.webp"></p>
+<p>here&rsquo;s William&rsquo;s year on the new year page, which shows a whole year of your journal at once: one view colors each day by how many activities or location records your journal holds for it, and the other lays out each place and each name as a row across the year&rsquo;s weeks. find it under &ldquo;more&rdquo;.</p>
+<h2>take back a stretch of time</h2>
+<p>had an afternoon you&rsquo;d rather not keep? on a day&rsquo;s transcripts page, choose &ldquo;delete a stretch of time&rdquo; and pick a &ldquo;from&rdquo; and a &ldquo;to&rdquo;, on one day or across several. each device&rsquo;s audio, screen and location from then, what you imported and your body data go to the trash together. recovering it puts all of it back.</p>
+<p><img alt="the &quot;delete a stretch of time?&quot; dialog on William's 10 august 2025, set from 14:15 to 14:45. it says it will move everything from 14:10 to 14:48 to the trash, where it can be recovered until it's erased, with buttons to erase now, cancel, or move to trash" src="https://solpbc.org/blog/features-galore/images/c1e882e0f47d65af544c49158882296a643bbc22433e845d978e048bfa029d00.png"></p>
+<p><em>William, about to take back half an hour of a sunday in Stratford. the journal shows exactly what it will move, 14:10 to 14:48, before anything goes.</em></p>
+<p>your journal also rewrites what it made from what you deleted: activities drop it at once, and the summaries of those days and weeks are written again from what&rsquo;s left. and when you erase something from the trash on mac or linux, you can now also remove it from your backups, while the rest of each backup stays as it is.</p>
+<h2>your screen, and your screenshots</h2>
+<p><img alt="William's screen in his journal at 06:45 on 27 september, labelled &quot;screenshot · your device · screen&quot;: his writing app, Foul Papers, open on a page of his Romeo and Juliet draft, with the description his journal wrote beneath it" src="https://solpbc.org/blog/features-galore/images/820b250b92838acf862477d4241dbcf3e53cff62a3997ce4db024cf5487539d7.png"></p>
+<p>that&rsquo;s William&rsquo;s screen at a quarter to seven on 27 september, Romeo and Juliet open in his writing app, and what his journal wrote about it underneath. your journal already keeps your screen like this. now the screenshots you take go in too, on every platform: the solstone app on linux, windows, iphone and ipad joins mac and android. on iphone and ipad, your Obsidian notes can come along too.</p>
+<h2>more ways to bring your life in</h2>
+<ul>
+<li><strong>chats and transcripts:</strong> your journal now brings in exports from Telegram, Slack, Fireflies, MacWhisper, Whisper and Podcasting 2.0 directly (<a href="https://github.com/solpbc/solstone-journal/releases/tag/v2.0.89">the exact formats</a>).</li>
+<li><strong>Garmin and Plaud:</strong> your journal can now sync Garmin Connect with your own Personal API key, for workouts, sleep, heart rate, steps and more. Plaud recordings now sync through Plaud&rsquo;s own sign-in; if you used a web token before, sign in to keep syncing.</li>
+<li><strong>any file, and it tells you how it&rsquo;s going:</strong> the solstone app on mac, windows and linux takes any file you import, and your journal decides what it can bring in. you can watch each one go from sending to done, and one your journal wants you to look over first, like an Apple Health export, opens its own review page.</li>
+<li><strong>what your journal keeps:</strong> from a new audio, PDF, chat or Evernote import, your journal keeps what it reads, not its own copy of the file. turn on <strong>keep originals</strong> on the import screen if you want that copy.</li>
+</ul>
+<h2>linux keeps itself up to date</h2>
+<p>on linux, a journal installed the default way now updates itself once a day, from a signed release catalogue, and never restarts your journal to do it: the new version starts the next time your journal does. a journal you already have asks you first. you can also <a href="https://solstone.app/install#linux-packages">install and update it with apt, dnf or zypper</a>.</p>
+<h2>confidential processing</h2>
+<p>the journal&rsquo;s 2.0.85 update is a security fix for confidential processing: your journal now sends only to machines that booted the service&rsquo;s current published build, and refuses one that booted the previous build. <a href="https://github.com/solpbc/solstone-journal/releases/tag/v2.0.85">its release note</a> says what the previous build&rsquo;s two flaws allowed. if you use confidential processing, update. how your journal checks our machine before it sends anything is in <strong><a href="https://solpbc.org/blog/how-your-journal-checks-our-machine/">this post</a></strong>.</p>
+<h2>smaller things</h2>
+<ul>
+<li>your journal no longer describes a screen again when it looks the same as a few minutes earlier, so a quiet desk uses much less of the thinking you chose.</li>
+<li>your journal can suggest profile pics for the people in your meetings, and you choose one or none. it&rsquo;s on by default, and agents you connect get them too. you can turn off either one.</li>
+<li>a link from your agent now opens your journal at that place, in the solstone app on mac, windows, linux, android, iphone and ipad.</li>
+<li>on the body page you can hide a day of body data: search and activities leave it out, and connected agents can&rsquo;t reach it.</li>
+</ul>
+<p>go see what else William&rsquo;s journal can do: <strong><a href="https://solstone.app/features">solstone.app/features</a></strong>.</p>
+<h2>what shipped</h2>
+<p>89 releases between our last update and november 25:</p>
+<ul>
+<li><strong>the journal</strong>, on mac, windows and linux: 15 releases, 2.0.76 → 2.0.91 (there was no 2.0.77, and windows skipped 2.0.83), with signed release records at <a href="https://trust.solstone.app/">trust.solstone.app</a></li>
+<li><strong>the journal app for mac:</strong> 15 releases, 2.0.76 → 2.0.91</li>
+<li><strong>the solstone app for mac:</strong> 14 releases, 2.0.65 → 2.0.78</li>
+<li><strong>the solstone app for linux:</strong> 14 releases, 2.0.40 → 2.0.53</li>
+<li><strong>the solstone app for windows:</strong> 12 releases, 2.0.48 → 2.0.59</li>
+<li><strong>iphone, ipad and apple watch:</strong> 2 releases, 2.0.12 and 2.0.13, on the App Store</li>
+<li><strong>android:</strong> 14 releases, 2.1.42 → 2.1.55</li>
+<li><strong>android watches:</strong> 3 releases, 1.0.0 → 1.0.2</li>
+</ul>
+<hr>
+<p><em>sol pbc is a public benefit corporation. the promises about your data live in article 8 of our filed articles of incorporation, not in a policy we could quietly change: it can&rsquo;t be amended without jer&rsquo;s personal signature, and after him the language can only get stronger, never weaker. <a href="https://solpbc.org/blog/on-your-side/">what that means</a>.</em></p>
+        </article>
+        <footer>
+            <a href="/blog/">← back to blog</a>
+            <p class="copyright">© 2026 sol pbc · solpbc.org · sol pbc, solstone, and vit are trademarks of sol pbc.</p>
+        </footer>
+    </div>
+</body>
+</html>

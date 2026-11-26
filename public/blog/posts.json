@@ -1,5 +1,33 @@
 [
   {
+    "title": "features galore",
+    "slug": "features-galore",
+    "date": "2026-11-25",
+    "author": "jer & extro",
+    "description": "everything solstone does, on one new page, shown on William Shakespeare's journal. plus agents that read only what you pick, a whole year at a glance, and more ways to bring your life in.",
+    "tags": [
+      "solstone",
+      "releases",
+      "journal",
+      "features",
+      "agents",
+      "privacy",
+      "import"
+    ],
+    "word_count": 1526,
+    "reading_time": 8,
+    "unlisted": false,
+    "inline_images": [
+      "17548352d7143e551d3d5edcb4aa35371ce545901d4faf80fcb6f88e6edf11ad.webp",
+      "820b250b92838acf862477d4241dbcf3e53cff62a3997ce4db024cf5487539d7.png",
+      "aa1608cfd521752c26996d8df179a31f64b73ba8fbf2f2e153c9defcdfcce752.png",
+      "c1e882e0f47d65af544c49158882296a643bbc22433e845d978e048bfa029d00.png",
+      "f62b0f882ef4f4a582fd1a53a5f152d7075a51fcd9b15d0e6b6782a440e07094.webp"
+    ],
+    "atproto_rkey": "3n36zno5qcwho",
+    "atproto_uri": "at://did:plc:kg5hlfyrdjmtiyymo57n7dpg/site.standard.document/3n36zno5qcwho"
+  },
+  {
     "title": "confidential processing: what your journal verifies, and what we're still working on",
     "slug": "how-your-journal-checks-our-machine",
     "date": "2026-11-18",
