@@ -25,7 +25,9 @@
       "f62b0f882ef4f4a582fd1a53a5f152d7075a51fcd9b15d0e6b6782a440e07094.webp"
     ],
     "atproto_rkey": "3n36zno5qcwho",
-    "atproto_uri": "at://did:plc:kg5hlfyrdjmtiyymo57n7dpg/site.standard.document/3n36zno5qcwho"
+    "atproto_uri": "at://did:plc:kg5hlfyrdjmtiyymo57n7dpg/site.standard.document/3n36zno5qcwho",
+    "bsky_post_uri": "at://did:plc:kg5hlfyrdjmtiyymo57n7dpg/app.bsky.feed.post/3n36ztfaz4n2e",
+    "bsky_post_cid": "bafyreig5ewseu4yvo4weg6xvbblnuepyxrsgeuikw6hwvhnqqwv2z35jse"
   },
   {
     "title": "confidential processing: what your journal verifies, and what we're still working on",
